@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('../../../../../../layouts/head.html')
+  </head>
+
+  <body>
+    @@include('../../../../../../layouts/header.html')
+
+    <main><h1 class="break-words" translate="no">Server-side Rendering (SSR)</h1><blockquote class="p-3 text-sm">
+<p>Also referred to as "SSR" or "Dynamic Rendering".</p>
+</blockquote>
+<p translated="true">Bir sayfa <strong>Sunucu Taraf</strong>ı Oluşturma kullanıyorsa, sayfa HTML'si <strong>her istekte</strong> oluşturulur.</p>
+<p translated="true">Bir sayfada Sunucu Tarafı Oluşturmayı kullanmak için <code translate="no">export</code> <code translate="no">getServerSideProps</code> adında bir <code translate="no">async</code> işlevi oluşturmanız gerekir. Bu fonksiyon her istekte sunucu tarafından çağrılacaktır.</p>
+<p translated="true">Örneğin, sayfanızın sık güncellenen verileri (harici bir API'den alınan) önceden oluşturması gerektiğini varsayalım. Bu veriyi getiren ve aşağıdaki gibi <code translate="no">Page</code> adresine ileten <code translate="no">getServerSideProps</code> yazabilirsiniz:</p>
+<div class="code-block_wrapper__t6FCO not-prose" translate="no"><button aria-label="Copy code" class="code-block_copyButton__uo5Yu code-block_copyFloatingButton__PsMvB" type="button"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M20 6L9 17l-5-5"></path></svg></button><pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">default</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">Page</span><span style="color:var(--shiki-color-text)">({ data }) {</span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-comment)">// Render data...</span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">}</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:var(--shiki-token-comment)">// This gets called on every request</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">async</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">getServerSideProps</span><span style="color:var(--shiki-color-text)">() {</span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-comment)">// Fetch data from external API</span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-constant)">res</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">await</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">fetch</span><span style="color:var(--shiki-color-text)">(</span><span style="color:var(--shiki-token-string-expression)">`https://.../data`</span><span style="color:var(--shiki-color-text)">)</span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-constant)">data</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">await</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-constant)">res</span><span style="color:var(--shiki-token-function)">.json</span><span style="color:var(--shiki-color-text)">()</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-comment)">// Pass data to the page via props</span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-keyword)">return</span><span style="color:var(--shiki-color-text)"> { props</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-color-text)"> { data } }</span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
+<p translated="true">Gördüğünüz gibi, <code translate="no">getServerSideProps</code> <code translate="no">getStaticProps</code> ile benzerdir, ancak aradaki fark <code translate="no">getServerSideProps</code> 'nin derleme zamanı yerine her istekte çalıştırılmasıdır.</p>
+<p translated="true"><code translate="no">getServerSideProps</code> 'un nasıl çalıştığı hakkında daha fazla bilgi edinmek için <a href="/docs/pages/building-your-application/data-fetching/get-server-side-props" title="Data Fetching documentation">Veri Getirme belgelerimize</a> göz atın.</p></main>
+
+    @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
+  </body>
+</html>

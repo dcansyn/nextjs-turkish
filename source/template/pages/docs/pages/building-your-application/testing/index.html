@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('../../../../../layouts/head.html')
+  </head>
+
+  <body>
+    @@include('../../../../../layouts/header.html')
+
+    <main><h1 class="break-words" translate="no">Testing</h1><p translated="true">React ve Next.js'de, yazabileceğiniz birkaç farklı test türü vardır ve her birinin kendi amacı ve kullanım durumları vardır. Bu sayfa, uygulamanızı test etmek için kullanabileceğiniz türlere ve yaygın olarak kullanılan araçlara genel bir bakış sağlar.</p>
+<h2 id="types-of-tests" data-docs-heading="" translate="no"><a href="#types-of-tests" title="Types of tests">Types of tests<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<ul>
+<li><strong>Unit testing</strong> involves testing individual units (or blocks of code) in isolation. In React, a unit can be a single function, hook, or component.<!-- -->
+<ul>
+<li><strong>Component testing</strong> is a more focused version of unit testing where the primary subject of the tests is React components. This may involve testing how components are rendered, their interaction with props, and their behavior in response to user events.</li>
+<li><strong>Integration testing</strong> involves testing how multiple units work together. This can be a combination of components, hooks, and functions.</li>
+</ul>
+</li>
+<li><strong>End-to-End (E2E) Testing</strong> involves testing user flows in an environment that simulates real user scenarios, like the browser. This means testing specific tasks (e.g. signup flow) in a production-like environment.</li>
+<li><strong>Snapshot testing</strong> involves capturing the rendered output of a component and saving it to a snapshot file. When tests run, the current rendered output of the component is compared against the saved snapshot. Changes in the snapshot are used to indicate unexpected changes in behavior.</li>
+</ul>
+<!-- -->
+<h2 id="guides" data-docs-heading="" translate="no"><a href="#guides" title="Guides">Guides<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true">Next.js'nin bu yaygın olarak kullanılan test araçlarıyla nasıl kurulacağını öğrenmek için aşağıdaki kılavuzlara bakın:</p></main>
+
+    @@include('../../../../../layouts/footer.html') @@include('../../../../../layouts/script.html')
+  </body>
+</html>

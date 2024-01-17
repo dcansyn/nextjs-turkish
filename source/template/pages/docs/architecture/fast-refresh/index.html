@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('../../../../layouts/head.html')
+  </head>
+
+  <body>
+    @@include('../../../../layouts/header.html')
+
+    <main><h1 class="break-words" translate="no">Fast Refresh</h1><p translated="true">Hızlı Yenileme, React bileşenlerinizde yapılan düzenlemeler hakkında size anlık geri bildirim sağlayan bir Next.js özelliğidir. Hızlı Yenileme, <strong>9.4 veya daha yeni</strong> sürümlerdeki tüm Next.js uygulamalarında varsayılan olarak etkindir. Next.js Hızlı Yenileme etkinleştirildiğinde, çoğu düzenleme <strong>bileşen durumunu kaybetmeden</strong> bir saniye içinde görünür olmalıdır.</p>
+<h2 id="how-it-works" data-docs-heading="" translate="no"><a href="#how-it-works" title="How It Works">How It Works<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<ul>
+<li>If you edit a file that <strong>only exports React component(s)</strong>, Fast Refresh will
+update the code only for that file, and re-render your component. You can edit
+anything in that file, including styles, rendering logic, event handlers, or
+effects.</li>
+<li>If you edit a file with exports that <em>aren't</em> React components, Fast Refresh
+will re-run both that file, and the other files importing it. So if both
+<code translate="no">Button.js</code> and <code translate="no">Modal.js</code> import <code translate="no">theme.js</code>, editing <code translate="no">theme.js</code> will update
+both components.</li>
+<li>Finally, if you <strong>edit a file</strong> that's <strong>imported by files outside of the
+React tree</strong>, Fast Refresh <strong>will fall back to doing a full reload</strong>. You
+might have a file which renders a React component but also exports a value
+that is imported by a <strong>non-React component</strong>. For example, maybe your
+component also exports a constant, and a non-React utility file imports it. In
+that case, consider migrating the constant to a separate file and importing it
+into both files. This will re-enable Fast Refresh to work. Other cases can
+usually be solved in a similar way.</li>
+</ul>
+<h2 id="error-resilience" data-docs-heading="" translate="no"><a href="#error-resilience" title="Error Resilience">Error Resilience<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<h3 id="syntax-errors" data-docs-heading="" translate="no"><a href="#syntax-errors" title="Syntax Errors">Syntax Errors<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Geliştirme sırasında bir sözdizimi hatası yaparsanız, bunu düzeltebilir ve dosyayı tekrar kaydedebilirsiniz. Hata otomatik olarak kaybolur, böylece uygulamayı yeniden yüklemeniz gerekmez. <strong>Bileşen durumunu kaybetmezsiniz</strong>.</p>
+<h3 id="runtime-errors" data-docs-heading="" translate="no"><a href="#runtime-errors" title="Runtime Errors">Runtime Errors<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Bileşeninizin içinde çalışma zamanı hatasına yol açan bir hata yaparsanız, bağlamsal bir kaplama ile karşılaşacaksınız. Hatayı düzeltmek, uygulamayı yeniden yüklemeden yer paylaşımını otomatik olarak kapatacaktır.</p>
+<p translated="true">Render sırasında hata oluşmadıysa bileşen durumu korunacaktır. Render sırasında hata oluştuysa, React güncellenmiş kodu kullanarak uygulamanızı yeniden yükleyecektir.</p>
+<p translated="true">Uygulamanızda <a href="https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary" rel="noopener noreferrer nofollow" target="_blank" title="error boundaries"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span> hata sınırları</a>varsa (üretimde zarif hatalar için iyi bir fikirdir), bir işleme hatasından sonra bir sonraki düzenlemede yeniden oluşturmayı deneyeceklerdir. Bu, bir hata sınırına sahip olmanın her zaman kök uygulama durumuna sıfırlanmanızı önleyebileceği anlamına gelir. Ancak hata sınırlarının <em>çok</em> ayrıntılı olmaması gerektiğini unutmayın. Bunlar React tarafından üretimde kullanılır ve her zaman bilinçli olarak tasarlanmalıdır.</p>
+<h2 id="limitations" data-docs-heading="" translate="no"><a href="#limitations" title="Limitations">Limitations<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true">Hızlı Yenileme, düzenlediğiniz bileşendeki yerel React durumunu korumaya çalışır, ancak bunu yapmak güvenliyse. İşte bir dosyadaki her düzenlemede yerel durumun sıfırlandığını görmenizin birkaç nedeni:</p>
+<ul>
+<li>Local state is not preserved for class components (only function components
+and Hooks preserve state).</li>
+<li>The file you're editing might have <em>other</em> exports in addition to a React
+component.</li>
+<li>Sometimes, a file would export the result of calling a higher-order component
+like <code translate="no">HOC(WrappedComponent)</code>. If the returned component is a
+class, its state will be reset.</li>
+<li>Anonymous arrow functions like <code translate="no">export default () =&gt; &lt;div /&gt;;</code> cause Fast Refresh to not preserve local component state. For large codebases you can use our <a href="/docs/pages/building-your-application/upgrading/codemods#name-default-component" title="name-default-component codemod"><code translate="no">name-default-component</code> codemod</a>.</li>
+</ul>
+<p translated="true">Kod tabanınızın daha büyük bir kısmı fonksiyon bileşenlerine ve Hook'lara geçtikçe, durumun daha fazla durumda korunmasını bekleyebilirsiniz.</p>
+<h2 id="tips" data-docs-heading="" translate="no"><a href="#tips" title="Tips">Tips<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<ul>
+<li>Fast Refresh preserves React local state in function components (and Hooks) by
+default.</li>
+<li>Sometimes you might want to <em>force</em> the state to be reset, and a component to
+be remounted. For example, this can be handy if you're tweaking an animation
+that only happens on mount. To do this, you can add <code translate="no">// @refresh reset</code>
+anywhere in the file you're editing. This directive is local to the file, and
+instructs Fast Refresh to remount components defined in that file on every
+edit.</li>
+<li>You can put <code translate="no">console.log</code> or <code translate="no">debugger;</code> into the components you edit during
+development.</li>
+<li>Remember that imports are case sensitive. Both fast and full refresh can fail,
+when your import doesn't match the actual filename.
+For example, <code translate="no">'./header'</code> vs <code translate="no">'./Header'</code>.</li>
+</ul>
+<h2 id="fast-refresh-and-hooks" data-docs-heading="" translate="no"><a href="#fast-refresh-and-hooks" title="Fast Refresh and Hooks">Fast Refresh and Hooks<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true">Mümkün olduğunda Hızlı Yenileme, düzenlemeler arasında bileşeninizin durumunu korumaya çalışır. Özellikle, <code translate="no">useState</code> ve <code translate="no">useRef</code>, argümanlarını veya Hook çağrılarının sırasını değiştirmediğiniz sürece önceki değerlerini korur.</p>
+<p translated="true">Bağımlılıkları olan kancalar - örneğin <code translate="no">useEffect</code>, <code translate="no">useMemo</code> ve <code translate="no">useCallback</code>- Hızlı Yenileme sırasında her<em>zaman</em> güncellenecektir. Hızlı Yenileme gerçekleşirken bağımlılık listeleri göz ardı edilecektir.</p>
+<p translated="true">Örneğin, <code translate="no">useMemo(() =&gt; x * 2, [x])</code> adresini<code translate="no">useMemo(() =&gt; x * 10, [x])</code> olarak düzenlediğinizde, <code translate="no">x</code> (bağımlılık) değişmemiş olsa bile yeniden çalışacaktır. Eğer React bunu yapmasaydı, düzenlemeniz ekrana yansımazdı!</p>
+<p translated="true">Bazen bu beklenmedik sonuçlara yol açabilir. Örneğin, boş bir bağımlılık dizisine sahip bir <code translate="no">useEffect</code>bile Hızlı Yenileme sırasında bir kez yeniden çalışacaktır.</p>
+<p translated="true">Ancak, Hızlı Yenileme olmasa bile <code translate="no">useEffect</code> 'un ara sıra yeniden çalıştırılmasına dayanıklı kod yazmak iyi bir uygulamadır. Bu, daha sonra yeni bağımlılıklar eklemenizi kolaylaştıracaktır ve etkinleştirmenizi şiddetle tavsiye ettiğimiz <a href="/docs/pages/api-reference/next-config-js/reactStrictMode" title="React Strict Mode">React Strict Mode</a> tarafından zorlanmaktadır.</p></main>
+
+    @@include('../../../../layouts/footer.html') @@include('../../../../layouts/script.html')
+  </body>
+</html>

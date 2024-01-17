@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('../../../../../../layouts/head.html')
+  </head>
+
+  <body>
+    @@include('../../../../../../layouts/header.html')
+
+    <main>
+      <h1 class="break-words" translate="no">Version 13</h1>
+      <h2 id="upgrading-from-12-to-13" data-docs-heading="" translate="no">
+        <a href="#upgrading-from-12-to-13" title="Upgrading from 12 to 13"
+          >Upgrading from 12 to 13<span
+            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+              <g stroke-width="1.2" fill="none" stroke="currentColor">
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
+                ></path>
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
+                ></path>
+              </g></svg></span
+        ></a>
+      </h2>
+      <p translated="true">Next.js sürüm 13'e güncellemek için tercih ettiğiniz paket yöneticisini kullanarak aşağıdaki komutu çalıştırın:</p>
+      <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD code-block_hideLineNumbers__52YKH not-prose" translate="no">
+        <div class="code-block_header__t3NRd">
+          <div class="code-block_fileName__HmSv1">
+            <div aria-hidden="true" class="code-block_iconWrapper__TuHFk">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                style="color: currentColor; width: 16px; height: 16px"
+              >
+                <path d="M4 17l6-6-6-6"></path>
+                <path d="M12 19h8"></path>
+              </svg>
+            </div>
+            <span class="code-block_filenameP__02nok">Terminal</span>
+          </div>
+          <div class="code-block_actions__yphRf">
+            <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path
+                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
+                ></path></svg
+              ><svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <pre
+          class="code-block_pre___OLfy"
+        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">npm </span><span style="color:var(--shiki-token-string)">i</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">next@</span><span style="color:var(--shiki-token-constant)">13</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react-dom@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">eslint-config-next@</span><span style="color:var(--shiki-token-constant)">13</span></span></code></pre>
+      </div>
+      <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD code-block_hideLineNumbers__52YKH not-prose" translate="no">
+        <div class="code-block_header__t3NRd">
+          <div class="code-block_fileName__HmSv1">
+            <div aria-hidden="true" class="code-block_iconWrapper__TuHFk">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                style="color: currentColor; width: 16px; height: 16px"
+              >
+                <path d="M4 17l6-6-6-6"></path>
+                <path d="M12 19h8"></path>
+              </svg>
+            </div>
+            <span class="code-block_filenameP__02nok">Terminal</span>
+          </div>
+          <div class="code-block_actions__yphRf">
+            <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path
+                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
+                ></path></svg
+              ><svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <pre
+          class="code-block_pre___OLfy"
+        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">yarn </span><span style="color:var(--shiki-token-string)">add</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">next@</span><span style="color:var(--shiki-token-constant)">13</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react-dom@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">eslint-config-next@</span><span style="color:var(--shiki-token-constant)">13</span></span></code></pre>
+      </div>
+      <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD code-block_hideLineNumbers__52YKH not-prose" translate="no">
+        <div class="code-block_header__t3NRd">
+          <div class="code-block_fileName__HmSv1">
+            <div aria-hidden="true" class="code-block_iconWrapper__TuHFk">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                style="color: currentColor; width: 16px; height: 16px"
+              >
+                <path d="M4 17l6-6-6-6"></path>
+                <path d="M12 19h8"></path>
+              </svg>
+            </div>
+            <span class="code-block_filenameP__02nok">Terminal</span>
+          </div>
+          <div class="code-block_actions__yphRf">
+            <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path
+                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
+                ></path></svg
+              ><svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <pre
+          class="code-block_pre___OLfy"
+        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">pnpm </span><span style="color:var(--shiki-token-string)">i</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">next@</span><span style="color:var(--shiki-token-constant)">13</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react-dom@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">eslint-config-next@</span><span style="color:var(--shiki-token-constant)">13</span></span></code></pre>
+      </div>
+      <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD code-block_hideLineNumbers__52YKH not-prose" translate="no">
+        <div class="code-block_header__t3NRd">
+          <div class="code-block_fileName__HmSv1">
+            <div aria-hidden="true" class="code-block_iconWrapper__TuHFk">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                style="color: currentColor; width: 16px; height: 16px"
+              >
+                <path d="M4 17l6-6-6-6"></path>
+                <path d="M12 19h8"></path>
+              </svg>
+            </div>
+            <span class="code-block_filenameP__02nok">Terminal</span>
+          </div>
+          <div class="code-block_actions__yphRf">
+            <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path
+                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
+                ></path></svg
+              ><svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <pre
+          class="code-block_pre___OLfy"
+        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">bun </span><span style="color:var(--shiki-token-string)">add</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">next@</span><span style="color:var(--shiki-token-constant)">13</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react-dom@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">eslint-config-next@</span><span style="color:var(--shiki-token-constant)">13</span></span></code></pre>
+      </div>
+      <blockquote class="p-3 text-sm">
+        <p>
+          <strong>Bilmekte fayda var:</strong> If you are using TypeScript, ensure you also upgrade <code translate="no">@types/react</code> and
+          <code translate="no">@types/react-dom</code> to their latest versions.
+        </p>
+      </blockquote>
+      <h3 id="v13-summary" data-docs-heading="" translate="no">
+        <a href="#v13-summary" title="v13 Summary"
+          >v13 Summary<span
+            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+              <g stroke-width="1.2" fill="none" stroke="currentColor">
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
+                ></path>
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
+                ></path>
+              </g></svg></span
+        ></a>
+      </h3>
+      <ul>
+        <li>
+          The <a href="/docs/architecture/supported-browsers" title="Supported Browsers">Supported Browsers</a> have been changed to drop Internet
+          Explorer and target modern browsers.
+        </li>
+        <li>The minimum Node.js version has been bumped from 12.22.0 to 16.14.0, since 12.x and 14.x have reached end-of-life.</li>
+        <li>The minimum React version has been bumped from 17.0.2 to 18.2.0.</li>
+        <li>
+          The <code translate="no">swcMinify</code> configuration property was changed from <code translate="no">false</code> to
+          <code translate="no">true</code>. See <a href="/docs/architecture/nextjs-compiler" title="Next.js Compiler">Next.js Compiler</a> for more
+          info.
+        </li>
+        <li>
+          The <code translate="no">next/image</code> import was renamed to <code translate="no">next/legacy/image</code>. The
+          <code translate="no">next/future/image</code> import was renamed to <code translate="no">next/image</code>. A
+          <a href="/docs/pages/building-your-application/upgrading/codemods#next-image-to-legacy-image" title="codemod is available"
+            >codemod is available</a
+          >
+          to safely and automatically rename your imports.
+        </li>
+        <li>
+          The <code translate="no">next/link</code> child can no longer be <code translate="no">&lt;a&gt;</code>. Add the
+          <code translate="no">legacyBehavior</code> prop to use the legacy behavior or remove the <code translate="no">&lt;a&gt;</code> to upgrade. A
+          <a href="/docs/pages/building-your-application/upgrading/codemods#new-link" title="codemod is available">codemod is available</a> to
+          automatically upgrade your code.
+        </li>
+        <li>
+          The <code translate="no">target</code> configuration property has been removed and superseded by
+          <a href="/docs/pages/api-reference/next-config-js/output" title="Output File Tracing">Output File Tracing</a>.
+        </li>
+      </ul>
+      <h2 id="migrating-shared-features" data-docs-heading="" translate="no">
+        <a href="#migrating-shared-features" title="Migrating shared features"
+          >Migrating shared features<span
+            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+              <g stroke-width="1.2" fill="none" stroke="currentColor">
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
+                ></path>
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
+                ></path>
+              </g></svg></span
+        ></a>
+      </h2>
+      <p translated="true">
+        Next.js 13, yeni özellikler ve kurallar içeren yeni bir
+        <a href="/docs/app/building-your-application/routing" title="app directory"><code translate="no">app</code> diz</a> ini sunar. Ancak Next.js
+        13'e yükseltmek için yeni
+        <a href="/docs/app/building-your-application/routing#the-app-router" title="app directory"><code translate="no">app</code> diz</a>ininin
+        kullanılması <strong>gerekmez</strong>.
+      </p>
+      <p translated="true">
+        Güncellenen <a href="#image-component" title="Image component">Resim bileş</a>eni,
+        <a href="#link-component" title="Link component">Bağlantı</a> bileşeni, Komut Dosyası
+        <a href="#script-component" title="Script component">bileşeni</a> ve
+        <a href="#font-optimization" title="Font optimization">Yazı Tipi optimizasyonu</a> gibi her iki dizinde de çalışan yeni özelliklerle
+        <code translate="no">pages</code> adresini kullanmaya devam edebilirsiniz.
+      </p>
+      <h3 id="image-component" data-docs-heading="" translate="no">
+        <a href="#image-component" title="&lt;Image/&gt; Component"
+          ><code translate="no">&lt;Image/&gt;</code> Component<span
+            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+              <g stroke-width="1.2" fill="none" stroke="currentColor">
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
+                ></path>
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
+                ></path>
+              </g></svg></span
+        ></a>
+      </h3>
+      <p translated="true">
+        Next.js 12, geçici bir içe aktarma ile Görüntü Bileşenine birçok iyileştirme getirdi: <code translate="no">next/future/image</code>. Bu
+        iyileştirmeler arasında daha az istemci tarafı JavaScript, görüntüleri genişletmek ve şekillendirmek için daha kolay yollar, daha iyi
+        erişilebilirlik ve yerel tarayıcı tembel yüklemesi yer alıyordu.
+      </p>
+      <p translated="true">Next.js 13'ten itibaren, bu yeni davranış artık <code translate="no">next/image</code> için varsayılandır.</p>
+      <p translated="true">Yeni Görüntü Bileşenine geçiş yapmanıza yardımcı olacak iki kodmod vardır:</p>
+      <ul>
+        <li>
+          <a href="/docs/pages/building-your-application/upgrading/codemods#next-image-to-legacy-image" title="next-image-to-legacy-image"
+            >next-image-to-legacy-image</a
+          >: This codemod will safely and automatically rename <code translate="no">next/image</code> imports to
+          <code translate="no">next/legacy/image</code> to maintain the same behavior as Next.js 12. We recommend running this codemod to quickly
+          update to Next.js 13 automatically.
+        </li>
+        <li>
+          <a href="/docs/pages/building-your-application/upgrading/codemods#next-image-experimental" title="next-image-experimental"
+            >next-image-experimental</a
+          >: After running the previous codemod, you can optionally run this experimental codemod to upgrade
+          <code translate="no">next/legacy/image</code> to the new <code translate="no">next/image</code>, which will remove unused props and add
+          inline styles. Please note this codemod is experimental and only covers static usage (such as
+          <code translate="no">&lt;Image src={img} layout="responsive" /&gt;</code>) but not dynamic usage (such as
+          <code translate="no">&lt;Image {...props} /&gt;</code>).
+        </li>
+      </ul>
+      <p translated="true">
+        Alternatif olarak,
+        <a href="/docs/pages/building-your-application/upgrading/codemods#next-image-experimental" title="migration guide">geçiş kılavuzunu</a>
+        izleyerek manuel olarak güncelleme yapabilir ve ayrıca
+        <a href="/docs/pages/api-reference/components/image-legacy#comparison" title="legacy comparison">eski karşılaştırmaya</a> bakabilirsiniz.
+      </p>
+      <h3 id="link-component" data-docs-heading="" translate="no">
+        <a href="#link-component" title="&lt;Link&gt; Component"
+          ><code translate="no">&lt;Link&gt;</code> Component<span
+            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+              <g stroke-width="1.2" fill="none" stroke="currentColor">
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
+                ></path>
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
+                ></path>
+              </g></svg></span
+        ></a>
+      </h3>
+      <p translated="true">
+        <a href="/docs/pages/api-reference/components/link" title="&lt;Link&gt; Component"><code translate="no">&lt;Link&gt;</code> Bileşeni</a> artık
+        bir <code translate="no">&lt;a&gt;</code> etiketinin alt öğe olarak manuel olarak eklenmesini gerektirmiyor. Bu davranış
+        <a href="https://nextjs.org/blog/next-12-2" rel="noopener noreferrer" target="_blank" title="version 12.2"
+          >12.2<span class="inline-flex"
+            ><svg
+              class="with-icon_icon__MHUeb"
+              data-testid="geist-icon"
+              fill="none"
+              height="24"
+              shape-rendering="geometricPrecision"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewbox="0 0 24 24"
+              width="24"
+              style="color: currentColor; width: 14px; height: 14px"
+            >
+              <path d="M7 17L17 7"></path>
+              <path d="M7 7h10v10"></path></svg
+          ></span>
+          sürümünde</a
+        >
+        deneysel bir seçenek olarak eklenmişti ve artık varsayılandır. Next.js 13'te, <code translate="no">&lt;Link&gt;</code> her zaman
+        <code translate="no">&lt;a&gt;</code> adresini oluşturur ve destekleri altta yatan etikete yönlendirmenize olanak tanır.
+      </p>
+      <p translated="true">Örneğin:</p>
+      <div class="code-block_wrapper__t6FCO not-prose" translate="no">
+        <button aria-label="Copy code" class="code-block_copyButton__uo5Yu code-block_copyFloatingButton__PsMvB" type="button">
+          <svg
+            class="with-icon_icon__MHUeb"
+            data-testid="geist-icon"
+            fill="none"
+            height="24"
+            shape-rendering="geometricPrecision"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            viewbox="0 0 24 24"
+            width="24"
+            aria-hidden="true"
+            style="color: currentColor; width: 20px; height: 20px"
+          >
+            <path
+              d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
+            ></path></svg
+          ><svg
+            class="with-icon_icon__MHUeb"
+            data-testid="geist-icon"
+            fill="none"
+            height="24"
+            shape-rendering="geometricPrecision"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.5"
+            viewbox="0 0 24 24"
+            width="24"
+            aria-hidden="true"
+            style="color: currentColor; width: 20px; height: 20px"
+          >
+            <path d="M20 6L9 17l-5-5"></path>
+          </svg>
+        </button>
+        <pre
+          class="code-block_pre___OLfy"
+        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> Link </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'next/link'</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:var(--shiki-token-comment)">// Next.js 12: `&lt;a&gt;` has to be nested otherwise it's excluded</span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">&lt;</span><span style="color:var(--shiki-token-constant)">Link</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">href</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">"/about"</span><span style="color:var(--shiki-color-text)">&gt;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">  &lt;</span><span style="color:var(--shiki-token-string-expression)">a</span><span style="color:var(--shiki-color-text)">&gt;About&lt;/</span><span style="color:var(--shiki-token-string-expression)">a</span><span style="color:var(--shiki-color-text)">&gt;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">&lt;/</span><span style="color:var(--shiki-token-constant)">Link</span><span style="color:var(--shiki-color-text)">&gt;</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:var(--shiki-token-comment)">// Next.js 13: `&lt;Link&gt;` always renders `&lt;a&gt;` under the hood</span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">&lt;</span><span style="color:var(--shiki-token-constant)">Link</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">href</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">"/about"</span><span style="color:var(--shiki-color-text)">&gt;</span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">  About</span></span>
+<span class="line"><span style="color:var(--shiki-color-text)">&lt;/</span><span style="color:var(--shiki-token-constant)">Link</span><span style="color:var(--shiki-color-text)">&gt;</span></span></code></pre>
+      </div>
+      <p translated="true">
+        Bağlantılarınızı Next.js 13'e yükseltmek için
+        <a href="/docs/pages/building-your-application/upgrading/codemods#new-link" title="new-link codemod"
+          ><code translate="no">new-link</code> codemod</a
+        >'u kullanabilirsiniz.
+      </p>
+      <h3 id="script-component" data-docs-heading="" translate="no">
+        <a href="#script-component" title="&lt;Script&gt; Component"
+          ><code translate="no">&lt;Script&gt;</code> Component<span
+            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+              <g stroke-width="1.2" fill="none" stroke="currentColor">
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
+                ></path>
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
+                ></path>
+              </g></svg></span
+        ></a>
+      </h3>
+      <p translated="true">
+        Davranışları <a href="/docs/pages/api-reference/components/script" title="next/script"><code translate="no">next/script</code></a> hem
+        <code translate="no">pages</code> hem de <code translate="no">app</code> adreslerini destekleyecek şekilde güncellenmiştir.
+        <code translate="no">app</code> adresini aşamalı olarak benimsiyorsanız,
+        <a href="/docs/pages/building-your-application/upgrading" title="upgrade guide">yükseltme kılavuzunu</a> okuyun.
+      </p>
+      <h3 id="font-optimization" data-docs-heading="" translate="no">
+        <a href="#font-optimization" title="Font Optimization"
+          >Font Optimization<span
+            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+              <g stroke-width="1.2" fill="none" stroke="currentColor">
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
+                ></path>
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
+                ></path>
+              </g></svg></span
+        ></a>
+      </h3>
+      <p translated="true">
+        Daha önce Next.js, yazı tipi CSS'sini inlining yaparak yazı tiplerini optimize etmenize yardımcı oluyordu. Sürüm 13 yeni
+        <a href="/docs/pages/building-your-application/optimizing/fonts" title="next/font"><code translate="no">next/font</code></a> modülü, size yazı
+        tipi yükleme deneyiminizi kişiselleştirme olanağı verirken, aynı zamanda mükemmel performans ve gizlilik sağlar.
+      </p>
+      <p translated="true">
+        <code translate="no">next/font</code> adresini nasıl kullanacağınızı öğrenmek için
+        <a href="/docs/pages/building-your-application/optimizing/fonts" title="Optimizing Fonts">Yazı Tiplerini Optimize</a> Etme bölümüne bakın.
+      </p>
+    </main>
+
+    @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
+  </body>
+</html>

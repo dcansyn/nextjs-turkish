@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('../../../../../layouts/head.html')
+  </head>
+
+  <body>
+    @@include('../../../../../layouts/header.html')
+
+    <main><h1 class="break-words" translate="no">Rendering</h1><p translated="true">Next.js varsayılan olarak her sayfayı <strong>önceden</strong> işler. Bu, Next.js'nin her sayfa için HTML'yi istemci tarafı JavaScript ile yapmak yerine önceden oluşturduğu anlamına gelir. Ön işleme, daha iyi performans ve SEO ile sonuçlanabilir.</p>
+<p translated="true">Oluşturulan her HTML, o sayfa için gerekli olan minimum JavaScript koduyla ilişkilendirilir. Bir sayfa tarayıcı tarafından yüklendiğinde, JavaScript kodu çalışır ve sayfayı tamamen etkileşimli hale getirir (bu işlem React'te <a href="https://react.dev/reference/react-dom/client/hydrateRoot" rel="noopener noreferrer nofollow" target="_blank" title="hydration">hidrasyon<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> olarak adlandırılır).</p>
+<h3 id="pre-rendering" data-docs-heading="" translate="no"><a href="#pre-rendering" title="Pre-rendering">Pre-rendering<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Next.js'de iki tür ön işleme vardır: <strong>Statik Oluşturma</strong> ve <strong>Sunucu Taraf</strong>ı <strong>Oluşturma</strong>. Aradaki fark, bir sayfa için HTML'yi <strong>ne zaman</strong> ürettiğidir.</p>
+<ul>
+<li>Static Generation: The HTML is generated at <strong>build time</strong> and will be reused on each request.</li>
+<li>Server-side Rendering: The HTML is generated on <strong>each request</strong>.</li>
+</ul>
+<p translated="true">Daha da önemlisi, Next.js her sayfa için hangi ön oluşturma formunu kullanmak istediğinizi seçmenize izin verir. Çoğu sayfa için Statik Oluşturma ve diğerleri için Sunucu Tarafı Oluşturma kullanarak "hibrit" bir Next.js uygulaması oluşturabilirsiniz.</p>
+<p translated="true">Performans nedenleriyle Sunucu Tarafı Oluşturma yerine Statik Oluşturma kullanmanızı öneririz. Statik olarak oluşturulan sayfalar, performansı artırmak için ekstra yapılandırmaya gerek kalmadan CDN tarafından önbelleğe alınabilir. Ancak bazı durumlarda Sunucu Tarafı Oluşturma tek seçenek olabilir.</p>
+<p translated="true">İstemci taraflı veri getirmeyi Statik Oluşturma veya Sunucu Taraflı Oluşturma ile birlikte de kullanabilirsiniz. Bu, bir sayfanın bazı bölümlerinin tamamen istemci tarafı JavaScript tarafından oluşturulabileceği anlamına gelir. Daha fazla bilgi edinmek için <a href="/docs/pages/building-your-application/data-fetching/client-side" title="Data Fetching">Veri Get</a> irme belgelerine göz atın.</p></main>
+
+    @@include('../../../../../layouts/footer.html') @@include('../../../../../layouts/script.html')
+  </body>
+</html>

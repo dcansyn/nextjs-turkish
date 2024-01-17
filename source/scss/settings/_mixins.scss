@@ -1,0 +1,44 @@
+$screen-widths: (
+  'laptop': $width-xl,
+  'tablet': $width-lg,
+  'ipad': $width-md,
+  'phone': $width-sm,
+  'ip5': $width-xs,
+);
+
+@mixin screen-width($width, $type: max) {
+  @if map_has_key($screen-widths, $width) {
+    $width: map_get($screen-widths, $width);
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  } @else {
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin border-radius($size: 5px) {
+  border-radius: $size;
+}
+
+@mixin border-radius-top($size: 5px) {
+  border-top-left-radius: $size;
+  border-top-right-radius: $size;
+}
+
+@mixin border-radius-bottom($size: 5px) {
+  border-bottom-left-radius: $size;
+  border-bottom-right-radius: $size;
+}
+
+@mixin border-radius-right($size: 5px) {
+  border-top-right-radius: $size;
+  border-bottom-right-radius: $size;
+}
+
+@mixin border-radius-left($size: 5px) {
+  border-top-left-radius: $size;
+  border-bottom-left-radius: $size;
+}

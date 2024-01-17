@@ -1,0 +1,9 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .logo {
+    @include border-radius();
+    height: 100px;
+  }
+}

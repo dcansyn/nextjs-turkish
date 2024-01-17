@@ -1,0 +1,29 @@
+{
+    "version": "1.0.0",
+    "name": "frontend-boilerplate",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "start": "gulp d",
+        "build": "gulp p"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.7",
+        "browser-sync": "^2.27.9",
+        "del": "^6.0.0",
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-convert-encoding": "^2.1.0",
+        "gulp-csso": "^4.0.1",
+        "gulp-file-include": "^2.3.0",
+        "gulp-imagemin": "^8.0.0",
+        "gulp-postcss": "^9.0.1",
+        "gulp-sass": "^5.1.0",
+        "gulp-strip-comments": "^2.5.2",
+        "gulp-uglify": "^3.0.2",
+        "gulp-webp": "^4.0.1",
+        "gulp4-run-sequence": "^1.0.1",
+        "sass": "^1.51.0"
+    }
+}

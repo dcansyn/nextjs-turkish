@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('../../../../../../layouts/head.html')
+  </head>
+
+  <body>
+    @@include('../../../../../../layouts/header.html')
+
+    <main><h1 class="break-words" translate="no">Multi Zones</h1><details open=""><summary>Examples</summary><ul>
+<li><a href="https://github.com/vercel/next.js/tree/canary/examples/with-zones" rel="noopener noreferrer" target="_blank" title="With Zones">With Zones<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a></li>
+</ul></details>
+<p translated="true">Bölge, bir Next.js uygulamasının tek bir dağıtımıdır. Birden fazla bölgeye sahip olabilir ve bunları tek bir uygulama olarak birleştirebilirsiniz.</p>
+<p translated="true">Örneğin, aşağıdaki uygulamalara sahip olduğunuzu varsayalım:</p>
+<ul>
+<li>An app for serving <code translate="no">/blog/**</code></li>
+<li>Another app for serving all other pages</li>
+</ul>
+<p translated="true">Çoklu bölge desteğiyle, bu iki uygulamayı tek bir uygulamada birleştirerek müşterilerinizin tek bir URL kullanarak göz atmasını sağlayabilirsiniz, ancak her iki uygulamayı da bağımsız olarak geliştirebilir ve dağıtabilirsiniz.</p>
+<h2 id="how-to-define-a-zone" data-docs-heading="" translate="no"><a href="#how-to-define-a-zone" title="How to define a zone">How to define a zone<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true">Bölge ile ilgili API'ler yoktur. Yalnızca aşağıdakileri yapmanız gerekir:</p>
+<ul>
+<li>Make sure to keep only the pages you need in your app, meaning that an app can't have pages from another app, if app <code translate="no">A</code> has <code translate="no">/blog</code> then app <code translate="no">B</code> shouldn't have it too.</li>
+<li>Make sure to configure a <a href="/docs/app/api-reference/next-config-js/basePath" title="basePath">basePath</a> to avoid conflicts with pages and static files.</li>
+</ul>
+<h2 id="how-to-merge-zones" data-docs-heading="" translate="no"><a href="#how-to-merge-zones" title="How to merge zones">How to merge zones<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true">kullanarak bölgeleri birleştirebilirsiniz <a href="/docs/pages/api-reference/next-config-js/rewrites" title="rewrites"><code translate="no">rewrites</code></a> uygulamalardan birinde veya herhangi bir HTTP proxy'sinde.</p>
+<p translated="true"><a href="https://vercel.com?utm_source=next-site&amp;utm_medium=docs&amp;utm_campaign=next-website" rel="noopener noreferrer" target="_blank" title="Next.js on Vercel">Next.js on Vercel<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> uygulamaları için, her iki uygulamayı da tek bir <code translate="no">git push</code> ile dağıtmak için bir <a href="https://vercel.com/blog/monorepos-are-changing-how-teams-build-software?utm_source=next-site&amp;utm_medium=docs&amp;utm_campaign=next-website" rel="noopener noreferrer" target="_blank" title="monorepo">monorepo<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> kullanabilirsiniz.</p></main>
+
+    @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
+  </body>
+</html>

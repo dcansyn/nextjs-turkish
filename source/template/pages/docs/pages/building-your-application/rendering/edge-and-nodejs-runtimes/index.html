@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('../../../../../../layouts/head.html')
+  </head>
+
+  <body>
+    @@include('../../../../../../layouts/header.html')
+
+    <main><h1 class="break-words" translate="no">Edge and Node.js Runtimes</h1>
+<p translated="true">Next.js bağlamında çalışma zamanı, yürütme sırasında kodunuz tarafından kullanılabilen kütüphaneler, API'ler ve genel işlevsellik kümesini ifade eder.</p>
+<p translated="true">Sunucuda, uygulama kodunuzun parçalarının işlenebileceği iki çalışma zamanı vardır:</p>
+<ul>
+<li>The <strong>Node.js Runtime</strong> (default) has access to all Node.js APIs and compatible packages from the ecosystem.</li>
+<li>The <strong>Edge Runtime</strong> is based on <a href="/docs/app/api-reference/edge" title="Web APIs">Web APIs</a>.</li>
+</ul>
+<h2 id="runtime-differences" data-docs-heading="" translate="no"><a href="#runtime-differences" title="Runtime Differences">Runtime Differences<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true">Bir çalışma zamanı seçerken dikkat edilmesi gereken birçok husus vardır. Bu tablo bir bakışta önemli farklılıkları göstermektedir. Farklılıkların daha derinlemesine bir analizini istiyorsanız, aşağıdaki bölümlere göz atın.</p>
+<div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th></th><th>Node</th><th>Serverless</th><th>Edge</th></tr></thead><tbody><tr><td>Cold Boot</td><td>/</td><td>Normal</td><td>Low</td></tr><tr><td><a href="/docs/app/building-your-application/routing/loading-ui-and-streaming" title="HTTP Streaming">HTTP Streaming</a></td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>IO</td><td>All</td><td>All</td><td><code translate="no">fetch</code></td></tr><tr><td>Scalability</td><td>/</td><td>High</td><td>Highest</td></tr><tr><td>Security</td><td>Normal</td><td>High</td><td>High</td></tr><tr><td>Latency</td><td>Normal</td><td>Low</td><td>Lowest</td></tr><tr><td>npm Packages</td><td>All</td><td>All</td><td>A smaller subset</td></tr><tr><td><a href="/docs/app/building-your-application/rendering/server-components#static-rendering-default" title="Static Rendering">Static Rendering</a></td><td>Yes</td><td>Yes</td><td>No</td></tr><tr><td><a href="/docs/app/building-your-application/rendering/server-components#dynamic-rendering" title="Dynamic Rendering">Dynamic Rendering</a></td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td><a href="/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating#revalidating-data" title="Data Revalidation w/ fetch">Data Revalidation w/ <code translate="no">fetch</code></a></td><td>Yes</td><td>Yes</td><td>Yes</td></tr></tbody></table></div>
+<h3 id="edge-runtime" data-docs-heading="" translate="no"><a href="#edge-runtime" title="Edge Runtime">Edge Runtime<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Next.js'de hafif Edge Runtime, mevcut Node.js API'lerinin bir alt kümesidir.</p>
+<p translated="true">Küçük, basit işlevlerle düşük gecikme süresinde dinamik, kişiselleştirilmiş içerik sunmanız gerekiyorsa Edge Runtime idealdir. Edge Runtime'ın hızı minimum kaynak kullanımından gelir, ancak bu birçok senaryoda sınırlayıcı olabilir.</p>
+<p translated="true">Örneğin, <a href="https://vercel.com/docs/concepts/limits/overview#edge-middleware-and-edge-functions-size" rel="noopener noreferrer" target="_blank" title="on Vercel cannot exceed between 1 MB and 4 MB">Vercel</a>'de Edge Runtime'da yürütülen kod <a href="https://vercel.com/docs/concepts/limits/overview#edge-middleware-and-edge-functions-size" rel="noopener noreferrer" target="_blank" title="on Vercel cannot exceed between 1 MB and 4 MB">1 MB ile 4 MB arasını geçemez<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>, bu sınır içe aktarılan paketleri, yazı tiplerini ve dosyaları içerir ve dağıtım altyapınıza bağlı olarak değişir.</p>
+<h3 id="nodejs-runtime" data-docs-heading="" translate="no"><a href="#nodejs-runtime" title="Node.js Runtime">Node.js Runtime<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Node.js çalışma zamanını kullanmak, tüm Node.js API'lerine ve bunlara dayanan tüm npm paketlerine erişmenizi sağlar. Ancak, başlatılması Edge çalışma zamanını kullanan rotalar kadar hızlı değildir.</p>
+<p translated="true">Next.js uygulamanızı bir Node.js sunucusuna dağıtmak, altyapınızı yönetmeyi, ölçeklendirmeyi ve yapılandırmayı gerektirecektir. Alternatif olarak, Next.js uygulamanızı Vercel gibi sunucusuz bir platforma dağıtmayı düşünebilirsiniz; bu platform bunu sizin için halledecektir.</p>
+<h3 id="serverless-nodejs" data-docs-heading="" translate="no"><a href="#serverless-nodejs" title="Serverless Node.js">Serverless Node.js<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Edge Runtime'dan daha karmaşık hesaplama yüklerini kaldırabilecek ölçeklenebilir bir çözüme ihtiyacınız varsa Sunucusuz idealdir. Örneğin Vercel'de Sunucusuz İşlevler ile genel kod boyutunuz içe aktarılan paketler, yazı tipleri ve dosyalar dahil olmak üzere <a href="https://vercel.com/docs/concepts/limits/overview#serverless-function-size" rel="noopener noreferrer" target="_blank" title="50MB">50 MB<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> 'dir.</p>
+<p translated="true"><a href="https://vercel.com/docs/concepts/functions/edge-functions" rel="noopener noreferrer" target="_blank" title="Edge">Edge<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> kullanan rotalara kıyasla dezavantajı, Sunucusuz İşlevlerin istekleri işlemeye başlamadan önce önyükleme yapmasının yüzlerce milisaniye sürebilmesidir. Sitenizin aldığı trafik miktarına bağlı olarak, işlevler sık sık "sıcak" olmadığından bu sık karşılaşılan bir durum olabilir.</p>
+<!-- -->
+<blockquote class="p-3 text-sm">
+<p>Please refer to the <a href="https://nodejs.org/docs/latest/api/" rel="noopener noreferrer nofollow" target="_blank" title="Node.js Docs">Node.js Docs<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> and <a href="/docs/app/api-reference/edge" title="Edge Docs">Edge Docs</a> for the full list of available APIs. Both runtimes can also support <a href="/docs/app/building-your-application/routing/loading-ui-and-streaming" title="streaming">streaming</a> depending on your deployment infrastructure.</p>
+</blockquote></main>
+
+    @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
+  </body>
+</html>

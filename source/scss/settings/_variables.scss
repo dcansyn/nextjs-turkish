@@ -1,0 +1,36 @@
+// Colors
+$white: #ffffff;
+$white-flu: rgba(255, 255, 255, 0.5);
+$white-flu-xl: rgba(255, 255, 255, 0.2);
+$grey: #cccccc;
+$black: #1d2123;
+$black-flu: rgba(29, 33, 35, 0.5);
+$black-flu-xl: rgba(29, 33, 35, 0.2);
+$blue: #406aa5;
+$blue-flu: rgba(64, 106, 165, 0.5);
+$blue-flu-xl: rgba(64, 106, 165, 0.2);
+$orange: #fa8e00;
+$red: #c30f0f;
+$lime: #00ff00;
+$primary: $blue;
+$primary-flu: $blue-flu;
+$primary-flu-xl: $blue-flu-xl;
+
+// Width
+$width-xl: 1365px;
+$width-lg: 991px; // iPad Pro
+$width-md: 767px; // iPad
+$width-sm: 575px; // Phone
+$width-xs: 320px; // iPhone 5
+
+// Font
+$font-size-base: 14px;
+$line-height-base: 1.5;
+
+// Font Heading Sizes
+$h1-font-size: 47px;
+$h2-font-size: 37px;
+$h3-font-size: 29px;
+$h4-font-size: 23px;
+$h5-font-size: 18px;
+$h6-font-size: 16px;
