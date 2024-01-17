@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('../../../../../../layouts/head.html')
+  </head>
+
+  <body>
+    @@include('../../../../../../layouts/header.html')
+
+    <main>
+      <h1 class="break-words" translate="no">Version 14</h1>
+      <h2 id="upgrading-from-13-to-14" data-docs-heading="" translate="no">
+        <a href="#upgrading-from-13-to-14" title="Upgrading from 13 to 14"
+          >Upgrading from 13 to 14<span
+            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+              <g stroke-width="1.2" fill="none" stroke="currentColor">
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
+                ></path>
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
+                ></path>
+              </g></svg></span
+        ></a>
+      </h2>
+      <p translated="true">Next.js sürüm 14'e güncellemek için tercih ettiğiniz paket yöneticisini kullanarak aşağıdaki komutu çalıştırın:</p>
+      <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD code-block_hideLineNumbers__52YKH not-prose" translate="no">
+        <div class="code-block_header__t3NRd">
+          <div class="code-block_fileName__HmSv1">
+            <div aria-hidden="true" class="code-block_iconWrapper__TuHFk">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                style="color: currentColor; width: 16px; height: 16px"
+              >
+                <path d="M4 17l6-6-6-6"></path>
+                <path d="M12 19h8"></path>
+              </svg>
+            </div>
+            <span class="code-block_filenameP__02nok">Terminal</span>
+          </div>
+          <div class="code-block_actions__yphRf">
+            <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path
+                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
+                ></path></svg
+              ><svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <pre
+          class="code-block_pre___OLfy"
+        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">npm </span><span style="color:var(--shiki-token-string)">i</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">next@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react-dom@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">eslint-config-next@latest</span></span></code></pre>
+      </div>
+      <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD code-block_hideLineNumbers__52YKH not-prose" translate="no">
+        <div class="code-block_header__t3NRd">
+          <div class="code-block_fileName__HmSv1">
+            <div aria-hidden="true" class="code-block_iconWrapper__TuHFk">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                style="color: currentColor; width: 16px; height: 16px"
+              >
+                <path d="M4 17l6-6-6-6"></path>
+                <path d="M12 19h8"></path>
+              </svg>
+            </div>
+            <span class="code-block_filenameP__02nok">Terminal</span>
+          </div>
+          <div class="code-block_actions__yphRf">
+            <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path
+                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
+                ></path></svg
+              ><svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <pre
+          class="code-block_pre___OLfy"
+        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">yarn </span><span style="color:var(--shiki-token-string)">add</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">next@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react-dom@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">eslint-config-next@latest</span></span></code></pre>
+      </div>
+      <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD code-block_hideLineNumbers__52YKH not-prose" translate="no">
+        <div class="code-block_header__t3NRd">
+          <div class="code-block_fileName__HmSv1">
+            <div aria-hidden="true" class="code-block_iconWrapper__TuHFk">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                style="color: currentColor; width: 16px; height: 16px"
+              >
+                <path d="M4 17l6-6-6-6"></path>
+                <path d="M12 19h8"></path>
+              </svg>
+            </div>
+            <span class="code-block_filenameP__02nok">Terminal</span>
+          </div>
+          <div class="code-block_actions__yphRf">
+            <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path
+                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
+                ></path></svg
+              ><svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <pre
+          class="code-block_pre___OLfy"
+        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">pnpm </span><span style="color:var(--shiki-token-string)">up</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">next</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react-dom</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">eslint-config-next</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">--latest</span></span></code></pre>
+      </div>
+      <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD code-block_hideLineNumbers__52YKH not-prose" translate="no">
+        <div class="code-block_header__t3NRd">
+          <div class="code-block_fileName__HmSv1">
+            <div aria-hidden="true" class="code-block_iconWrapper__TuHFk">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                style="color: currentColor; width: 16px; height: 16px"
+              >
+                <path d="M4 17l6-6-6-6"></path>
+                <path d="M12 19h8"></path>
+              </svg>
+            </div>
+            <span class="code-block_filenameP__02nok">Terminal</span>
+          </div>
+          <div class="code-block_actions__yphRf">
+            <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
+              <svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path
+                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
+                ></path></svg
+              ><svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                aria-hidden="true"
+                style="color: currentColor; width: 20px; height: 20px"
+              >
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <pre
+          class="code-block_pre___OLfy"
+        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">bun </span><span style="color:var(--shiki-token-string)">add</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">next@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react-dom@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">eslint-config-next@latest</span></span></code></pre>
+      </div>
+      <blockquote class="p-3 text-sm">
+        <p>
+          <strong>Bilmekte fayda var:</strong> If you are using TypeScript, ensure you also upgrade <code translate="no">@types/react</code> and
+          <code translate="no">@types/react-dom</code> to their latest versions.
+        </p>
+      </blockquote>
+      <h3 id="v14-summary" data-docs-heading="" translate="no">
+        <a href="#v14-summary" title="v14 Summary"
+          >v14 Summary<span
+            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+              <g stroke-width="1.2" fill="none" stroke="currentColor">
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
+                ></path>
+                <path
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-miterlimit="10"
+                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
+                ></path>
+              </g></svg></span
+        ></a>
+      </h3>
+      <ul>
+        <li>The minimum Node.js version has been bumped from 16.14 to 18.17, since 16.x has reached end-of-life.</li>
+        <li>
+          The <code translate="no">next export</code> command has been removed in favor of <code translate="no">output: 'export'</code> config. Please
+          see the
+          <a
+            href="https://nextjs.org/docs/app/building-your-application/deploying/static-exports"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="docs"
+            >docs<span class="inline-flex"
+              ><svg
+                class="with-icon_icon__MHUeb"
+                data-testid="geist-icon"
+                fill="none"
+                height="24"
+                shape-rendering="geometricPrecision"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                viewbox="0 0 24 24"
+                width="24"
+                style="color: currentColor; width: 14px; height: 14px"
+              >
+                <path d="M7 17L17 7"></path>
+                <path d="M7 7h10v10"></path></svg></span
+          ></a>
+          for more information.
+        </li>
+        <li>
+          The <code translate="no">next/server</code> import for <code translate="no">ImageResponse</code> was renamed to
+          <code translate="no">next/og</code>. A
+          <a href="/docs/app/building-your-application/upgrading/codemods#next-og-import" title="codemod is available">codemod is available</a> to
+          safely and automatically rename your imports.
+        </li>
+        <li>
+          The <code translate="no">@next/font</code> package has been fully removed in favor of the built-in <code translate="no">next/font</code>. A
+          <a href="/docs/app/building-your-application/upgrading/codemods#built-in-next-font" title="codemod is available">codemod is available</a> to
+          safely and automatically rename your imports.
+        </li>
+        <li>The WASM target for <code translate="no">next-swc</code> has been removed.</li>
+      </ul>
+    </main>
+
+    @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
+  </body>
+</html>

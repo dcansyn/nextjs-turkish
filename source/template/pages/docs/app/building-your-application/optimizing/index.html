@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('../../../../../layouts/head.html')
+  </head>
+
+  <body>
+    @@include('../../../../../layouts/header.html')
+
+    <main><h1 class="break-words" translate="no">Optimizations</h1>
+<p translated="true">Next.js, uygulamanızın hızını ve <a href="https://web.dev/vitals/" rel="noopener noreferrer nofollow" target="_blank" title="Core Web Vitals">Core Web Vitals<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> iyileştirmek için tasarlanmış çeşitli yerleşik optimizasyonlarla birlikte gelir. Bu kılavuz, kullanıcı deneyiminizi geliştirmek için yararlanabileceğiniz optimizasyonları kapsayacaktır.</p>
+<h2 id="built-in-components" data-docs-heading="" translate="no"><a href="#built-in-components" title="Built-in Components">Built-in Components<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true">Yerleşik bileşenler, yaygın UI optimizasyonlarını uygulamanın karmaşıklığını ortadan kaldırır. Bu bileşenler şunlardır:</p>
+<ul>
+<li><strong>Images</strong>: Built on the native <code translate="no">&lt;img&gt;</code> element. The Image Component optimizes images for performance by lazy loading and automatically resizing images based on device size.</li>
+<li><strong>Link</strong>: Built on the native <code translate="no">&lt;a&gt;</code> tags. The Link Component prefetches pages in the background, for faster and smoother page transitions.</li>
+<li><strong>Scripts</strong>: Built on the native <code translate="no">&lt;script&gt;</code> tags. The Script Component gives you control over loading and execution of third-party scripts.</li>
+</ul>
+<h2 id="metadata" data-docs-heading="" translate="no"><a href="#metadata" title="Metadata">Metadata<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true">Meta veriler, arama motorlarının içeriğinizi daha iyi anlamasına yardımcı olur (bu da daha iyi SEO ile sonuçlanabilir) ve içeriğinizin sosyal medyada nasıl sunulduğunu özelleştirmenize olanak tanıyarak çeşitli platformlarda daha ilgi çekici ve tutarlı bir kullanıcı deneyimi oluşturmanıza yardımcı olur.</p>
+<p translated="true">Next.js'deki Metadata API, bir sayfanın <code translate="no">&lt;head&gt;</code> öğesini değiştirmenize olanak tanır. Meta verileri iki şekilde yapılandırabilirsiniz:</p><ul>
+<li><strong>Config-based Metadata</strong>: Export a <a href="/docs/app/api-reference/functions/generate-metadata#metadata-object" title="static metadata object">static <code translate="no">metadata</code> object</a> or a dynamic <a href="/docs/app/api-reference/functions/generate-metadata#generatemetadata-function" title="generateMetadata function"><code translate="no">generateMetadata</code> function</a> in a <code translate="no">layout.js</code> or <code translate="no">page.js</code> file.</li>
+<li><strong>File-based Metadata</strong>: Add static or dynamically generated special files to route segments.</li>
+</ul><p translated="true">Ayrıca, <a href="/docs/app/api-reference/functions/image-response" title="imageResponse">imageResponse</a> yapıcısı ile JSX ve CSS kullanarak dinamik Open Graph Görselleri oluşturabilirsiniz.</p>
+<!-- -->
+<h2 id="static-assets" data-docs-heading="" translate="no"><a href="#static-assets" title="Static Assets">Static Assets<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true">Next.js <code translate="no">/public</code> klasörü görüntüler, yazı tipleri ve diğer dosyalar gibi statik varlıkları sunmak için kullanılabilir. <code translate="no">/public</code> içindeki dosyalar da CDN sağlayıcıları tarafından önbelleğe alınabilir, böylece verimli bir şekilde teslim edilirler.</p>
+<h2 id="analytics-and-monitoring" data-docs-heading="" translate="no"><a href="#analytics-and-monitoring" title="Analytics and Monitoring">Analytics and Monitoring<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true">Büyük uygulamalar için Next.js, uygulamanızın nasıl performans gösterdiğini anlamanıza yardımcı olmak için popüler analiz ve izleme araçlarıyla entegre olur. Daha fazla bilgi için <!-- --> <a href="/docs/pages/building-your-application/optimizing/open-telemetry" title="OpenTelemetry">OpenTelemetry</a> ve <a href="/docs/pages/building-your-application/optimizing/instrumentation" title="Instrumentation">Instrumentation</a> kılavuzlarını inceleyin.</p></main>
+
+    @@include('../../../../../layouts/footer.html') @@include('../../../../../layouts/script.html')
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('../../../../../../layouts/head.html')
+  </head>
+
+  <body>
+    @@include('../../../../../../layouts/header.html')
+
+    <main><h1 class="break-words" translate="no">Route Groups</h1><p translated="true"><code translate="no">app</code> dizininde, iç içe geçmiş klasörler normalde URL yollarıyla eşleştirilir. Ancak, klasörün rotanın URL yoluna dahil edilmesini önlemek için bir klasörü <strong>Rota Grubu</strong> olarak işaretleyebilirsiniz.</p>
+<p translated="true">Bu, URL yolu yapısını etkilemeden rota segmentlerinizi ve proje dosyalarınızı mantıksal gruplar halinde düzenlemenizi sağlar.</p>
+<p translated="true">Rota grupları şunlar için kullanışlıdır:</p>
+<ul>
+<li><a href="#organize-routes-without-affecting-the-url-path" title="Organizing routes into groups">Organizing routes into groups</a> e.g. by site section, intent, or team.</li>
+<li>Enabling <a href="/docs/app/building-your-application/routing/pages-and-layouts" title="nested layouts">nested layouts</a> in the same route segment level:<!-- -->
+<ul>
+<li><a href="#creating-multiple-root-layouts" title="Creating multiple nested layouts in the same segment, including multiple root layouts">Creating multiple nested layouts in the same segment, including multiple root layouts</a></li>
+<li><a href="#opting-specific-segments-into-a-layout" title="Adding a layout to a subset of routes in a common segment">Adding a layout to a subset of routes in a common segment</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="convention" data-docs-heading="" translate="no"><a href="#convention" title="Convention">Convention<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true">Bir klasörün adı parantez içine alınarak bir rota grubu oluşturulabilir: <code translate="no">(folderName)</code></p>
+<h2 id="examples" data-docs-heading="" translate="no"><a href="#examples" title="Examples">Examples<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<h3 id="organize-routes-without-affecting-the-url-path" data-docs-heading="" translate="no"><a href="#organize-routes-without-affecting-the-url-path" title="Organize routes without affecting the URL path">Organize routes without affecting the URL path<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">URL'yi etkilemeden rotaları düzenlemek için, ilgili rotaları bir arada tutmak üzere bir grup oluşturun. Parantez içindeki klasörler URL'den çıkarılacaktır (örn. <code translate="no">(marketing)</code> veya <code translate="no">(shop)</code>).</p>
+<figure><img alt="Organizing Routes with Route Groups" loading="lazy" width="1600" height="930" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/route-group-organisation.png"><img alt="Organizing Routes with Route Groups" loading="lazy" width="1600" height="930" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/route-group-organisation.png"></figure>
+<p translated="true"><code translate="no">(marketing)</code> ve <code translate="no">(shop)</code> içindeki rotalar aynı URL hiyerarşisini paylaşsa da, klasörlerinin içine bir <code translate="no">layout.js</code> dosyası ekleyerek her grup için farklı bir düzen oluşturabilirsiniz.</p>
+<figure><img alt="Route Groups with Multiple Layouts" loading="lazy" width="1600" height="768" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/route-group-multiple-layouts.png"><img alt="Route Groups with Multiple Layouts" loading="lazy" width="1600" height="768" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/route-group-multiple-layouts.png"></figure>
+<h3 id="opting-specific-segments-into-a-layout" data-docs-heading="" translate="no"><a href="#opting-specific-segments-into-a-layout" title="Opting specific segments into a layout">Opting specific segments into a layout<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Belirli rotaları bir düzene dahil etmek için yeni bir rota grubu oluşturun (örn. <code translate="no">(shop)</code>) ve aynı düzeni paylaşan rotaları gruba taşıyın (örn. <code translate="no">account</code> ve <code translate="no">cart</code>). Grubun dışındaki rotalar düzeni paylaşmayacaktır (örn. <code translate="no">checkout</code>).</p>
+<figure><img alt="Route Groups with Opt-in Layouts" loading="lazy" width="1600" height="930" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/route-group-opt-in-layouts.png"><img alt="Route Groups with Opt-in Layouts" loading="lazy" width="1600" height="930" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/route-group-opt-in-layouts.png"></figure>
+<h3 id="creating-multiple-root-layouts" data-docs-heading="" translate="no"><a href="#creating-multiple-root-layouts" title="Creating multiple root layouts">Creating multiple root layouts<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Birden fazla <a href="/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required" title="root layouts">kök düzen</a> oluşturmak için, üst düzey <code translate="no">layout.js</code> dosyasını kaldırın ve her rota grubunun içine bir <code translate="no">layout.js</code> dosyası ekleyin. Bu, bir uygulamayı tamamen farklı bir kullanıcı arayüzüne veya deneyime sahip bölümlere ayırmak için kullanışlıdır. <code translate="no">&lt;html&gt;</code> ve <code translate="no">&lt;body&gt;</code> etiketlerinin her bir kök düzene eklenmesi gerekir.</p>
+<figure><img alt="Route Groups with Multiple Root Layouts" loading="lazy" width="1600" height="687" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/route-group-multiple-root-layouts.png"><img alt="Route Groups with Multiple Root Layouts" loading="lazy" width="1600" height="687" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/route-group-multiple-root-layouts.png"></figure>
+<p translated="true">Yukarıdaki örnekte, hem <code translate="no">(marketing)</code> hem de <code translate="no">(shop)</code> kendi kök düzenine sahiptir.</p>
+<hr>
+<blockquote class="p-3 text-sm">
+<p><strong>Good to know</strong>:</p>
+<ul>
+<li>The naming of route groups has no special significance other than for organization. They do not affect the URL path.</li>
+<li>Routes that include a route group <strong>should not</strong> resolve to the same URL path as other routes. For example, since route groups don't affect URL structure, <code translate="no">(marketing)/about/page.js</code> and <code translate="no">(shop)/about/page.js</code> would both resolve to <code translate="no">/about</code> and cause an error.</li>
+<li>If you use multiple root layouts without a top-level <code translate="no">layout.js</code> file, your home <code translate="no">page.js</code> file should be defined in one of the route groups, For example: <code translate="no">app/(marketing)/page.js</code>.</li>
+<li>Navigating <strong>across multiple root layouts</strong> will cause a <strong>full page load</strong> (as opposed to a client-side navigation). For example, navigating from <code translate="no">/cart</code> that uses <code translate="no">app/(shop)/layout.js</code> to <code translate="no">/blog</code> that uses <code translate="no">app/(marketing)/layout.js</code> will cause a full page load. This <strong>only</strong> applies to multiple root layouts.</li>
+</ul>
+</blockquote></main>
+
+    @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
+  </body>
+</html>

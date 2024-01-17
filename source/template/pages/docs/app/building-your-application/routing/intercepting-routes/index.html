@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('../../../../../../layouts/head.html')
+  </head>
+
+  <body>
+    @@include('../../../../../../layouts/header.html')
+
+    <main><h1 class="break-words" translate="no">Intercepting Routes</h1><p translated="true">Rotaları durdurma, geçerli düzen içinde uygulamanızın başka bir bölümünden bir rota yüklemenize olanak tanır. Bu yönlendirme paradigması, kullanıcı farklı bir bağlama geçmeden bir rotanın içeriğini görüntülemek istediğinizde faydalı olabilir.</p>
+<p translated="true">Örneğin, bir beslemedeki bir fotoğrafa tıklandığında, fotoğrafı beslemenin üzerine bindirerek bir modalde görüntüleyebilirsiniz. Bu durumda Next.js, <code translate="no">/photo/123</code> yolunu keser, URL'yi maskeler ve <code translate="no">/feed</code> üzerine yerleştirir.</p>
+<figure><img alt="Intercepting routes soft navigation" loading="lazy" width="1600" height="617" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/intercepting-routes-soft-navigate.png"><img alt="Intercepting routes soft navigation" loading="lazy" width="1600" height="617" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/intercepting-routes-soft-navigate.png"></figure>
+<p translated="true">Ancak, paylaşılabilir bir URL'ye tıklayarak veya sayfayı yenileyerek fotoğrafa gidildiğinde, modal yerine fotoğraf sayfasının tamamı oluşturulmalıdır. Herhangi bir rota müdahalesi gerçekleşmemelidir.</p>
+<figure><img alt="Intercepting routes hard navigation" loading="lazy" width="1600" height="604" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/intercepting-routes-hard-navigate.png"><img alt="Intercepting routes hard navigation" loading="lazy" width="1600" height="604" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/intercepting-routes-hard-navigate.png"></figure>
+<h2 id="convention" data-docs-heading="" translate="no"><a href="#convention" title="Convention">Convention<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true">Kesişen rotalar, <code translate="no">../</code> göreli yol kuralına benzeyen ancak segmentler için olan <code translate="no">(..)</code> kuralı ile tanımlanabilir.</p>
+<p translated="true">Kullanabilirsin:</p>
+<ul>
+<li><code translate="no">(.)</code> to match segments on the <strong>same level</strong></li>
+<li><code translate="no">(..)</code> to match segments <strong>one level above</strong></li>
+<li><code translate="no">(..)(..)</code> to match segments <strong>two levels above</strong></li>
+<li><code translate="no">(...)</code> to match segments from the <strong>root</strong> <code translate="no">app</code> directory</li>
+</ul>
+<p translated="true">Örneğin, bir <code translate="no">(..)photo</code> dizini oluşturarak <code translate="no">photo</code> segmentini <code translate="no">feed</code> segmenti içinden kesebilirsiniz.</p>
+<figure><img alt="Intercepting routes folder structure" loading="lazy" width="1600" height="604" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/intercepted-routes-files.png"><img alt="Intercepting routes folder structure" loading="lazy" width="1600" height="604" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/intercepted-routes-files.png"></figure>
+<blockquote class="p-3 text-sm">
+<p>Note that the <code translate="no">(..)</code> convention is based on <em>route segments</em>, not the file-system.</p>
+</blockquote>
+<h2 id="examples" data-docs-heading="" translate="no"><a href="#examples" title="Examples">Examples<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<h3 id="modals" data-docs-heading="" translate="no"><a href="#modals" title="Modals">Modals<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Yakalama Rotaları, modaller oluşturmak için <a href="/docs/app/building-your-application/routing/parallel-routes" title="Parallel Routes">Paralel Rot</a> alar ile birlikte kullanılabilir.</p>
+<p translated="true">Bu kalıbı kullanarak modaller oluşturmak, modallerle çalışırken karşılaşılan bazı zorlukların üstesinden gelmenizi sağlar:</p>
+<ul>
+<li>Make the modal content <strong>shareable through a URL</strong></li>
+<li><strong>Preserve context</strong> when the page is refreshed, instead of closing the modal</li>
+<li><strong>Close the modal on backwards navigation</strong> rather than going to the previous route</li>
+<li><strong>Reopen the modal on forwards navigation</strong></li>
+</ul>
+<figure><img alt="Intercepting routes modal example" loading="lazy" width="1600" height="976" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/intercepted-routes-modal-example.png"><img alt="Intercepting routes modal example" loading="lazy" width="1600" height="976" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/intercepted-routes-modal-example.png"></figure>
+<blockquote class="p-3 text-sm">
+<p>In the above example, the path to the <code translate="no">photo</code> segment can use the <code translate="no">(..)</code> matcher since <code translate="no">@modal</code> is a <em>slot</em> and not a <em>segment</em>. This means that the <code translate="no">photo</code> route is only one <em>segment</em> level higher, despite being two <em>file-system</em> levels higher.</p>
+</blockquote>
+<p translated="true">Diğer örnekler arasında, özel bir <code translate="no">/login</code> sayfasına sahipken üst navbarda bir oturum açma modalı açmak veya bir yan modalda bir alışveriş sepeti açmak sayılabilir.</p>
+<p translated="true">Intercepted ve Parallel Routes ile modallerin <a href="https://github.com/vercel-labs/nextgram" rel="noopener noreferrer" target="_blank" title="View an example">örnek bir<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> adresini görüntüleyin.</p></main>
+
+    @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
+  </body>
+</html>

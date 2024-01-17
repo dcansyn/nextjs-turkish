@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include('../../../../../../layouts/head.html')
+  </head>
+
+  <body>
+    @@include('../../../../../../layouts/header.html')
+
+    <main><h1 class="break-words" translate="no">Project Organization and File Colocation</h1><p translated="true"><a href="/docs/getting-started/project-structure#app-routing-conventions" title="routing folder and file conventions">Yönlendirme klasörü ve dosya kuralları</a> dışında Next.js, proje dosyalarınızı nasıl düzenlediğiniz ve konumlandırdığınız konusunda <strong>görüş</strong> bildirmez.</p>
+<p translated="true">Bu sayfa, projenizi düzenlemek için kullanabileceğiniz varsayılan davranış ve özellikleri paylaşır.</p>
+<ul>
+<li><a href="#safe-colocation-by-default" title="Safe colocation by default">Safe colocation by default</a></li>
+<li><a href="#project-organization-features" title="Project organization features">Project organization features</a></li>
+<li><a href="#project-organization-strategies" title="Project organization strategies">Project organization strategies</a></li>
+</ul>
+<h2 id="safe-colocation-by-default" data-docs-heading="" translate="no"><a href="#safe-colocation-by-default" title="Safe colocation by default">Safe colocation by default<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true"><code translate="no">app</code> dizininde, <a href="/docs/app/building-your-application/routing#route-segments" title="nested folder hierarchy">iç içe geçmiş klasör hiyerarşisi</a> rota yapısını tanımlar.</p>
+<p translated="true">Her klasör, URL yolunda karşılık gelen bir segmentle eşlenen bir rota segmentini temsil eder.</p>
+<p translated="true">Ancak, rota yapısı klasörler aracılığıyla tanımlansa da, bir rota segmentine <code translate="no">page.js</code> veya <code translate="no">route.js</code> dosyası eklenene kadar bir rotaya <strong>genel olarak erişilemez</strong>.</p>
+<figure><img alt="A diagram showing how a route is not publicly accessible until a page.js or route.js file is added to a route segment." loading="lazy" width="1600" height="444" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/project-organization-not-routable.png"><img alt="A diagram showing how a route is not publicly accessible until a page.js or route.js file is added to a route segment." loading="lazy" width="1600" height="444" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/project-organization-not-routable.png"></figure>
+<p translated="true">Ve bir rota herkese açık hale getirildiğinde bile, istemciye yalnızca <code translate="no">page.js</code> veya <code translate="no">route.js</code> tarafından <strong>döndürülen içerik</strong> gönderilir.</p>
+<figure><img alt="A diagram showing how page.js and route.js files make routes publicly accessible." loading="lazy" width="1600" height="687" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/project-organization-routable.png"><img alt="A diagram showing how page.js and route.js files make routes publicly accessible." loading="lazy" width="1600" height="687" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/project-organization-routable.png"></figure>
+<p translated="true">Bu, <strong>proje dosyalarının</strong> yanlışlıkla yönlendirilebilir olmadan <code translate="no">app</code> dizinindeki rota segmentlerinin içine <strong>güvenli bir şekilde yerleştirilebileceği</strong> anlamına gelir.</p>
+<figure><img alt="A diagram showing colocated project files are not routable even when a segment contains a page.js or route.js file." loading="lazy" width="1600" height="1011" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/project-organization-colocation.png"><img alt="A diagram showing colocated project files are not routable even when a segment contains a page.js or route.js file." loading="lazy" width="1600" height="1011" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/project-organization-colocation.png"></figure>
+<blockquote class="p-3 text-sm">
+<p><strong>Good to know</strong>:</p>
+<ul>
+<li>This is different from the <code translate="no">pages</code> directory, where any file in <code translate="no">pages</code> is considered a route.</li>
+<li>While you <strong>can</strong> colocate your project files in <code translate="no">app</code> you don't <strong>have</strong> to. If you prefer, you can <a href="#store-project-files-outside-of-app" title="keep them outside the app directory">keep them outside the <code translate="no">app</code> directory</a>.</li>
+</ul>
+</blockquote>
+<h2 id="project-organization-features" data-docs-heading="" translate="no"><a href="#project-organization-features" title="Project organization features">Project organization features<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true">Next.js, projenizi düzenlemenize yardımcı olacak çeşitli özellikler sunar.</p>
+<h3 id="private-folders" data-docs-heading="" translate="no"><a href="#private-folders" title="Private Folders">Private Folders<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Özel klasörler, bir klasörün önüne alt çizgi getirilerek oluşturulabilir: <code translate="no">_folderName</code></p>
+<p translated="true">Bu, klasörün özel bir uygulama ayrıntısı olduğunu ve yönlendirme sistemi tarafından dikkate alınmaması gerektiğini gösterir, böylece klasör <strong>ve tüm alt klas</strong> örleri yönlendirme dışında bırakılır.</p>
+<figure><img alt="An example folder structure using private folders" loading="lazy" width="1600" height="849" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/project-organization-private-folders.png"><img alt="An example folder structure using private folders" loading="lazy" width="1600" height="849" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/project-organization-private-folders.png"></figure>
+<p translated="true"><code translate="no">app</code> dizinindeki dosyalar <a href="#safe-colocation-by-default" title="safely colocated by default">varsayılan olarak güvenli</a> bir şekilde ortak yerleştirilebildiğinden, özel klasörler ortak yerleştirme için gerekli değildir. Ancak, şunlar için yararlı olabilirler:</p>
+<ul>
+<li>Separating UI logic from routing logic.</li>
+<li>Consistently organizing internal files across a project and the Next.js ecosystem.</li>
+<li>Sorting and grouping files in code editors.</li>
+<li>Avoiding potential naming conflicts with future Next.js file conventions.</li>
+</ul>
+<blockquote class="p-3 text-sm">
+<p><strong>Good to know</strong></p>
+<ul>
+<li>While not a framework convention, you might also consider marking files outside private folders as "private" using the same underscore pattern.</li>
+<li>You can create URL segments that start with an underscore by prefixing the folder name with <code translate="no">%5F</code> (the URL-encoded form of an underscore): <code translate="no">%5FfolderName</code>.</li>
+<li>If you don't use private folders, it would be helpful to know Next.js <a href="/docs/getting-started/project-structure#routing-files" title="special file conventions">special file conventions</a> to prevent unexpected naming conflicts.</li>
+</ul>
+</blockquote>
+<h3 id="route-groups" data-docs-heading="" translate="no"><a href="#route-groups" title="Route Groups">Route Groups<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Rota grupları, bir klasör parantez içine alınarak oluşturulabilir: <code translate="no">(folderName)</code></p>
+<p translated="true">Bu, klasörün organizasyonel amaçlar için olduğunu ve rotanın URL yoluna <strong>dahil edilm</strong> emesi gerektiğini gösterir.</p>
+<figure><img alt="An example folder structure using route groups" loading="lazy" width="1600" height="849" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/project-organization-route-groups.png"><img alt="An example folder structure using route groups" loading="lazy" width="1600" height="849" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/project-organization-route-groups.png"></figure>
+<p translated="true">Rota grupları şunlar için kullanışlıdır:</p>
+<ul>
+<li><a href="/docs/app/building-your-application/routing/route-groups#organize-routes-without-affecting-the-url-path" title="Organizing routes into groups">Organizing routes into groups</a> e.g. by site section, intent, or team.</li>
+<li>Enabling nested layouts in the same route segment level:<!-- -->
+<ul>
+<li><a href="/docs/app/building-your-application/routing/route-groups#creating-multiple-root-layouts" title="Creating multiple nested layouts in the same segment, including multiple root layouts">Creating multiple nested layouts in the same segment, including multiple root layouts</a></li>
+<li><a href="/docs/app/building-your-application/routing/route-groups#opting-specific-segments-into-a-layout" title="Adding a layout to a subset of routes in a common segment">Adding a layout to a subset of routes in a common segment</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="src-directory" data-docs-heading="" translate="no"><a href="#src-directory" title="src Directory"><code translate="no">src</code> Directory<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Next.js, uygulama kodunun ( <code translate="no">app</code> dahil) isteğe bağlı bir <a href="/docs/app/building-your-application/configuring/src-directory" title="src directory"><code translate="no">src</code> dizini</a> içinde depolanmasını destekler. Bu, uygulama kodunu çoğunlukla bir projenin kök dizininde bulunan proje yapılandırma dosyalarından ayırır.</p>
+<figure><img alt="An example folder structure with the `src` directory" loading="lazy" width="1600" height="687" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/project-organization-src-directory.png"><img alt="An example folder structure with the `src` directory" loading="lazy" width="1600" height="687" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/project-organization-src-directory.png"></figure>
+<h3 id="module-path-aliases" data-docs-heading="" translate="no"><a href="#module-path-aliases" title="Module Path Aliases">Module Path Aliases<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Next.js, derinlemesine iç içe geçmiş proje dosyalarında içe aktarmaları okumayı ve sürdürmeyi kolaylaştıran <a href="/docs/app/building-your-application/configuring/absolute-imports-and-module-aliases" title="Module Path Aliases">Modül Yolu Tak</a> ma Adlarını destekler.</p>
+<div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no"><div class="code-block_header__t3NRd"><div class="code-block_fileName__HmSv1"><div aria-hidden="true" class="code-block_iconWrapper__TuHFk"><svg height="17" style="margin-left:-1.5px" viewbox="0 0 50 50" width="17" xmlns="http://www.w3.org/2000/svg"><path d="M 43.335938 4 L 6.667969 4 C 5.195313 4 4 5.195313 4 6.667969 L 4 43.332031 C 4 44.804688 5.195313 46 6.667969 46 L 43.332031 46 C 44.804688 46 46 44.804688 46 43.335938 L 46 6.667969 C 46 5.195313 44.804688 4 43.335938 4 Z M 27 36.183594 C 27 40.179688 24.65625 42 21.234375 42 C 18.140625 42 15.910156 39.925781 15 38 L 18.144531 36.097656 C 18.75 37.171875 19.671875 38 21 38 C 22.269531 38 23 37.503906 23 35.574219 L 23 23 L 27 23 Z M 35.675781 42 C 32.132813 42 30.121094 40.214844 29 38 L 32 36 C 32.816406 37.335938 33.707031 38.613281 35.589844 38.613281 C 37.171875 38.613281 38 37.824219 38 36.730469 C 38 35.425781 37.140625 34.960938 35.402344 34.199219 L 34.449219 33.789063 C 31.695313 32.617188 29.863281 31.148438 29.863281 28.039063 C 29.863281 25.179688 32.046875 23 35.453125 23 C 37.878906 23 39.621094 23.84375 40.878906 26.054688 L 37.910156 27.964844 C 37.253906 26.789063 36.550781 26.328125 35.453125 26.328125 C 34.335938 26.328125 33.628906 27.039063 33.628906 27.964844 C 33.628906 29.109375 34.335938 29.570313 35.972656 30.28125 L 36.925781 30.691406 C 40.171875 32.078125 42 33.496094 42 36.683594 C 42 40.117188 39.300781 42 35.675781 42 Z" fill="currentColor"></path></svg></div><span class="code-block_filenameP__02nok">app/dashboard/settings/analytics/page.js</span></div><div class="code-block_actions__yphRf"><button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M20 6L9 17l-5-5"></path></svg></button></div></div><pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-comment)">// before</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> { Button } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'../../../components/button'</span></span>
+<span class="line"> </span>
+<span class="line"><span style="color:var(--shiki-token-comment)">// after</span></span>
+<span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> { Button } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'@/components/button'</span></span></code></pre></div>
+<h2 id="project-organization-strategies" data-docs-heading="" translate="no"><a href="#project-organization-strategies" title="Project organization strategies">Project organization strategies<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true">Bir Next.js projesinde kendi dosyalarınızı ve klasörlerinizi düzenlemek söz konusu olduğunda "doğru" veya "yanlış" bir yol yoktur.</p>
+<p translated="true">Aşağıdaki bölüm, yaygın stratejilerin çok üst düzey bir özetini listelemektedir. En basit çıkarım, sizin ve ekibiniz için işe yarayan bir strateji seçmek ve proje genelinde tutarlı olmaktır.</p>
+<blockquote class="p-3 text-sm">
+<p><strong>Good to know</strong>: In our examples below, we're using <code translate="no">components</code> and <code translate="no">lib</code> folders as generalized placeholders, their naming has no special framework significance and your projects might use other folders like <code translate="no">ui</code>, <code translate="no">utils</code>, <code translate="no">hooks</code>, <code translate="no">styles</code>, etc.</p>
+</blockquote>
+<h3 id="store-project-files-outside-of-app" data-docs-heading="" translate="no"><a href="#store-project-files-outside-of-app" title="Store project files outside of app">Store project files outside of <code translate="no">app</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Bu strateji, tüm uygulama kodunu <strong>projenizin kök</strong> dizinindeki paylaşılan klasörlerde saklar ve <code translate="no">app</code> dizinini yalnızca yönlendirme amacıyla tutar.</p>
+<figure><img alt="An example folder structure with project files outside of app" loading="lazy" width="1600" height="849" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/project-organization-project-root.png"><img alt="An example folder structure with project files outside of app" loading="lazy" width="1600" height="849" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/project-organization-project-root.png"></figure>
+<h3 id="store-project-files-in-top-level-folders-inside-of-app" data-docs-heading="" translate="no"><a href="#store-project-files-in-top-level-folders-inside-of-app" title="Store project files in top-level folders inside of app">Store project files in top-level folders inside of <code translate="no">app</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Bu strateji, tüm uygulama kodunu <strong> <code translate="no">app</code> dizininin kök dizinindeki</strong> paylaşılan klasörlerde saklar.</p>
+<figure><img alt="An example folder structure with project files inside app" loading="lazy" width="1600" height="849" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/project-organization-app-root.png"><img alt="An example folder structure with project files inside app" loading="lazy" width="1600" height="849" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/project-organization-app-root.png"></figure>
+<h3 id="split-project-files-by-feature-or-route" data-docs-heading="" translate="no"><a href="#split-project-files-by-feature-or-route" title="Split project files by feature or route">Split project files by feature or route<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h3>
+<p translated="true">Bu strateji, global olarak paylaşılan uygulama kodunu kök <code translate="no">app</code> dizininde depolar ve daha spesifik uygulama kodunu bunları kullanan rota segmentlerine <strong>böler</strong>.</p>
+<figure><img alt="An example folder structure with project files split by feature or route" loading="lazy" width="1600" height="1011" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/project-organization-app-root-split.png"><img alt="An example folder structure with project files split by feature or route" loading="lazy" width="1600" height="1011" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/project-organization-app-root-split.png"></figure></main>
+
+    @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
+  </body>
+</html>
