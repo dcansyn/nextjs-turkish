@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Linking and Navigating</h1><p translated="true">Next.js'de rotalar arasında gezinmenin üç yolu vardır:</p>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Linking and Navigating</h1><p translated="true">Next.js'de rotalar arasında gezinmenin üç yolu vardır:</p>
 <ul>
 <li>Using the <a href="#link-component" title="&lt;Link&gt; Component"><code translate="no">&lt;Link&gt;</code> Component</a></li>
 <li>Using the <a href="#userouter-hook" title="useRouter Hook"><code translate="no">useRouter</code> Hook</a></li>
@@ -288,7 +288,7 @@
   </g>
 </svg></span></a></h3>
 <p translated="true"><code translate="no">pages/</code> adresinden <code translate="no">app/</code> adresine aşamalı olarak geçiş yapıldığında Next.js yönlendiricisi ikisi arasındaki zor gezinmeyi otomatik olarak halledecektir. <code translate="no">pages/</code> adresinden <code translate="no">app/</code> adresine geçişleri tespit etmek için, uygulama rotalarının olasılıksal kontrolünden yararlanan ve zaman zaman yanlış pozitif sonuçlara neden olabilen bir istemci yönlendirici filtresi vardır. Varsayılan olarak, yanlış pozitif olasılığını %0,01 olarak yapılandırdığımız için bu tür olaylar çok nadir olmalıdır. Bu olasılık, <code translate="no">next.config.js</code> adresindeki <code translate="no">experimental.clientRouterFilterAllowedRate</code> seçeneği aracılığıyla özelleştirilebilir. Yanlış pozitif oranının düşürülmesinin, istemci paketinde oluşturulan filtrenin boyutunu artıracağını unutmamak önemlidir.</p>
-<p translated="true">Alternatif olarak, bu işlemi tamamen devre dışı bırakmayı ve <code translate="no">pages/</code> ile <code translate="no">app/</code> arasındaki yönlendirmeyi manuel olarak yönetmeyi tercih ederseniz, <code translate="no">experimental.clientRouterFilter</code> öğesini <code translate="no">next.config.js</code> içinde false olarak ayarlayabilirsiniz. Bu özellik devre dışı bırakıldığında, uygulama rotaları ile çakışan sayfalardaki dinamik rotalara varsayılan olarak düzgün bir şekilde gidilmeyecektir.</p></main>
+<p translated="true">Alternatif olarak, bu işlemi tamamen devre dışı bırakmayı ve <code translate="no">pages/</code> ile <code translate="no">app/</code> arasındaki yönlendirmeyi manuel olarak yönetmeyi tercih ederseniz, <code translate="no">experimental.clientRouterFilter</code> öğesini <code translate="no">next.config.js</code> içinde false olarak ayarlayabilirsiniz. Bu özellik devre dışı bırakıldığında, uygulama rotaları ile çakışan sayfalardaki dinamik rotalara varsayılan olarak düzgün bir şekilde gidilmeyecektir.</p></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

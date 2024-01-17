@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Client-side Fetching</h1><p translated="true">Sayfanız SEO indekslemesi gerektirmediğinde, verilerinizi önceden render etmeniz gerekmediğinde veya sayfalarınızın içeriğinin sık sık güncellenmesi gerektiğinde istemci taraflı veri getirme kullanışlıdır. Sunucu tarafı oluşturma API'lerinin aksine, istemci tarafı veri getirmeyi bileşen düzeyinde kullanabilirsiniz.</p>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Client-side Fetching</h1><p translated="true">Sayfanız SEO indekslemesi gerektirmediğinde, verilerinizi önceden render etmeniz gerekmediğinde veya sayfalarınızın içeriğinin sık sık güncellenmesi gerektiğinde istemci taraflı veri getirme kullanışlıdır. Sunucu tarafı oluşturma API'lerinin aksine, istemci tarafı veri getirmeyi bileşen düzeyinde kullanabilirsiniz.</p>
 <p translated="true">Sayfa düzeyinde yapılırsa, veriler çalışma zamanında getirilir ve sayfanın içeriği veriler değiştikçe güncellenir. Bileşen düzeyinde kullanıldığında, veriler bileşen montajı sırasında getirilir ve veri değiştikçe bileşenin içeriği güncellenir.</p>
 <p translated="true">İstemci taraflı veri getirmenin kullanılmasının uygulamanızın performansını ve sayfalarınızın yüklenme hızını etkileyebileceğini unutmamak önemlidir. Bunun nedeni, veri getirme işleminin bileşen veya sayfalar bağlanırken yapılması ve verilerin önbelleğe alınmamasıdır.</p>
 <h2 id="client-side-data-fetching-with-useeffect" data-docs-heading="" translate="no"><a href="#client-side-data-fetching-with-useeffect" title="Client-side data fetching with useEffect">Client-side data fetching with useEffect<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -67,7 +67,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">      &lt;</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-color-text)">&gt;{</span><span style="color:var(--shiki-token-constant)">data</span><span style="color:var(--shiki-color-text)">.bio}&lt;/</span><span style="color:var(--shiki-token-string-expression)">p</span><span style="color:var(--shiki-color-text)">&gt;</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">    &lt;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-color-text)">&gt;</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">  )</span></span>
-<span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div></main>
+<span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

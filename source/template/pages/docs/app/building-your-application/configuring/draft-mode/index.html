@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Draft Mode</h1><p translated="true">Statik oluşturma, sayfalarınız başsız bir CMS'den veri aldığında kullanışlıdır. Ancak, başsız CMS'nizde bir taslak yazarken ve taslağı hemen sayfanızda görüntülemek istediğinizde ideal değildir. Next.js'nin bu sayfaları derleme zamanı yerine <strong>istek zamanında</strong> oluşturmasını ve yayınlanan içerik yerine taslak içeriği getirmesini istersiniz. Next.js'in yalnızca bu özel durum için <a href="/docs/app/building-your-application/rendering/server-components#dynamic-rendering" title="dynamic rendering">dinamik</a> oluşturmaya geçmesini istersiniz.</p>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Draft Mode</h1><p translated="true">Statik oluşturma, sayfalarınız başsız bir CMS'den veri aldığında kullanışlıdır. Ancak, başsız CMS'nizde bir taslak yazarken ve taslağı hemen sayfanızda görüntülemek istediğinizde ideal değildir. Next.js'nin bu sayfaları derleme zamanı yerine <strong>istek zamanında</strong> oluşturmasını ve yayınlanan içerik yerine taslak içeriği getirmesini istersiniz. Next.js'in yalnızca bu özel durum için <a href="/docs/app/building-your-application/rendering/server-components#dynamic-rendering" title="dynamic rendering">dinamik</a> oluşturmaya geçmesini istersiniz.</p>
 <p translated="true">Next.js, bu sorunu çözen <strong>Taslak Modu</strong> adlı bir özelliğe sahiptir. İşte nasıl kullanılacağına dair talimatlar.</p>
 <h2 id="step-1-create-and-access-the-route-handler" data-docs-heading="" translate="no"><a href="#step-1-create-and-access-the-route-handler" title="Step 1: Create and access the Route Handler">Step 1: Create and access the Route Handler<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -154,7 +154,7 @@
 <p translated="true">Bu, bypass çerezinin tahmin edilememesini sağlar.</p>
 <blockquote class="p-3 text-sm">
 <p><strong>Good to know</strong>: To test Draft Mode locally over HTTP, your browser will need to allow third-party cookies and local storage access.</p>
-</blockquote></main>
+</blockquote></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

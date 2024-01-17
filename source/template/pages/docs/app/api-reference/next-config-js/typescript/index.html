@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">typescript</h1>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">typescript</h1>
 <p translated="true">Next.js, projenizde TypeScript hataları mevcut olduğunda <strong>üretim derlemenizde</strong> başarısız olur (<code translate="no">next build</code>).</p>
 <p translated="true">Next.js'nin uygulamanızda hatalar olsa bile tehlikeli bir şekilde üretim kodu üretmesini istiyorsanız, yerleşik tür denetimi adımını devre dışı bırakabilirsiniz.</p>
 <p translated="true">Devre dışı bırakılmışsa, derleme veya dağıtım işleminizin bir parçası olarak tür denetimlerini çalıştırdığınızdan emin olun, aksi takdirde bu çok tehlikeli olabilir.</p>
@@ -20,7 +20,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">    </span><span style="color:var(--shiki-token-comment)">// !! WARN !!</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">    ignoreBuildErrors</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-constant)">true</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">  }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
-<span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div></main>
+<span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

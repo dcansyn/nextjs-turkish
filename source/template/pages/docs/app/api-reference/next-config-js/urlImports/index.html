@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">urlImports</h1>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">urlImports</h1>
 <p translated="true">URL içe aktarımları, modülleri doğrudan harici sunuculardan (yerel disk yerine) içe aktarmanıza olanak tanıyan deneysel bir özelliktir.</p>
 <blockquote class="p-3 text-sm">
 <p><strong>Warning</strong>: This feature is experimental. Only use domains that you trust to download and execute on your machine. Please exercise
@@ -95,7 +95,7 @@ discretion, and caution until the feature is flagged as stable.</p>
 <span class="line"> </span>
 <span class="line"><span style="color:var(--shiki-token-constant)">console</span><span style="color:var(--shiki-token-function)">.log</span><span style="color:var(--shiki-color-text)">(</span><span style="color:var(--shiki-token-constant)">logo</span><span style="color:var(--shiki-color-text)">.pathname)</span></span>
 <span class="line"> </span>
-<span class="line"><span style="color:var(--shiki-token-comment)">// prints "/_next/static/media/file.a9727b5d.txt"</span></span></code></pre></div></main>
+<span class="line"><span style="color:var(--shiki-token-comment)">// prints "/_next/static/media/file.a9727b5d.txt"</span></span></code></pre></div></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

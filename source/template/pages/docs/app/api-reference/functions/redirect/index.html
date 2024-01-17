@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">redirect</h1><p translated="true"><code translate="no">redirect</code> işlevi, kullanıcıyı başka bir URL'ye yönlendirmenize olanak tanır. <code translate="no">redirect</code> <a href="/docs/app/building-your-application/rendering/server-components" title="Server Components">Sunucu Bileşenlerinde</a>, <a href="/docs/app/building-your-application/routing/route-handlers" title="Route Handlers">Rota İşleyicilerinde</a> ve Sunucu <a href="/docs/app/building-your-application/data-fetching/server-actions-and-mutations" title="Server Actions">Eylemlerinde</a> kullanılabilir.</p>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">redirect</h1><p translated="true"><code translate="no">redirect</code> işlevi, kullanıcıyı başka bir URL'ye yönlendirmenize olanak tanır. <code translate="no">redirect</code> <a href="/docs/app/building-your-application/rendering/server-components" title="Server Components">Sunucu Bileşenlerinde</a>, <a href="/docs/app/building-your-application/routing/route-handlers" title="Route Handlers">Rota İşleyicilerinde</a> ve Sunucu <a href="/docs/app/building-your-application/data-fetching/server-actions-and-mutations" title="Server Actions">Eylemlerinde</a> kullanılabilir.</p>
 <p translated="true">Bir <a href="/docs/app/building-your-application/routing/loading-ui-and-streaming#what-is-streaming" title="streaming context">akış bağlamında</a> kullanıldığında, bu, istemci tarafında yönlendirmeyi yaymak için bir meta etiket ekleyecektir. Bir sunucu eyleminde kullanıldığında, arayan kişiye 303 HTTP yönlendirme yanıtı sunar. Aksi takdirde, arayan kişiye 307 HTTP yönlendirme yanıtı sunar.</p>
 <p translated="true">Bir kaynak mevcut değilse, bunun yerine <a href="/docs/app/api-reference/functions/not-found" title="notFound function"><code translate="no">notFound</code> işlevini</a> kullanabilirsiniz.</p>
 <blockquote class="p-3 text-sm">
@@ -118,7 +118,7 @@
     <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
   </g>
 </svg></span></a></h2>
-<div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th>Version</th><th>Changes</th></tr></thead><tbody><tr><td><code translate="no">v13.0.0</code></td><td><code translate="no">redirect</code> introduced.</td></tr></tbody></table></div></main>
+<div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th>Version</th><th>Changes</th></tr></thead><tbody><tr><td><code translate="no">v13.0.0</code></td><td><code translate="no">redirect</code> introduced.</td></tr></tbody></table></div></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

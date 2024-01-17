@@ -7,7 +7,8 @@
   <body>
     @@include('../layouts/header.html')
 
-    <main>
+    <main>@@include('../layouts/navigation.html')<article>
+      @@include('../layouts/navigation.html')
       <article>
         <section>
           <p>Index</p>
@@ -16,7 +17,8 @@
           <div class="section" data-section="3">Section 3</div>
         </section>
       </article>
-    </main>
+      @@include('../layouts/sidebar.html')
+    </article>@@include('../layouts/sidebar.html')</main>
 
     @@include('../layouts/footer.html') @@include('../layouts/script.html')
   </body>

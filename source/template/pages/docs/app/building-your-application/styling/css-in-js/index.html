@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">CSS-in-JS</h1>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">CSS-in-JS</h1>
 <blockquote class="p-3 text-sm">
 <p><strong>Warning:</strong> CSS-in-JS libraries which require runtime JavaScript are not currently supported in Server Components. Using CSS-in-JS with newer React features like Server Components and Streaming requires library authors to support the latest version of React, including <a href="https://react.dev/blog/2022/03/29/react-v18#what-is-concurrent-react" rel="noopener noreferrer nofollow" target="_blank" title="concurrent rendering">concurrent rendering<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>.</p>
 <p>We're working with the React team on upstream APIs to handle CSS and JavaScript assets with support for React Server Components and streaming architecture.</p>
@@ -136,7 +136,7 @@
 <li>For advanced use cases where you need to configure individual properties of styled-components compilation, you can read our <a href="/docs/architecture/nextjs-compiler#styled-components" title="Next.js styled-components API reference">Next.js styled-components API reference</a> to learn more.</li>
 </ul>
 </blockquote>
-</main>
+</article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

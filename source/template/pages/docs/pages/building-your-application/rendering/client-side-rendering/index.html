@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Client-side Rendering (CSR)</h1><p translated="true">React ile Client-Side Rendering'de (CSR), tarayıcı minimal bir HTML sayfasını ve sayfa için gereken JavaScript'i indirir. JavaScript daha sonra DOM'u güncellemek ve sayfayı işlemek için kullanılır. Uygulama ilk yüklendiğinde, kullanıcı sayfanın tamamını görmeden önce hafif bir gecikme fark edebilir, bunun nedeni tüm JavaScript indirilene, ayrıştırılana ve yürütülene kadar sayfanın tam olarak oluşturulmamasıdır.</p>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Client-side Rendering (CSR)</h1><p translated="true">React ile Client-Side Rendering'de (CSR), tarayıcı minimal bir HTML sayfasını ve sayfa için gereken JavaScript'i indirir. JavaScript daha sonra DOM'u güncellemek ve sayfayı işlemek için kullanılır. Uygulama ilk yüklendiğinde, kullanıcı sayfanın tamamını görmeden önce hafif bir gecikme fark edebilir, bunun nedeni tüm JavaScript indirilene, ayrıştırılana ve yürütülene kadar sayfanın tam olarak oluşturulmamasıdır.</p>
 <p translated="true">Sayfa ilk kez yüklendikten sonra, aynı web sitesindeki diğer sayfalarda gezinmek genellikle daha hızlıdır, çünkü yalnızca gerekli verilerin getirilmesi gerekir ve JavaScript, tam sayfa yenileme gerektirmeden sayfanın bazı bölümlerini yeniden oluşturabilir.</p>
 <p translated="true">Next.js'de, istemci tarafı oluşturmayı uygulayabileceğiniz iki yol vardır:</p>
 <ol>
@@ -56,7 +56,7 @@
 <blockquote class="p-3 text-sm">
 <p><strong>Good to know</strong>:</p>
 <p>Keep in mind that CSR can impact SEO. Some search engine crawlers might not execute JavaScript and therefore only see the initial empty or loading state of your application. It can also lead to performance issues for users with slower internet connections or devices, as they need to wait for all the JavaScript to load and run before they can see the full page. Next.js promotes a hybrid approach that allows you to use a combination of <a href="/docs/pages/building-your-application/rendering/server-side-rendering" title="server-side rendering">server-side rendering</a>, <a href="/docs/pages/building-your-application/rendering/static-site-generation" title="static site generation">static site generation</a>, and client-side rendering, <strong>depending on the needs of each page</strong> in your application. In the App Router, you can also use <a href="/docs/app/building-your-application/routing/loading-ui-and-streaming" title="Loading UI with Suspense">Loading UI with Suspense</a> to show a loading indicator while the page is being rendered.</p>
-</blockquote></main>
+</blockquote></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Custom Webpack Config</h1>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Custom Webpack Config</h1>
 <blockquote class="p-3 text-sm">
 <p><strong>Good to know</strong>: changes to webpack config are not covered by semver so proceed at your own risk</p>
 </blockquote>
@@ -75,7 +75,7 @@
     <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
   </g>
 </svg></span></a></h4>
-<p translated="true"><code translate="no">nextRuntime</code> <code translate="no">"edge"</code> veya <code translate="no">"nodejs"</code> olduğunda <code translate="no">isServer</code> 'un <code translate="no">true</code> olduğuna dikkat edin, nextRuntime "<code translate="no">edge</code>" şu anda yalnızca edge runtime'daki middleware ve Sunucu Bileşenleri içindir.</p></main>
+<p translated="true"><code translate="no">nextRuntime</code> <code translate="no">"edge"</code> veya <code translate="no">"nodejs"</code> olduğunda <code translate="no">isServer</code> 'un <code translate="no">true</code> olduğuna dikkat edin, nextRuntime "<code translate="no">edge</code>" şu anda yalnızca edge runtime'daki middleware ve Sunucu Bileşenleri içindir.</p></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

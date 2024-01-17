@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">src Directory</h1>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">src Directory</h1>
 <p translated="true">Next.js, projenizin kök dizininde özel Next.js <code translate="no">app</code> veya <code translate="no">pages</code> dizinlerine sahip olmaya alternatif olarak, uygulama kodunu <code translate="no">src</code> dizini altına yerleştirmenin yaygın modelini de destekler.</p>
 <p translated="true">Bu, uygulama kodunu çoğunlukla bir projenin kökünde bulunan ve bazı bireyler ve ekipler tarafından tercih edilen proje yapılandırma dosyalarından ayırır.</p>
 <p translated="true"><code translate="no">src</code> dizinini kullanmak için <code translate="no">app</code> Router klasörünü veya <code translate="no">pages</code> Router klasörünü sırasıyla <code translate="no">src/app</code> veya <code translate="no">src/pages</code> adresine taşıyın.</p>
@@ -23,7 +23,7 @@
 <li>If you're using Middleware, ensure it is placed inside the <code translate="no">src</code> directory.</li>
 <li>If you're using Tailwind CSS, you'll need to add the <code translate="no">/src</code> prefix to the <code translate="no">tailwind.config.js</code> file in the <a href="https://tailwindcss.com/docs/content-configuration" rel="noopener noreferrer nofollow" target="_blank" title="content section">content section<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>.</li>
 </ul>
-</blockquote></main>
+</blockquote></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

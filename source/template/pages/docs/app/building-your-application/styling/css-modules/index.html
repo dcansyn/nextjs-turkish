@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">CSS Modules</h1>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">CSS Modules</h1>
 <!-- -->
 <p translated="true">Next.js, <code translate="no">.module.css</code> uzantısını kullanan CSS Modülleri için yerleşik desteğe sahiptir.</p>
 <p translated="true">CSS Modülleri, otomatik olarak benzersiz bir sınıf adı oluşturarak CSS'yi yerel olarak kapsar. Bu, çakışma endişesi olmadan farklı dosyalarda aynı sınıf adını kullanmanıza olanak tanır. Bu davranış CSS Modüllerini bileşen düzeyinde CSS eklemek için ideal bir yol haline getirir.</p>
@@ -91,7 +91,7 @@
 <li>When running locally with <code translate="no">next dev</code>, local stylesheets (either global or CSS modules) will take advantage of <a href="/docs/architecture/fast-refresh" title="Fast Refresh">Fast Refresh</a> to instantly reflect changes as edits are saved.</li>
 <li>When building for production with <code translate="no">next build</code>, CSS files will be bundled into fewer minified <code translate="no">.css</code> files to reduce the number of network requests needed to retrieve styles.</li>
 <li>If you disable JavaScript, styles will still be loaded in the production build (<code translate="no">next start</code>). However, JavaScript is still required for <code translate="no">next dev</code> to enable <a href="/docs/architecture/fast-refresh" title="Fast Refresh">Fast Refresh</a>.</li>
-</ul></main>
+</ul></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

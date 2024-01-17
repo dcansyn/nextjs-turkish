@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main>
+    <main>@@include('../../../../../../layouts/navigation.html')<article>
       <h1 class="break-words" translate="no">Setting up Vitest with Next.js</h1>
       <p translated="true">
         Vite ve React Test Kütüphanesi, <strong>Birim Testi</strong> için sıklıkla birlikte kullanılır. Bu rehber size Vitest'i Next.js ile nasıl
@@ -21,68 +21,24 @@
         </p>
       </blockquote>
       <h2 id="quickstart" data-docs-heading="" translate="no">
-        <a href="#quickstart" title="Quickstart"
-          >Quickstart<span
-            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+        <a href="#quickstart" title="Quickstart">Quickstart<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
               <g stroke-width="1.2" fill="none" stroke="currentColor">
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
-                ></path>
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
-                ></path>
-              </g></svg></span
-        ></a>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+              </g></svg></span></a>
       </h2>
       <p translated="true">
         Hızlı bir şekilde başlamak için Next.js
-        <a href="https://github.com/vercel/next.js/tree/canary/examples/with-vitest" rel="noopener noreferrer" target="_blank" title="with-vitest"
-          >with-vitest<span class="inline-flex"
-            ><svg
-              class="with-icon_icon__MHUeb"
-              data-testid="geist-icon"
-              fill="none"
-              height="24"
-              shape-rendering="geometricPrecision"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              viewbox="0 0 24 24"
-              width="24"
-              style="color: currentColor; width: 14px; height: 14px"
-            >
+        <a href="https://github.com/vercel/next.js/tree/canary/examples/with-vitest" rel="noopener noreferrer" target="_blank" title="with-vitest">with-vitest<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
               <path d="M7 17L17 7"></path>
-              <path d="M7 7h10v10"></path></svg></span
-        ></a>
+              <path d="M7 7h10v10"></path></svg></span></a>
         örneği ile <code translate="no">create-next-app</code> adresini kullanabilirsiniz:
       </p>
       <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD code-block_hideLineNumbers__52YKH not-prose" translate="no">
         <div class="code-block_header__t3NRd">
           <div class="code-block_fileName__HmSv1">
             <div aria-hidden="true" class="code-block_iconWrapper__TuHFk">
-              <svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                style="color: currentColor; width: 16px; height: 16px"
-              >
+              <svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 16px; height: 16px">
                 <path d="M4 17l6-6-6-6"></path>
                 <path d="M12 19h8"></path>
               </svg>
@@ -91,69 +47,21 @@
           </div>
           <div class="code-block_actions__yphRf">
             <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
-              <svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
-                <path
-                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
-                ></path></svg
-              ><svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
+              <svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
+                <path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
                 <path d="M20 6L9 17l-5-5"></path>
               </svg>
             </button>
           </div>
         </div>
-        <pre
-          class="code-block_pre___OLfy"
-        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">npx </span><span style="color:var(--shiki-token-string)">create-next-app@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">--example</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">with-vitest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">with-vitest-app</span></span></code></pre>
+        <pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">npx </span><span style="color:var(--shiki-token-string)">create-next-app@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">--example</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">with-vitest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">with-vitest-app</span></span></code></pre>
       </div>
       <h2 id="manual-setup" data-docs-heading="" translate="no">
-        <a href="#manual-setup" title="Manual Setup"
-          >Manual Setup<span
-            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+        <a href="#manual-setup" title="Manual Setup">Manual Setup<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
               <g stroke-width="1.2" fill="none" stroke="currentColor">
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
-                ></path>
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
-                ></path>
-              </g></svg></span
-        ></a>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+              </g></svg></span></a>
       </h2>
       <p translated="true">
         Vitest'i manuel olarak kurmak için <code translate="no">vitest</code> adresini ve aşağıdaki paketleri dev bağımlılıkları olarak yükleyin:
@@ -162,20 +70,7 @@
         <div class="code-block_header__t3NRd">
           <div class="code-block_fileName__HmSv1">
             <div aria-hidden="true" class="code-block_iconWrapper__TuHFk">
-              <svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                style="color: currentColor; width: 16px; height: 16px"
-              >
+              <svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 16px; height: 16px">
                 <path d="M4 17l6-6-6-6"></path>
                 <path d="M12 19h8"></path>
               </svg>
@@ -184,47 +79,14 @@
           </div>
           <div class="code-block_actions__yphRf">
             <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
-              <svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
-                <path
-                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
-                ></path></svg
-              ><svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
+              <svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
+                <path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
                 <path d="M20 6L9 17l-5-5"></path>
               </svg>
             </button>
           </div>
         </div>
-        <pre
-          class="code-block_pre___OLfy"
-        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">npm </span><span style="color:var(--shiki-token-string)">install</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">-D</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">vitest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">@vitejs/plugin-react</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">jsdom</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">@testing-library/react</span></span>
+        <pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">npm </span><span style="color:var(--shiki-token-string)">install</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">-D</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">vitest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">@vitejs/plugin-react</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">jsdom</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">@testing-library/react</span></span>
 <span class="line"><span style="color:var(--shiki-token-comment)"># or</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">yarn </span><span style="color:var(--shiki-token-string)">add</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">-D</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">vitest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">@vitejs/plugin-react</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">jsdom</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">@testing-library/react</span></span>
 <span class="line"><span style="color:var(--shiki-token-comment)"># or</span></span>
@@ -242,90 +104,28 @@
               <svg fill="none" height="14" viewbox="0 0 512 512" width="14" xmlns="http://www.w3.org/2000/svg">
                 <rect fill="currentColor" height="512" rx="50" width="512"></rect>
                 <rect fill="currentColor" height="512" rx="50" width="512"></rect>
-                <path
-                  clip-rule="evenodd"
-                  d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z"
-                  fill="var(--ds-background-100)"
-                  fill-rule="evenodd"
-                ></path>
+                <path clip-rule="evenodd" d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z" fill="var(--ds-background-100)" fill-rule="evenodd"></path>
               </svg>
             </div>
             <span class="code-block_filenameP__02nok">vitest.config.ts</span>
           </div>
           <div class="code-block_actions__yphRf">
             <div>
-              <button
-                type="button"
-                role="combobox"
-                aria-controls="radix-:R54jilttquktta:"
-                aria-expanded="false"
-                aria-autocomplete="none"
-                dir="ltr"
-                data-state="closed"
-                class="switcher_langSwitcherTrigger__3z75V"
-              >
-                <span style="pointer-events: none">TypeScript</span
-                ><svg
-                  class="with-icon_icon__MHUeb"
-                  data-testid="geist-icon"
-                  fill="none"
-                  height="24"
-                  shape-rendering="geometricPrecision"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  viewbox="0 0 24 24"
-                  width="24"
-                  aria-hidden="true"
-                  style="color: currentColor; width: 16px; height: 16px"
-                >
+              <button type="button" role="combobox" aria-controls="radix-:R54jilttquktta:" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" class="switcher_langSwitcherTrigger__3z75V">
+                <span style="pointer-events: none">TypeScript</span><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 16px; height: 16px">
                   <path d="M6 9l6 6 6-6"></path>
                 </svg>
               </button>
             </div>
             <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
-              <svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
-                <path
-                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
-                ></path></svg
-              ><svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
+              <svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
+                <path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
                 <path d="M20 6L9 17l-5-5"></path>
               </svg>
             </button>
           </div>
         </div>
-        <pre
-          class="code-block_pre___OLfy"
-        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> { defineConfig } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'vitest/config'</span></span>
+        <pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> { defineConfig } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'vitest/config'</span></span>
 <span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> react </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'@vitejs/plugin-react'</span></span>
 <span class="line"> </span>
 <span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">default</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">defineConfig</span><span style="color:var(--shiki-color-text)">({</span></span>
@@ -338,25 +138,9 @@
       <!-- -->
       <p translated="true">
         Vitest'in yapılandırılması hakkında daha fazla bilgi için lütfen Vitest
-        <a href="https://vitest.dev/config/#configuration" rel="noopener noreferrer nofollow" target="_blank" title="Vitest Configuration"
-          >Yapılandırma<span class="inline-flex"
-            ><svg
-              class="with-icon_icon__MHUeb"
-              data-testid="geist-icon"
-              fill="none"
-              height="24"
-              shape-rendering="geometricPrecision"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              viewbox="0 0 24 24"
-              width="24"
-              style="color: currentColor; width: 14px; height: 14px"
-            >
+        <a href="https://vitest.dev/config/#configuration" rel="noopener noreferrer nofollow" target="_blank" title="Vitest Configuration">Yapılandırma<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
               <path d="M7 17L17 7"></path>
-              <path d="M7 7h10v10"></path></svg></span
-        ></a>
+              <path d="M7 7h10v10"></path></svg></span></a>
         dokümanlarına bakın.
       </p>
       <p translated="true">Ardından, <code translate="no">package.json</code> adresinize bir <code translate="no">test</code> betiği ekleyin:</p>
@@ -365,57 +149,21 @@
           <div class="code-block_fileName__HmSv1">
             <div aria-hidden="true" class="code-block_iconWrapper__TuHFk">
               <svg clip-rule="evenodd" fill-rule="evenodd" height="16" viewbox="0 0 1321.45 1333.33" width="16">
-                <path
-                  d="M221.37 618.44h757.94V405.15H755.14c-23.5 0-56.32-12.74-71.82-28.24-15.5-15.5-25-43.47-25-66.97V82.89H88.39c-1.99 0-3.49 1-4.49 2-1.5 1-2 2.5-2 4.5v1155.04c0 1.5 1 3.5 2 4.5 1 1.49 3 1.99 4.49 1.99H972.8c2 0 1.89-.99 2.89-1.99 1.5-1 3.61-3 3.61-4.5v-121.09H221.36c-44.96 0-82-36.9-82-81.99V700.44c0-45.1 36.9-82 82-82zm126.51 117.47h75.24v146.61c0 30.79-2.44 54.23-7.33 70.31-4.92 16.03-14.8 29.67-29.65 40.85-14.86 11.12-33.91 16.72-57.05 16.72-24.53 0-43.51-3.71-56.94-11.06-13.5-7.36-23.89-18.1-31.23-32.3-7.35-14.14-11.69-31.67-12.99-52.53l71.5-10.81c.11 11.81 1.07 20.61 2.81 26.33 1.76 5.78 4.75 10.37 9 13.95 2.87 2.33 6.94 3.46 12.25 3.46 8.4 0 14.58-3.46 18.53-10.37 3.9-6.92 5.87-18.6 5.87-35V735.92zm112.77 180.67l71.17-4.97c1.54 12.81 4.69 22.62 9.44 29.28 7.74 10.88 18.74 16.34 33.09 16.34 10.68 0 18.93-2.76 24.68-8.36 5.81-5.58 8.7-12.07 8.7-19.41 0-6.97-2.71-13.26-8.2-18.79-5.47-5.53-18.23-10.68-38.28-15.65-32.89-8.17-56.27-19.1-70.26-32.74-14.12-13.57-21.18-30.92-21.18-52.03 0-13.83 3.61-26.89 10.85-39.21 7.22-12.38 18.07-22.06 32.59-29.09 14.52-7.04 34.4-10.56 59.65-10.56 31 0 54.62 6.41 70.88 19.29 16.28 12.81 25.92 33.24 29.04 61.27l-70.5 4.65c-1.87-12.25-5.81-21.17-11.81-26.7-6.05-5.6-14.35-8.36-24.9-8.36-8.71 0-15.31 2.07-19.73 6.16-4.4 4.09-6.59 9.12-6.59 15.02 0 4.27 1.81 8.11 5.37 11.57 3.45 3.59 11.8 6.85 25.02 9.93 32.75 7.86 56.2 15.84 70.31 23.87 14.18 8.05 24.52 17.98 30.96 29.92 6.44 11.88 9.66 25.2 9.66 39.96 0 17.29-4.3 33.24-12.88 47.89-8.63 14.58-20.61 25.7-36.08 33.24-15.41 7.54-34.85 11.31-58.33 11.31-41.24 0-69.81-8.86-85.68-26.52-15.88-17.65-24.85-40.09-26.96-67.3zm248.74-45.5c0-44.05 11.02-78.36 33.09-102.87 22.09-24.57 52.82-36.82 92.24-36.82 40.38 0 71.5 12.07 93.34 36.13 21.86 24.13 32.77 57.94 32.77 101.37 0 31.54-4.75 57.36-14.3 77.54-9.54 20.18-23.37 35.89-41.4 47.13-18.07 11.24-40.55 16.84-67.48 16.84-27.33 0-49.99-4.83-67.94-14.52-17.92-9.74-32.49-25.07-43.62-46.06-11.13-20.92-16.72-47.19-16.72-78.74zm74.89.19c0 27.21 4.57 46.81 13.68 58.68 9.13 11.88 21.57 17.85 37.26 17.85 16.1 0 28.65-5.84 37.45-17.47 8.87-11.68 13.28-32.54 13.28-62.77 0-25.39-4.63-43.92-13.84-55.61-9.26-11.76-21.75-17.6-37.56-17.6-15.13 0-27.34 5.97-36.49 17.85-9.21 11.88-13.78 31.61-13.78 59.07zm209.08-135.36h69.99l90.98 149.05V735.91h70.83v269.96h-70.83l-90.48-148.24v148.24h-70.49V735.91zm67.71-117.47h178.37c45.1 0 82 37.04 82 82v340.91c0 44.96-37.03 81.99-82 81.99h-178.37v147c0 17.5-6.99 32.99-18.5 44.5-11.5 11.49-27 18.5-44.5 18.5H62.97c-17.5 0-32.99-7-44.5-18.5-11.49-11.5-18.5-27-18.5-44.5V63.49c0-17.5 7-33 18.5-44.5S45.97.49 62.97.49H700.1c1.5-.5 3-.5 4.5-.5 7 0 14 3 19 7.49h1c1 .5 1.5 1 2.5 2l325.46 329.47c5.5 5.5 9.5 13 9.5 21.5 0 2.5-.5 4.5-1 7v250.98zM732.61 303.47V96.99l232.48 235.47H761.6c-7.99 0-14.99-3.5-20.5-8.49-4.99-5-8.49-12.5-8.49-20.5z"
-                  fill="currentColor"
-                ></path>
+                <path d="M221.37 618.44h757.94V405.15H755.14c-23.5 0-56.32-12.74-71.82-28.24-15.5-15.5-25-43.47-25-66.97V82.89H88.39c-1.99 0-3.49 1-4.49 2-1.5 1-2 2.5-2 4.5v1155.04c0 1.5 1 3.5 2 4.5 1 1.49 3 1.99 4.49 1.99H972.8c2 0 1.89-.99 2.89-1.99 1.5-1 3.61-3 3.61-4.5v-121.09H221.36c-44.96 0-82-36.9-82-81.99V700.44c0-45.1 36.9-82 82-82zm126.51 117.47h75.24v146.61c0 30.79-2.44 54.23-7.33 70.31-4.92 16.03-14.8 29.67-29.65 40.85-14.86 11.12-33.91 16.72-57.05 16.72-24.53 0-43.51-3.71-56.94-11.06-13.5-7.36-23.89-18.1-31.23-32.3-7.35-14.14-11.69-31.67-12.99-52.53l71.5-10.81c.11 11.81 1.07 20.61 2.81 26.33 1.76 5.78 4.75 10.37 9 13.95 2.87 2.33 6.94 3.46 12.25 3.46 8.4 0 14.58-3.46 18.53-10.37 3.9-6.92 5.87-18.6 5.87-35V735.92zm112.77 180.67l71.17-4.97c1.54 12.81 4.69 22.62 9.44 29.28 7.74 10.88 18.74 16.34 33.09 16.34 10.68 0 18.93-2.76 24.68-8.36 5.81-5.58 8.7-12.07 8.7-19.41 0-6.97-2.71-13.26-8.2-18.79-5.47-5.53-18.23-10.68-38.28-15.65-32.89-8.17-56.27-19.1-70.26-32.74-14.12-13.57-21.18-30.92-21.18-52.03 0-13.83 3.61-26.89 10.85-39.21 7.22-12.38 18.07-22.06 32.59-29.09 14.52-7.04 34.4-10.56 59.65-10.56 31 0 54.62 6.41 70.88 19.29 16.28 12.81 25.92 33.24 29.04 61.27l-70.5 4.65c-1.87-12.25-5.81-21.17-11.81-26.7-6.05-5.6-14.35-8.36-24.9-8.36-8.71 0-15.31 2.07-19.73 6.16-4.4 4.09-6.59 9.12-6.59 15.02 0 4.27 1.81 8.11 5.37 11.57 3.45 3.59 11.8 6.85 25.02 9.93 32.75 7.86 56.2 15.84 70.31 23.87 14.18 8.05 24.52 17.98 30.96 29.92 6.44 11.88 9.66 25.2 9.66 39.96 0 17.29-4.3 33.24-12.88 47.89-8.63 14.58-20.61 25.7-36.08 33.24-15.41 7.54-34.85 11.31-58.33 11.31-41.24 0-69.81-8.86-85.68-26.52-15.88-17.65-24.85-40.09-26.96-67.3zm248.74-45.5c0-44.05 11.02-78.36 33.09-102.87 22.09-24.57 52.82-36.82 92.24-36.82 40.38 0 71.5 12.07 93.34 36.13 21.86 24.13 32.77 57.94 32.77 101.37 0 31.54-4.75 57.36-14.3 77.54-9.54 20.18-23.37 35.89-41.4 47.13-18.07 11.24-40.55 16.84-67.48 16.84-27.33 0-49.99-4.83-67.94-14.52-17.92-9.74-32.49-25.07-43.62-46.06-11.13-20.92-16.72-47.19-16.72-78.74zm74.89.19c0 27.21 4.57 46.81 13.68 58.68 9.13 11.88 21.57 17.85 37.26 17.85 16.1 0 28.65-5.84 37.45-17.47 8.87-11.68 13.28-32.54 13.28-62.77 0-25.39-4.63-43.92-13.84-55.61-9.26-11.76-21.75-17.6-37.56-17.6-15.13 0-27.34 5.97-36.49 17.85-9.21 11.88-13.78 31.61-13.78 59.07zm209.08-135.36h69.99l90.98 149.05V735.91h70.83v269.96h-70.83l-90.48-148.24v148.24h-70.49V735.91zm67.71-117.47h178.37c45.1 0 82 37.04 82 82v340.91c0 44.96-37.03 81.99-82 81.99h-178.37v147c0 17.5-6.99 32.99-18.5 44.5-11.5 11.49-27 18.5-44.5 18.5H62.97c-17.5 0-32.99-7-44.5-18.5-11.49-11.5-18.5-27-18.5-44.5V63.49c0-17.5 7-33 18.5-44.5S45.97.49 62.97.49H700.1c1.5-.5 3-.5 4.5-.5 7 0 14 3 19 7.49h1c1 .5 1.5 1 2.5 2l325.46 329.47c5.5 5.5 9.5 13 9.5 21.5 0 2.5-.5 4.5-1 7v250.98zM732.61 303.47V96.99l232.48 235.47H761.6c-7.99 0-14.99-3.5-20.5-8.49-4.99-5-8.49-12.5-8.49-20.5z" fill="currentColor"></path>
               </svg>
             </div>
             <span class="code-block_filenameP__02nok">package.json</span>
           </div>
           <div class="code-block_actions__yphRf">
             <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
-              <svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
-                <path
-                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
-                ></path></svg
-              ><svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
+              <svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
+                <path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
                 <path d="M20 6L9 17l-5-5"></path>
               </svg>
             </button>
           </div>
         </div>
-        <pre
-          class="code-block_pre___OLfy"
-        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">{</span></span>
+        <pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">{</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-keyword)">"scripts"</span><span style="color:var(--shiki-token-punctuation)">:</span><span style="color:var(--shiki-color-text)"> {</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">    </span><span style="color:var(--shiki-token-keyword)">"dev"</span><span style="color:var(--shiki-token-punctuation)">:</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">"next dev"</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">    </span><span style="color:var(--shiki-token-keyword)">"build"</span><span style="color:var(--shiki-token-punctuation)">:</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">"next build"</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
@@ -429,26 +177,11 @@
         <strong>izleyecektir</strong>.
       </p>
       <h2 id="creating-your-first-vitest-unit-test" data-docs-heading="" translate="no">
-        <a href="#creating-your-first-vitest-unit-test" title="Creating your first Vitest Unit Test"
-          >Creating your first Vitest Unit Test<span
-            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+        <a href="#creating-your-first-vitest-unit-test" title="Creating your first Vitest Unit Test">Creating your first Vitest Unit Test<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
               <g stroke-width="1.2" fill="none" stroke="currentColor">
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
-                ></path>
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
-                ></path>
-              </g></svg></span
-        ></a>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+              </g></svg></span></a>
       </h2>
       <p translated="true">
         <code translate="no">&lt;Page /&gt;</code> bileşeninin bir başlığı başarıyla oluşturup oluşturmadığını kontrol etmek için bir test oluşturarak
@@ -461,90 +194,28 @@
               <svg fill="none" height="14" viewbox="0 0 512 512" width="14" xmlns="http://www.w3.org/2000/svg">
                 <rect fill="currentColor" height="512" rx="50" width="512"></rect>
                 <rect fill="currentColor" height="512" rx="50" width="512"></rect>
-                <path
-                  clip-rule="evenodd"
-                  d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z"
-                  fill="var(--ds-background-100)"
-                  fill-rule="evenodd"
-                ></path>
+                <path clip-rule="evenodd" d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z" fill="var(--ds-background-100)" fill-rule="evenodd"></path>
               </svg>
             </div>
             <span class="code-block_filenameP__02nok">app/page.tsx</span>
           </div>
           <div class="code-block_actions__yphRf">
             <div>
-              <button
-                type="button"
-                role="combobox"
-                aria-controls="radix-:R1933ilttquktta:"
-                aria-expanded="false"
-                aria-autocomplete="none"
-                dir="ltr"
-                data-state="closed"
-                class="switcher_langSwitcherTrigger__3z75V"
-              >
-                <span style="pointer-events: none">TypeScript</span
-                ><svg
-                  class="with-icon_icon__MHUeb"
-                  data-testid="geist-icon"
-                  fill="none"
-                  height="24"
-                  shape-rendering="geometricPrecision"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  viewbox="0 0 24 24"
-                  width="24"
-                  aria-hidden="true"
-                  style="color: currentColor; width: 16px; height: 16px"
-                >
+              <button type="button" role="combobox" aria-controls="radix-:R1933ilttquktta:" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" class="switcher_langSwitcherTrigger__3z75V">
+                <span style="pointer-events: none">TypeScript</span><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 16px; height: 16px">
                   <path d="M6 9l6 6 6-6"></path>
                 </svg>
               </button>
             </div>
             <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
-              <svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
-                <path
-                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
-                ></path></svg
-              ><svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
+              <svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
+                <path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
                 <path d="M20 6L9 17l-5-5"></path>
               </svg>
             </button>
           </div>
         </div>
-        <pre
-          class="code-block_pre___OLfy"
-        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> Link </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'next/link'</span></span>
+        <pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> Link </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'next/link'</span></span>
 <span class="line"> </span>
 <span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">default</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">function</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">Page</span><span style="color:var(--shiki-color-text)">() {</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-keyword)">return</span><span style="color:var(--shiki-color-text)"> (</span></span>
@@ -562,90 +233,28 @@
               <svg fill="none" height="14" viewbox="0 0 512 512" width="14" xmlns="http://www.w3.org/2000/svg">
                 <rect fill="currentColor" height="512" rx="50" width="512"></rect>
                 <rect fill="currentColor" height="512" rx="50" width="512"></rect>
-                <path
-                  clip-rule="evenodd"
-                  d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z"
-                  fill="var(--ds-background-100)"
-                  fill-rule="evenodd"
-                ></path>
+                <path clip-rule="evenodd" d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z" fill="var(--ds-background-100)" fill-rule="evenodd"></path>
               </svg>
             </div>
             <span class="code-block_filenameP__02nok">__tests__/page.test.tsx</span>
           </div>
           <div class="code-block_actions__yphRf">
             <div>
-              <button
-                type="button"
-                role="combobox"
-                aria-controls="radix-:R1973ilttquktta:"
-                aria-expanded="false"
-                aria-autocomplete="none"
-                dir="ltr"
-                data-state="closed"
-                class="switcher_langSwitcherTrigger__3z75V"
-              >
-                <span style="pointer-events: none">TypeScript</span
-                ><svg
-                  class="with-icon_icon__MHUeb"
-                  data-testid="geist-icon"
-                  fill="none"
-                  height="24"
-                  shape-rendering="geometricPrecision"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  viewbox="0 0 24 24"
-                  width="24"
-                  aria-hidden="true"
-                  style="color: currentColor; width: 16px; height: 16px"
-                >
+              <button type="button" role="combobox" aria-controls="radix-:R1973ilttquktta:" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" class="switcher_langSwitcherTrigger__3z75V">
+                <span style="pointer-events: none">TypeScript</span><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 16px; height: 16px">
                   <path d="M6 9l6 6 6-6"></path>
                 </svg>
               </button>
             </div>
             <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
-              <svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
-                <path
-                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
-                ></path></svg
-              ><svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
+              <svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
+                <path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
                 <path d="M20 6L9 17l-5-5"></path>
               </svg>
             </button>
           </div>
         </div>
-        <pre
-          class="code-block_pre___OLfy"
-        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> { expect</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-color-text)"> test } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'vitest'</span></span>
+        <pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> { expect</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-color-text)"> test } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'vitest'</span></span>
 <span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> { render</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-color-text)"> screen } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'@testing-library/react'</span></span>
 <span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> Page </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'../app/page'</span></span>
 <span class="line"> </span>
@@ -662,46 +271,18 @@
       </blockquote>
       <!-- -->
       <h2 id="running-your-tests" data-docs-heading="" translate="no">
-        <a href="#running-your-tests" title="Running your tests"
-          >Running your tests<span
-            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+        <a href="#running-your-tests" title="Running your tests">Running your tests<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
               <g stroke-width="1.2" fill="none" stroke="currentColor">
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
-                ></path>
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
-                ></path>
-              </g></svg></span
-        ></a>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+              </g></svg></span></a>
       </h2>
       <p translated="true">Ardından, testlerinizi çalıştırmak için aşağıdaki komutu çalıştırın:</p>
       <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no">
         <div class="code-block_header__t3NRd">
           <div class="code-block_fileName__HmSv1">
             <div aria-hidden="true" class="code-block_iconWrapper__TuHFk">
-              <svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                style="color: currentColor; width: 16px; height: 16px"
-              >
+              <svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 16px; height: 16px">
                 <path d="M4 17l6-6-6-6"></path>
                 <path d="M12 19h8"></path>
               </svg>
@@ -710,47 +291,14 @@
           </div>
           <div class="code-block_actions__yphRf">
             <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
-              <svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
-                <path
-                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
-                ></path></svg
-              ><svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
+              <svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
+                <path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
                 <path d="M20 6L9 17l-5-5"></path>
               </svg>
             </button>
           </div>
         </div>
-        <pre
-          class="code-block_pre___OLfy"
-        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">npm </span><span style="color:var(--shiki-token-string)">run</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">test</span></span>
+        <pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">npm </span><span style="color:var(--shiki-token-string)">run</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">test</span></span>
 <span class="line"><span style="color:var(--shiki-token-comment)"># or</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">yarn </span><span style="color:var(--shiki-token-string)">test</span></span>
 <span class="line"><span style="color:var(--shiki-token-comment)"># or</span></span>
@@ -759,102 +307,31 @@
 <span class="line"><span style="color:var(--shiki-color-text)">bun </span><span style="color:var(--shiki-token-string)">test</span></span></code></pre>
       </div>
       <h2 id="additional-resources" data-docs-heading="" translate="no">
-        <a href="#additional-resources" title="Additional Resources"
-          >Additional Resources<span
-            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+        <a href="#additional-resources" title="Additional Resources">Additional Resources<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
               <g stroke-width="1.2" fill="none" stroke="currentColor">
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
-                ></path>
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
-                ></path>
-              </g></svg></span
-        ></a>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+              </g></svg></span></a>
       </h2>
       <p translated="true">Bu kaynakları faydalı bulabilirsiniz:</p>
       <ul>
         <li>
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples/with-vitest"
-            rel="noopener noreferrer"
-            target="_blank"
-            title="Next.js with Vitest example"
-            >Next.js with Vitest example<span class="inline-flex"
-              ><svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                style="color: currentColor; width: 14px; height: 14px"
-              >
+          <a href="https://github.com/vercel/next.js/tree/canary/examples/with-vitest" rel="noopener noreferrer" target="_blank" title="Next.js with Vitest example">Next.js with Vitest example<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span
-          ></a>
+                <path d="M7 7h10v10"></path></svg></span></a>
         </li>
         <li>
-          <a href="https://vitest.dev/guide/" rel="noopener noreferrer nofollow" target="_blank" title="Vitest Docs"
-            >Vitest Docs<span class="inline-flex"
-              ><svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                style="color: currentColor; width: 14px; height: 14px"
-              >
+          <a href="https://vitest.dev/guide/" rel="noopener noreferrer nofollow" target="_blank" title="Vitest Docs">Vitest Docs<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span
-          ></a>
+                <path d="M7 7h10v10"></path></svg></span></a>
         </li>
         <li>
-          <a
-            href="https://testing-library.com/docs/react-testing-library/intro/"
-            rel="noopener noreferrer nofollow"
-            target="_blank"
-            title="React Testing Library Docs"
-            >React Testing Library Docs<span class="inline-flex"
-              ><svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                style="color: currentColor; width: 14px; height: 14px"
-              >
+          <a href="https://testing-library.com/docs/react-testing-library/intro/" rel="noopener noreferrer nofollow" target="_blank" title="React Testing Library Docs">React Testing Library Docs<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span
-          ></a>
+                <path d="M7 7h10v10"></path></svg></span></a>
         </li>
       </ul>
-    </main>
+    </article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

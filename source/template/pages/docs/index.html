@@ -7,7 +7,7 @@
   <body>
     @@include('../../layouts/header.html')
 
-    <main>
+    <main>@@include('../../layouts/navigation.html')<article>
       <h1 class="break-words" translate="no">Introduction</h1>
       <p translated="true">Next.js belgelerine hoş geldiniz!</p>
       <h2 id="what-is-nextjs" data-docs-heading="" translate="no">
@@ -140,7 +140,7 @@
               <path d="M7 7h10v10"></path></svg></span></a> ve <a href="https://www.reddit.com/r/nextjs" rel="noopener noreferrer nofollow" target="_blank" title="Reddit">Reddit<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
               <path d="M7 17L17 7"></path>
               <path d="M7 7h10v10"></path></svg></span></a> üzerinden topluluğumuza her zaman sorabilirsiniz.      </p>
-    </main>
+    </article>@@include('../../layouts/sidebar.html')</main>
 
     @@include('../../layouts/footer.html') @@include('../../layouts/script.html')
   </body>

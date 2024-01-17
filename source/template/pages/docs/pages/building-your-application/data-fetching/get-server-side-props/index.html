@@ -7,33 +7,18 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main>
+    <main>@@include('../../../../../../layouts/navigation.html')<article>
       <h1 class="break-words" translate="no">getServerSideProps</h1>
       <p translated="true">
         <code translate="no">getServerSideProps</code> bir Next.js fonksiyonudur ve istek anında veri almak ve bir sayfanın içeriğini oluşturmak için
         kullanılabilir.
       </p>
       <h2 id="example" data-docs-heading="" translate="no">
-        <a href="#example" title="Example"
-          >Example<span
-            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+        <a href="#example" title="Example">Example<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
               <g stroke-width="1.2" fill="none" stroke="currentColor">
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
-                ></path>
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
-                ></path>
-              </g></svg></span
-        ></a>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+              </g></svg></span></a>
       </h2>
       <p translated="true">
         <code translate="no">getServerSideProps</code> adresini bir Sayfa Bileşeninden dışa aktararak kullanabilirsiniz. Aşağıdaki örnek,
@@ -47,90 +32,28 @@
               <svg fill="none" height="14" viewbox="0 0 512 512" width="14" xmlns="http://www.w3.org/2000/svg">
                 <rect fill="currentColor" height="512" rx="50" width="512"></rect>
                 <rect fill="currentColor" height="512" rx="50" width="512"></rect>
-                <path
-                  clip-rule="evenodd"
-                  d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z"
-                  fill="var(--ds-background-100)"
-                  fill-rule="evenodd"
-                ></path>
+                <path clip-rule="evenodd" d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z" fill="var(--ds-background-100)" fill-rule="evenodd"></path>
               </svg>
             </div>
             <span class="code-block_filenameP__02nok">pages/index.tsx</span>
           </div>
           <div class="code-block_actions__yphRf">
             <div>
-              <button
-                type="button"
-                role="combobox"
-                aria-controls="radix-:R547ilttquktta:"
-                aria-expanded="false"
-                aria-autocomplete="none"
-                dir="ltr"
-                data-state="closed"
-                class="switcher_langSwitcherTrigger__3z75V"
-              >
-                <span style="pointer-events: none">TypeScript</span
-                ><svg
-                  class="with-icon_icon__MHUeb"
-                  data-testid="geist-icon"
-                  fill="none"
-                  height="24"
-                  shape-rendering="geometricPrecision"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  viewbox="0 0 24 24"
-                  width="24"
-                  aria-hidden="true"
-                  style="color: currentColor; width: 16px; height: 16px"
-                >
+              <button type="button" role="combobox" aria-controls="radix-:R547ilttquktta:" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" class="switcher_langSwitcherTrigger__3z75V">
+                <span style="pointer-events: none">TypeScript</span><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 16px; height: 16px">
                   <path d="M6 9l6 6 6-6"></path>
                 </svg>
               </button>
             </div>
             <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
-              <svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
-                <path
-                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
-                ></path></svg
-              ><svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
+              <svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
+                <path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
                 <path d="M20 6L9 17l-5-5"></path>
               </svg>
             </button>
           </div>
         </div>
-        <pre
-          class="code-block_pre___OLfy"
-        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">type</span><span style="color:var(--shiki-color-text)"> { InferGetServerSidePropsType</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-color-text)"> GetServerSideProps } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'next'</span></span>
+        <pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">type</span><span style="color:var(--shiki-color-text)"> { InferGetServerSidePropsType</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-color-text)"> GetServerSideProps } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'next'</span></span>
 <span class="line"> </span>
 <span class="line"><span style="color:var(--shiki-token-keyword)">type</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">Repo</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-color-text)"> {</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">  name</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-constant)">string</span></span>
@@ -157,26 +80,11 @@
       </div>
       <!-- -->
       <h2 id="when-should-i-use-getserversideprops" data-docs-heading="" translate="no">
-        <a href="#when-should-i-use-getserversideprops" title="When should I use getServerSideProps?"
-          >When should I use <code translate="no">getServerSideProps</code>?<span
-            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+        <a href="#when-should-i-use-getserversideprops" title="When should I use getServerSideProps?">When should I use <code translate="no">getServerSideProps</code>?<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
               <g stroke-width="1.2" fill="none" stroke="currentColor">
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
-                ></path>
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
-                ></path>
-              </g></svg></span
-        ></a>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+              </g></svg></span></a>
       </h2>
       <p translated="true">
         Kişiselleştirilmiş kullanıcı verilerine veya yalnızca istek sırasında bilinebilecek bilgilere dayanan bir sayfa oluşturmanız gerekiyorsa
@@ -185,31 +93,14 @@
       </p>
       <p translated="true">
         Verileri istek anında almanız gerekmiyorsa veya verileri ve önceden oluşturulmuş HTML'yi önbelleğe almayı tercih ediyorsanız
-        <a href="/docs/pages/building-your-application/data-fetching/get-static-props" title="getStaticProps"
-          ><code translate="no">getStaticProps</code></a
-        >.
+        <a href="/docs/pages/building-your-application/data-fetching/get-static-props" title="getStaticProps"><code translate="no">getStaticProps</code></a>.
       </p>
       <h2 id="behavior" data-docs-heading="" translate="no">
-        <a href="#behavior" title="Behavior"
-          >Behavior<span
-            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+        <a href="#behavior" title="Behavior">Behavior<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
               <g stroke-width="1.2" fill="none" stroke="currentColor">
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
-                ></path>
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
-                ></path>
-              </g></svg></span
-        ></a>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+              </g></svg></span></a>
       </h2>
       <ul>
         <li><code translate="no">getServerSideProps</code> runs on the server.</li>
@@ -222,33 +113,16 @@
         <li>
           <code translate="no">props</code> passed to the page component can be viewed on the client as part of the initial HTML. This is to allow the
           page to be
-          <a href="https://react.dev/reference/react-dom/hydrate" rel="noopener noreferrer nofollow" target="_blank" title="hydrated"
-            >hydrated<span class="inline-flex"
-              ><svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                style="color: currentColor; width: 14px; height: 14px"
-              >
+          <a href="https://react.dev/reference/react-dom/hydrate" rel="noopener noreferrer nofollow" target="_blank" title="hydrated">hydrated<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span
-          ></a>
+                <path d="M7 7h10v10"></path></svg></span></a>
           correctly. Make sure that you don't pass any sensitive information that shouldn't be available on the client in
           <code translate="no">props</code>.
         </li>
         <li>
           When a user visits the page through
           <a href="/docs/pages/api-reference/components/link" title="next/link"><code translate="no">next/link</code></a> or
-          <a href="/docs/pages/api-reference/functions/use-router" title="next/router"><code translate="no">next/router</code></a
-          >, Next.js sends an API request to the server, which runs <code translate="no">getServerSideProps</code>.
+          <a href="/docs/pages/api-reference/functions/use-router" title="next/router"><code translate="no">next/router</code></a>, Next.js sends an API request to the server, which runs <code translate="no">getServerSideProps</code>.
         </li>
         <li>
           You do not have to call a Next.js <a href="/docs/pages/building-your-application/routing/api-routes" title="API Route">API Route</a> to
@@ -261,57 +135,24 @@
         <ul>
           <li>
             See
-            <a href="/docs/pages/api-reference/functions/get-server-side-props" title="getServerSideProps API reference"
-              ><code translate="no">getServerSideProps</code> API reference</a
-            >
+            <a href="/docs/pages/api-reference/functions/get-server-side-props" title="getServerSideProps API reference"><code translate="no">getServerSideProps</code> API reference</a>
             for parameters and props that can be used with <code translate="no">getServerSideProps</code>.
           </li>
           <li>
             You can use the
-            <a href="https://next-code-elimination.vercel.app/" rel="noopener noreferrer nofollow" target="_blank" title="next-code-elimination tool"
-              >next-code-elimination tool<span class="inline-flex"
-                ><svg
-                  class="with-icon_icon__MHUeb"
-                  data-testid="geist-icon"
-                  fill="none"
-                  height="24"
-                  shape-rendering="geometricPrecision"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
-                  viewbox="0 0 24 24"
-                  width="24"
-                  style="color: currentColor; width: 14px; height: 14px"
-                >
+            <a href="https://next-code-elimination.vercel.app/" rel="noopener noreferrer nofollow" target="_blank" title="next-code-elimination tool">next-code-elimination tool<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                   <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path></svg></span
-            ></a>
+                  <path d="M7 7h10v10"></path></svg></span></a>
             to verify what Next.js eliminates from the client-side bundle.
           </li>
         </ul>
       </blockquote>
       <h2 id="error-handling" data-docs-heading="" translate="no">
-        <a href="#error-handling" title="Error Handling"
-          >Error Handling<span
-            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+        <a href="#error-handling" title="Error Handling">Error Handling<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
               <g stroke-width="1.2" fill="none" stroke="currentColor">
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
-                ></path>
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
-                ></path>
-              </g></svg></span
-        ></a>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+              </g></svg></span></a>
       </h2>
       <p translated="true">
         <code translate="no">getServerSideProps</code> içinde bir hata atılırsa, <code translate="no">pages/500.js</code> dosyasını gösterecektir.
@@ -320,48 +161,18 @@
         Geliştirme sırasında bu dosya kullanılmayacak ve bunun yerine geliştirme hatası yer paylaşımı gösterilecektir.
       </p>
       <h2 id="edge-cases" data-docs-heading="" translate="no">
-        <a href="#edge-cases" title="Edge Cases"
-          >Edge Cases<span
-            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+        <a href="#edge-cases" title="Edge Cases">Edge Cases<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
               <g stroke-width="1.2" fill="none" stroke="currentColor">
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
-                ></path>
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
-                ></path>
-              </g></svg></span
-        ></a>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+              </g></svg></span></a>
       </h2>
       <h3 id="edge-runtime" data-docs-heading="" translate="no">
-        <a href="#edge-runtime" title="Edge Runtime"
-          >Edge Runtime<span
-            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+        <a href="#edge-runtime" title="Edge Runtime">Edge Runtime<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
               <g stroke-width="1.2" fill="none" stroke="currentColor">
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
-                ></path>
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
-                ></path>
-              </g></svg></span
-        ></a>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+              </g></svg></span></a>
       </h3>
       <p translated="true">
         <code translate="no">getServerSideProps</code> hem
@@ -382,150 +193,47 @@
           <div class="code-block_fileName__HmSv1">
             <div aria-hidden="true" class="code-block_iconWrapper__TuHFk">
               <svg height="17" style="margin-left: -1.5px" viewbox="0 0 50 50" width="17" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M 43.335938 4 L 6.667969 4 C 5.195313 4 4 5.195313 4 6.667969 L 4 43.332031 C 4 44.804688 5.195313 46 6.667969 46 L 43.332031 46 C 44.804688 46 46 44.804688 46 43.335938 L 46 6.667969 C 46 5.195313 44.804688 4 43.335938 4 Z M 27 36.183594 C 27 40.179688 24.65625 42 21.234375 42 C 18.140625 42 15.910156 39.925781 15 38 L 18.144531 36.097656 C 18.75 37.171875 19.671875 38 21 38 C 22.269531 38 23 37.503906 23 35.574219 L 23 23 L 27 23 Z M 35.675781 42 C 32.132813 42 30.121094 40.214844 29 38 L 32 36 C 32.816406 37.335938 33.707031 38.613281 35.589844 38.613281 C 37.171875 38.613281 38 37.824219 38 36.730469 C 38 35.425781 37.140625 34.960938 35.402344 34.199219 L 34.449219 33.789063 C 31.695313 32.617188 29.863281 31.148438 29.863281 28.039063 C 29.863281 25.179688 32.046875 23 35.453125 23 C 37.878906 23 39.621094 23.84375 40.878906 26.054688 L 37.910156 27.964844 C 37.253906 26.789063 36.550781 26.328125 35.453125 26.328125 C 34.335938 26.328125 33.628906 27.039063 33.628906 27.964844 C 33.628906 29.109375 34.335938 29.570313 35.972656 30.28125 L 36.925781 30.691406 C 40.171875 32.078125 42 33.496094 42 36.683594 C 42 40.117188 39.300781 42 35.675781 42 Z"
-                  fill="currentColor"
-                ></path>
+                <path d="M 43.335938 4 L 6.667969 4 C 5.195313 4 4 5.195313 4 6.667969 L 4 43.332031 C 4 44.804688 5.195313 46 6.667969 46 L 43.332031 46 C 44.804688 46 46 44.804688 46 43.335938 L 46 6.667969 C 46 5.195313 44.804688 4 43.335938 4 Z M 27 36.183594 C 27 40.179688 24.65625 42 21.234375 42 C 18.140625 42 15.910156 39.925781 15 38 L 18.144531 36.097656 C 18.75 37.171875 19.671875 38 21 38 C 22.269531 38 23 37.503906 23 35.574219 L 23 23 L 27 23 Z M 35.675781 42 C 32.132813 42 30.121094 40.214844 29 38 L 32 36 C 32.816406 37.335938 33.707031 38.613281 35.589844 38.613281 C 37.171875 38.613281 38 37.824219 38 36.730469 C 38 35.425781 37.140625 34.960938 35.402344 34.199219 L 34.449219 33.789063 C 31.695313 32.617188 29.863281 31.148438 29.863281 28.039063 C 29.863281 25.179688 32.046875 23 35.453125 23 C 37.878906 23 39.621094 23.84375 40.878906 26.054688 L 37.910156 27.964844 C 37.253906 26.789063 36.550781 26.328125 35.453125 26.328125 C 34.335938 26.328125 33.628906 27.039063 33.628906 27.964844 C 33.628906 29.109375 34.335938 29.570313 35.972656 30.28125 L 36.925781 30.691406 C 40.171875 32.078125 42 33.496094 42 36.683594 C 42 40.117188 39.300781 42 35.675781 42 Z" fill="currentColor"></path>
               </svg>
             </div>
             <span class="code-block_filenameP__02nok">pages/index.js</span>
           </div>
           <div class="code-block_actions__yphRf">
             <button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button">
-              <svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
-                <path
-                  d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
-                ></path></svg
-              ><svg
-                class="with-icon_icon__MHUeb"
-                data-testid="geist-icon"
-                fill="none"
-                height="24"
-                shape-rendering="geometricPrecision"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                viewbox="0 0 24 24"
-                width="24"
-                aria-hidden="true"
-                style="color: currentColor; width: 20px; height: 20px"
-              >
+              <svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
+                <path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
                 <path d="M20 6L9 17l-5-5"></path>
               </svg>
             </button>
           </div>
         </div>
-        <pre
-          class="code-block_pre___OLfy"
-        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-constant)">config</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-color-text)"> {</span></span>
+        <pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-constant)">config</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-color-text)"> {</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">  runtime</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'nodejs'</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-comment)">// or "edge"</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span>
 <span class="line"> </span>
 <span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">getServerSideProps</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">async</span><span style="color:var(--shiki-color-text)"> () </span><span style="color:var(--shiki-token-keyword)">=&gt;</span><span style="color:var(--shiki-color-text)"> {}</span></span></code></pre>
       </div>
       <h3 id="caching-with-server-side-rendering-ssr" data-docs-heading="" translate="no">
-        <a href="#caching-with-server-side-rendering-ssr" title="Caching with Server-Side Rendering (SSR)"
-          >Caching with Server-Side Rendering (SSR)<span
-            ><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+        <a href="#caching-with-server-side-rendering-ssr" title="Caching with Server-Side Rendering (SSR)">Caching with Server-Side Rendering (SSR)<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
               <g stroke-width="1.2" fill="none" stroke="currentColor">
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"
-                ></path>
-                <path
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"
-                ></path>
-              </g></svg></span
-        ></a>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+                <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+              </g></svg></span></a>
       </h3>
       <p translated="true">
-        Dinamik yanıtları önbelleğe almak için <code translate="no">getServerSideProps</code> içinde önbellek başlıklarını (<code translate="no"
-          >Cache-Control</code
-        >) kullanabilirsiniz. Örneğin, kullanarak
-        <a href="https://web.dev/stale-while-revalidate/" rel="noopener noreferrer nofollow" target="_blank" title="stale-while-revalidate"
-          ><code translate="no">stale-while-revalidate</code
-          ><span class="inline-flex"
-            ><svg
-              class="with-icon_icon__MHUeb"
-              data-testid="geist-icon"
-              fill="none"
-              height="24"
-              shape-rendering="geometricPrecision"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.5"
-              viewbox="0 0 24 24"
-              width="24"
-              style="color: currentColor; width: 14px; height: 14px"
-            >
+        Dinamik yanıtları önbelleğe almak için <code translate="no">getServerSideProps</code> içinde önbellek başlıklarını (<code translate="no">Cache-Control</code>) kullanabilirsiniz. Örneğin, kullanarak
+        <a href="https://web.dev/stale-while-revalidate/" rel="noopener noreferrer nofollow" target="_blank" title="stale-while-revalidate"><code translate="no">stale-while-revalidate</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
               <path d="M7 17L17 7"></path>
-              <path d="M7 7h10v10"></path></svg></span></a
-        >.
+              <path d="M7 7h10v10"></path></svg></span></a>.
       </p>
       <div class="code-block_wrapper__t6FCO not-prose" translate="no">
         <button aria-label="Copy code" class="code-block_copyButton__uo5Yu code-block_copyFloatingButton__PsMvB" type="button">
-          <svg
-            class="with-icon_icon__MHUeb"
-            data-testid="geist-icon"
-            fill="none"
-            height="24"
-            shape-rendering="geometricPrecision"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-            viewbox="0 0 24 24"
-            width="24"
-            aria-hidden="true"
-            style="color: currentColor; width: 20px; height: 20px"
-          >
-            <path
-              d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"
-            ></path></svg
-          ><svg
-            class="with-icon_icon__MHUeb"
-            data-testid="geist-icon"
-            fill="none"
-            height="24"
-            shape-rendering="geometricPrecision"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
-            viewbox="0 0 24 24"
-            width="24"
-            aria-hidden="true"
-            style="color: currentColor; width: 20px; height: 20px"
-          >
+          <svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
+            <path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color: currentColor; width: 20px; height: 20px">
             <path d="M20 6L9 17l-5-5"></path>
           </svg>
         </button>
-        <pre
-          class="code-block_pre___OLfy"
-        ><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-comment)">// This value is considered fresh for ten seconds (s-maxage=10).</span></span>
+        <pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-comment)">// This value is considered fresh for ten seconds (s-maxage=10).</span></span>
 <span class="line"><span style="color:var(--shiki-token-comment)">// If a request is repeated within the next 10 seconds, the previously</span></span>
 <span class="line"><span style="color:var(--shiki-token-comment)">// cached value will still be fresh. If the request is repeated before 59 seconds,</span></span>
 <span class="line"><span style="color:var(--shiki-token-comment)">// the cached value will be stale but still render (stale-while-revalidate=59).</span></span>
@@ -545,12 +253,10 @@
       </div>
       <p translated="true">
         Bununla birlikte, <code translate="no">cache-control</code> adresine ulaşmadan önce
-        <a href="/docs/pages/building-your-application/data-fetching/get-static-props" title="getStaticProps"
-          ><code translate="no">getStaticProps</code></a
-        ><a href="/docs/pages/building-your-application/data-fetching/incremental-static-regeneration" title="ISR">ISR</a> ile kullanım durumunuz için
+        <a href="/docs/pages/building-your-application/data-fetching/get-static-props" title="getStaticProps"><code translate="no">getStaticProps</code></a><a href="/docs/pages/building-your-application/data-fetching/incremental-static-regeneration" title="ISR">ISR</a> ile kullanım durumunuz için
         daha uygundur.
       </p>
-    </main>
+    </article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

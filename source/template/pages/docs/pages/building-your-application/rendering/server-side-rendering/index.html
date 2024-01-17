@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Server-side Rendering (SSR)</h1><blockquote class="p-3 text-sm">
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Server-side Rendering (SSR)</h1><blockquote class="p-3 text-sm">
 <p>Also referred to as "SSR" or "Dynamic Rendering".</p>
 </blockquote>
 <p translated="true">Bir sayfa <strong>Sunucu Taraf</strong>ı Oluşturma kullanıyorsa, sayfa HTML'si <strong>her istekte</strong> oluşturulur.</p>
@@ -27,7 +27,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-keyword)">return</span><span style="color:var(--shiki-color-text)"> { props</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-color-text)"> { data } }</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <p translated="true">Gördüğünüz gibi, <code translate="no">getServerSideProps</code> <code translate="no">getStaticProps</code> ile benzerdir, ancak aradaki fark <code translate="no">getServerSideProps</code> 'nin derleme zamanı yerine her istekte çalıştırılmasıdır.</p>
-<p translated="true"><code translate="no">getServerSideProps</code> 'un nasıl çalıştığı hakkında daha fazla bilgi edinmek için <a href="/docs/pages/building-your-application/data-fetching/get-server-side-props" title="Data Fetching documentation">Veri Getirme belgelerimize</a> göz atın.</p></main>
+<p translated="true"><code translate="no">getServerSideProps</code> 'un nasıl çalıştığı hakkında daha fazla bilgi edinmek için <a href="/docs/pages/building-your-application/data-fetching/get-server-side-props" title="Data Fetching documentation">Veri Getirme belgelerimize</a> göz atın.</p></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

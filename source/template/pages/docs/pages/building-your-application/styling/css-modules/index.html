@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">CSS Modules</h1>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">CSS Modules</h1>
 <details open=""><summary>Examples</summary><ul>
 <li><a href="https://github.com/vercel/next.js/tree/canary/examples/basic-css" rel="noopener noreferrer" target="_blank" title="Basic CSS Example">Basic CSS Example<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a></li>
 </ul></details>
@@ -123,7 +123,7 @@
 <li>When running locally with <code translate="no">next dev</code>, local stylesheets (either global or CSS modules) will take advantage of <a href="/docs/architecture/fast-refresh" title="Fast Refresh">Fast Refresh</a> to instantly reflect changes as edits are saved.</li>
 <li>When building for production with <code translate="no">next build</code>, CSS files will be bundled into fewer minified <code translate="no">.css</code> files to reduce the number of network requests needed to retrieve styles.</li>
 <li>If you disable JavaScript, styles will still be loaded in the production build (<code translate="no">next start</code>). However, JavaScript is still required for <code translate="no">next dev</code> to enable <a href="/docs/architecture/fast-refresh" title="Fast Refresh">Fast Refresh</a>.</li>
-</ul></main>
+</ul></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

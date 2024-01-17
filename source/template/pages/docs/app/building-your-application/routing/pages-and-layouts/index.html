@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Pages and Layouts</h1><blockquote class="p-3 text-sm">
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Pages and Layouts</h1><blockquote class="p-3 text-sm">
 <p>We recommend reading the <a href="/docs/app/building-your-application/routing" title="Routing Fundamentals">Routing Fundamentals</a> and <a href="/docs/app/building-your-application/routing/defining-routes" title="Defining Routes">Defining Routes</a> pages before continuing.</p>
 </blockquote>
 <p translated="true">Next.js 13 içindeki Uygulama Yönlendiricisi, <a href="#pages" title="pages">sayfaları</a>, <a href="#layouts" title="shared layouts">paylaşılan düzenleri</a> ve <a href="#templates" title="templates">şablonları</a> kolayca oluşturmak için yeni dosya kurallarını tanıttı. Bu sayfa, Next.js uygulamanızda bu özel dosyaları nasıl kullanacağınız konusunda size rehberlik edecektir.</p>
@@ -181,7 +181,7 @@
 <blockquote class="p-3 text-sm">
 <p><strong>Good to know</strong>: You should <strong>not</strong> manually add <code translate="no">&lt;head&gt;</code> tags such as <code translate="no">&lt;title&gt;</code> and <code translate="no">&lt;meta&gt;</code> to root layouts. Instead, you should use the <a href="/docs/app/api-reference/functions/generate-metadata" title="Metadata API">Metadata API</a> which automatically handles advanced requirements such as streaming and de-duplicating <code translate="no">&lt;head&gt;</code> elements.</p>
 </blockquote>
-<p translated="true"><a href="/docs/app/api-reference/functions/generate-metadata" title="Learn more about available metadata options in the API reference.">API referansında mevcut meta veri seçenekleri hakkında daha fazla bilgi edinin.</a></p></main>
+<p translated="true"><a href="/docs/app/api-reference/functions/generate-metadata" title="Learn more about available metadata options in the API reference.">API referansında mevcut meta veri seçenekleri hakkında daha fazla bilgi edinin.</a></p></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

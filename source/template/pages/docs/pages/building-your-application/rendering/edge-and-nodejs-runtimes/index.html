@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Edge and Node.js Runtimes</h1>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Edge and Node.js Runtimes</h1>
 <p translated="true">Next.js bağlamında çalışma zamanı, yürütme sırasında kodunuz tarafından kullanılabilen kütüphaneler, API'ler ve genel işlevsellik kümesini ifade eder.</p>
 <p translated="true">Sunucuda, uygulama kodunuzun parçalarının işlenebileceği iki çalışma zamanı vardır:</p>
 <ul>
@@ -50,7 +50,7 @@
 <!-- -->
 <blockquote class="p-3 text-sm">
 <p>Please refer to the <a href="https://nodejs.org/docs/latest/api/" rel="noopener noreferrer nofollow" target="_blank" title="Node.js Docs">Node.js Docs<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> and <a href="/docs/app/api-reference/edge" title="Edge Docs">Edge Docs</a> for the full list of available APIs. Both runtimes can also support <a href="/docs/app/building-your-application/routing/loading-ui-and-streaming" title="streaming">streaming</a> depending on your deployment infrastructure.</p>
-</blockquote></main>
+</blockquote></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

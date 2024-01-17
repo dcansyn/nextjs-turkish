@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">assetPrefix</h1>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">assetPrefix</h1>
 <!-- -->
 <blockquote class="p-3 text-sm">
 <p><strong>Attention</strong>: <a href="/docs/pages/building-your-application/deploying" title="Deploying to Vercel">Deploying to Vercel</a> automatically configures a global CDN for your Next.js project.
@@ -39,7 +39,7 @@ We do not suggest you use a custom Asset Prefix for this use case.</p>
 <li>Files in the <a href="/docs/pages/building-your-application/optimizing/static-assets" title="public">public</a> folder; if you want to serve those assets over a CDN, you'll have to introduce the prefix yourself</li>
 <li><code translate="no">/_next/data/</code> requests for <code translate="no">getServerSideProps</code> pages. These requests will always be made against the main domain since they're not static.</li>
 <li><code translate="no">/_next/data/</code> requests for <code translate="no">getStaticProps</code> pages. These requests will always be made against the main domain to support <a href="/docs/pages/building-your-application/data-fetching/incremental-static-regeneration" title="Incremental Static Generation">Incremental Static Generation</a>, even if you're not using it (for consistency).</li>
-</ul></main>
+</ul></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

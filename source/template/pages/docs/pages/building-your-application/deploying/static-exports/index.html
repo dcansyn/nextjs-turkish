@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Static Exports</h1>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Static Exports</h1>
 <p translated="true">Next.js, statik bir site veya Tek Sayfalık Uygulama (SPA) olarak başlamayı ve daha sonra isteğe bağlı olarak sunucu gerektiren özellikleri kullanmak için yükseltmeyi sağlar.</p>
 <p translated="true">Next.js, <code translate="no">next build</code> adresini çalıştırırken her rota için bir HTML dosyası oluşturur. Next.js, katı bir SPA'yı ayrı HTML dosyalarına bölerek istemci tarafında gereksiz JavaScript kodlarının yüklenmesini önleyebilir, paket boyutunu küçültebilir ve sayfanın daha hızlı yüklenmesini sağlayabilir.</p>
 <p translated="true">Next.js bu statik dışa aktarımı desteklediğinden, HTML/CSS/JS statik varlıklarını sunabilen herhangi bir web sunucusunda dağıtılabilir ve barındırılabilir.</p>
@@ -166,7 +166,7 @@
     <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
   </g>
 </svg></span></a></h2>
-<div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th>Version</th><th>Changes</th></tr></thead><tbody><tr><td><code translate="no">v14.0.0</code></td><td><code translate="no">next export</code> has been removed in favor of <code translate="no">"output": "export"</code></td></tr><tr><td><code translate="no">v13.4.0</code></td><td>App Router (Stable) adds enhanced static export support, including using React Server Components and Route Handlers.</td></tr><tr><td><code translate="no">v13.3.0</code></td><td><code translate="no">next export</code> is deprecated and replaced with <code translate="no">"output": "export"</code></td></tr></tbody></table></div></main>
+<div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th>Version</th><th>Changes</th></tr></thead><tbody><tr><td><code translate="no">v14.0.0</code></td><td><code translate="no">next export</code> has been removed in favor of <code translate="no">"output": "export"</code></td></tr><tr><td><code translate="no">v13.4.0</code></td><td>App Router (Stable) adds enhanced static export support, including using React Server Components and Route Handlers.</td></tr><tr><td><code translate="no">v13.3.0</code></td><td><code translate="no">next export</code> is deprecated and replaced with <code translate="no">"output": "export"</code></td></tr></tbody></table></div></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

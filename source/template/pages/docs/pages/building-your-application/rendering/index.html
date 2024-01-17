@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Rendering</h1><p translated="true">Next.js varsayılan olarak her sayfayı <strong>önceden</strong> işler. Bu, Next.js'nin her sayfa için HTML'yi istemci tarafı JavaScript ile yapmak yerine önceden oluşturduğu anlamına gelir. Ön işleme, daha iyi performans ve SEO ile sonuçlanabilir.</p>
+    <main>@@include('../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Rendering</h1><p translated="true">Next.js varsayılan olarak her sayfayı <strong>önceden</strong> işler. Bu, Next.js'nin her sayfa için HTML'yi istemci tarafı JavaScript ile yapmak yerine önceden oluşturduğu anlamına gelir. Ön işleme, daha iyi performans ve SEO ile sonuçlanabilir.</p>
 <p translated="true">Oluşturulan her HTML, o sayfa için gerekli olan minimum JavaScript koduyla ilişkilendirilir. Bir sayfa tarayıcı tarafından yüklendiğinde, JavaScript kodu çalışır ve sayfayı tamamen etkileşimli hale getirir (bu işlem React'te <a href="https://react.dev/reference/react-dom/client/hydrateRoot" rel="noopener noreferrer nofollow" target="_blank" title="hydration">hidrasyon<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> olarak adlandırılır).</p>
 <h3 id="pre-rendering" data-docs-heading="" translate="no"><a href="#pre-rendering" title="Pre-rendering">Pre-rendering<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -22,7 +22,7 @@
 </ul>
 <p translated="true">Daha da önemlisi, Next.js her sayfa için hangi ön oluşturma formunu kullanmak istediğinizi seçmenize izin verir. Çoğu sayfa için Statik Oluşturma ve diğerleri için Sunucu Tarafı Oluşturma kullanarak "hibrit" bir Next.js uygulaması oluşturabilirsiniz.</p>
 <p translated="true">Performans nedenleriyle Sunucu Tarafı Oluşturma yerine Statik Oluşturma kullanmanızı öneririz. Statik olarak oluşturulan sayfalar, performansı artırmak için ekstra yapılandırmaya gerek kalmadan CDN tarafından önbelleğe alınabilir. Ancak bazı durumlarda Sunucu Tarafı Oluşturma tek seçenek olabilir.</p>
-<p translated="true">İstemci taraflı veri getirmeyi Statik Oluşturma veya Sunucu Taraflı Oluşturma ile birlikte de kullanabilirsiniz. Bu, bir sayfanın bazı bölümlerinin tamamen istemci tarafı JavaScript tarafından oluşturulabileceği anlamına gelir. Daha fazla bilgi edinmek için <a href="/docs/pages/building-your-application/data-fetching/client-side" title="Data Fetching">Veri Get</a> irme belgelerine göz atın.</p></main>
+<p translated="true">İstemci taraflı veri getirmeyi Statik Oluşturma veya Sunucu Taraflı Oluşturma ile birlikte de kullanabilirsiniz. Bu, bir sayfanın bazı bölümlerinin tamamen istemci tarafı JavaScript tarafından oluşturulabileceği anlamına gelir. Daha fazla bilgi edinmek için <a href="/docs/pages/building-your-application/data-fetching/client-side" title="Data Fetching">Veri Get</a> irme belgelerine göz atın.</p></article>@@include('../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../layouts/footer.html') @@include('../../../../../layouts/script.html')
   </body>

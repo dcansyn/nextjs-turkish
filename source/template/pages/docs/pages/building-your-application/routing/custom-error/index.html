@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Custom Errors</h1><h2 id="404-page" data-docs-heading="" translate="no"><a href="#404-page" title="404 Page">404 Page<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Custom Errors</h1><h2 id="404-page" data-docs-heading="" translate="no"><a href="#404-page" title="404 Page">404 Page<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
     <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
     <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
@@ -111,7 +111,7 @@
 <ul>
 <li><code translate="no">Error</code> does not currently support Next.js <a href="/docs/pages/building-your-application/data-fetching" title="Data Fetching methods">Data Fetching methods</a> like <a href="/docs/pages/building-your-application/data-fetching/get-static-props" title="getStaticProps"><code translate="no">getStaticProps</code></a> or <a href="/docs/pages/building-your-application/data-fetching/get-server-side-props" title="getServerSideProps"><code translate="no">getServerSideProps</code></a>.</li>
 <li><code translate="no">_error</code>, like <code translate="no">_app</code>, is a reserved pathname. <code translate="no">_error</code> is used to define the customized layouts and behaviors of the error pages. <code translate="no">/_error</code> will render 404 when accessed directly via <a href="/docs/pages/building-your-application/routing" title="routing">routing</a> or rendering in a <a href="/docs/pages/building-your-application/configuring/custom-server" title="custom server">custom server</a>.</li>
-</ul></main>
+</ul></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">API Routes</h1><details><summary>Examples</summary><ul>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">API Routes</h1><details><summary>Examples</summary><ul>
 <li><a href="https://github.com/vercel/next.js/tree/canary/examples/api-routes" rel="noopener noreferrer" target="_blank" title="Basic API Routes">Basic API Routes<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a></li>
 <li><a href="https://github.com/vercel/next.js/tree/canary/examples/api-routes-middleware" rel="noopener noreferrer" target="_blank" title="API Routes Request Helpers">API Routes Request Helpers<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a></li>
 <li><a href="https://github.com/vercel/next.js/tree/canary/examples/api-routes-graphql" rel="noopener noreferrer" target="_blank" title="API Routes with GraphQL">API Routes with GraphQL<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a></li>
@@ -342,7 +342,7 @@
   </g>
 </svg></span></a></h2>
 <p translated="true">Edge Runtime ile API Routes kullanmak istiyorsanız, App Router'ı aşamalı olarak benimsemenizi ve bunun yerine <a href="/docs/app/building-your-application/routing/route-handlers" title="Route Handlers">Route Handlers</a> kullanmanızı öneririz.</p>
-<p translated="true">Route Handlers işlev imzası izomorfiktir, yani aynı işlevi hem Edge hem de Node.js çalışma zamanları için kullanabilirsiniz.</p></main>
+<p translated="true">Route Handlers işlev imzası izomorfiktir, yani aynı işlevi hem Edge hem de Node.js çalışma zamanları için kullanabilirsiniz.</p></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

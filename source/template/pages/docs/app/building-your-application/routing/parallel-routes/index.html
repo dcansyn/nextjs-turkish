@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Parallel Routes</h1><p translated="true">Paralel Yönlendirme, bir veya daha fazla sayfayı aynı düzende eşzamanlı veya koşullu olarak oluşturmanıza olanak tanır. Bir uygulamanın gösterge tabloları ve sosyal sitelerdeki beslemeler gibi son derece dinamik bölümleri için Paralel Yönlendirme, karmaşık yönlendirme modellerini uygulamak için kullanılabilir.</p>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Parallel Routes</h1><p translated="true">Paralel Yönlendirme, bir veya daha fazla sayfayı aynı düzende eşzamanlı veya koşullu olarak oluşturmanıza olanak tanır. Bir uygulamanın gösterge tabloları ve sosyal sitelerdeki beslemeler gibi son derece dinamik bölümleri için Paralel Yönlendirme, karmaşık yönlendirme modellerini uygulamak için kullanılabilir.</p>
 <p translated="true">Örneğin, ekip ve analiz sayfalarını aynı anda oluşturabilirsiniz.</p>
 <figure><img alt="Parallel Routes Diagram" loading="lazy" width="1600" height="952" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/parallel-routes.png"><img alt="Parallel Routes Diagram" loading="lazy" width="1600" height="952" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/parallel-routes.png"></figure>
 <p translated="true">Paralel Yönlendirme, her bir rota için bağımsız hata ve yükleme durumları tanımlamanıza olanak tanır.</p>
@@ -195,7 +195,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-keyword)">return</span><span style="color:var(--shiki-color-text)"> isLoggedIn </span><span style="color:var(--shiki-token-keyword)">?</span><span style="color:var(--shiki-color-text)"> dashboard </span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-color-text)"> login</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <!-- -->
-<figure><img alt="Parallel routes authentication example" loading="lazy" width="1600" height="898" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/conditional-routes-ui.png"><img alt="Parallel routes authentication example" loading="lazy" width="1600" height="898" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/conditional-routes-ui.png"></figure></main>
+<figure><img alt="Parallel routes authentication example" loading="lazy" width="1600" height="898" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/conditional-routes-ui.png"><img alt="Parallel routes authentication example" loading="lazy" width="1600" height="898" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/conditional-routes-ui.png"></figure></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

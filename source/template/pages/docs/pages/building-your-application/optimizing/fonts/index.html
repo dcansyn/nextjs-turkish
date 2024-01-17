@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Font Optimization</h1>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Font Optimization</h1>
 <p translated="true"><a href="/docs/app/api-reference/components/font" title="next/font"><strong><code translate="no">next/font</code></strong></a> yazı tiplerinizi (özel yazı tipleri dahil) otomatik olarak optimize edecek ve gelişmiş gizlilik ve performans için harici ağ isteklerini kaldıracaktır.</p>
 <blockquote class="p-3 text-sm">
 <p><strong>🎥 Watch:</strong> Learn more about how to use <code translate="no">next/font</code> → <a href="https://www.youtube.com/watch?v=L8_98i_bMMA" rel="noopener noreferrer nofollow" target="_blank" title="YouTube (6 minutes)">YouTube (6 minutes)<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>.</p>
@@ -250,7 +250,7 @@
 <li>Call the font loader function in one shared file</li>
 <li>Export it as a constant</li>
 <li>Import the constant in each file where you would like to use this font</li>
-</ul></main>
+</ul></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Lazy Loading</h1>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Lazy Loading</h1>
 <p translated="true">Next.js'deki <a href="https://developer.mozilla.org/docs/Web/Performance/Lazy_loading" rel="noopener noreferrer nofollow" target="_blank" title="Lazy loading"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span> tembel yükleme</a>, bir rotayı oluşturmak için gereken JavaScript miktarını azaltarak bir uygulamanın ilk yükleme performansını artırmaya yardımcı olur.</p>
 <p translated="true"><strong>İstemci Bileşenlerinin</strong> ve içe aktarılan kitaplıkların yüklenmesini ertelemenize ve bunları yalnızca gerektiğinde istemci paketine dahil etmenize olanak tanır. Örneğin, bir kullanıcı açmak için tıklayana kadar bir modalin yüklenmesini ertelemek isteyebilirsiniz.</p>
 <p translated="true">Next.js'de tembel yüklemeyi uygulayabileceğiniz iki yol vardır:</p>
@@ -92,7 +92,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">      &lt;</span><span style="color:var(--shiki-token-string-expression)">pre</span><span style="color:var(--shiki-color-text)">&gt;Results: {</span><span style="color:var(--shiki-token-constant)">JSON</span><span style="color:var(--shiki-token-function)">.stringify</span><span style="color:var(--shiki-color-text)">(results</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-constant)">null</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-constant)">2</span><span style="color:var(--shiki-color-text)">)}&lt;/</span><span style="color:var(--shiki-token-string-expression)">pre</span><span style="color:var(--shiki-color-text)">&gt;</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">    &lt;/</span><span style="color:var(--shiki-token-string-expression)">div</span><span style="color:var(--shiki-color-text)">&gt;</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">  )</span></span>
-<span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div></main>
+<span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

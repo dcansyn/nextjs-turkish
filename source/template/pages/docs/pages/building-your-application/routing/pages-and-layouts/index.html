@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Pages and Layouts</h1><p translated="true">Sayfalar Yönlendiricisi, sayfalar kavramı üzerine inşa edilmiş dosya sistemi tabanlı bir yönlendiriciye sahiptir.</p>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Pages and Layouts</h1><p translated="true">Sayfalar Yönlendiricisi, sayfalar kavramı üzerine inşa edilmiş dosya sistemi tabanlı bir yönlendiriciye sahiptir.</p>
 <p translated="true">Bir dosya <code translate="no">pages</code> dizinine eklendiğinde, otomatik olarak bir rota olarak kullanılabilir.</p>
 <p translated="true">Next.js'de bir <strong>sayfa</strong>, <code translate="no">pages</code> dizinindeki bir <code translate="no">.js</code>, <code translate="no">.jsx</code>, <code translate="no">.ts</code> veya <code translate="no">.tsx</code> dosyasından dışa aktarılan bir <a href="https://react.dev/learn/your-first-component" rel="noopener noreferrer nofollow" target="_blank" title="React Component">React Bileşeni<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> 'dur. Her sayfa, dosya adına bağlı olarak bir rota ile ilişkilendirilir.</p>
 <p translated="true"><strong>Örnek</strong>: Aşağıdaki gibi bir React bileşenini dışa aktaran <code translate="no">pages/about.js</code> oluşturursanız, bu bileşene <code translate="no">/about</code> adresinden erişilebilir.</p>
@@ -191,7 +191,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">      &lt;</span><span style="color:var(--shiki-token-constant)">Footer</span><span style="color:var(--shiki-color-text)"> /&gt;</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">    &lt;/&gt;</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">  )</span></span>
-<span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div></main>
+<span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

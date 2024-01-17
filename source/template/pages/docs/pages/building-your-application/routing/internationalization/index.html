@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Internationalization (i18n) Routing</h1><details><summary>Examples</summary><ul>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Internationalization (i18n) Routing</h1><details><summary>Examples</summary><ul>
 <li><a href="https://github.com/vercel/next.js/tree/canary/examples/i18n-routing" rel="noopener noreferrer" target="_blank" title="i18n routing">i18n routing<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a></li>
 </ul></details>
 <p translated="true">Next.js, <code translate="no">v10.0.0</code> adresinden bu yana uluslararasılaştırılmış<a href="https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming" rel="noopener noreferrer nofollow" target="_blank" title="i18n">(i18n<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>) yönlendirme için yerleşik desteğe sahiptir. Yerel ayarların, varsayılan yerel ayarın ve etki alanına özgü yerel ayarların bir listesini sağlayabilirsiniz ve Next.js yönlendirmeyi otomatik olarak gerçekleştirecektir.</p>
@@ -346,7 +346,7 @@
 </ul>
 <blockquote class="p-3 text-sm">
 <p><strong>Good to know</strong>: These limits have been added initially to prevent potential <a href="#dynamic-routes-and-getstaticprops-pages" title="performance issues at build time">performance issues at build time</a>. You can workaround these limits with custom routing using <a href="/docs/pages/building-your-application/routing/middleware" title="Middleware">Middleware</a> in Next.js 12.</p>
-</blockquote></main>
+</blockquote></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

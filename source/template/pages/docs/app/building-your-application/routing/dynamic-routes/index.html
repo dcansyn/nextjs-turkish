@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Dynamic Routes</h1><p translated="true">Segment adlarını önceden tam olarak bilmediğinizde ve dinamik verilerden rotalar oluşturmak istediğinizde, istek zamanında doldurulan veya derleme zamanında <a href="#generating-static-params" title="prerendered">önceden</a> oluşturulan Dinamik Segmentleri kullanabilirsiniz.</p>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Dynamic Routes</h1><p translated="true">Segment adlarını önceden tam olarak bilmediğinizde ve dinamik verilerden rotalar oluşturmak istediğinizde, istek zamanında doldurulan veya derleme zamanında <a href="#generating-static-params" title="prerendered">önceden</a> oluşturulan Dinamik Segmentleri kullanabilirsiniz.</p>
 <h2 id="convention" data-docs-heading="" translate="no"><a href="#convention" title="Convention">Convention<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
     <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
@@ -83,7 +83,7 @@
 <div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th>Route</th><th><code translate="no">params</code> Type Definition</th></tr></thead><tbody><tr><td><code translate="no">app/blog/[slug]/page.js</code></td><td><code translate="no">{ slug: string }</code></td></tr><tr><td><code translate="no">app/shop/[...slug]/page.js</code></td><td><code translate="no">{ slug: string[] }</code></td></tr><tr><td><code translate="no">app/shop/[[...slug]]/page.js</code></td><td><code translate="no">{ slug?: string[] }</code></td></tr><tr><td><code translate="no">app/[categoryId]/[itemId]/page.js</code></td><td><code translate="no">{ categoryId: string, itemId: string }</code></td></tr></tbody></table></div>
 <blockquote class="p-3 text-sm">
 <p><strong>Good to know</strong>: This may be done automatically by the <a href="/docs/app/building-your-application/configuring/typescript#typescript-plugin" title="TypeScript plugin">TypeScript plugin</a> in the future.</p>
-</blockquote></main>
+</blockquote></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

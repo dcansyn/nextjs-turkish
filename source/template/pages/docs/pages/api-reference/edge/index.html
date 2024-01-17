@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Edge Runtime</h1>
+    <main>@@include('../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Edge Runtime</h1>
 <p translated="true">Next.js Edge Runtime standart Web API'lerini temel alır, aşağıdaki API'leri destekler:</p>
 <h2 id="network-apis" data-docs-heading="" translate="no"><a href="#network-apis" title="Network APIs">Network APIs<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -85,7 +85,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">  ]</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <p translated="true"><code translate="no">unstable_allowDynamic</code> bir <a href="https://github.com/micromatch/micromatch#matching-features" rel="noopener noreferrer nofollow" target="_blank" title="glob">glob<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> veya belirli dosyalar için dinamik kod değerlendirmesini yok sayan bir <a href="https://github.com/micromatch/micromatch#matching-features" rel="noopener noreferrer nofollow" target="_blank" title="glob">glob</a> dizisidir. Globlar uygulamanızın kök klasörüne görelidir.</p>
-<p translated="true">Bu ifadeler Edge üzerinde çalıştırılırsa, <em>çalışma zamanı hatasına neden olacakları</em> konusunda uyarılmalıdır.</p></main>
+<p translated="true">Bu ifadeler Edge üzerinde çalıştırılırsa, <em>çalışma zamanı hatasına neden olacakları</em> konusunda uyarılmalıdır.</p></article>@@include('../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../layouts/footer.html') @@include('../../../../../layouts/script.html')
   </body>

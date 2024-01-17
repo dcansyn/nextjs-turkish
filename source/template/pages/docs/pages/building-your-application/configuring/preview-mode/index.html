@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Preview Mode</h1><blockquote class="p-3 text-sm">
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Preview Mode</h1><blockquote class="p-3 text-sm">
 <p><strong>Note</strong>: This feature is superseded by <a href="/docs/pages/building-your-application/configuring/draft-mode" title="Draft Mode">Draft Mode</a>.</p>
 </blockquote>
 <details><summary>Examples</summary><ul>
@@ -225,7 +225,7 @@
 <p translated="true"><code translate="no">next build</code> tamamlandığında hem bypass çerez değeri hem de <code translate="no">previewData</code> şifrelemek için kullanılan özel anahtar değişir. Bu, bypass çerezinin tahmin edilememesini sağlar.</p>
 <blockquote class="p-3 text-sm">
 <p><strong>Good to know</strong>: To test Preview Mode locally over HTTP your browser will need to allow third-party cookies and local storage access.</p>
-</blockquote></main>
+</blockquote></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

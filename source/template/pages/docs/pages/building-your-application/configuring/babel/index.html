@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Babel</h1><details><summary>Examples</summary><ul>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Babel</h1><details><summary>Examples</summary><ul>
 <li><a href="https://github.com/vercel/next.js/tree/canary/examples/with-custom-babel-config" rel="noopener noreferrer" target="_blank" title="Customizing babel configuration">Customizing babel configuration<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a></li>
 </ul></details>
 <p translated="true">Next.js, React uygulamalarını ve sunucu tarafı kodunu derlemek için gereken her şeyi içeren <code translate="no">next/babel</code> ön ayarını uygulamanıza dahil eder. Ancak varsayılan Babel yapılandırmalarını genişletmek istiyorsanız, bu da mümkündür.</p>
@@ -57,7 +57,7 @@
 <li>Next.js uses the <a href="https://github.com/nodejs/release#release-schedule" rel="noopener noreferrer nofollow" target="_blank" title="current Node.js version"><strong>current</strong> Node.js version<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> for server-side compilations.</li>
 <li>The <code translate="no">modules</code> option on <code translate="no">"preset-env"</code> should be kept to <code translate="no">false</code>, otherwise webpack code splitting is turned off.</li>
 </ul>
-</blockquote></main>
+</blockquote></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

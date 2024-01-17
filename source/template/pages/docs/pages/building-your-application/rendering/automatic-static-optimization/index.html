@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Automatic Static Optimization</h1><p translated="true">Next.js, engelleyici veri gereksinimi yoksa bir sayfanın statik (önceden oluşturulabilir) olduğunu otomatik olarak belirler. Bu belirleme, sayfada <code translate="no">getServerSideProps</code> ve <code translate="no">getInitialProps</code> adreslerinin bulunmamasına göre yapılır.</p>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Automatic Static Optimization</h1><p translated="true">Next.js, engelleyici veri gereksinimi yoksa bir sayfanın statik (önceden oluşturulabilir) olduğunu otomatik olarak belirler. Bu belirleme, sayfada <code translate="no">getServerSideProps</code> ve <code translate="no">getInitialProps</code> adreslerinin bulunmamasına göre yapılır.</p>
 <p translated="true">Bu özellik Next.js'nin <strong>hem sunucu tarafından oluşturulan hem de statik olarak oluşturulan sayfalar</strong> içeren hibrit uygulamalar <strong>oluşturmasına</strong> olanak tanır.</p>
 <blockquote class="p-3 text-sm">
 <p>Statically generated pages are still reactive: Next.js will hydrate your application client-side to give it full interactivity.</p>
@@ -46,7 +46,7 @@
 <li>If you have a <a href="/docs/pages/building-your-application/routing/custom-app" title="custom App">custom <code translate="no">App</code></a> with <code translate="no">getInitialProps</code> then this optimization will be turned off in pages without <a href="/docs/pages/building-your-application/data-fetching/get-static-props" title="Static Generation">Static Generation</a>.</li>
 <li>If you have a <a href="/docs/pages/building-your-application/routing/custom-document" title="custom Document">custom <code translate="no">Document</code></a> with <code translate="no">getInitialProps</code> be sure you check if <code translate="no">ctx.req</code> is defined before assuming the page is server-side rendered. <code translate="no">ctx.req</code> will be <code translate="no">undefined</code> for pages that are prerendered.</li>
 <li>Avoid using the <code translate="no">asPath</code> value on <a href="/docs/pages/api-reference/functions/use-router#router-object" title="next/router"><code translate="no">next/router</code></a> in the rendering tree until the router's <code translate="no">isReady</code> field is <code translate="no">true</code>. Statically optimized pages only know <code translate="no">asPath</code> on the client and not the server, so using it as a prop may lead to mismatch errors. The <a href="https://github.com/vercel/next.js/tree/canary/examples/active-class-name" rel="noopener noreferrer" target="_blank" title="active-class-name example"><code translate="no">active-class-name</code> example<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> demonstrates one way to use <code translate="no">asPath</code> as a prop.</li>
-</ul></main>
+</ul></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

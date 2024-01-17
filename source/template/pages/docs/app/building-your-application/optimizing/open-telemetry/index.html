@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">OpenTelemetry</h1>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">OpenTelemetry</h1>
 <blockquote class="p-3 text-sm">
 <p><strong>Good to know</strong>: This feature is <strong>experimental</strong>, you need to explicitly opt-in by providing <code translate="no">experimental.instrumentationHook = true;</code> in your <code translate="no">next.config.js</code>.</p>
 </blockquote>
@@ -322,7 +322,7 @@ We don't provide any for <code translate="no">edge</code> or client side code.</
 <li><code translate="no">next.span_name</code></li>
 <li><code translate="no">next.span_type</code></li>
 <li><code translate="no">next.page</code></li>
-</ul></main>
+</ul></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

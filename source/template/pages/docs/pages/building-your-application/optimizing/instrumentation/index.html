@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Instrumentation</h1>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Instrumentation</h1>
 <p translated="true">Enstrümantasyon, izleme ve günlük tutma araçlarını uygulamanıza entegre etmek için kod kullanma sürecidir. Bu, uygulamanızın performansını ve davranışını izlemenize ve üretimdeki sorunları ayıklamanıza olanak tanır.</p>
 <p translated="true">Next.js, projenizin <strong>kök dizinindeki</strong> (veya kullanıyorsanız <code translate="no">src</code> klasörünün içindeki) bir <code translate="no">instrumentation.ts|js</code> dosyasından dışa aktarılabilen bir <code translate="no">register</code> işlevi sağlar. Next.js daha sonra yeni bir Next.js sunucu örneği önyüklendiğinde <code translate="no">register</code> adresini çağıracaktır.</p>
 <!-- -->
@@ -45,7 +45,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">    </span><span style="color:var(--shiki-token-keyword)">await</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)">(</span><span style="color:var(--shiki-token-string-expression)">'./instrumentation-edge'</span><span style="color:var(--shiki-color-text)">)</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">  }</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
-</main>
+</article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

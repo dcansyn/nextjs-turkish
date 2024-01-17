@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Continuous Integration (CI) Build Caching</h1><p translated="true">Derleme performansını artırmak için Next.js, derlemeler arasında paylaşılan bir önbelleği <code translate="no">.next/cache</code> adresine kaydeder.</p>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Continuous Integration (CI) Build Caching</h1><p translated="true">Derleme performansını artırmak için Next.js, derlemeler arasında paylaşılan bir önbelleği <code translate="no">.next/cache</code> adresine kaydeder.</p>
 <p translated="true">Sürekli Entegrasyon (CI) ortamlarında bu önbellekten yararlanmak için, CI iş akışınızın derlemeler arasında önbelleği doğru şekilde devam ettirecek şekilde yapılandırılması gerekir.</p>
 <blockquote class="p-3 text-sm">
 <p>If your CI is not configured to persist <code translate="no">.next/cache</code> between builds, you may see a <a href="/docs/messages/no-cache" title="No Cache Detected">No Cache Detected</a> error.</p>
@@ -169,7 +169,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">            </span><span style="color:var(--shiki-token-string-expression)">sh "npm run build"</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">        }</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">    }</span></span>
-<span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div></main>
+<span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

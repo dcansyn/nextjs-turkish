@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Caching in Next.js</h1><p translated="true">Next.js, işleme işini ve veri isteklerini önbelleğe alarak uygulamanızın performansını artırır ve maliyetleri azaltır. Bu sayfa Next.js önbellekleme mekanizmalarına, bunları yapılandırmak için kullanabileceğiniz API'lere ve birbirleriyle nasıl etkileşime girdiklerine derinlemesine bir bakış sağlar.</p>
+    <main>@@include('../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Caching in Next.js</h1><p translated="true">Next.js, işleme işini ve veri isteklerini önbelleğe alarak uygulamanızın performansını artırır ve maliyetleri azaltır. Bu sayfa Next.js önbellekleme mekanizmalarına, bunları yapılandırmak için kullanabileceğiniz API'lere ve birbirleriyle nasıl etkileşime girdiklerine derinlemesine bir bakış sağlar.</p>
 <blockquote class="p-3 text-sm">
 <p><strong>Good to know</strong>: This page helps you understand how Next.js works under the hood but is <strong>not</strong> essential knowledge to be productive with Next.js. Most of Next.js' caching heuristics are determined by your API usage and have defaults for the best performance with zero or minimal configuration.</p>
 </blockquote>
@@ -552,7 +552,7 @@ This cache specifically applies to Next.js and Server Components, and is differe
 <span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-constant)">item</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">await</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-constant)">db</span><span style="color:var(--shiki-token-function)">.</span><span style="color:var(--shiki-token-constant)">item</span><span style="color:var(--shiki-token-function)">.findUnique</span><span style="color:var(--shiki-color-text)">({ id })</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-keyword)">return</span><span style="color:var(--shiki-color-text)"> item</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">})</span></span></code></pre></div>
-</main>
+</article>@@include('../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../layouts/footer.html') @@include('../../../../../layouts/script.html')
   </body>

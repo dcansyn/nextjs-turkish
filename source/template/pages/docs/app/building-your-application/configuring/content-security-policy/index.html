@@ -7,7 +7,7 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main><h1 class="break-words" translate="no">Content Security Policy</h1>
+    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Content Security Policy</h1>
 <p translated="true"><a href="https://developer.mozilla.org/docs/Web/HTTP/CSP" rel="noopener noreferrer nofollow" target="_blank" title="Content Security Policy (CSP)">İçerik Güvenliği Politikası (CSP)<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> Next.js uygulamanızı siteler arası komut dosyası oluşturma (XSS), clickjacking ve diğer kod enjeksiyon saldırıları gibi çeşitli güvenlik tehditlerine karşı korumak için önemlidir.</p>
 <p translated="true">Geliştiriciler CSP'yi kullanarak içerik kaynakları, komut dosyaları, stil sayfaları, görüntüler, yazı tipleri, nesneler, medya (ses, video), iframe'ler ve daha fazlası için hangi kökenlere izin verileceğini belirleyebilirler.</p>
 <details><summary>Examples</summary><ul>
@@ -164,7 +164,7 @@
     <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
   </g>
 </svg></span></a></h2>
-<p translated="true">Nonce'ları düzgün bir şekilde işlemek ve uygulamak için Next.js'nin <code translate="no">v13.4.20+</code> adresini kullanmanızı öneririz.</p></main>
+<p translated="true">Nonce'ları düzgün bir şekilde işlemek ve uygulamak için Next.js'nin <code translate="no">v13.4.20+</code> adresini kullanmanızı öneririz.</p></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>
