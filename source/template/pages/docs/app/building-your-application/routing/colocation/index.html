@@ -10,9 +10,9 @@
     <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Project Organization and File Colocation</h1><p translated="true"><a href="/docs/getting-started/project-structure#app-routing-conventions" title="routing folder and file conventions">Yönlendirme klasörü ve dosya kuralları</a> dışında Next.js, proje dosyalarınızı nasıl düzenlediğiniz ve konumlandırdığınız konusunda <strong>görüş</strong> bildirmez.</p>
 <p translated="true">Bu sayfa, projenizi düzenlemek için kullanabileceğiniz varsayılan davranış ve özellikleri paylaşır.</p>
 <ul>
-<li><a href="#safe-colocation-by-default" title="Safe colocation by default">Safe colocation by default</a></li>
-<li><a href="#project-organization-features" title="Project organization features">Project organization features</a></li>
-<li><a href="#project-organization-strategies" title="Project organization strategies">Project organization strategies</a></li>
+<li translated="true"><a href="#safe-colocation-by-default" title="Safe colocation by default">Varsayılan olarak güvenli ortak yerleşim</a></li>
+<li translated="true"><a href="#project-organization-features" title="Project organization features">Proje organizasyon özellikleri</a></li>
+<li translated="true"><a href="#project-organization-strategies" title="Project organization strategies">Proje organizasyon stratejileri</a></li>
 </ul>
 <h2 id="safe-colocation-by-default" data-docs-heading="" translate="no"><a href="#safe-colocation-by-default" title="Safe colocation by default">Safe colocation by default<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -29,10 +29,10 @@
 <p translated="true">Bu, <strong>proje dosyalarının</strong> yanlışlıkla yönlendirilebilir olmadan <code translate="no">app</code> dizinindeki rota segmentlerinin içine <strong>güvenli bir şekilde yerleştirilebileceği</strong> anlamına gelir.</p>
 <figure><img alt="A diagram showing colocated project files are not routable even when a segment contains a page.js or route.js file." loading="lazy" width="1600" height="1011" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/project-organization-colocation.png"><img alt="A diagram showing colocated project files are not routable even when a segment contains a page.js or route.js file." loading="lazy" width="1600" height="1011" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/project-organization-colocation.png"></figure>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>This is different from the <code translate="no">pages</code> directory, where any file in <code translate="no">pages</code> is considered a route.</li>
-<li>While you <strong>can</strong> colocate your project files in <code translate="no">app</code> you don't <strong>have</strong> to. If you prefer, you can <a href="#store-project-files-outside-of-app" title="keep them outside the app directory">keep them outside the <code translate="no">app</code> directory</a>.</li>
+<li translated="true">Bu, <code translate="no">pages</code> adresindeki herhangi bir dosyanın rota olarak kabul edildiği <code translate="no">pages</code> dizininden farklıdır.</li>
+<li translated="true">Proje dosyalarınızı <code translate="no">app</code> dizinine <strong>yerleştirebilirsiniz</strong> ancak bunu yapmak <strong>zorunda</strong> değilsiniz. Tercih ederseniz, <a href="#store-project-files-outside-of-app" title="keep them outside the app directory">bunları <code translate="no">app</code> dizininin dışında tutabilirsiniz</a>.</li>
 </ul>
 </blockquote>
 <h2 id="project-organization-features" data-docs-heading="" translate="no"><a href="#project-organization-features" title="Project organization features">Project organization features<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -53,17 +53,17 @@
 <figure><img alt="An example folder structure using private folders" loading="lazy" width="1600" height="849" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/project-organization-private-folders.png"><img alt="An example folder structure using private folders" loading="lazy" width="1600" height="849" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/project-organization-private-folders.png"></figure>
 <p translated="true"><code translate="no">app</code> dizinindeki dosyalar <a href="#safe-colocation-by-default" title="safely colocated by default">varsayılan olarak güvenli</a> bir şekilde ortak yerleştirilebildiğinden, özel klasörler ortak yerleştirme için gerekli değildir. Ancak, şunlar için yararlı olabilirler:</p>
 <ul>
-<li>Separating UI logic from routing logic.</li>
-<li>Consistently organizing internal files across a project and the Next.js ecosystem.</li>
-<li>Sorting and grouping files in code editors.</li>
-<li>Avoiding potential naming conflicts with future Next.js file conventions.</li>
+<li translated="true">UI mantığını yönlendirme mantığından ayırma.</li>
+<li translated="true">Bir proje ve Next.js ekosistemi genelinde dahili dosyaları tutarlı bir şekilde düzenlemek.</li>
+<li translated="true">Kod düzenleyicilerde dosyaları sıralama ve gruplama.</li>
+<li translated="true">Gelecekteki Next.js dosya kurallarıyla olası adlandırma çakışmalarını önleme.</li>
 </ul>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong></p>
+<p translated="true"><strong>Bildiğim iyi oldu</strong></p>
 <ul>
-<li>While not a framework convention, you might also consider marking files outside private folders as "private" using the same underscore pattern.</li>
-<li>You can create URL segments that start with an underscore by prefixing the folder name with <code translate="no">%5F</code> (the URL-encoded form of an underscore): <code translate="no">%5FfolderName</code>.</li>
-<li>If you don't use private folders, it would be helpful to know Next.js <a href="/docs/getting-started/project-structure#routing-files" title="special file conventions">special file conventions</a> to prevent unexpected naming conflicts.</li>
+<li translated="true">Bir çerçeve kuralı olmamakla birlikte, özel klasörlerin dışındaki dosyaları da aynı alt çizgi kalıbını kullanarak "özel" olarak işaretlemeyi düşünebilirsiniz.</li>
+<li translated="true">Klasör adının önüne <code translate="no">%5F</code> (alt çizginin URL ile kodlanmış biçimi) ekleyerek alt çizgi ile başlayan URL segmentleri oluşturabilirsiniz: <code translate="no">%5FfolderName</code>.</li>
+<li translated="true">Özel klasörler kullanmıyorsanız, beklenmedik adlandırma çakışmalarını önlemek için Next.js <a href="/docs/getting-started/project-structure#routing-files" title="special file conventions">özel dosya kurallarını</a> bilmek yararlı olacaktır.</li>
 </ul>
 </blockquote>
 <h3 id="route-groups" data-docs-heading="" translate="no"><a href="#route-groups" title="Route Groups">Route Groups<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -77,11 +77,10 @@
 <figure><img alt="An example folder structure using route groups" loading="lazy" width="1600" height="849" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/project-organization-route-groups.png"><img alt="An example folder structure using route groups" loading="lazy" width="1600" height="849" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/project-organization-route-groups.png"></figure>
 <p translated="true">Rota grupları şunlar için kullanışlıdır:</p>
 <ul>
-<li><a href="/docs/app/building-your-application/routing/route-groups#organize-routes-without-affecting-the-url-path" title="Organizing routes into groups">Organizing routes into groups</a> e.g. by site section, intent, or team.</li>
-<li>Enabling nested layouts in the same route segment level:<!-- -->
-<ul>
-<li><a href="/docs/app/building-your-application/routing/route-groups#creating-multiple-root-layouts" title="Creating multiple nested layouts in the same segment, including multiple root layouts">Creating multiple nested layouts in the same segment, including multiple root layouts</a></li>
-<li><a href="/docs/app/building-your-application/routing/route-groups#opting-specific-segments-into-a-layout" title="Adding a layout to a subset of routes in a common segment">Adding a layout to a subset of routes in a common segment</a></li>
+<li translated="true"><a href="/docs/app/building-your-application/routing/route-groups#organize-routes-without-affecting-the-url-path" title="Organizing routes into groups">Rotaların gruplar halinde düzenlenmesi</a>, örneğin saha bölümüne, amaca veya ekibe göre.</li>
+<li translated="true">Aynı rota segmenti düzeyinde iç içe düzenleri etkinleştirme:<!-- --><ul>
+<li><a href="/docs/app/building-your-application/routing/route-groups#creating-multiple-root-layouts" title="Creating multiple nested layouts in the same segment, including multiple root layouts">Birden fazla kök düzen dahil olmak üzere aynı segmentte birden fazla iç içe düzen oluşturma</a></li>
+<li><a href="/docs/app/building-your-application/routing/route-groups#opting-specific-segments-into-a-layout" title="Adding a layout to a subset of routes in a common segment">Ortak bir segmentteki rotaların alt kümesine bir düzen ekleme</a></li>
 </ul>
 </li>
 </ul>
@@ -114,7 +113,7 @@
 <p translated="true">Bir Next.js projesinde kendi dosyalarınızı ve klasörlerinizi düzenlemek söz konusu olduğunda "doğru" veya "yanlış" bir yol yoktur.</p>
 <p translated="true">Aşağıdaki bölüm, yaygın stratejilerin çok üst düzey bir özetini listelemektedir. En basit çıkarım, sizin ve ekibiniz için işe yarayan bir strateji seçmek ve proje genelinde tutarlı olmaktır.</p>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: In our examples below, we're using <code translate="no">components</code> and <code translate="no">lib</code> folders as generalized placeholders, their naming has no special framework significance and your projects might use other folders like <code translate="no">ui</code>, <code translate="no">utils</code>, <code translate="no">hooks</code>, <code translate="no">styles</code>, etc.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: Aşağıdaki örneklerimizde, <code translate="no">components</code> ve <code translate="no">lib</code> klasörlerini genelleştirilmiş yer tutucular olarak kullanıyoruz, bunların adlandırılmasının özel bir çerçeve önemi yoktur ve projeleriniz <code translate="no">ui</code>, <code translate="no">utils</code>, <code translate="no">hooks</code>, <code translate="no">styles</code>, vb. gibi başka klasörler kullanabilir.</p>
 </blockquote>
 <h3 id="store-project-files-outside-of-app" data-docs-heading="" translate="no"><a href="#store-project-files-outside-of-app" title="Store project files outside of app">Store project files outside of <code translate="no">app</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">

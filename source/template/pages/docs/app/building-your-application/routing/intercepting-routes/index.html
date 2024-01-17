@@ -21,15 +21,15 @@
 <p translated="true">Kesişen rotalar, <code translate="no">../</code> göreli yol kuralına benzeyen ancak segmentler için olan <code translate="no">(..)</code> kuralı ile tanımlanabilir.</p>
 <p translated="true">Kullanabilirsin:</p>
 <ul>
-<li><code translate="no">(.)</code> to match segments on the <strong>same level</strong></li>
-<li><code translate="no">(..)</code> to match segments <strong>one level above</strong></li>
-<li><code translate="no">(..)(..)</code> to match segments <strong>two levels above</strong></li>
-<li><code translate="no">(...)</code> to match segments from the <strong>root</strong> <code translate="no">app</code> directory</li>
+<li translated="true"><code translate="no">(.)</code> <strong>aynı seviyedeki</strong> segmentleri eşleştirmek için</li>
+<li translated="true"><code translate="no">(..)</code> <strong>bir seviye üstündeki</strong> segmentlerle eşleştirmek için</li>
+<li translated="true"><code translate="no">(..)(..)</code> <strong>iki seviye üstündeki</strong> segmentlerle eşleştirmek için</li>
+<li translated="true"><code translate="no">(...)</code> <strong>kök</strong> <code translate="no">app</code> dizinindeki segmentleri eşleştirmek için</li>
 </ul>
 <p translated="true">Örneğin, bir <code translate="no">(..)photo</code> dizini oluşturarak <code translate="no">photo</code> segmentini <code translate="no">feed</code> segmenti içinden kesebilirsiniz.</p>
 <figure><img alt="Intercepting routes folder structure" loading="lazy" width="1600" height="604" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/intercepted-routes-files.png"><img alt="Intercepting routes folder structure" loading="lazy" width="1600" height="604" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/intercepted-routes-files.png"></figure>
 <blockquote class="p-3 text-sm">
-<p>Note that the <code translate="no">(..)</code> convention is based on <em>route segments</em>, not the file-system.</p>
+<p translated="true"><code translate="no">(..)</code> kuralının dosya sistemini değil, <em>rota segmentlerini</em> temel aldığını unutmayın.</p>
 </blockquote>
 <h2 id="examples" data-docs-heading="" translate="no"><a href="#examples" title="Examples">Examples<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -46,14 +46,14 @@
 <p translated="true">Yakalama Rotaları, modaller oluşturmak için <a href="/docs/app/building-your-application/routing/parallel-routes" title="Parallel Routes">Paralel Rot</a> alar ile birlikte kullanılabilir.</p>
 <p translated="true">Bu kalıbı kullanarak modaller oluşturmak, modallerle çalışırken karşılaşılan bazı zorlukların üstesinden gelmenizi sağlar:</p>
 <ul>
-<li>Make the modal content <strong>shareable through a URL</strong></li>
-<li><strong>Preserve context</strong> when the page is refreshed, instead of closing the modal</li>
-<li><strong>Close the modal on backwards navigation</strong> rather than going to the previous route</li>
-<li><strong>Reopen the modal on forwards navigation</strong></li>
+<li translated="true">Modal içeriği <strong>bir URL aracılığıyla paylaşılabilir</strong> hale getirin</li>
+<li translated="true">Sayfa yenilendiğinde, modalı kapatmak yerine <strong>bağlamı koruyun</strong> </li>
+<li translated="true">Önceki rotaya gitmek yerine <strong>geriye doğru gezinmede modalı kapatın</strong> </li>
+<li translated="true"><strong>İleriye doğru gezinme modalini yeniden açma</strong></li>
 </ul>
 <figure><img alt="Intercepting routes modal example" loading="lazy" width="1600" height="976" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/intercepted-routes-modal-example.png"><img alt="Intercepting routes modal example" loading="lazy" width="1600" height="976" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/intercepted-routes-modal-example.png"></figure>
 <blockquote class="p-3 text-sm">
-<p>In the above example, the path to the <code translate="no">photo</code> segment can use the <code translate="no">(..)</code> matcher since <code translate="no">@modal</code> is a <em>slot</em> and not a <em>segment</em>. This means that the <code translate="no">photo</code> route is only one <em>segment</em> level higher, despite being two <em>file-system</em> levels higher.</p>
+<p translated="true">Yukarıdaki örnekte, <code translate="no">photo</code> segmentine giden yol <code translate="no">(..)</code> eşleştiricisini kullanabilir çünkü <code translate="no">@modal</code> bir <em>segment</em> değil bir <em>yuvadır</em>. Bu, <code translate="no">photo</code> yolunun iki <em>dosya sistemi</em> seviyesi daha yüksek olmasına rağmen yalnızca bir <em>segment</em> seviyesi daha yüksek olduğu anlamına gelir.</p>
 </blockquote>
 <p translated="true">Diğer örnekler arasında, özel bir <code translate="no">/login</code> sayfasına sahipken üst navbarda bir oturum açma modalı açmak veya bir yan modalda bir alışveriş sepeti açmak sayılabilir.</p>
 <p translated="true">Intercepted ve Parallel Routes ile modallerin <a href="https://github.com/vercel-labs/nextgram" rel="noopener noreferrer" target="_blank" title="View an example">örnek bir<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> adresini görüntüleyin.</p></article>@@include('../../../../../../layouts/sidebar.html')</main>

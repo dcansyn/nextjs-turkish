@@ -56,10 +56,10 @@
 </svg></span></a></h3>
 <p translated="true">Kodun yükleme stratejisi. Kullanılabilecek dört farklı strateji vardır:</p>
 <ul>
-<li><code translate="no">beforeInteractive</code>: Load before any Next.js code and before any page hydration occurs.</li>
-<li><code translate="no">afterInteractive</code>: (<strong>default</strong>) Load early but after some hydration on the page occurs.</li>
-<li><code translate="no">lazyOnload</code>: Load during browser idle time.</li>
-<li><code translate="no">worker</code>: (experimental) Load in a web worker.</li>
+<li translated="true"><code translate="no">beforeInteractive</code>: Herhangi bir Next.js kodundan önce ve herhangi bir sayfa hidrasyonu gerçekleşmeden önce yükleyin.</li>
+<li translated="true"><code translate="no">afterInteractive</code>:<strong>(varsayılan</strong>) Erken yükleyin, ancak sayfada bir miktar hidrasyon gerçekleştikten sonra.</li>
+<li translated="true"><code translate="no">lazyOnload</code>: Tarayıcı boşta kaldığı süre boyunca yükleyin.</li>
+<li translated="true"><code translate="no">worker</code>: (deneysel) Bir web çalışanında yük.</li>
 </ul>
 <h3 id="beforeinteractive" data-docs-heading="" translate="no"><a href="#beforeinteractive" title="beforeInteractive"><code translate="no">beforeInteractive</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -91,12 +91,12 @@
 <span class="line"><span style="color:var(--shiki-color-text)">  )</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: Scripts with <code translate="no">beforeInteractive</code> will always be injected inside the <code translate="no">head</code> of the HTML document regardless of where it's placed in the component.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: <code translate="no">beforeInteractive</code> içeren komut dosyaları, bileşenin neresine yerleştirildiğine bakılmaksızın her zaman HTML belgesinin <code translate="no">head</code> içine enjekte edilecektir.</p>
 </blockquote>
 <p translated="true"><code translate="no">beforeInteractive</code> ile mümkün olan en kısa sürede yüklenmesi gereken bazı komut dosyası örnekleri şunlardır:</p>
 <ul>
-<li>Bot detectors</li>
-<li>Cookie consent managers</li>
+<li translated="true">Bot dedektörleri</li>
+<li translated="true">Çerez onayı yöneticileri</li>
 </ul>
 <h3 id="afterinteractive" data-docs-heading="" translate="no"><a href="#afterinteractive" title="afterInteractive"><code translate="no">afterInteractive</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -117,8 +117,8 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <p translated="true"><code translate="no">afterInteractive</code> için iyi aday olan bazı senaryo örnekleri şunlardır:</p>
 <ul>
-<li>Tag managers</li>
-<li>Analytics</li>
+<li translated="true">Etiket yöneticileri</li>
+<li translated="true">Analitik</li>
 </ul>
 <h3 id="lazyonload" data-docs-heading="" translate="no"><a href="#lazyonload" title="lazyOnload"><code translate="no">lazyOnload</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -139,8 +139,8 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <p translated="true">Hemen yüklenmesi gerekmeyen ve <code translate="no">lazyOnload</code> ile getirilebilen komut dosyalarına örnek olarak şunlar verilebilir:</p>
 <ul>
-<li>Chat support plugins</li>
-<li>Social media widgets</li>
+<li translated="true">Sohbet destek eklentileri</li>
+<li translated="true">Sosyal medya widget'ları</li>
 </ul>
 <h3 id="worker" data-docs-heading="" translate="no"><a href="#worker" title="worker"><code translate="no">worker</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -149,7 +149,7 @@
   </g>
 </svg></span></a></h3>
 <blockquote class="p-3 text-sm">
-<p><strong>Warning:</strong> The <code translate="no">worker</code> strategy is not yet stable and does not yet work with the <a href="/docs/app/building-your-application/routing/defining-routes" title="app"><code translate="no">app</code></a> directory. Use with caution.</p>
+<p translated="true"><strong>Uyarı:</strong> <code translate="no">worker</code> stratejisi henüz kararlı değildir ve henüz <a href="/docs/app/building-your-application/routing/defining-routes" title="app"><code translate="no">app</code></a> dizin. Dikkatli kullanın.</p>
 </blockquote>
 <p translated="true"><code translate="no">worker</code> stratejisini kullanan komut dosyaları, ana iş parçacığını boşaltmak ve yalnızca kritik, birinci taraf kaynakların işlenmesini sağlamak için bir web çalışanına yüklenir. Bu strateji herhangi bir komut dosyası için kullanılabilse de, tüm üçüncü taraf komut dosyalarını desteklemesi garanti edilmeyen gelişmiş bir kullanım durumudur.</p>
 <p translated="true"><code translate="no">worker</code> adresini bir strateji olarak kullanmak için <code translate="no">next.config.js</code> adresinde <code translate="no">nextScriptWorkers</code> bayrağı etkinleştirilmelidir:</p>
@@ -176,7 +176,7 @@
   </g>
 </svg></span></a></h3>
 <blockquote class="p-3 text-sm">
-<p><strong>Warning:</strong> <code translate="no">onLoad</code> does not yet work with Server Components and can only be used in Client Components. Further, <code translate="no">onLoad</code> can't be used with <code translate="no">beforeInteractive</code> – consider using <code translate="no">onReady</code> instead.</p>
+<p translated="true"><strong>Uyarı:</strong> <code translate="no">onLoad</code> henüz Sunucu Bileşenleri ile çalışmamaktadır ve sadece İstemci Bileşenlerinde kullanılabilir. Ayrıca, <code translate="no">onLoad</code>, <code translate="no">beforeInteractive</code> ile birlikte kullanılamaz - bunun yerine <code translate="no">onReady</code> kullanmayı düşünün.</p>
 </blockquote>
 <p translated="true">Bazı üçüncü taraf komut dosyaları, içeriği örneklendirmek veya bir işlevi çağırmak için kullanıcıların JavaScript kodunu komut dosyası yüklendikten sonra bir kez çalıştırmasını gerektirir. Bir komut dosyasını yükleme stratejisi olarak afterInteractive veya lazyOnload ile yüklüyorsanız, onLoad özelliğini kullanarak kod yüklendikten sonra çalıştırabilirsiniz.</p>
 <p translated="true">İşte bir lodash yönteminin yalnızca kütüphane yüklendikten sonra çalıştırılmasına ilişkin bir örnek.</p>
@@ -204,7 +204,7 @@
   </g>
 </svg></span></a></h3>
 <blockquote class="p-3 text-sm">
-<p><strong>Warning:</strong> <code translate="no">onReady</code> does not yet work with Server Components and can only be used in Client Components.</p>
+<p translated="true"><strong>Uyarı:</strong> <code translate="no">onReady</code> henüz Sunucu Bileşenleri ile çalışmaz ve yalnızca İstemci Bileşenlerinde kullanılabilir.</p>
 </blockquote>
 <p translated="true">Bazı üçüncü taraf komut dosyaları, komut dosyası yüklemeyi tamamladıktan sonra ve bileşen her takıldığında (örneğin bir rota gezintisinden sonra) kullanıcıların JavaScript kodunu çalıştırmasını gerektirir. Kod ilk yüklendiğinde kodun load olayından sonra ve ardından onReady özelliğini kullanarak sonraki her bileşen yeniden takıldıktan sonra kodu çalıştırabilirsiniz.</p>
 <p translated="true">Bileşen her yüklendiğinde bir Google Maps JS katıştırmasının nasıl yeniden oluşturulacağına dair bir örnek aşağıda verilmiştir:</p>
@@ -238,7 +238,7 @@
   </g>
 </svg></span></a></h3>
 <blockquote class="p-3 text-sm">
-<p><strong>Warning:</strong> <code translate="no">onError</code> does not yet work with Server Components and can only be used in Client Components. <code translate="no">onError</code> cannot be used with the <code translate="no">beforeInteractive</code> loading strategy.</p>
+<p translated="true"><strong>Uyarı:</strong> <code translate="no">onError</code> henüz Sunucu Bileşenleri ile çalışmaz ve yalnızca İstemci Bileşenlerinde kullanılabilir. <code translate="no">onError</code>, <code translate="no">beforeInteractive</code> yükleme stratejisi ile kullanılamaz.</p>
 </blockquote>
 <p translated="true">Bazen bir kod yüklenemediğinde yakalamak yararlı olabilir. Bu hatalar onError özelliği ile ele alınabilir:</p>
 <!-- -->

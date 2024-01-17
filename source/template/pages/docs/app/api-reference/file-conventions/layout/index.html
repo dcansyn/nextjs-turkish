@@ -86,7 +86,7 @@
 <p translated="true">Bu performans optimizasyonu, bir düzeni paylaşan sayfalar arasında gezinmenin daha hızlı olmasını sağlar, çünkü kendi verilerini getiren paylaşılan düzenleri içerebilecek tüm rota yerine yalnızca sayfa için veri getirme ve oluşturma işlemlerinin çalıştırılması gerekir.</p>
 <p translated="true"><code translate="no">dashboard/layout.tsx</code> yeniden oluşturmadığından, düzen Sunucu Bileşenindeki <code translate="no">searchParams</code> desteği gezinmeden sonra <strong>eski</strong> haline gelebilir.</p>
 <ul>
-<li>Instead, use the Page <a href="/docs/app/api-reference/file-conventions/page#searchparams-optional" title="searchParams"><code translate="no">searchParams</code></a> prop or the <a href="/docs/app/api-reference/functions/use-search-params" title="useSearchParams"><code translate="no">useSearchParams</code></a> hook in a Client Component, which is re-rendered on the client with the latest <code translate="no">searchParams</code>.</li>
+<li translated="true">Bunun yerine, Sayfa <a href="/docs/app/api-reference/file-conventions/page#searchparams-optional" title="searchParams"><code translate="no">searchParams</code></a> pervane veya <a href="/docs/app/api-reference/functions/use-search-params" title="useSearchParams"><code translate="no">useSearchParams</code></a> istemcide en son <code translate="no">searchParams</code> ile yeniden oluşturulan bir İstemci Bileşenindeki kanca.</li>
 </ul>
 <h3 id="root-layouts" data-docs-heading="" translate="no"><a href="#root-layouts" title="Root Layouts">Root Layouts<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -95,15 +95,13 @@
   </g>
 </svg></span></a></h3>
 <ul>
-<li>The <code translate="no">app</code> directory <strong>must</strong> include a root <code translate="no">app/layout.js</code>.</li>
-<li>The root layout <strong>must</strong> define <code translate="no">&lt;html&gt;</code> and <code translate="no">&lt;body&gt;</code> tags.<!-- -->
-<ul>
-<li>You should <strong>not</strong> manually add <code translate="no">&lt;head&gt;</code> tags such as <code translate="no">&lt;title&gt;</code> and <code translate="no">&lt;meta&gt;</code> to root layouts. Instead, you should use the <a href="/docs/app/api-reference/functions/generate-metadata" title="Metadata API">Metadata API</a> which automatically handles advanced requirements such as streaming and de-duplicating <code translate="no">&lt;head&gt;</code> elements.</li>
+<li translated="true"><code translate="no">app</code> dizini bir kök <code translate="no">app/layout.js</code><strong>içermelidir</strong>.</li>
+<li translated="true">Kök düzen <code translate="no">&lt;html&gt;</code> ve <code translate="no">&lt;body&gt;</code> etiketlerini <strong>tanımlamalıdır</strong>.<!-- --><ul>
+<li translated="true"><code translate="no">&lt;title&gt;</code> ve <code translate="no">&lt;meta&gt;</code> gibi <code translate="no">&lt;head&gt;</code> etiketlerini kök düzenlerine manuel olarak <strong>eklemelisiniz</strong>. Bunun yerine, akış ve <code translate="no">&lt;head&gt;</code> öğelerinin tekilleştirilmesi gibi gelişmiş gereksinimleri otomatik olarak ele alan <a href="/docs/app/api-reference/functions/generate-metadata" title="Metadata API">Metadata API</a> 'sini kullanmalısınız.</li>
 </ul>
 </li>
-<li>You can use <a href="/docs/app/building-your-application/routing/route-groups" title="route groups">route groups</a> to create multiple root layouts.<!-- -->
-<ul>
-<li>Navigating <strong>across multiple root layouts</strong> will cause a <strong>full page load</strong> (as opposed to a client-side navigation). For example, navigating from <code translate="no">/cart</code> that uses <code translate="no">app/(shop)/layout.js</code> to <code translate="no">/blog</code> that uses <code translate="no">app/(marketing)/layout.js</code> will cause a full page load. This <strong>only</strong> applies to multiple root layouts.</li>
+<li translated="true">Birden fazla kök düzen oluşturmak için <a href="/docs/app/building-your-application/routing/route-groups" title="route groups">rota gruplarını</a> kullanabilirsiniz.<!-- --><ul>
+<li><strong>Birden fazla kök düzen arasında</strong> gezinmek <strong>tam sayfa yüklemeye</strong> neden olacaktır (istemci tarafı gezinmenin aksine). Örneğin, <code translate="no">app/(shop)/layout.js</code> kullanan <code translate="no">/cart</code> adresinden <code translate="no">app/(marketing)/layout.js</code> kullanan <code translate="no">/blog</code> adresine gitmek tam sayfa yüklemeye neden olacaktır. Bu <strong>yalnızca</strong> birden fazla kök düzen için geçerlidir.</li>
 </ul>
 </li>
 </ul>

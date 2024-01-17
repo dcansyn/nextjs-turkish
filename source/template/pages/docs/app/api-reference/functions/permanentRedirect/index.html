@@ -11,7 +11,7 @@
 <p translated="true">Bir akış bağlamında kullanıldığında, bu, istemci tarafında yönlendirmeyi yaymak için bir meta etiket ekleyecektir. Bir sunucu eyleminde kullanıldığında, arayan kişiye 303 HTTP yönlendirme yanıtı sunar. Aksi takdirde, arayan kişiye 308 (Kalıcı) HTTP yönlendirme yanıtı sunar.</p>
 <p translated="true">Bir kaynak mevcut değilse, bunun yerine <a href="/docs/app/api-reference/functions/not-found" title="notFound function"><code translate="no">notFound</code> işlevini</a> kullanabilirsiniz.</p>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: If you prefer to return a 307 (Temporary) HTTP redirect instead of 308 (Permanent), you can use the <a href="/docs/app/api-reference/functions/redirect" title="redirect function"><code translate="no">redirect</code> function</a> instead.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: Eğer 308 (Kalıcı) yerine 307 (Geçici) HTTP yönlendirmesi döndürmeyi tercih ediyorsanız, bunun yerine <a href="/docs/app/api-reference/functions/redirect" title="redirect function"><code translate="no">redirect</code> fonksiyonunu</a> kullanabilirsiniz.</p>
 </blockquote>
 <h2 id="parameters" data-docs-heading="" translate="no"><a href="#parameters" title="Parameters">Parameters<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -55,7 +55,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-comment)">// ...</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: <code translate="no">permanentRedirect</code> does not require you to use <code translate="no">return permanentRedirect()</code> as it uses the TypeScript <a href="https://www.typescriptlang.org/docs/handbook/2/functions.html#never" rel="noopener noreferrer nofollow" target="_blank" title="never"><code translate="no">never</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> type.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: <code translate="no">permanentRedirect</code>, TypeScript'i kullandığı için <code translate="no">return permanentRedirect()</code> kullanmanızı gerektirmez <a href="https://www.typescriptlang.org/docs/handbook/2/functions.html#never" rel="noopener noreferrer nofollow" target="_blank" title="never"><code translate="no">never</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> tip.</p>
 </blockquote></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')

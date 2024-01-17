@@ -21,7 +21,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-keyword)">...</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <blockquote class="p-3 text-sm">
-<p><strong>Warning</strong>: This API is unstable and may change in the future. We will provide migration documentation and codemods, if needed, as this API stabilizes.</p>
+<p translated="true"><strong>Uyarı</strong>: Bu API kararsızdır ve gelecekte değişebilir. Bu API stabil hale geldikçe, gerekirse geçiş belgeleri ve kodmodları sağlayacağız.</p>
 </blockquote>
 <h2 id="parameters" data-docs-heading="" translate="no"><a href="#parameters" title="Parameters">Parameters<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -31,12 +31,11 @@
 </svg></span></a></h2>
 <div class="code-block_wrapper__t6FCO code-block_hideLineNumbers__52YKH not-prose" translate="no"><button aria-label="Copy code" class="code-block_copyButton__uo5Yu code-block_copyFloatingButton__PsMvB" type="button"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M20 6L9 17l-5-5"></path></svg></button><pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-constant)">data</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">unstable_cache</span><span style="color:var(--shiki-color-text)">(fetchData</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-color-text)"> keyParts</span><span style="color:var(--shiki-token-punctuation)">,</span><span style="color:var(--shiki-color-text)"> options)()</span></span></code></pre></div>
 <ul>
-<li><code translate="no">fetchData</code>: This is an asynchronous function that fetches the data you want to cache. It must be a function that returns a <code translate="no">Promise</code>.</li>
-<li><code translate="no">keyParts</code>: This is an array that identifies the cached key. It must contain globally unique values that together identify the key of the data being cached. The cache key also includes the arguments passed to the function.</li>
-<li><code translate="no">options</code>: This is an object that controls how the cache behaves. It can contain the following properties:<!-- -->
-<ul>
-<li><code translate="no">tags</code>: An array of tags that can be used to control cache invalidation.</li>
-<li><code translate="no">revalidate</code>: The number of seconds after which the cache should be revalidated.</li>
+<li translated="true"><code translate="no">fetchData</code>: Bu, önbelleğe almak istediğiniz verileri getiren eşzamansız bir işlevdir. <code translate="no">Promise</code> döndüren bir fonksiyon olmalıdır.</li>
+<li translated="true"><code translate="no">keyParts</code>: Bu, önbelleğe alınan anahtarı tanımlayan bir dizidir. Önbelleğe alınan verinin anahtarını birlikte tanımlayan global olarak benzersiz değerler içermelidir. Önbellek anahtarı ayrıca fonksiyona aktarılan argümanları da içerir.</li>
+<li translated="true"><code translate="no">options</code>: Bu, önbelleğin nasıl davranacağını kontrol eden bir nesnedir. Aşağıdaki özellikleri içerebilir:<!-- --><ul>
+<li><code translate="no">tags</code>: Önbelleğin geçersiz kılınmasını kontrol etmek için kullanılabilecek bir etiket dizisi.</li>
+<li><code translate="no">revalidate</code>: Önbelleğin yeniden doğrulanması gereken saniye sayısı.</li>
 </ul>
 </li>
 </ul>

@@ -77,9 +77,9 @@
       </h2>
       <p translated="true">Next.js'yi üç farklı şekilde kendi kendinize barındırabilirsiniz:</p>
       <ul>
-        <li><a href="#nodejs-server" title="A Node.js server">A Node.js server</a></li>
-        <li><a href="#docker-image" title="A Docker container">A Docker container</a></li>
-        <li><a href="#static-html-export" title="A static export">A static export</a></li>
+        <li translated="true"><a href="#nodejs-server" title="A Node.js server">Bir Node.js sunucusu</a></li>
+        <li translated="true"><a href="#docker-image" title="A Docker container">Bir Docker konteyneri</a></li>
+        <li translated="true"><a href="#static-html-export" title="A static export">Statik bir ihracat</a></li>
       </ul>
       <h3 id="nodejs-server" data-docs-heading="" translate="no">
         <a href="#nodejs-server" title="Node.js Server">Node.js Server<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -142,23 +142,18 @@
         gibi konteyner orkestratörlerine konuşlandırırken veya herhangi bir bulut sağlayıcısında bir konteyner içinde çalıştırırken kullanabilirsiniz.
       </p>
       <ol>
-        <li>
-          <a href="https://docs.docker.com/get-docker/" rel="noopener noreferrer nofollow" target="_blank" title="Install Docker">Install Docker<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+         <a href="https://docs.docker.com/get-docker/" rel="noopener noreferrer nofollow" target="_blank" title="Install Docker">Docker<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-          on your machine
-        </li>
-        <li>
-          <a href="https://github.com/vercel/next.js/tree/canary/examples/with-docker" rel="noopener noreferrer" target="_blank" title="Clone our example">Clone our example<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 7h10v10"></path></svg></span></a>'u makinenize <a href="https://docs.docker.com/get-docker/" rel="noopener noreferrer nofollow" target="_blank" title="Install Docker">yükleyin</a>       </li>
+        <li translated="true">
+         <a href="https://github.com/vercel/next.js/tree/canary/examples/with-docker" rel="noopener noreferrer" target="_blank" title="Clone our example">Örneğimizi klonlayın<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-          (or the
-          <a href="https://github.com/vercel/next.js/tree/canary/examples/with-docker-multi-env" rel="noopener noreferrer" target="_blank" title="multi-environment example">multi-environment example<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 7h10v10"></path></svg></span></a>(veya <a href="https://github.com/vercel/next.js/tree/canary/examples/with-docker-multi-env" rel="noopener noreferrer" target="_blank" title="multi-environment example">çoklu ortam</a> <a href="https://github.com/vercel/next.js/tree/canary/examples/with-docker" rel="noopener noreferrer" target="_blank" title="Clone our example">örneği</a> <a href="https://github.com/vercel/next.js/tree/canary/examples/with-docker-multi-env" rel="noopener noreferrer" target="_blank" title="multi-environment example"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>)
-        </li>
-        <li>Build your container: <code translate="no">docker build -t nextjs-docker .</code></li>
-        <li>Run your container: <code translate="no">docker run -p 3000:3000 nextjs-docker</code></li>
+                <path d="M7 7h10v10"></path></svg></span></a>) </li>
+        <li translated="true">Konteynerinizi oluşturun: <code translate="no">docker build -t nextjs-docker .</code></li>
+        <li translated="true">Konteynerinizi çalıştırın: <code translate="no">docker run -p 3000:3000 nextjs-docker</code></li>
       </ol>
       <p translated="true">Docker aracılığıyla Next.js, tüm Next.js özelliklerini destekler.</p>
       <h3 id="static-html-export" data-docs-heading="" translate="no">
@@ -183,12 +178,10 @@
         <a href="/docs/app/building-your-application/deploying/static-exports#unsupported-features" title="Learn more">Daha fazla</a> bilgi edinin.
       </p>
       <blockquote class="p-3 text-sm">
-        <p><strong>Bilmekte fayda var:</strong></p>
+        <p translated="true"><strong>Bilmekte fayda var:</strong></p>
         <ul>
-          <li>
-            <a href="/docs/app/building-your-application/rendering/server-components" title="Server Components">Server Components</a> are supported
-            with static exports.
-          </li>
+          <li translated="true">
+           <a href="/docs/app/building-your-application/rendering/server-components" title="Server Components">Sunucu Bileşenleri</a> statik dışa aktarımlarla desteklenir.          </li>
         </ul>
       </blockquote>
       <h2 id="features" data-docs-heading="" translate="no">
@@ -218,29 +211,16 @@
         ile kullanılabilir. Görüntülerin derleme sırasında değil, çalışma zamanında optimize edildiğini unutmayın.
       </p>
       <blockquote class="p-3 text-sm">
-        <p><strong>Bilmekte fayda var:</strong></p>
+        <p translated="true"><strong>Bilmekte fayda var:</strong></p>
         <ul>
-          <li>
-            When self-hosting, consider installing <code translate="no">sharp</code> for more performant
-            <a href="/docs/pages/building-your-application/optimizing/images" title="Image Optimization">Image Optimization</a> in your production
-            environment by running <code translate="no">npm install sharp</code> in your project directory. On Linux platforms,
-            <code translate="no">sharp</code> may require
-            <a href="https://sharp.pixelplumbing.com/install#linux-memory-allocator" rel="noopener noreferrer nofollow" target="_blank" title="additional configuration">additional configuration<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+          <li translated="true">
+            Kendi kendinize barındırma yaparken, üretim ortamınızda daha performanslı <a href="/docs/pages/building-your-application/optimizing/images" title="Image Optimization">Görüntü Optimizasyonu</a> için proje dizininizde <code translate="no">npm install sharp</code> adresini çalıştırarak <code translate="no">sharp</code> adresini yüklemeyi düşünün. Linux platformlarında, <code translate="no">sharp</code> aşırı bellek kullanımını önlemek için <a href="https://sharp.pixelplumbing.com/install#linux-memory-allocator" rel="noopener noreferrer nofollow" target="_blank" title="additional configuration"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                   <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path></svg></span></a>
-            to prevent excessive memory usage.
-          </li>
-          <li>
-            Learn more about the
-            <a href="/docs/app/api-reference/components/image#caching-behavior" title="caching behavior of optimized images">caching behavior of optimized images</a>
-            and how to configure the TTL.
-          </li>
-          <li>
-            You can also
-            <a href="/docs/app/api-reference/components/image#unoptimized" title="disable Image Optimization">disable Image Optimization</a> and still
-            retain other benefits of using <code translate="no">next/image</code> if you prefer. For example, if you are optimizing images yourself
-            separately.
-          </li>
+                  <path d="M7 7h10v10"></path></svg></span> ek yapılandırma</a>gerektirebilir.          </li>
+          <li translated="true">
+           <a href="/docs/app/api-reference/components/image#caching-behavior" title="caching behavior of optimized images">Optimize edilmiş görüntülerin önbelleğe alma davranışı</a>ve TTL'nin nasıl yapılandırılacağı hakkında daha fazla bilgi edinin.       </li>
+          <li translated="true">
+            İsterseniz <a href="/docs/app/api-reference/components/image#unoptimized" title="disable Image Optimization">Görüntü Optimizasyonunu devre dışı</a> bırakabilir ve <code translate="no">next/image</code> kullanmanın diğer avantajlarından yararlanmaya devam edebilirsiniz. Örneğin, görüntüleri kendiniz ayrı olarak optimize ediyorsanız.          </li>
         </ul>
       </blockquote>
       <h3 id="middleware" data-docs-heading="" translate="no">
@@ -314,19 +294,12 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre>
       </div>
       <blockquote class="p-3 text-sm">
-        <p><strong>Bilmekte fayda var:</strong></p>
+        <p translated="true"><strong>Bilmekte fayda var:</strong></p>
         <ul>
-          <li>
-            You can run code on server startup using the
-            <a href="/docs/app/building-your-application/optimizing/instrumentation" title="register function"><code translate="no">register</code> function</a>.
-          </li>
-          <li>
-            We do not recommend using the
-            <a href="/docs/pages/api-reference/next-config-js/runtime-configuration" title="runtimeConfig">runtimeConfig</a> option, as this does not
-            work with the standalone output mode. Instead, we recommend
-            <a href="/docs/app/building-your-application/upgrading/app-router-migration" title="incrementally adopting">incrementally adopting</a> the
-            App Router.
-          </li>
+          <li translated="true">
+            <a href="/docs/app/building-your-application/optimizing/instrumentation" title="register function"><code translate="no">register</code> işlevini</a> kullanarak sunucu başlangıcında kod çalıştırabilirsiniz.          </li>
+          <li translated="true">
+            Bağımsız çıktı modunda çalışmadığı için <a href="/docs/pages/api-reference/next-config-js/runtime-configuration" title="runtimeConfig">runtimeConfig</a> seçeneğinin kullanılmasını önermiyoruz. Bunun yerine, App Router'ı aşamalı olarak <a href="/docs/app/building-your-application/upgrading/app-router-migration" title="incrementally adopting">benimsemenizi</a> öneririz.          </li>
         </ul>
       </blockquote>
       <h3 id="caching-and-isr" data-docs-heading="" translate="no">
@@ -358,26 +331,12 @@
               </g></svg></span></a>
       </h4>
       <ul>
-        <li>
-          Next.js sets the <code translate="no">Cache-Control</code> header of <code translate="no">public, max-age=31536000, immutable</code> to
-          truly immutable assets. It cannot be overridden. These immutable files contain a SHA-hash in the file name, so they can be safely cached
-          indefinitely. For example,
-          <a href="/docs/app/building-your-application/optimizing/images#local-images" title="Static Image Imports">Static Image Imports</a>. You can
-          <a href="/docs/app/api-reference/components/image#caching-behavior" title="configure the TTL">configure the TTL</a> for images.
-        </li>
-        <li>
-          Incremental Static Regeneration (ISR) sets the <code translate="no">Cache-Control</code> header of
-          <code translate="no">s-maxage: &lt;revalidate in getStaticProps&gt;, stale-while-revalidate</code>. This revalidation time is defined in
-          your
-          <a href="/docs/pages/building-your-application/data-fetching/get-static-props" title="getStaticProps function"><code translate="no">getStaticProps</code> function</a>
-          in seconds. If you set <code translate="no">revalidate: false</code>, it will default to a one-year cache duration.
-        </li>
-        <li>
-          Dynamically rendered pages set a <code translate="no">Cache-Control</code> header of
-          <code translate="no">private, no-cache, no-store, max-age=0, must-revalidate</code> to prevent user-specific data from being cached. This
-          applies to both the App Router and Pages Router. This also includes
-          <a href="/docs/app/building-your-application/configuring/draft-mode" title="Draft Mode">Draft Mode</a>.
-        </li>
+        <li translated="true">
+          Next.js, <code translate="no">public, max-age=31536000, immutable</code> adresinin <code translate="no">Cache-Control</code> başlığını gerçekten değişmez varlıklara ayarlar. Geçersiz kılınamaz. Bu değişmez dosyalar dosya adında bir SHA-hash içerir, böylece süresiz olarak güvenli bir şekilde önbelleğe alınabilirler. Örneğin, <a href="/docs/app/building-your-application/optimizing/images#local-images" title="Static Image Imports">Statik Görüntü İçe Aktarımları.</a> Görüntüler için <a href="/docs/app/api-reference/components/image#caching-behavior" title="configure the TTL">TTL'yi yapılandırabilirsiniz</a>.        </li>
+        <li translated="true">
+          Artımlı Statik Yenileme (ISR) <code translate="no">s-maxage: &lt;revalidate in getStaticProps&gt;, stale-while-revalidate</code> adresinin <code translate="no">Cache-Control</code> başlığını ayarlar. Bu yeniden doğrulama süresi <a href="/docs/pages/building-your-application/data-fetching/get-static-props" title="getStaticProps function"><code translate="no">getStaticProps</code> işlevinizde</a>saniye cinsinden tanımlanır. <code translate="no">revalidate: false</code> adresini ayarlarsanız, varsayılan olarak bir yıllık önbellek süresi belirlenir.        </li>
+        <li translated="true">
+          Dinamik olarak oluşturulan sayfalar, kullanıcıya özel verilerin önbelleğe alınmasını önlemek için <code translate="no">private, no-cache, no-store, max-age=0, must-revalidate</code> şeklinde bir <code translate="no">Cache-Control</code> başlığı ayarlar. Bu hem Uygulama Yönlendirici hem de Sayfa Yönlendirici için geçerlidir. Buna <a href="/docs/app/building-your-application/configuring/draft-mode" title="Draft Mode">Taslak Modu</a> da dahildir.        </li>
       </ul>
       <h4 id="static-assets" data-docs-heading="" translate="no">
         <a href="#static-assets" title="Static Assets">Static Assets<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -502,13 +461,10 @@
         veya AWS S3 gibi herhangi bir yere kaydedebilirsiniz.
       </p>
       <blockquote class="p-3 text-sm">
-        <p><strong>Bilmekte fayda var:</strong></p>
+        <p translated="true"><strong>Bilmekte fayda var:</strong></p>
         <ul>
-          <li>
-            <code translate="no">revalidatePath</code> is a convenience layer on top of cache tags. Calling
-            <code translate="no">revalidatePath</code> will call the <code translate="no">revalidateTag</code> function with a special default tag for
-            the provided page.
-          </li>
+          <li translated="true">
+            <code translate="no">revalidatePath</code> önbellek etiketlerinin üstünde bir kolaylık katmanıdır. <code translate="no">revalidatePath</code> çağrısı, sağlanan sayfa için özel bir varsayılan etiketle <code translate="no">revalidateTag</code> işlevini çağıracaktır.          </li>
         </ul>
       </blockquote>
       <h3 id="build-cache" data-docs-heading="" translate="no">

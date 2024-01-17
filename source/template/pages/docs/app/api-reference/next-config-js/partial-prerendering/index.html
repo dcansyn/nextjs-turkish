@@ -10,10 +10,8 @@
     <main>@@include('../../../../../../layouts/navigation.html')<article>
       <h1 class="break-words" translate="no">Partial Prerendering (experimental)</h1>
       <blockquote class="p-3 text-sm">
-        <p>
-          <strong>Warning</strong>: Partial Prerendering is an experimental feature and is currently
-          <strong>not suitable for production environments</strong>.
-        </p>
+        <p translated="true">
+         <strong>Uyarı</strong>: Kısmi Ön Oluşturma deneysel bir özelliktir ve şu anda <strong>üretim ortamları için uygun değildir</strong>.        </p>
       </blockquote>
       <p translated="true">
         Kısmi Önceden Oluşturma, bir rotanın statik bölümlerinin tek bir HTTP isteğiyle önceden oluşturulmasına ve önbellekten dinamik boşluklarla
@@ -72,14 +70,11 @@
 <span class="line"><span style="color:var(--shiki-token-constant)">module</span><span style="color:var(--shiki-color-text)">.</span><span style="color:var(--shiki-token-constant)">exports</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-color-text)"> nextConfig</span></span></code></pre>
       </div>
       <blockquote class="p-3 text-sm">
-        <p><strong>Bilmekte fayda var:</strong></p>
+        <p translated="true"><strong>Bilmekte fayda var:</strong></p>
         <ul>
-          <li>Partial Prerendering does not yet apply to client-side navigations. We are actively working on this.</li>
-          <li>
-            Partial Prerendering is designed for the
-            <a href="/docs/app/building-your-application/rendering/edge-and-nodejs-runtimes" title="Node.js runtime">Node.js runtime</a> only. Using
-            the subset of the Node.js runtime is not needed when you can instantly serve the static shell.
-          </li>
+          <li translated="true">Kısmi Ön Oluşturma henüz istemci tarafı gezinmeler için geçerli değildir. Bu konu üzerinde aktif olarak çalışıyoruz.</li>
+          <li translated="true">
+            Kısmi Prerendering yalnızca <a href="/docs/app/building-your-application/rendering/edge-and-nodejs-runtimes" title="Node.js runtime">Node.js çalışma zamanı</a> için tasarlanmıştır. Statik kabuğu anında sunabildiğinizde Node.js çalışma zamanının alt kümesini kullanmak gerekli değildir.          </li>
         </ul>
       </blockquote>
       <p translated="true">

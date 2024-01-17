@@ -23,10 +23,10 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>The <code translate="no">metadata</code> object and <code translate="no">generateMetadata</code> function exports are <strong>only supported in Server Components</strong>.</li>
-<li>You cannot export both the <code translate="no">metadata</code> object and <code translate="no">generateMetadata</code> function from the same route segment.</li>
+<li translated="true"><code translate="no">metadata</code> nesnesi ve <code translate="no">generateMetadata</code> işlev dışa aktarımları <strong>yalnızca Sunucu Bileşenlerinde desteklenir</strong>.</li>
+<li translated="true">Aynı rota segmentinden hem <code translate="no">metadata</code> nesnesini hem de <code translate="no">generateMetadata</code> işlevini dışa aktaramazsınız.</li>
 </ul>
 </blockquote>
 <h2 id="the-metadata-object" data-docs-heading="" translate="no"><a href="#the-metadata-object" title="The metadata object">The <code translate="no">metadata</code> object<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -91,21 +91,21 @@
 </svg></span></a></h3>
 <p translated="true"><code translate="no">generateMetadata</code> fonksiyonu aşağıdaki parametreleri kabul eder:</p>
 <ul>
-<li>
-<p><code translate="no">props</code> - An object containing the parameters of the current route:</p>
+<li translated="true">
+<p><code translate="no">props</code> - Geçerli rotanın parametrelerini içeren bir nesne:</p>
 <ul>
 <li>
-<p><code translate="no">params</code> - An object containing the <a href="/docs/app/building-your-application/routing/dynamic-routes" title="dynamic route parameters">dynamic route parameters</a> object from the root segment down to the segment <code translate="no">generateMetadata</code> is called from. Examples:</p>
-<div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th>Route</th><th>URL</th><th><code translate="no">params</code></th></tr></thead><tbody><tr><td><code translate="no">app/shop/[slug]/page.js</code></td><td><code translate="no">/shop/1</code></td><td><code translate="no">{ slug: '1' }</code></td></tr><tr><td><code translate="no">app/shop/[tag]/[item]/page.js</code></td><td><code translate="no">/shop/1/2</code></td><td><code translate="no">{ tag: '1', item: '2' }</code></td></tr><tr><td><code translate="no">app/shop/[...slug]/page.js</code></td><td><code translate="no">/shop/1/2</code></td><td><code translate="no">{ slug: ['1', '2'] }</code></td></tr></tbody></table></div>
+<p><code translate="no">params</code> - Kök segmentten <code translate="no">generateMetadata</code> adresinden çağrılan segmente kadar <a href="/docs/app/building-your-application/routing/dynamic-routes" title="dynamic route parameters">dinamik rota parametreleri</a> nesnesini içeren bir nesne. Örnekler:</p>
+<div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th>Rota</th><th>URL</th><th><code translate="no">params</code></th></tr></thead><tbody><tr><td><code translate="no">app/shop/[slug]/page.js</code></td><td><code translate="no">/shop/1</code></td><td><code translate="no">{ slug: '1' }</code></td></tr><tr><td><code translate="no">app/shop/[tag]/[item]/page.js</code></td><td><code translate="no">/shop/1/2</code></td><td><code translate="no">{ tag: '1', item: '2' }</code></td></tr><tr><td><code translate="no">app/shop/[...slug]/page.js</code></td><td><code translate="no">/shop/1/2</code></td><td><code translate="no">{ slug: ['1', '2'] }</code></td></tr></tbody></table></div>
 </li>
 <li>
-<p><code translate="no">searchParams</code> - An object containing the current URL's <a href="https://developer.mozilla.org/docs/Learn/Common_questions/What_is_a_URL#parameters" rel="noopener noreferrer nofollow" target="_blank" title="search params">search params<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>. Examples:</p>
+<p><code translate="no">searchParams</code> - Geçerli URL'nin <a href="https://developer.mozilla.org/docs/Learn/Common_questions/What_is_a_URL#parameters" rel="noopener noreferrer nofollow" target="_blank" title="search params">arama parametrelerini</a> içeren bir nesne <a href="https://developer.mozilla.org/docs/Learn/Common_questions/What_is_a_URL#parameters" rel="noopener noreferrer nofollow" target="_blank" title="search params"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span>. Örnekler:</a></p>
 <div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th>URL</th><th><code translate="no">searchParams</code></th></tr></thead><tbody><tr><td><code translate="no">/shop?a=1</code></td><td><code translate="no">{ a: '1' }</code></td></tr><tr><td><code translate="no">/shop?a=1&amp;b=2</code></td><td><code translate="no">{ a: '1', b: '2' }</code></td></tr><tr><td><code translate="no">/shop?a=1&amp;a=2</code></td><td><code translate="no">{ a: ['1', '2'] }</code></td></tr></tbody></table></div>
 </li>
 </ul>
 </li>
-<li>
-<p><code translate="no">parent</code> - A promise of the resolved metadata from parent route segments.</p>
+<li translated="true">
+<p><code translate="no">parent</code> - Üst rota segmentlerinden çözümlenmiş meta verilerin bir sözü.</p>
 </li>
 </ul>
 <h3 id="returns" data-docs-heading="" translate="no"><a href="#returns" title="Returns">Returns<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -116,12 +116,12 @@
 </svg></span></a></h3>
 <p translated="true"><code translate="no">generateMetadata</code> bir veya daha fazla meta veri alanı içeren bir <a href="#metadata-fields" title="Metadata object"><code translate="no">Metadata</code> nesnesi</a> döndürmelidir.</p>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>If metadata doesn't depend on runtime information, it should be defined using the static <a href="#the-metadata-object" title="metadata object"><code translate="no">metadata</code> object</a> rather than <code translate="no">generateMetadata</code>.</li>
-<li><code translate="no">fetch</code> requests are automatically <a href="/docs/app/building-your-application/caching#request-memoization" title="memoized">memoized</a> for the same data across <code translate="no">generateMetadata</code>, <code translate="no">generateStaticParams</code>, Layouts, Pages, and Server Components. React <a href="/docs/app/building-your-application/caching#request-memoization" title="cache can be used"><code translate="no">cache</code> can be used</a> if <code translate="no">fetch</code> is unavailable.</li>
-<li><code translate="no">searchParams</code> are only available in <code translate="no">page.js</code> segments.</li>
-<li>The <a href="/docs/app/api-reference/functions/redirect" title="redirect()"><code translate="no">redirect()</code></a> and <a href="/docs/app/api-reference/functions/not-found" title="notFound()"><code translate="no">notFound()</code></a> Next.js methods can also be used inside <code translate="no">generateMetadata</code>.</li>
+<li translated="true">Meta veriler çalışma zamanı bilgilerine bağlı değilse, <code translate="no">generateMetadata</code> yerine statik <a href="#the-metadata-object" title="metadata object"><code translate="no">metadata</code> nesnesi</a> kullanılarak tanımlanmalıdır.</li>
+<li translated="true"><code translate="no">fetch</code> <code translate="no">generateMetadata</code> , <code translate="no">generateStaticParams</code>, Düzenler, Sayfalar ve Sunucu Bileşenleri arasında aynı veriler için istekler otomatik olarak <a href="/docs/app/building-your-application/caching#request-memoization" title="memoized">not</a> edilir. <code translate="no">fetch</code> <a href="/docs/app/building-your-application/caching#request-memoization" title="cache can be used">kullanılamıyorsa</a> React <a href="/docs/app/building-your-application/caching#request-memoization" title="cache can be used"><code translate="no">cache</code> kullanılabilir.</a> </li>
+<li translated="true"><code translate="no">searchParams</code> yalnızca <code translate="no">page.js</code> segmentlerinde mevcuttur.</li>
+<li translated="true">Bu <a href="/docs/app/api-reference/functions/redirect" title="redirect()"><code translate="no">redirect()</code></a> ve <a href="/docs/app/api-reference/functions/not-found" title="notFound()"><code translate="no">notFound()</code></a> Next.js yöntemleri <code translate="no">generateMetadata</code> içinde de kullanılabilir.</li>
 </ul>
 </blockquote>
 <h2 id="metadata-fields" data-docs-heading="" translate="no"><a href="#metadata-fields" title="Metadata Fields">Metadata Fields<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -207,18 +207,18 @@
 <span class="line"><span style="color:var(--shiki-token-comment)">// Output: &lt;title&gt;About | Acme&lt;/title&gt;</span></span></code></pre></div>
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>
-<p><code translate="no">title.template</code> applies to <strong>child</strong> route segments and <strong>not</strong> the segment it's defined in. This means:</p>
+<li translated="true">
+<p><code translate="no">title.template</code> tanımlandığı segment için <strong>değil</strong>, <strong>alt</strong> rota segmentleri için geçerlidir. Bu şu anlama gelir:</p>
 <ul>
-<li><code translate="no">title.default</code> is <strong>required</strong> when you add a <code translate="no">title.template</code>.</li>
-<li><code translate="no">title.template</code> defined in <code translate="no">layout.js</code> will not apply to a <code translate="no">title</code> defined in a <code translate="no">page.js</code> of the same route segment.</li>
-<li><code translate="no">title.template</code> defined in <code translate="no">page.js</code> has no effect because a page is always the terminating segment (it doesn't have any children route segments).</li>
+<li><code translate="no">title.default</code> bir <code translate="no">title.template</code> eklediğinizde <strong>gereklidir</strong>.</li>
+<li><code translate="no">title.template</code> <code translate="no">layout.js</code> içinde tanımlanan, aynı rota segmentinin <code translate="no">page.js</code> içinde tanımlanan bir <code translate="no">title</code> için geçerli olmayacaktır.</li>
+<li><code translate="no">title.template</code> <code translate="no">page.js</code> adresinde tanımlanan bir sayfa her zaman sonlandırıcı segment olduğundan (herhangi bir alt rota segmenti yoktur) hiçbir etkisi yoktur.</li>
 </ul>
 </li>
-<li>
-<p><code translate="no">title.template</code> has <strong>no effect</strong> if a route has not defined a <code translate="no">title</code> or <code translate="no">title.default</code>.</p>
+<li translated="true">
+<p><code translate="no">title.template</code> bir rota bir <code translate="no">title</code> veya <code translate="no">title.default</code> tanımlamamışsa <strong>hiçbir etkisi</strong> yoktur.</p>
 </li>
 </ul>
 </blockquote>
@@ -248,23 +248,23 @@
 <span class="line"><span style="color:var(--shiki-token-comment)">// Output: &lt;title&gt;About&lt;/title&gt;</span></span></code></pre></div>
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>
+<li translated="true">
 <p><code translate="no">layout.js</code></p>
 <ul>
-<li><code translate="no">title</code> (string) and <code translate="no">title.default</code> define the default title for child segments (that do not define their own <code translate="no">title</code>). It will augment <code translate="no">title.template</code> from the closest parent segment if it exists.</li>
-<li><code translate="no">title.absolute</code> defines the default title for child segments. It ignores <code translate="no">title.template</code> from parent segments.</li>
-<li><code translate="no">title.template</code> defines a new title template for child segments.</li>
+<li><code translate="no">title</code> (string) ve <code translate="no">title.default</code> alt segmentler için varsayılan başlığı tanımlar (kendi <code translate="no">title</code>'larını tanımlamayan). Varsa, <code translate="no">title.template</code> adresini en yakın üst segmentten artıracaktır.</li>
+<li translated="true"><code translate="no">title.absolute</code> alt segmentler için varsayılan başlık tanımlar. Ana segmentlerden gelen <code translate="no">title.template</code> adresini yok sayar.</li>
+<li><code translate="no">title.template</code> Alt segmentler için yeni bir başlık şablonu tanımlar.</li>
 </ul>
 </li>
-<li>
+<li translated="true">
 <p><code translate="no">page.js</code></p>
 <ul>
-<li>If a page does not define its own title the closest parents resolved title will be used.</li>
-<li><code translate="no">title</code> (string) defines the routes title. It will augment <code translate="no">title.template</code> from the closest parent segment if it exists.</li>
-<li><code translate="no">title.absolute</code> defines the route title. It ignores <code translate="no">title.template</code> from parent segments.</li>
-<li><code translate="no">title.template</code> has no effect in <code translate="no">page.js</code> because a page is always the terminating segment of a route.</li>
+<li>Bir sayfa kendi başlığını tanımlamazsa, en yakın ebeveyn tarafından çözümlenmiş başlık kullanılır.</li>
+<li><code translate="no">title</code> (string) rotaların başlığını tanımlar. Varsa, <code translate="no">title.template</code> adresini en yakın üst segmentten artıracaktır.</li>
+<li><code translate="no">title.absolute</code> rota başlığını tanımlar. Ana segmentlerden <code translate="no">title.template</code> 'u yok sayar.</li>
+<li><code translate="no">title.template</code> <code translate="no">page.js</code> 'da hiçbir etkisi yoktur çünkü bir sayfa her zaman bir rotanın sonlandırıcı segmentidir.</li>
 </ul>
 </li>
 </ul>
@@ -318,9 +318,9 @@
 </svg></span></a></h3>
 <p translated="true"><code translate="no">metadataBase</code> tam nitelikli URL gerektiren <code translate="no">metadata</code> alanları için bir temel URL öneki ayarlamaya yönelik bir kolaylık seçeneğidir.</p>
 <ul>
-<li><code translate="no">metadataBase</code> allows URL-based <code translate="no">metadata</code> fields defined in the <strong>current route segment and below</strong> to use a <strong>relative path</strong> instead of an otherwise required absolute URL.</li>
-<li>The field's relative path will be composed with <code translate="no">metadataBase</code> to form a fully qualified URL.</li>
-<li>If not configured, <code translate="no">metadataBase</code> is <strong>automatically populated</strong> with a <a href="#default-value" title="default value">default value</a>.</li>
+<li translated="true"><code translate="no">metadataBase</code> <strong>geçerli rota segmentinde ve altında</strong> tanımlanan URL tabanlı <code translate="no">metadata</code> alanlarının, aksi takdirde gerekli olan mutlak URL yerine <strong>göreli</strong> bir yol kullanmasına olanak tanır.</li>
+<li translated="true">Alanın göreli yolu, tam nitelikli bir URL oluşturmak için <code translate="no">metadataBase</code> ile oluşturulacaktır.</li>
+<li translated="true">Yapılandırılmamışsa, <code translate="no">metadataBase</code> <strong>otomatik</strong> olarak <a href="#default-value" title="default value">varsayılan</a> bir <a href="#default-value" title="default value">değerle</a> <strong>doldurulur</strong>.</li>
 </ul>
 <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no"><div class="code-block_header__t3NRd"><div class="code-block_fileName__HmSv1"><div aria-hidden="true" class="code-block_iconWrapper__TuHFk"><svg height="17" style="margin-left:-1.5px" viewbox="0 0 50 50" width="17" xmlns="http://www.w3.org/2000/svg"><path d="M 43.335938 4 L 6.667969 4 C 5.195313 4 4 5.195313 4 6.667969 L 4 43.332031 C 4 44.804688 5.195313 46 6.667969 46 L 43.332031 46 C 44.804688 46 46 44.804688 46 43.335938 L 46 6.667969 C 46 5.195313 44.804688 4 43.335938 4 Z M 27 36.183594 C 27 40.179688 24.65625 42 21.234375 42 C 18.140625 42 15.910156 39.925781 15 38 L 18.144531 36.097656 C 18.75 37.171875 19.671875 38 21 38 C 22.269531 38 23 37.503906 23 35.574219 L 23 23 L 27 23 Z M 35.675781 42 C 32.132813 42 30.121094 40.214844 29 38 L 32 36 C 32.816406 37.335938 33.707031 38.613281 35.589844 38.613281 C 37.171875 38.613281 38 37.824219 38 36.730469 C 38 35.425781 37.140625 34.960938 35.402344 34.199219 L 34.449219 33.789063 C 31.695313 32.617188 29.863281 31.148438 29.863281 28.039063 C 29.863281 25.179688 32.046875 23 35.453125 23 C 37.878906 23 39.621094 23.84375 40.878906 26.054688 L 37.910156 27.964844 C 37.253906 26.789063 36.550781 26.328125 35.453125 26.328125 C 34.335938 26.328125 33.628906 27.039063 33.628906 27.964844 C 33.628906 29.109375 34.335938 29.570313 35.972656 30.28125 L 36.925781 30.691406 C 40.171875 32.078125 42 33.496094 42 36.683594 C 42 40.117188 39.300781 42 35.675781 42 Z" fill="currentColor"></path></svg></div><span class="code-block_filenameP__02nok">layout.js | page.js</span></div><div class="code-block_actions__yphRf"><button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M20 6L9 17l-5-5"></path></svg></button></div></div><pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-constant)">metadata</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-color-text)"> {</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">  metadataBase</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">new</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">URL</span><span style="color:var(--shiki-color-text)">(</span><span style="color:var(--shiki-token-string-expression)">'https://acme.com'</span><span style="color:var(--shiki-color-text)">)</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
@@ -340,14 +340,14 @@
 <span class="line"><span style="color:var(--shiki-color-text)">&lt;</span><span style="color:var(--shiki-token-string-expression)">link</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">rel</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">"alternate"</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">hreflang</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">"de-DE"</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">href</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">"https://acme.com/de-DE"</span><span style="color:var(--shiki-color-text)"> /&gt;</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">&lt;</span><span style="color:var(--shiki-token-string-expression)">meta</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">property</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">"og:image"</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">content</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">"https://acme.com/og-image.png"</span><span style="color:var(--shiki-color-text)"> /&gt;</span></span></code></pre></div>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li><code translate="no">metadataBase</code> is typically set in root <code translate="no">app/layout.js</code> to apply to URL-based <code translate="no">metadata</code> fields across all routes.</li>
-<li>All URL-based <code translate="no">metadata</code> fields that require absolute URLs can be configured with a <code translate="no">metadataBase</code> option.</li>
-<li><code translate="no">metadataBase</code> can contain a subdomain e.g. <code translate="no">https://app.acme.com</code> or base path e.g. <code translate="no">https://acme.com/start/from/here</code></li>
-<li>If a <code translate="no">metadata</code> field provides an absolute URL, <code translate="no">metadataBase</code> will be ignored.</li>
-<li>Using a relative path in a URL-based <code translate="no">metadata</code> field without configuring a <code translate="no">metadataBase</code> will cause a build error.</li>
-<li>Next.js will normalize duplicate slashes between <code translate="no">metadataBase</code> (e.g. <code translate="no">https://acme.com/</code>) and a relative field (e.g. <code translate="no">/path</code>) to a single slash (e.g. <code translate="no">https://acme.com/path</code>)</li>
+<li translated="true"><code translate="no">metadataBase</code> genellikle tüm rotalarda URL tabanlı <code translate="no">metadata</code> alanlarına uygulanmak üzere kök <code translate="no">app/layout.js</code> adresinde ayarlanır.</li>
+<li translated="true">Mutlak URL'ler gerektiren tüm URL tabanlı <code translate="no">metadata</code> alanları <code translate="no">metadataBase</code> seçeneği ile yapılandırılabilir.</li>
+<li translated="true"><code translate="no">metadataBase</code> <code translate="no">https://app.acme.com</code> gibi bir alt alan adı veya örneğin temel yol içerebilir. <code translate="no">https://acme.com/start/from/here</code></li>
+<li translated="true">Bir <code translate="no">metadata</code> alanı mutlak bir URL sağlarsa, <code translate="no">metadataBase</code> yok sayılır.</li>
+<li translated="true">URL tabanlı bir <code translate="no">metadata</code> alanında <code translate="no">metadataBase</code> yapılandırılmadan göreli bir yol kullanılması derleme hatasına neden olur.</li>
+<li translated="true">Next.js, <code translate="no">metadataBase</code> (örn. <code translate="no">https://acme.com/</code>) ve göreli bir alan (örn. <code translate="no">/path</code>) arasındaki yinelenen eğik çizgileri tek bir eğik çizgiye (örn. <code translate="no">https://acme.com/path</code>) normalleştirecektir</li>
 </ul>
 </blockquote>
 <h4 id="default-value" data-docs-heading="" translate="no"><a href="#default-value" title="Default value">Default value<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -358,8 +358,8 @@
 </svg></span></a></h4>
 <p translated="true">Yapılandırılmamışsa, <code translate="no">metadataBase</code> <strong>varsayılan bir değere</strong> sahiptir</p>
 <ul>
-<li>When <a href="https://vercel.com/docs/concepts/projects/environment-variables/system-environment-variables#:~:text=.-,VERCEL_URL,-The%20domain%20name" rel="noopener noreferrer" target="_blank" title="VERCEL_URL"><code translate="no">VERCEL_URL</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> is detected: <code translate="no">https://${process.env.VERCEL_URL}</code> otherwise it falls back to <code translate="no">http://localhost:${process.env.PORT || 3000}</code>.</li>
-<li>When overriding the default, we recommend using environment variables to compute the URL. This allows configuring a URL for local development, staging, and production environments.</li>
+<li translated="true">Ne zaman <a href="https://vercel.com/docs/concepts/projects/environment-variables/system-environment-variables#:~:text=.-,VERCEL_URL,-The%20domain%20name" rel="noopener noreferrer" target="_blank" title="VERCEL_URL"><code translate="no">VERCEL_URL</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> tespit edilirse: <code translate="no">https://${process.env.VERCEL_URL}</code> aksi takdirde <code translate="no">http://localhost:${process.env.PORT || 3000}</code> adresine geri döner.</li>
+<li translated="true">Varsayılanı geçersiz kılarken, URL'yi hesaplamak için ortam değişkenlerini kullanmanızı öneririz. Bu, yerel geliştirme, hazırlama ve üretim ortamları için bir URL yapılandırılmasına olanak tanır.</li>
 </ul>
 <h4 id="url-composition" data-docs-heading="" translate="no"><a href="#url-composition" title="URL Composition">URL Composition<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -369,8 +369,8 @@
 </svg></span></a></h4>
 <p translated="true">URL bileşimi, varsayılan dizin geçişi semantiği yerine geliştirici amacını tercih eder.</p>
 <ul>
-<li>Trailing slashes between <code translate="no">metadataBase</code> and <code translate="no">metadata</code> fields are normalized.</li>
-<li>An "absolute" path in a <code translate="no">metadata</code> field (that typically would replace the whole URL path) is treated as a "relative" path (starting from the end of <code translate="no">metadataBase</code>).</li>
+<li translated="true"><code translate="no">metadataBase</code> ve <code translate="no">metadata</code> alanları arasındaki eğik çizgiler normalleştirilir.</li>
+<li translated="true"><code translate="no">metadata</code> alanındaki bir "mutlak" yol (tipik olarak tüm URL yolunun yerini alır) bir "göreli" yol olarak değerlendirilir ( <code translate="no">metadataBase</code> adresinin sonundan başlayarak).</li>
 </ul>
 <p translated="true">Örneğin, aşağıda verilen <code translate="no">metadataBase</code>:</p>
 <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no"><div class="code-block_header__t3NRd"><div class="code-block_fileName__HmSv1"><div aria-hidden="true" class="code-block_iconWrapper__TuHFk"><svg fill="none" height="14" viewbox="0 0 512 512" width="14" xmlns="http://www.w3.org/2000/svg"><rect fill="currentColor" height="512" rx="50" width="512"></rect><rect fill="currentColor" height="512" rx="50" width="512"></rect><path clip-rule="evenodd" d="m316.939 407.424v50.061c8.138 4.172 17.763 7.3 28.875 9.386s22.823 3.129 35.135 3.129c11.999 0 23.397-1.147 34.196-3.442 10.799-2.294 20.268-6.075 28.406-11.342 8.138-5.266 14.581-12.15 19.328-20.65s7.121-19.007 7.121-31.522c0-9.074-1.356-17.026-4.069-23.857s-6.625-12.906-11.738-18.225c-5.112-5.319-11.242-10.091-18.389-14.315s-15.207-8.213-24.18-11.967c-6.573-2.712-12.468-5.345-17.685-7.9-5.217-2.556-9.651-5.163-13.303-7.822-3.652-2.66-6.469-5.476-8.451-8.448-1.982-2.973-2.974-6.336-2.974-10.091 0-3.441.887-6.544 2.661-9.308s4.278-5.136 7.512-7.118c3.235-1.981 7.199-3.52 11.894-4.615 4.696-1.095 9.912-1.642 15.651-1.642 4.173 0 8.581.313 13.224.938 4.643.626 9.312 1.591 14.008 2.894 4.695 1.304 9.259 2.947 13.694 4.928 4.434 1.982 8.529 4.276 12.285 6.884v-46.776c-7.616-2.92-15.937-5.084-24.962-6.492s-19.381-2.112-31.066-2.112c-11.895 0-23.163 1.278-33.805 3.833s-20.006 6.544-28.093 11.967c-8.086 5.424-14.476 12.333-19.171 20.729-4.695 8.395-7.043 18.433-7.043 30.114 0 14.914 4.304 27.638 12.912 38.172 8.607 10.533 21.675 19.45 39.204 26.751 6.886 2.816 13.303 5.579 19.25 8.291s11.086 5.528 15.415 8.448c4.33 2.92 7.747 6.101 10.252 9.543 2.504 3.441 3.756 7.352 3.756 11.733 0 3.233-.783 6.231-2.348 8.995s-3.939 5.162-7.121 7.196-7.147 3.624-11.894 4.771c-4.748 1.148-10.303 1.721-16.668 1.721-10.851 0-21.597-1.903-32.24-5.71-10.642-3.806-20.502-9.516-29.579-17.13zm-84.159-123.342h64.22v-41.082h-179v41.082h63.906v182.918h50.874z" fill="var(--ds-background-100)" fill-rule="evenodd"></path></svg></div><span class="code-block_filenameP__02nok">app/layout.tsx</span></div><div class="code-block_actions__yphRf"><div><button type="button" role="combobox" aria-controls="radix-:R1943ilttquktta:" aria-expanded="false" aria-autocomplete="none" dir="ltr" data-state="closed" class="switcher_langSwitcherTrigger__3z75V"><span style="pointer-events:none">TypeScript</span><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:16px;height:16px"><path d="M6 9l6 6 6-6"></path></svg></button></div><button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M20 6L9 17l-5-5"></path></svg></button></div></div><pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> { Metadata } </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'next'</span></span>
@@ -439,9 +439,9 @@
 <span class="line"><span style="color:var(--shiki-color-text)">&lt;</span><span style="color:var(--shiki-token-string-expression)">meta</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">property</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">"article:author"</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">content</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">"Seb"</span><span style="color:var(--shiki-color-text)"> /&gt;</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">&lt;</span><span style="color:var(--shiki-token-string-expression)">meta</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">property</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">"article:author"</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">content</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">"Josh"</span><span style="color:var(--shiki-color-text)"> /&gt;</span></span></code></pre></div>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>It may be more convenient to use the <a href="/docs/app/api-reference/file-conventions/metadata/opengraph-image#image-files-jpg-png-gif" title="file-based Metadata API">file-based Metadata API</a> for Open Graph images. Rather than having to sync the config export with actual files, the file-based API will automatically generate the correct metadata for you.</li>
+<li translated="true">Open Graph görüntüleri için <a href="/docs/app/api-reference/file-conventions/metadata/opengraph-image#image-files-jpg-png-gif" title="file-based Metadata API">dosya tabanlı Meta Veri API</a> 'sini kullanmak daha uygun olabilir. Yapılandırma dışa aktarımını gerçek dosyalarla senkronize etmek zorunda kalmak yerine, dosya tabanlı API sizin için doğru meta verileri otomatik olarak oluşturacaktır.</li>
 </ul>
 </blockquote>
 <h3 id="robots" data-docs-heading="" translate="no"><a href="#robots" title="robots"><code translate="no">robots</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -479,7 +479,7 @@
   </g>
 </svg></span></a></h3>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: We recommend using the <a href="/docs/app/api-reference/file-conventions/metadata/app-icons#image-files-ico-jpg-png" title="file-based Metadata API">file-based Metadata API</a> for icons where possible. Rather than having to sync the config export with actual files, the file-based API will automatically generate the correct metadata for you.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: Mümkün olan yerlerde simgeler için <a href="/docs/app/api-reference/file-conventions/metadata/app-icons#image-files-ico-jpg-png" title="file-based Metadata API">dosya tabanlı Meta Veri API</a> 'sini kullanmanızı öneririz. Yapılandırma dışa aktarımını gerçek dosyalarla senkronize etmek zorunda kalmak yerine, dosya tabanlı API sizin için doğru meta verileri otomatik olarak oluşturacaktır.</p>
 </blockquote>
 <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no"><div class="code-block_header__t3NRd"><div class="code-block_fileName__HmSv1"><div aria-hidden="true" class="code-block_iconWrapper__TuHFk"><svg height="17" style="margin-left:-1.5px" viewbox="0 0 50 50" width="17" xmlns="http://www.w3.org/2000/svg"><path d="M 43.335938 4 L 6.667969 4 C 5.195313 4 4 5.195313 4 6.667969 L 4 43.332031 C 4 44.804688 5.195313 46 6.667969 46 L 43.332031 46 C 44.804688 46 46 44.804688 46 43.335938 L 46 6.667969 C 46 5.195313 44.804688 4 43.335938 4 Z M 27 36.183594 C 27 40.179688 24.65625 42 21.234375 42 C 18.140625 42 15.910156 39.925781 15 38 L 18.144531 36.097656 C 18.75 37.171875 19.671875 38 21 38 C 22.269531 38 23 37.503906 23 35.574219 L 23 23 L 27 23 Z M 35.675781 42 C 32.132813 42 30.121094 40.214844 29 38 L 32 36 C 32.816406 37.335938 33.707031 38.613281 35.589844 38.613281 C 37.171875 38.613281 38 37.824219 38 36.730469 C 38 35.425781 37.140625 34.960938 35.402344 34.199219 L 34.449219 33.789063 C 31.695313 32.617188 29.863281 31.148438 29.863281 28.039063 C 29.863281 25.179688 32.046875 23 35.453125 23 C 37.878906 23 39.621094 23.84375 40.878906 26.054688 L 37.910156 27.964844 C 37.253906 26.789063 36.550781 26.328125 35.453125 26.328125 C 34.335938 26.328125 33.628906 27.039063 33.628906 27.964844 C 33.628906 29.109375 34.335938 29.570313 35.972656 30.28125 L 36.925781 30.691406 C 40.171875 32.078125 42 33.496094 42 36.683594 C 42 40.117188 39.300781 42 35.675781 42 Z" fill="currentColor"></path></svg></div><span class="code-block_filenameP__02nok">layout.js | page.js</span></div><div class="code-block_actions__yphRf"><button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M20 6L9 17l-5-5"></path></svg></button></div></div><pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-constant)">metadata</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-color-text)"> {</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">  icons</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-color-text)"> {</span></span>
@@ -535,7 +535,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-function)">type</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">"image/png"</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">/&gt;</span></span></code></pre></div>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: The <code translate="no">msapplication-*</code> meta tags are no longer supported in Chromium builds of Microsoft Edge, and thus no longer needed.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: <code translate="no">msapplication-*</code> meta etiketleri Microsoft Edge'in Chromium sürümlerinde artık desteklenmemektedir ve bu nedenle artık gerekli değildir.</p>
 </blockquote>
 <h3 id="themecolor" data-docs-heading="" translate="no"><a href="#themecolor" title="themeColor"><code translate="no">themeColor</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -544,7 +544,7 @@
   </g>
 </svg></span></a></h3>
 <blockquote class="p-3 text-sm">
-<p><strong>Deprecated</strong>: The <code translate="no">themeColor</code> option in <code translate="no">metadata</code> is deprecated as of Next.js 14. Please use the <a href="/docs/app/api-reference/functions/generate-viewport" title="viewport configuration"><code translate="no">viewport</code> configuration</a> instead.</p>
+<p translated="true">Kullanımdan <strong>kaldırılmıştır</strong>: <code translate="no">metadata</code> adresindeki <code translate="no">themeColor</code> seçeneği Next.js 14'ten itibaren kullanımdan kaldırılmıştır. Lütfen bunun yerine <a href="/docs/app/api-reference/functions/generate-viewport" title="viewport configuration"><code translate="no">viewport</code> yapılandırmasını</a> kullanın.</p>
 </blockquote>
 <h3 id="manifest" data-docs-heading="" translate="no"><a href="#manifest" title="manifest"><code translate="no">manifest</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -632,7 +632,7 @@
   </g>
 </svg></span></a></h3>
 <blockquote class="p-3 text-sm">
-<p><strong>Deprecated</strong>: The <code translate="no">viewport</code> option in <code translate="no">metadata</code> is deprecated as of Next.js 14. Please use the <a href="/docs/app/api-reference/functions/generate-viewport" title="viewport configuration"><code translate="no">viewport</code> configuration</a> instead.</p>
+<p translated="true">Kullanımdan <strong>kaldırılmıştır</strong>: <code translate="no">metadata</code> adresindeki <code translate="no">viewport</code> seçeneği Next.js 14'ten itibaren kullanımdan kaldırılmıştır. Lütfen bunun yerine <a href="/docs/app/api-reference/functions/generate-viewport" title="viewport configuration"><code translate="no">viewport</code> yapılandırmasını</a> kullanın.</p>
 </blockquote>
 <h3 id="verification" data-docs-heading="" translate="no"><a href="#verification" title="verification"><code translate="no">verification</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -876,11 +876,11 @@
 <div class="code-block_wrapper__t6FCO code-block_hideLineNumbers__52YKH not-prose" translate="no"><button aria-label="Copy code" class="code-block_copyButton__uo5Yu code-block_copyFloatingButton__PsMvB" type="button"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M20 6L9 17l-5-5"></path></svg></button><pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-constant)">ReactDOM</span><span style="color:var(--shiki-token-function)">.prefetchDNS</span><span style="color:var(--shiki-color-text)">(href: string)</span></span></code></pre></div>
 <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD code-block_hideLineNumbers__52YKH not-prose" translate="no"><div class="code-block_header__t3NRd"><div class="code-block_fileName__HmSv1"><div aria-hidden="true" class="code-block_iconWrapper__TuHFk"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:16px;height:16px"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"></path><path d="M13 2v7h7"></path></svg></div><span class="code-block_filenameP__02nok">&lt;head&gt; output</span></div><div class="code-block_actions__yphRf"><button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M20 6L9 17l-5-5"></path></svg></button></div></div><pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">&lt;</span><span style="color:var(--shiki-token-string-expression)">link</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">rel</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">"dns-prefetch"</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">href</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">"..."</span><span style="color:var(--shiki-color-text)"> /&gt;</span></span></code></pre></div>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>These methods are currently only supported in Client Components, which are still Server Side Rendered on initial page load.</li>
-<li>Next.js in-built features such as <code translate="no">next/font</code>, <code translate="no">next/image</code> and <code translate="no">next/script</code> automatically handle relevant resource hints.</li>
-<li>React 18.3 does not yet include type definitions for <code translate="no">ReactDOM.preload</code>, <code translate="no">ReactDOM.preconnect</code>, and <code translate="no">ReactDOM.preconnectDNS</code>. You can use <code translate="no">// @ts-ignore</code> as a temporary solution to avoid type errors.</li>
+<li translated="true">Bu yöntemler şu anda yalnızca ilk sayfa yüklemesinde hala Sunucu Tarafı Oluşturulan İstemci Bileşenlerinde desteklenmektedir.</li>
+<li translated="true">Next.js'nin <code translate="no">next/font</code>, <code translate="no">next/image</code> ve <code translate="no">next/script</code> gibi yerleşik özellikleri ilgili kaynak ipuçlarını otomatik olarak işler.</li>
+<li translated="true">React 18.3 henüz <code translate="no">ReactDOM.preload</code>, <code translate="no">ReactDOM.preconnect</code> ve <code translate="no">ReactDOM.preconnectDNS</code> için tip tanımları içermemektedir. Tip hatalarını önlemek için geçici bir çözüm olarak <code translate="no">// @ts-ignore</code> adresini kullanabilirsiniz.</li>
 </ul>
 </blockquote>
 <h2 id="types" data-docs-heading="" translate="no"><a href="#types" title="Types">Types<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">

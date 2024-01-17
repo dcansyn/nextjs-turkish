@@ -26,15 +26,15 @@
 <p translated="true">Aynı klasörde, <code translate="no">loading.js</code> dosyası <code translate="no">layout.js</code> dosyasının içine yerleştirilecektir. <code translate="no">page.js</code> dosyasını ve altındaki tüm alt dosyaları otomatik olarak <code translate="no">&lt;Suspense&gt;</code> sınırına saracaktır.</p>
 <figure><img alt="loading.js overview" loading="lazy" width="1600" height="768" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/loading-overview.png"><img alt="loading.js overview" loading="lazy" width="1600" height="768" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/loading-overview.png"></figure>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>Navigation is immediate, even with <a href="/docs/app/building-your-application/routing/linking-and-navigating#how-routing-and-navigation-works" title="server-centric routing">server-centric routing</a>.</li>
-<li>Navigation is interruptible, meaning changing routes does not need to wait for the content of the route to fully load before navigating to another route.</li>
-<li>Shared layouts remain interactive while new route segments load.</li>
+<li translated="true"><a href="/docs/app/building-your-application/routing/linking-and-navigating#how-routing-and-navigation-works" title="server-centric routing">Sunucu merkezli yönlendir</a>mede bile navigasyon anında gerçekleşir.</li>
+<li translated="true">Navigasyon kesintiye uğramaz, yani rota değiştirirken başka bir rotaya geçmeden önce rotanın içeriğinin tamamen yüklenmesini beklemek gerekmez.</li>
+<li translated="true">Yeni rota segmentleri yüklenirken paylaşılan düzenler etkileşimli kalır.</li>
 </ul>
 </blockquote>
 <blockquote class="p-3 text-sm">
-<p><strong>Recommendation:</strong> Use the <code translate="no">loading.js</code> convention for route segments (layouts and pages) as Next.js optimizes this functionality.</p>
+<p translated="true"><strong>Öneri:</strong> Next.js bu işlevi optimize ettiğinden, rota segmentleri (düzenler ve sayfalar) için <code translate="no">loading.js</code> kuralını kullanın.</p>
 </blockquote>
 <h2 id="streaming-with-suspense" data-docs-heading="" translate="no"><a href="#streaming-with-suspense" title="Streaming with Suspense">Streaming with Suspense<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -52,11 +52,11 @@
 <p translated="true">Akışın React ve Next.js'de nasıl çalıştığını öğrenmek için <strong>Sunucu Tarafı Oluşturma (SSR)</strong> ve sınırlamalarını anlamak faydalı olacaktır.</p>
 <p translated="true">SSR ile, bir kullanıcının bir sayfayı görebilmesi ve etkileşimde bulunabilmesi için tamamlanması gereken bir dizi adım vardır:</p>
 <ol>
-<li>First, all data for a given page is fetched on the server.</li>
-<li>The server then renders the HTML for the page.</li>
-<li>The HTML, CSS, and JavaScript for the page are sent to the client.</li>
-<li>A non-interactive user interface is shown using the generated HTML, and CSS.</li>
-<li>Finally, React <a href="https://react.dev/reference/react-dom/client/hydrateRoot#hydrating-server-rendered-html" rel="noopener noreferrer nofollow" target="_blank" title="hydrates">hydrates<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> the user interface to make it interactive.</li>
+<li translated="true">İlk olarak, belirli bir sayfa için tüm veriler sunucudan getirilir.</li>
+<li translated="true">Sunucu daha sonra sayfa için HTML'yi işler.</li>
+<li translated="true">Sayfa için HTML, CSS ve JavaScript istemciye gönderilir.</li>
+<li translated="true">Oluşturulan HTML ve CSS kullanılarak etkileşimli olmayan bir kullanıcı arayüzü gösterilir.</li>
+<li translated="true">Son olarak, React <a href="https://react.dev/reference/react-dom/client/hydrateRoot#hydrating-server-rendered-html" rel="noopener noreferrer nofollow" target="_blank" title="hydrates">hydrates<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> kullanıcı arayüzünü etkileşimli hale getirir.</li>
 </ol>
 <figure><img alt="Chart showing Server Rendering without Streaming" loading="lazy" width="1600" height="612" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/server-rendering-without-streaming-chart.png"><img alt="Chart showing Server Rendering without Streaming" loading="lazy" width="1600" height="612" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/server-rendering-without-streaming-chart.png"></figure>
 <p translated="true">Bu adımlar sıralı ve engelleyicidir, yani sunucu ancak tüm veriler getirildikten sonra bir sayfanın HTML'sini oluşturabilir. İstemcide ise React, kullanıcı arayüzünü ancak sayfadaki tüm bileşenlerin kodu indirildikten sonra hidrate edebilir.</p>
@@ -94,8 +94,8 @@
 <!-- -->
 <p translated="true">Suspense kullanarak şu avantajları elde edersiniz:</p>
 <ol>
-<li><strong>Streaming Server Rendering</strong> - Progressively rendering HTML from the server to the client.</li>
-<li><strong>Selective Hydration</strong> - React prioritizes what components to make interactive first based on user interaction.</li>
+<li translated="true"><strong>Akış Sun</strong> ucusu Oluşturma - HTML'yi sunucudan istemciye aşamalı olarak oluşturma.</li>
+<li translated="true"><strong>Seçici Hidrasyon</strong> - React, kullanıcı etkileşimine göre hangi bileşenlerin önce etkileşimli hale getirileceğine öncelik verir.</li>
 </ol>
 <p translated="true">Daha fazla Suspense örneği ve kullanım senaryosu için lütfen <a href="https://react.dev/reference/react/Suspense" rel="noopener noreferrer nofollow" target="_blank" title="React Documentation"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span> adresindeki</a> <a href="https://react.dev/reference/react/Suspense" rel="noopener noreferrer nofollow" target="_blank" title="React Documentation">React Dokümantasyonuna</a> bakın.</p>
 <h3 id="seo" data-docs-heading="" translate="no"><a href="#seo" title="SEO">SEO<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -105,8 +105,8 @@
   </g>
 </svg></span></a></h3>
 <ul>
-<li>Next.js will wait for data fetching inside <a href="/docs/app/api-reference/functions/generate-metadata" title="generateMetadata"><code translate="no">generateMetadata</code></a> to complete before streaming UI to the client. This guarantees the first part of a streamed response includes <code translate="no">&lt;head&gt;</code> tags.</li>
-<li>Since streaming is server-rendered, it does not impact SEO. You can use the <a href="https://search.google.com/test/mobile-friendly" rel="noopener noreferrer nofollow" target="_blank" title="Mobile Friendly Test">Mobile Friendly Test<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> tool from Google to see how your page appears to Google's web crawlers and view the serialized HTML (<a href="https://web.dev/rendering-on-the-web/#seo-considerations" rel="noopener noreferrer nofollow" target="_blank" title="source">source<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>).</li>
+<li translated="true">Next.js içinde veri getirme için bekleyecek <a href="/docs/app/api-reference/functions/generate-metadata" title="generateMetadata"><code translate="no">generateMetadata</code></a> UI'yi istemciye aktarmadan önce tamamlamak için. Bu, akışa alınan yanıtın ilk bölümünün <code translate="no">&lt;head&gt;</code> etiketlerini içermesini garanti eder.</li>
+<li translated="true">Akış sunucu tarafından oluşturulduğu için SEO'yu etkilemez. Sayfanızın Google'ın web tarayıcılarında nasıl göründüğünü görmek ve serileştirilmiş HTML'yi<a href="https://web.dev/rendering-on-the-web/#seo-considerations" rel="noopener noreferrer nofollow" target="_blank" title="source">(kaynak<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>) görüntülemek için Google'ın <a href="https://search.google.com/test/mobile-friendly" rel="noopener noreferrer nofollow" target="_blank" title="Mobile Friendly Test">Mobil Uyumluluk Testi<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> aracını kullanabilirsiniz.</li>
 </ul>
 <h3 id="status-codes" data-docs-heading="" translate="no"><a href="#status-codes" title="Status Codes">Status Codes<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">

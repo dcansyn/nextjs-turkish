@@ -10,13 +10,10 @@
     <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">assetPrefix</h1>
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p><strong>Attention</strong>: <a href="/docs/pages/building-your-application/deploying" title="Deploying to Vercel">Deploying to Vercel</a> automatically configures a global CDN for your Next.js project.
-You do not need to manually setup an Asset Prefix.</p>
+<p translated="true"><strong>Dikkat</strong>! <a href="/docs/pages/building-your-application/deploying" title="Deploying to Vercel">Vercel'e dağıtım</a>, Next.js projeniz için otomatik olarak global bir CDN yapılandırır. Bir Varlık Önekini manuel olarak ayarlamanıza gerek yoktur.</p>
 </blockquote>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: Next.js 9.5+ added support for a customizable <a href="/docs/app/api-reference/next-config-js/basePath" title="Base Path">Base Path</a>, which is better
-suited for hosting your application on a sub-path like <code translate="no">/docs</code>.
-We do not suggest you use a custom Asset Prefix for this use case.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: Next.js 9.5+, uygulamanızı <code translate="no">/docs</code> gibi bir alt yolda barındırmak için daha uygun olan özelleştirilebilir bir <a href="/docs/app/api-reference/next-config-js/basePath" title="Base Path">Temel Yol</a> desteği ekledi. Bu kullanım durumu için özel bir Varlık Öneki kullanmanızı önermiyoruz.</p>
 </blockquote>
 <p translated="true">Bir <a href="https://en.wikipedia.org/wiki/Content_delivery_network" rel="noopener noreferrer nofollow" target="_blank" title="CDN">CDN</a> kurmak için <a href="https://en.wikipedia.org/wiki/Content_delivery_network" rel="noopener noreferrer nofollow" target="_blank" title="CDN"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span>, bir varlık öneki ayarlayabilir ve CDN'inizin kaynağını Next.js'nin barındırıldığı etki alanına çözümlenecek şekilde yapılandırabilirsiniz.</a></p>
 <p translated="true"><code translate="no">next.config.js</code> adresini açın ve <code translate="no">assetPrefix</code> yapılandırmasını ekleyin:</p>
@@ -36,9 +33,9 @@ We do not suggest you use a custom Asset Prefix for this use case.</p>
 <p translated="true"><code translate="no">assetPrefix</code>, <code translate="no">_next/static</code> adresine yapılan talepleri kapsarken, aşağıdaki yolları etkilemez:</p>
 <!-- -->
 <ul>
-<li>Files in the <a href="/docs/pages/building-your-application/optimizing/static-assets" title="public">public</a> folder; if you want to serve those assets over a CDN, you'll have to introduce the prefix yourself</li>
-<li><code translate="no">/_next/data/</code> requests for <code translate="no">getServerSideProps</code> pages. These requests will always be made against the main domain since they're not static.</li>
-<li><code translate="no">/_next/data/</code> requests for <code translate="no">getStaticProps</code> pages. These requests will always be made against the main domain to support <a href="/docs/pages/building-your-application/data-fetching/incremental-static-regeneration" title="Incremental Static Generation">Incremental Static Generation</a>, even if you're not using it (for consistency).</li>
+<li translated="true"><a href="/docs/pages/building-your-application/optimizing/static-assets" title="public">Ortak</a> klasördeki dosyalar; bu varlıkları bir CDN üzerinden sunmak istiyorsanız, öneki kendiniz tanıtmanız gerekir</li>
+<li translated="true"><code translate="no">/_next/data/</code> <code translate="no">getServerSideProps</code> sayfaları için istekler. Bu istekler, statik olmadıkları için her zaman ana etki alanına karşı yapılacaktır.</li>
+<li translated="true"><code translate="no">/_next/data/</code> <code translate="no">getStaticProps</code> sayfaları için talepler. Bu istekler, kullanmıyor olsanız bile (tutarlılık için) <a href="/docs/pages/building-your-application/data-fetching/incremental-static-regeneration" title="Incremental Static Generation">Artımlı Statik Üretimi</a> desteklemek için her zaman ana etki alanına karşı yapılacaktır.</li>
 </ul></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')

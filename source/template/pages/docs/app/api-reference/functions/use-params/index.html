@@ -39,11 +39,11 @@
 </svg></span></a></h2>
 <p translated="true"><code translate="no">useParams</code> geçerli rotanın doldurulmuş <a href="/docs/app/building-your-application/routing/dynamic-routes" title="dynamic parameters">dinamik parametrelerini</a> içeren bir nesne döndürür.</p>
 <ul>
-<li>Each property in the object is an active dynamic segment.</li>
-<li>The properties name is the segment's name, and the properties value is what the segment is filled in with.</li>
-<li>The properties value will either be a <code translate="no">string</code> or array of <code translate="no">string</code>'s depending on the <a href="/docs/app/building-your-application/routing/dynamic-routes" title="type of dynamic segment">type of dynamic segment</a>.</li>
-<li>If the route contains no dynamic parameters, <code translate="no">useParams</code> returns an empty object.</li>
-<li>If used in <code translate="no">pages</code>, <code translate="no">useParams</code> will return <code translate="no">null</code>.</li>
+<li translated="true">Nesnedeki her özellik aktif bir dinamik segmenttir.</li>
+<li translated="true">Özellikler adı segmentin adıdır ve özellikler değeri segmentin ne ile doldurulduğudur.</li>
+<li translated="true">Özellik değeri, <a href="/docs/app/building-your-application/routing/dynamic-routes" title="type of dynamic segment">dinamik segmentin türüne</a> bağlı olarak ya bir <code translate="no">string</code> ya da <code translate="no">string</code>'ler dizisi olacaktır.</li>
+<li translated="true">Rota hiçbir dinamik parametre içermiyorsa, <code translate="no">useParams</code> boş bir nesne döndürür.</li>
+<li translated="true"><code translate="no">pages</code> içinde kullanılırsa <code translate="no">useParams</code>, <code translate="no">null</code> döndürür.</li>
 </ul>
 <p translated="true">Örneğin:</p>
 <div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th>Route</th><th>URL</th><th><code translate="no">useParams()</code></th></tr></thead><tbody><tr><td><code translate="no">app/shop/page.js</code></td><td><code translate="no">/shop</code></td><td><code translate="no">null</code></td></tr><tr><td><code translate="no">app/shop/[slug]/page.js</code></td><td><code translate="no">/shop/1</code></td><td><code translate="no">{ slug: '1' }</code></td></tr><tr><td><code translate="no">app/shop/[tag]/[item]/page.js</code></td><td><code translate="no">/shop/1/2</code></td><td><code translate="no">{ tag: '1', item: '2' }</code></td></tr><tr><td><code translate="no">app/shop/[...slug]/page.js</code></td><td><code translate="no">/shop/1/2</code></td><td><code translate="no">{ slug: ['1', '2'] }</code></td></tr></tbody></table></div>

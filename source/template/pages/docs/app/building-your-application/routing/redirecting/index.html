@@ -131,25 +131,16 @@
       </div>
       <!-- -->
       <blockquote class="p-3 text-sm">
-        <p><strong>Good to know</strong>:</p>
+        <p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
         <ul>
-          <li>
-            <code translate="no">redirect</code> returns a 307 (Temporary Redirect) status code by default. When used in a Server Action, it returns a
-            303 (See Other), which is commonly used for redirecting to a success page as a result of a POST request.
-          </li>
-          <li>
-            <code translate="no">redirect</code> internally throws an error so should be called outside of
-            <code translate="no">try/catch</code> blocks.
-          </li>
-          <li>
-            <code translate="no">redirect</code> can be called in Client Components during the rendering process but not in event handlers. You can
-            use the <a href="#userouter-hook" title="useRouter hook"><code translate="no">useRouter</code> hook</a> instead.
-          </li>
-          <li>
-            If you'd like to redirect before the render process, use
-            <a href="#redirects-in-nextconfigjs" title="next.config.js"><code translate="no">next.config.js</code></a> or
-            <a href="#nextresponseredirect-in-middleware" title="Middleware">Middleware</a>.
-          </li>
+          <li translated="true">
+            <code translate="no">redirect</code> varsayılan olarak bir 307 (Geçici Yönlendirme) durum kodu döndürür. Bir Sunucu Eyleminde kullanıldığında, genellikle bir POST isteğinin sonucu olarak bir başarı sayfasına yönlendirmek için kullanılan bir 303 (Diğerine Bakın) döndürür.          </li>
+          <li translated="true">
+            <code translate="no">redirect</code> dahili olarak bir hata atar, bu nedenle <code translate="no">try/catch</code> bloklarının dışında çağrılmalıdır.          </li>
+          <li translated="true">
+            <code translate="no">redirect</code> oluşturma işlemi sırasında İstemci Bileşenlerinde çağrılabilir ancak olay işleyicilerinde çağrılamaz. Bunun yerine <a href="#userouter-hook" title="useRouter hook"><code translate="no">useRouter</code> kancasını</a> kullanabilirsiniz.          </li>
+          <li translated="true">
+            Render işleminden önce yeniden yönlendirme yapmak istiyorsanız            <a href="#redirects-in-nextconfigjs" title="next.config.js"><code translate="no">next.config.js</code></a> veya <a href="#nextresponseredirect-in-middleware" title="Middleware">Orta Yazılım</a>.          </li>
         </ul>
       </blockquote>
       <p translated="true">
@@ -222,14 +213,11 @@
       </div>
       <!-- -->
       <blockquote class="p-3 text-sm">
-        <p><strong>Good to know</strong>:</p>
+        <p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
         <ul>
-          <li><code translate="no">permanentRedirect</code> returns a 308 (permanent redirect) status code by default.</li>
-          <li>
-            If you'd like to redirect before the render process, use
-            <a href="#redirects-in-nextconfigjs" title="next.config.js"><code translate="no">next.config.js</code></a> or
-            <a href="#nextresponseredirect-in-middleware" title="Middleware">Middleware</a>.
-          </li>
+          <li translated="true"><code translate="no">permanentRedirect</code> varsayılan olarak bir 308 (kalıcı yönlendirme) durum kodu döndürür.</li>
+          <li translated="true">
+            Render işleminden önce yeniden yönlendirme yapmak istiyorsanız            <a href="#redirects-in-nextconfigjs" title="next.config.js"><code translate="no">next.config.js</code></a> veya <a href="#nextresponseredirect-in-middleware" title="Middleware">Orta Yazılım</a>.          </li>
         </ul>
       </blockquote>
       <p translated="true">
@@ -292,12 +280,10 @@
       </div>
       <!-- -->
       <blockquote class="p-3 text-sm">
-        <p><strong>Good to know</strong>:</p>
+        <p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
         <ul>
-          <li>
-            If you don't need to programatically navigate a user, you should use a
-            <a href="/docs/app/api-reference/components/link" title="&lt;Link&gt;"><code translate="no">&lt;Link&gt;</code></a> component
-          </li>
+          <li translated="true">
+            Bir kullanıcıyı programlı olarak yönlendirmeniz gerekmiyorsa, bir   <a href="/docs/app/api-reference/components/link" title="&lt;Link&gt;"><code translate="no">&lt;Link&gt;</code></a> bileşen        </li>
         </ul>
       </blockquote>
       <p translated="true">
@@ -369,19 +355,13 @@
         bakın.
       </p>
       <blockquote class="p-3 text-sm">
-        <p><strong>Good to know</strong>:</p>
+        <p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
         <ul>
-          <li>
-            <code translate="no">redirects</code> can return a 307 (Temporary Redirect) or 308 (Permanent Redirect) status code with the
-            <code translate="no">permanent</code> option.
-          </li>
-          <li>
-            <code translate="no">redirects</code> may have a limit on platforms. For example, on Vercel, there's a limit of 1,024 redirects. To manage
-            a large number of redirects (1000+), consider creating a custom solution using
-            <a href="/docs/app/building-your-application/routing/middleware" title="Middleware">Middleware</a>. See
-            <a href="#managing-redirects-at-scale-advanced" title="managing redirects at scale">managing redirects at scale</a> for more.
-          </li>
-          <li><code translate="no">redirects</code> runs <strong>before</strong> Middleware.</li>
+          <li translated="true">
+            <code translate="no">redirects</code> <code translate="no">permanent</code> seçeneği ile 307 (Geçici Yönlendirme) veya 308 (Kalıcı Yönlendirme) durum kodu döndürebilir.          </li>
+          <li translated="true">
+            <code translate="no">redirects</code> platformlarda bir sınıra sahip olabilir. Örneğin, Vercel'de 1.024 yönlendirme sınırı vardır. Çok sayıda yönlendirmeyi (1000+) yönetmek için <a href="/docs/app/building-your-application/routing/middleware" title="Middleware">Middleware</a> kullanarak özel bir çözüm oluşturmayı düşünün. Daha fazla bilgi için Yönlendirmeleri uygun <a href="#managing-redirects-at-scale-advanced" title="managing redirects at scale">ölçekte yönetme</a> bölümüne bakın.       </li>
+          <li translated="true"><code translate="no">redirects</code> Middleware'den <strong>önce</strong> çalışır.</li>
         </ul>
       </blockquote>
       <h2 id="nextresponseredirect-in-middleware" data-docs-heading="" translate="no">
@@ -449,12 +429,10 @@
       </div>
       <!-- -->
       <blockquote class="p-3 text-sm">
-        <p><strong>Good to know</strong>:</p>
+        <p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
         <ul>
-          <li>
-            Middleware runs <strong>after</strong> <code translate="no">redirects</code> in <code translate="no">next.config.js</code> and
-            <strong>before</strong> rendering.
-          </li>
+          <li translated="true">
+            Ara yazılım <code translate="no">redirects</code> adresinden <strong>sonra</strong> <code translate="no">next.config.js</code> adresinde ve render işleminden <strong>önce</strong> çalışır.          </li>
         </ul>
       </blockquote>
       <p translated="true">
@@ -473,8 +451,8 @@
       </p>
       <p translated="true">Çok sayıda yönlendirmeyi ele alırken şunları göz önünde bulundurmalısınız:</p>
       <ol>
-        <li>Creating and storing a redirect map.</li>
-        <li>Optimizing data lookup performance.</li>
+        <li translated="true">Yönlendirme haritası oluşturma ve saklama.</li>
+        <li translated="true">Veri arama performansını optimize etme.</li>
       </ol>
       <h3 id="1-creating-and-storing-a-redirect-map" data-docs-heading="" translate="no">
         <a href="#1-creating-and-storing-a-redirect-map" title="1. Creating and storing a redirect map">1. Creating and storing a redirect map<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -579,23 +557,16 @@
         Gelen her istek için büyük bir veri kümesini okumak yavaş ve pahalı olabilir. Veri arama performansını optimize etmenin iki yolu vardır:
       </p>
       <ul>
-        <li>
-          Use a database that is optimized for fast reads, such as
-          <a href="https://vercel.com/docs/storage/edge-config/get-started?utm_source=next-site&amp;utm_medium=docs&amp;utm_campaign=next-website" rel="noopener noreferrer" target="_blank" title="Vercel Edge Config">Vercel Edge Config<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+         <a href="https://vercel.com/docs/storage/edge-config/get-started?utm_source=next-site&amp;utm_medium=docs&amp;utm_campaign=next-website" rel="noopener noreferrer" target="_blank" title="Vercel Edge Config">Vercel Edge Config<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-          or
-          <a href="https://vercel.com/docs/storage/vercel-kv?utm_source=next-site&amp;utm_medium=docs&amp;utm_campaign=next-website" rel="noopener noreferrer" target="_blank" title="Redis">Redis<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 7h10v10"></path></svg></span></a>veya <a href="https://vercel.com/docs/storage/vercel-kv?utm_source=next-site&amp;utm_medium=docs&amp;utm_campaign=next-website" rel="noopener noreferrer" target="_blank" title="Redis">Redis<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>.
-        </li>
-        <li>
-          Use a data lookup strategy such as a
-          <a href="https://en.wikipedia.org/wiki/Bloom_filter" rel="noopener noreferrer nofollow" target="_blank" title="Bloom filter">Bloom filter<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 7h10v10"></path></svg></span></a> gibi hızlı okumalar için optimize edilmiş bir <a href="https://vercel.com/docs/storage/edge-config/get-started?utm_source=next-site&amp;utm_medium=docs&amp;utm_campaign=next-website" rel="noopener noreferrer" target="_blank" title="Vercel Edge Config">veritabanı</a>kullanın.        </li>
+        <li translated="true">
+          Daha büyük yönlendirmeler dosyasını okumadan <strong>önce</strong> bir yönlendirmenin var olup olmadığını verimli bir şekilde kontrol etmek için <a href="https://en.wikipedia.org/wiki/Bloom_filter" rel="noopener noreferrer nofollow" target="_blank" title="Bloom filter">Bloom filtresi<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-          to efficiently check if a redirect exists <strong>before</strong> reading the larger redirects file.
-        </li>
+                <path d="M7 7h10v10"></path></svg></span></a>gibi bir veri arama stratejisi kullanın.        </li>
       </ul>
       <p translated="true">
         Önceki örneği göz önünde bulundurarak, oluşturulan bir bloom filtresi dosyasını Middleware'e aktarabilir, ardından gelen istek yol adının
@@ -743,13 +714,11 @@
       <blockquote class="p-3 text-sm">
         <p><strong>Bilmekte fayda var:</strong></p>
         <ul>
-          <li>
-            To generate a bloom filter, you can use a library like
-            <a href="https://www.npmjs.com/package/bloom-filters" rel="noopener noreferrer nofollow" target="_blank" title="bloom-filters"><code translate="no">bloom-filters</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+          <li translated="true">
+            Bir bloom filtresi oluşturmak için aşağıdaki gibi bir kütüphane kullanabilirsiniz            <a href="https://www.npmjs.com/package/bloom-filters" rel="noopener noreferrer nofollow" target="_blank" title="bloom-filters"><code translate="no">bloom-filters</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                   <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path></svg></span></a>.
-          </li>
-          <li>You should validate requests made to your Route Handler to prevent malicious requests.</li>
+                  <path d="M7 7h10v10"></path></svg></span></a>. </li>
+          <li translated="true">Kötü niyetli istekleri önlemek için Rota İşleyicinize yapılan istekleri doğrulamalısınız.</li>
         </ul>
       </blockquote>
     </article>@@include('../../../../../../layouts/sidebar.html')</main>

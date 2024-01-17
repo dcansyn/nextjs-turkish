@@ -24,10 +24,10 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong></p>
+<p translated="true"><strong>Bildiğim iyi oldu</strong></p>
 <ul>
-<li><code translate="no">_document</code> is only rendered on the server, so event handlers like <code translate="no">onClick</code> cannot be used in this file.</li>
-<li><code translate="no">&lt;Html&gt;</code>, <code translate="no">&lt;Head /&gt;</code>, <code translate="no">&lt;Main /&gt;</code> and <code translate="no">&lt;NextScript /&gt;</code> are required for the page to be properly rendered.</li>
+<li translated="true"><code translate="no">_document</code> yalnızca sunucuda işlenir, bu nedenle <code translate="no">onClick</code> gibi olay işleyicileri bu dosyada kullanılamaz.</li>
+<li translated="true"><code translate="no">&lt;Html&gt;</code>, <code translate="no">&lt;Head /&gt;</code>, <code translate="no">&lt;Main /&gt;</code> ve <code translate="no">&lt;NextScript /&gt;</code> sayfanın düzgün bir şekilde işlenmesi için gereklidir.</li>
 </ul>
 </blockquote>
 <h2 id="caveats" data-docs-heading="" translate="no"><a href="#caveats" title="Caveats">Caveats<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -37,9 +37,9 @@
   </g>
 </svg></span></a></h2>
 <ul>
-<li>The <code translate="no">&lt;Head /&gt;</code> component used in <code translate="no">_document</code> is not the same as <a href="/docs/pages/api-reference/components/head" title="next/head"><code translate="no">next/head</code></a>. The <code translate="no">&lt;Head /&gt;</code> component used here should only be used for any <code translate="no">&lt;head&gt;</code> code that is common for all pages. For all other cases, such as <code translate="no">&lt;title&gt;</code> tags, we recommend using <a href="/docs/pages/api-reference/components/head" title="next/head"><code translate="no">next/head</code></a> in your pages or components.</li>
-<li>React components outside of <code translate="no">&lt;Main /&gt;</code> will not be initialized by the browser. Do <em>not</em> add application logic here or custom CSS (like <code translate="no">styled-jsx</code>). If you need shared components in all your pages (like a menu or a toolbar), read <a href="/docs/pages/building-your-application/routing/pages-and-layouts#layout-pattern" title="Layouts">Layouts</a> instead.</li>
-<li><code translate="no">Document</code> currently does not support Next.js <a href="/docs/pages/building-your-application/data-fetching" title="Data Fetching methods">Data Fetching methods</a> like <a href="/docs/pages/building-your-application/data-fetching/get-static-props" title="getStaticProps"><code translate="no">getStaticProps</code></a> or <a href="/docs/pages/building-your-application/data-fetching/get-server-side-props" title="getServerSideProps"><code translate="no">getServerSideProps</code></a>.</li>
+<li translated="true"><code translate="no">_document</code> adresinde kullanılan <code translate="no">&lt;Head /&gt;</code> bileşeni, aşağıdaki bileşenlerle aynı değildir <a href="/docs/pages/api-reference/components/head" title="next/head"><code translate="no">next/head</code></a>. Burada kullanılan <code translate="no">&lt;Head /&gt;</code> bileşeni yalnızca tüm sayfalar için ortak olan <code translate="no">&lt;head&gt;</code> kodu için kullanılmalıdır. <code translate="no">&lt;title&gt;</code> etiketleri gibi diğer tüm durumlar için şunları kullanmanızı öneririz <a href="/docs/pages/api-reference/components/head" title="next/head"><code translate="no">next/head</code></a> sayfalarınızda veya bileşenlerinizde.</li>
+<li translated="true"><code translate="no">&lt;Main /&gt;</code> dışındaki React bileşenleri tarayıcı tarafından başlatılmayacaktır. Buraya uygulama mantığı veya özel CSS <em>eklemeyin</em> ( <code translate="no">styled-jsx</code> gibi). Tüm sayfalarınızda paylaşılan bileşenlere ihtiyacınız varsa (bir menü veya araç çubuğu gibi), bunun yerine <a href="/docs/pages/building-your-application/routing/pages-and-layouts#layout-pattern" title="Layouts">Düzenleri</a> okuyun.</li>
+<li translated="true"><code translate="no">Document</code> gibi Next.js <a href="/docs/pages/building-your-application/data-fetching" title="Data Fetching methods">Veri Getirme yöntemlerini</a> şu anda desteklemiyor <a href="/docs/pages/building-your-application/data-fetching/get-static-props" title="getStaticProps"><code translate="no">getStaticProps</code></a> veya <a href="/docs/pages/building-your-application/data-fetching/get-server-side-props" title="getServerSideProps"><code translate="no">getServerSideProps</code></a>.</li>
 </ul>
 <h2 id="customizing-renderpage" data-docs-heading="" translate="no"><a href="#customizing-renderpage" title="Customizing renderPage">Customizing <code translate="no">renderPage</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -95,10 +95,10 @@
 <span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">default</span><span style="color:var(--shiki-color-text)"> MyDocument</span></span></code></pre></div>
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong></p>
+<p translated="true"><strong>Bildiğim iyi oldu</strong></p>
 <ul>
-<li><code translate="no">getInitialProps</code> in <code translate="no">_document</code> is not called during client-side transitions.</li>
-<li>The <code translate="no">ctx</code> object for <code translate="no">_document</code> is equivalent to the one received in <a href="/docs/pages/api-reference/functions/get-initial-props#context-object" title="getInitialProps"><code translate="no">getInitialProps</code></a>, with the addition of <code translate="no">renderPage</code>.</li>
+<li translated="true"><code translate="no">getInitialProps</code> <code translate="no">_document</code> adresinde istemci tarafı geçişler sırasında çağrılmaz.</li>
+<li translated="true"><code translate="no">_document</code> için <code translate="no">ctx</code> nesnesi şu adreste alınana eşdeğerdir <a href="/docs/pages/api-reference/functions/get-initial-props#context-object" title="getInitialProps"><code translate="no">getInitialProps</code></a>ile birlikte <code translate="no">renderPage</code>.</li>
 </ul>
 </blockquote></article>@@include('../../../../../../layouts/sidebar.html')</main>
 

@@ -8,7 +8,7 @@
     @@include('../../../../../../layouts/header.html')
 
     <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Pages and Layouts</h1><blockquote class="p-3 text-sm">
-<p>We recommend reading the <a href="/docs/app/building-your-application/routing" title="Routing Fundamentals">Routing Fundamentals</a> and <a href="/docs/app/building-your-application/routing/defining-routes" title="Defining Routes">Defining Routes</a> pages before continuing.</p>
+<p translated="true">Devam etmeden önce <a href="/docs/app/building-your-application/routing" title="Routing Fundamentals">Yönlendirme Temelleri</a> ve <a href="/docs/app/building-your-application/routing/defining-routes" title="Defining Routes">Yönleri Tanımlama</a> sayfalarını okumanızı öneririz.</p>
 </blockquote>
 <p translated="true">Next.js 13 içindeki Uygulama Yönlendiricisi, <a href="#pages" title="pages">sayfaları</a>, <a href="#layouts" title="shared layouts">paylaşılan düzenleri</a> ve <a href="#templates" title="templates">şablonları</a> kolayca oluşturmak için yeni dosya kurallarını tanıttı. Bu sayfa, Next.js uygulamanızda bu özel dosyaları nasıl kullanacağınız konusunda size rehberlik edecektir.</p>
 <h2 id="pages" data-docs-heading="" translate="no"><a href="#pages" title="Pages">Pages<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -31,13 +31,13 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>A page is always the <a href="/docs/app/building-your-application/routing#terminology" title="leaf">leaf</a> of the <a href="/docs/app/building-your-application/routing#terminology" title="route subtree">route subtree</a>.</li>
-<li><code translate="no">.js</code>, <code translate="no">.jsx</code>, or <code translate="no">.tsx</code> file extensions can be used for Pages.</li>
-<li>A <code translate="no">page.js</code> file is required to make a route segment publicly accessible.</li>
-<li>Pages are <a href="/docs/app/building-your-application/rendering/server-components" title="Server Components">Server Components</a> by default but can be set to a <a href="/docs/app/building-your-application/rendering/client-components" title="Client Component">Client Component</a>.</li>
-<li>Pages can fetch data. View the <a href="/docs/app/building-your-application/data-fetching" title="Data Fetching">Data Fetching</a> section for more information.</li>
+<li translated="true">Bir sayfa her zaman <a href="/docs/app/building-your-application/routing#terminology" title="route subtree">rota alt ağacının</a> <a href="/docs/app/building-your-application/routing#terminology" title="leaf">yaprağıdır</a>.</li>
+<li translated="true"><code translate="no">.js</code>, <code translate="no">.jsx</code> veya <code translate="no">.tsx</code> dosya uzantıları Pages için kullanılabilir.</li>
+<li translated="true">Bir rota segmentini herkesin erişimine açmak için <code translate="no">page.js</code> dosyası gereklidir.</li>
+<li translated="true">Sayfalar varsayılan olarak <a href="/docs/app/building-your-application/rendering/server-components" title="Server Components">Sunucu Bileşenleridir</a> ancak <a href="/docs/app/building-your-application/rendering/client-components" title="Client Component">İstemci Bileşeni</a> olarak ayarlanabilir.</li>
+<li translated="true">Sayfalar veri getirebilir. Daha fazla bilgi için <a href="/docs/app/building-your-application/data-fetching" title="Data Fetching">Veri Getirme</a> bölümünü inceleyin.</li>
 </ul>
 </blockquote>
 <h2 id="layouts" data-docs-heading="" translate="no"><a href="#layouts" title="Layouts">Layouts<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -65,18 +65,18 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>The top-most layout is called the <a href="#root-layout-required" title="Root Layout">Root Layout</a>. This <strong>required</strong> layout is shared across all pages in an application. Root layouts must contain <code translate="no">html</code> and <code translate="no">body</code> tags.</li>
-<li>Any route segment can optionally define its own <a href="#nesting-layouts" title="Layout">Layout</a>. These layouts will be shared across all pages in that segment.</li>
-<li>Layouts in a route are <strong>nested</strong> by default. Each parent layout wraps child layouts below it using the React <code translate="no">children</code> prop.</li>
-<li>You can use <a href="/docs/app/building-your-application/routing/route-groups" title="Route Groups">Route Groups</a> to opt specific route segments in and out of shared layouts.</li>
-<li>Layouts are <a href="/docs/app/building-your-application/rendering/server-components" title="Server Components">Server Components</a> by default but can be set to a <a href="/docs/app/building-your-application/rendering/client-components" title="Client Component">Client Component</a>.</li>
-<li>Layouts can fetch data. View the <a href="/docs/app/building-your-application/data-fetching" title="Data Fetching">Data Fetching</a> section for more information.</li>
-<li>Passing data between a parent layout and its children is not possible. However, you can fetch the same data in a route more than once, and React will <a href="/docs/app/building-your-application/caching#request-memoization" title="automatically dedupe the requests">automatically dedupe the requests</a> without affecting performance.</li>
-<li>Layouts do not have access to the route segments below itself. To access all route segments, you can use <a href="/docs/app/api-reference/functions/use-selected-layout-segment" title="useSelectedLayoutSegment"><code translate="no">useSelectedLayoutSegment</code></a> or <a href="/docs/app/api-reference/functions/use-selected-layout-segments" title="useSelectedLayoutSegments"><code translate="no">useSelectedLayoutSegments</code></a> in a Client Component.</li>
-<li><code translate="no">.js</code>, <code translate="no">.jsx</code>, or <code translate="no">.tsx</code> file extensions can be used for Layouts.</li>
-<li>A <code translate="no">layout.js</code> and <code translate="no">page.js</code> file can be defined in the same folder. The layout will wrap the page.</li>
+<li translated="true">En üstteki düzen <a href="#root-layout-required" title="Root Layout">Kök</a> Düzen olarak adlandırılır. Bu <strong>gerekli</strong> düzen, bir uygulamadaki tüm sayfalarda paylaşılır. Kök düzenler <code translate="no">html</code> ve <code translate="no">body</code> etiketlerini içermelidir.</li>
+<li translated="true">Herhangi bir rota segmenti isteğe bağlı olarak kendi <a href="#nesting-layouts" title="Layout">Düzenini</a> tanımlayabilir. Bu düzenler o segmentteki tüm sayfalarda paylaşılacaktır.</li>
+<li translated="true">Bir rotadaki düzenler varsayılan olarak <strong>iç</strong> içedir. Her üst düzen, React <code translate="no">children</code> prop'unu kullanarak altındaki alt düzenleri sarar.</li>
+<li translated="true"><a href="/docs/app/building-your-application/routing/route-groups" title="Route Groups">Rota Gruplarını</a>, belirli rota segmentlerini paylaşılan düzenlere dahil etmek ve bu düzenlerden çıkarmak için kullanabilirsiniz.</li>
+<li translated="true">Düzenler varsayılan olarak <a href="/docs/app/building-your-application/rendering/server-components" title="Server Components">Sunucu Bileşenleridir</a> ancak <a href="/docs/app/building-your-application/rendering/client-components" title="Client Component">İstemci Bileşeni</a> olarak ayarlanabilir.</li>
+<li translated="true">Düzenler veri getirebilir. Daha fazla bilgi için <a href="/docs/app/building-your-application/data-fetching" title="Data Fetching">Veri Getirme</a> bölümüne bakın.</li>
+<li translated="true">Bir üst düzen ve onun alt düzenleri arasında veri aktarımı mümkün değildir. Bununla birlikte, aynı verileri bir rotada birden fazla kez getirebilirsiniz ve React, performansı etkilemeden <a href="/docs/app/building-your-application/caching#request-memoization" title="automatically dedupe the requests">istekleri otomatik</a> olarak çıkaracaktır.</li>
+<li translated="true">Düzenlerin kendi altındaki rota segmentlerine erişimi yoktur. Tüm rota segmentlerine erişmek için <a href="/docs/app/api-reference/functions/use-selected-layout-segment" title="useSelectedLayoutSegment"><code translate="no">useSelectedLayoutSegment</code></a> veya <a href="/docs/app/api-reference/functions/use-selected-layout-segments" title="useSelectedLayoutSegments"><code translate="no">useSelectedLayoutSegments</code></a> bir İstemci Bileşeninde.</li>
+<li translated="true"><code translate="no">.js</code>, <code translate="no">.jsx</code> veya <code translate="no">.tsx</code> dosya uzantıları Düzenler için kullanılabilir.</li>
+<li translated="true">Bir <code translate="no">layout.js</code> ve <code translate="no">page.js</code> dosyası aynı klasörde tanımlanabilir. Düzen sayfayı saracaktır.</li>
 </ul>
 </blockquote>
 <h3 id="root-layout-required" data-docs-heading="" translate="no"><a href="#root-layout-required" title="Root Layout (Required)">Root Layout (Required)<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -99,17 +99,17 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>The <code translate="no">app</code> directory <strong>must</strong> include a root layout.</li>
-<li>The root layout must define <code translate="no">&lt;html&gt;</code> and <code translate="no">&lt;body&gt;</code> tags since Next.js does not automatically create them.</li>
-<li>You can use the <a href="/docs/app/building-your-application/optimizing/metadata" title="built-in SEO support">built-in SEO support</a> to manage <code translate="no">&lt;head&gt;</code> HTML elements, for example, the <code translate="no">&lt;title&gt;</code> element.</li>
-<li>You can use <a href="/docs/app/building-your-application/routing/route-groups" title="route groups">route groups</a> to create multiple root layouts. See an <a href="/docs/app/building-your-application/routing/route-groups#creating-multiple-root-layouts" title="example here">example here</a>.</li>
-<li>The root layout is a <a href="/docs/app/building-your-application/rendering/server-components" title="Server Component">Server Component</a> by default and <strong>can not</strong> be set to a <a href="/docs/app/building-your-application/rendering/client-components" title="Client Component">Client Component</a>.</li>
+<li translated="true"><code translate="no">app</code> dizini bir kök düzeni <strong>içermelidir</strong>.</li>
+<li translated="true">Next.js bunları otomatik olarak oluşturmadığı için kök düzen <code translate="no">&lt;html&gt;</code> ve <code translate="no">&lt;body&gt;</code> etiketlerini tanımlamalıdır.</li>
+<li translated="true"><a href="/docs/app/building-your-application/optimizing/metadata" title="built-in SEO support">Yerleşik SEO desteğini</a> <code translate="no">&lt;head&gt;</code> HTML öğelerini, örneğin <code translate="no">&lt;title&gt;</code> öğesini yönetmek için kullanabilirsiniz.</li>
+<li translated="true">Birden fazla kök düzen oluşturmak için <a href="/docs/app/building-your-application/routing/route-groups" title="route groups">rota gruplarını</a> kullanabilirsiniz. <a href="/docs/app/building-your-application/routing/route-groups#creating-multiple-root-layouts" title="example here">Burada</a> bir <a href="/docs/app/building-your-application/routing/route-groups#creating-multiple-root-layouts" title="example here">örnek</a> görebilirsiniz.</li>
+<li translated="true">Kök düzen varsayılan olarak bir <a href="/docs/app/building-your-application/rendering/server-components" title="Server Component">Sunucu Bileşenidir</a> ve bir <a href="/docs/app/building-your-application/rendering/client-components" title="Client Component">İstemci</a> Bileşeni olarak <strong>ayarlanamaz</strong>.</li>
 </ul>
 </blockquote>
 <blockquote class="p-3 text-sm">
-<p><strong>Migrating from the <code translate="no">pages</code> directory:</strong> The root layout replaces the <a href="/docs/pages/building-your-application/routing/custom-app" title="_app.js"><code translate="no">_app.js</code></a> and <a href="/docs/pages/building-your-application/routing/custom-document" title="_document.js"><code translate="no">_document.js</code></a> files. <a href="/docs/app/building-your-application/upgrading/app-router-migration#migrating-_documentjs-and-_appjs" title="View the migration guide">View the migration guide</a>.</p>
+<p translated="true"><strong> <code translate="no">pages</code> dizininden taşınıyor:</strong> Kök düzeni şu dizinin yerini alır <a href="/docs/pages/building-your-application/routing/custom-app" title="_app.js"><code translate="no">_app.js</code></a> ve <a href="/docs/pages/building-your-application/routing/custom-document" title="_document.js"><code translate="no">_document.js</code></a> dosyalar. <a href="/docs/app/building-your-application/upgrading/app-router-migration#migrating-_documentjs-and-_appjs" title="View the migration guide">Geçiş kılavuzunu görüntü</a>leyin.</p>
 </blockquote>
 <h3 id="nesting-layouts" data-docs-heading="" translate="no"><a href="#nesting-layouts" title="Nesting Layouts">Nesting Layouts<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -128,9 +128,9 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>Only the root layout can contain <code translate="no">&lt;html&gt;</code> and <code translate="no">&lt;body&gt;</code> tags.</li>
+<li translated="true">Yalnızca kök düzen <code translate="no">&lt;html&gt;</code> ve <code translate="no">&lt;body&gt;</code> etiketlerini içerebilir.</li>
 </ul>
 </blockquote>
 <p translated="true">Yukarıdaki iki düzeni birleştirecek olursanız, kök düzen (<code translate="no">app/layout.js</code>) gösterge paneli düzenini (<code translate="no">app/dashboard/layout.js</code>) saracak ve bu da <code translate="no">app/dashboard/*</code> içindeki rota segmentlerini saracaktır.</p>
@@ -146,8 +146,8 @@
 <p translated="true">Şablonlar, her bir alt düzeni veya sayfayı sarması bakımından düzenlere benzer. Rotalar arasında kalıcı olan ve durumu koruyan düzenlerin aksine, şablonlar gezinme sırasında alt öğelerinin her biri için yeni bir örnek oluşturur. Bu, bir kullanıcı bir şablonu paylaşan rotalar arasında gezindiğinde, bileşenin yeni bir örneğinin monte edildiği, DOM öğelerinin yeniden oluşturulduğu, durumun <strong>korunmadığı</strong> ve efektlerin yeniden senkronize edildiği anlamına gelir.</p>
 <p translated="true">Bu belirli davranışlara ihtiyaç duyduğunuz durumlar olabilir ve şablonlar düzenlerden daha uygun bir seçenek olabilir. Örneğin:</p>
 <ul>
-<li>Features that rely on <code translate="no">useEffect</code> (e.g logging page views) and <code translate="no">useState</code> (e.g a per-page feedback form).</li>
-<li>To change the default framework behavior. For example, Suspense Boundaries inside layouts only show the fallback the first time the Layout is loaded and not when switching pages. For templates, the fallback is shown on each navigation.</li>
+<li translated="true"><code translate="no">useEffect</code> (örn. sayfa görüntülemelerinin kaydedilmesi) ve <code translate="no">useState</code> (örn. sayfa başına geri bildirim formu) adreslerine dayanan özellikler.</li>
+<li translated="true">Varsayılan çerçeve davranışını değiştirmek için. Örneğin, düzenlerin içindeki Askıya Alma Sınırları, geri dönüşü yalnızca Düzen ilk kez yüklendiğinde gösterir ve sayfalar arasında geçiş yaparken göstermez. Şablonlar için, geri dönüş her gezinmede gösterilir.</li>
 </ul>
 <p translated="true">Bir şablon, bir <code translate="no">template.js</code> dosyasından varsayılan bir React bileşeni dışa aktarılarak tanımlanabilir. Bileşen bir <code translate="no">children</code> prop kabul etmelidir.</p>
 <figure><img alt="template.js special file" loading="lazy" width="1600" height="444" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/template-special-file.png"><img alt="template.js special file" loading="lazy" width="1600" height="444" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/template-special-file.png"></figure>
@@ -179,7 +179,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: You should <strong>not</strong> manually add <code translate="no">&lt;head&gt;</code> tags such as <code translate="no">&lt;title&gt;</code> and <code translate="no">&lt;meta&gt;</code> to root layouts. Instead, you should use the <a href="/docs/app/api-reference/functions/generate-metadata" title="Metadata API">Metadata API</a> which automatically handles advanced requirements such as streaming and de-duplicating <code translate="no">&lt;head&gt;</code> elements.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: <code translate="no">&lt;title&gt;</code> ve <code translate="no">&lt;meta&gt;</code> gibi <code translate="no">&lt;head&gt;</code> etiketlerini kök düzenlerine manuel olarak <strong>eklememelisiniz</strong>. Bunun yerine, akış ve <code translate="no">&lt;head&gt;</code> öğelerinin tekilleştirilmesi gibi gelişmiş gereksinimleri otomatik olarak ele alan <a href="/docs/app/api-reference/functions/generate-metadata" title="Metadata API">Metadata API</a> 'sini kullanmalısınız.</p>
 </blockquote>
 <p translated="true"><a href="/docs/app/api-reference/functions/generate-metadata" title="Learn more about available metadata options in the API reference.">API referansında mevcut meta veri seçenekleri hakkında daha fazla bilgi edinin.</a></p></article>@@include('../../../../../../layouts/sidebar.html')</main>
 

@@ -24,13 +24,13 @@
 <span class="line"><span style="color:var(--shiki-color-text)">  </span><span style="color:var(--shiki-token-comment)">// ...</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong></p>
+<p translated="true"><strong>Bildiğim iyi oldu</strong></p>
 <ul>
-<li>You can use the <a href="/docs/app/api-reference/file-conventions/route-segment-config#dynamicparams" title="dynamicParams"><code translate="no">dynamicParams</code></a> segment config option to control what happens when a dynamic segment is visited that was not generated with <code translate="no">generateStaticParams</code>.</li>
-<li>During <code translate="no">next dev</code>, <code translate="no">generateStaticParams</code> will be called when you navigate to a route.</li>
-<li>During <code translate="no">next build</code>, <code translate="no">generateStaticParams</code> runs before the corresponding Layouts or Pages are generated.</li>
-<li>During revalidation (ISR), <code translate="no">generateStaticParams</code> will not be called again.</li>
-<li><code translate="no">generateStaticParams</code> replaces the <a href="/docs/pages/api-reference/functions/get-static-paths" title="getStaticPaths"><code translate="no">getStaticPaths</code></a> function in the Pages Router.</li>
+<li translated="true">Kullanabilirsiniz <a href="/docs/app/api-reference/file-conventions/route-segment-config#dynamicparams" title="dynamicParams"><code translate="no">dynamicParams</code></a><code translate="no">generateStaticParams</code> ile oluşturulmamış bir dinamik segment ziyaret edildiğinde ne olacağını kontrol etmek için segment yapılandırma seçeneği.</li>
+<li translated="true"><code translate="no">next dev</code> sırasında, bir rotaya gittiğinizde <code translate="no">generateStaticParams</code> çağrılacaktır.</li>
+<li translated="true"><code translate="no">next build</code> sırasında, <code translate="no">generateStaticParams</code> ilgili Düzenler veya Sayfalar oluşturulmadan önce çalışır.</li>
+<li translated="true">Yeniden doğrulama (ISR) sırasında <code translate="no">generateStaticParams</code> tekrar çağrılmayacaktır.</li>
+<li translated="true"><code translate="no">generateStaticParams</code> değiştirir <a href="/docs/pages/api-reference/functions/get-static-paths" title="getStaticPaths"><code translate="no">getStaticPaths</code></a> Sayfalar Yönlendiricisi'ndeki işlev.</li>
 </ul>
 </blockquote>
 <h2 id="parameters" data-docs-heading="" translate="no"><a href="#parameters" title="Parameters">Parameters<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -50,8 +50,8 @@
 </svg></span></a></h2>
 <p translated="true"><code translate="no">generateStaticParams</code> her bir nesnenin tek bir rotanın doldurulmuş dinamik segmentlerini temsil ettiği bir nesne dizisi döndürmelidir.</p>
 <ul>
-<li>Each property in the object is a dynamic segment to be filled in for the route.</li>
-<li>The properties name is the segment's name, and the properties value is what that segment should be filled in with.</li>
+<li translated="true">Nesnedeki her özellik, rota için doldurulacak dinamik bir segmenttir.</li>
+<li translated="true">Özellikler adı segmentin adıdır ve özellikler değeri segmentin ne ile doldurulması gerektiğini belirtir.</li>
 </ul>
 <div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th>Example Route</th><th><code translate="no">generateStaticParams</code> Return Type</th></tr></thead><tbody><tr><td><code translate="no">/product/[id]</code></td><td><code translate="no">{ id: string }[]</code></td></tr><tr><td><code translate="no">/products/[category]/[product]</code></td><td><code translate="no">{ category: string, product: string }[]</code></td></tr><tr><td><code translate="no">/products/[...slug]</code></td><td><code translate="no">{ slug: string[] }[]</code></td></tr></tbody></table></div>
 <h2 id="single-dynamic-segment" data-docs-heading="" translate="no"><a href="#single-dynamic-segment" title="Single Dynamic Segment">Single Dynamic Segment<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -136,8 +136,8 @@
 </svg></span></a></h3>
 <p translated="true">Geçerli düzen veya sayfanın üzerindeki dinamik segmentler için parametreler oluşturabilirsiniz, ancak <strong>altında</strong> oluşturamazsınız. Örneğin, <code translate="no">app/products/[category]/[product]</code> rotası verildiğinde:</p>
 <ul>
-<li><code translate="no">app/products/[category]/[product]/page.js</code> can generate params for <strong>both</strong> <code translate="no">[category]</code> and <code translate="no">[product]</code>.</li>
-<li><code translate="no">app/products/[category]/layout.js</code> can <strong>only</strong> generate params for <code translate="no">[category]</code>.</li>
+<li translated="true"><code translate="no">app/products/[category]/[product]/page.js</code> <strong>hem</strong> <code translate="no">[category]</code> <strong>hem</strong> de <code translate="no">[product]</code> için paramlar oluşturabilir.</li>
+<li translated="true"><code translate="no">app/products/[category]/layout.js</code> <strong>yalnızca</strong> <code translate="no">[category]</code> için paramlar oluşturabilir.</li>
 </ul>
 <p translated="true">Birden fazla dinamik segmente sahip bir rota için parametre oluşturmaya yönelik iki yaklaşım vardır:</p>
 <h3 id="generate-params-from-the-bottom-up" data-docs-heading="" translate="no"><a href="#generate-params-from-the-bottom-up" title="Generate params from the bottom up">Generate params from the bottom up<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -212,7 +212,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: <code translate="no">fetch</code> requests are automatically <a href="/docs/app/building-your-application/caching#request-memoization" title="memoized">memoized</a> for the same data across all <code translate="no">generate</code>-prefixed functions, Layouts, Pages, and Server Components. React <a href="/docs/app/building-your-application/caching#request-memoization" title="cache can be used"><code translate="no">cache</code> can be used</a> if <code translate="no">fetch</code> is unavailable.</p>
+<p translated="true"><strong>Bilmenizde</strong> fayda var: <code translate="no">fetch</code> istekleri, tüm <code translate="no">generate</code>-önceden belirlenmiş işlevler, Düzenler, Sayfalar ve Sunucu Bileşenleri genelinde aynı veriler için otomatik olarak <a href="/docs/app/building-your-application/caching#request-memoization" title="memoized">not</a> edilir. <code translate="no">fetch</code> <a href="/docs/app/building-your-application/caching#request-memoization" title="cache can be used">kullanılamıyorsa</a> React <a href="/docs/app/building-your-application/caching#request-memoization" title="cache can be used"><code translate="no">cache</code> kullanılabilir.</a> </p>
 </blockquote>
 <h3 id="generate-only-a-subset-of-params" data-docs-heading="" translate="no"><a href="#generate-only-a-subset-of-params" title="Generate only a subset of params">Generate only a subset of params<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">

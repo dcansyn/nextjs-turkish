@@ -14,12 +14,10 @@
         mutasyonlarını işlemek için Sunucu ve İstemci Bileşenlerinde kullanılabilirler.
       </p>
       <blockquote class="p-3 text-sm">
-        <p>
-          <strong>🎥 Watch:</strong> Learn more about forms and mutations with Server Actions →
-          <a href="https://youtu.be/dDpZfOQBMaU?si=cJZHlUu_jFhCzHUg" rel="noopener noreferrer nofollow" target="_blank" title="YouTube (10 minutes)">YouTube (10 minutes)<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <p translated="true">
+         <strong>🎥 İzleyin:</strong> Sunucu Eylemleri ile formlar ve mutasyonlar hakkında daha fazla bilgi edinin → <a href="https://youtu.be/dDpZfOQBMaU?si=cJZHlUu_jFhCzHUg" rel="noopener noreferrer nofollow" target="_blank" title="YouTube (10 minutes)">YouTube (10 dakika)<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>.
-        </p>
+                <path d="M7 7h10v10"></path></svg></span></a>. </p>
       </blockquote>
       <h2 id="convention" data-docs-heading="" translate="no">
         <a href="#convention" title="Convention">Convention<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -226,42 +224,27 @@
               </g></svg></span></a>
       </h2>
       <ul>
-        <li>
-          Server actions can be invoked using the <code translate="no">action</code> attribute in a
-          <a href="#forms" title="&lt;form&gt; element"><code translate="no">&lt;form&gt;</code> element</a>:<!-- -->
-          <ul>
+        <li translated="true">
+          Sunucu eylemleri <a href="#forms" title="&lt;form&gt; element"><code translate="no">&lt;form&gt;</code> öğesindeki</a> <code translate="no">action</code> <a href="#forms" title="&lt;form&gt; element"></a> özniteliği kullanılarak çağrılabilir:<!-- --><ul>
+            <li translated="true">
+              Sunucu Bileşenleri varsayılan olarak aşamalı geliştirmeyi destekler, yani JavaScript henüz yüklenmemiş veya devre dışı bırakılmış olsa da safra formu gönderilir.            </li>
             <li>
-              Server Components support progressive enhancement by default, meaning the form will be submitted even if JavaScript hasn't loaded yet or
-              is disabled.
-            </li>
-            <li>
-              In Client Components, forms invoking Server Actions will queue submissions if JavaScript isn't loaded yet, prioritizing client
-              hydration.
-            </li>
-            <li>After hydration, the browser does not refresh on form submission.</li>
+              İstemci Bileşenlerinde, Sunucu Eylemlerini çağıran formlar, JavaScript henüz yüklenmemişse gönderimleri kuyruğa alır ve istemci hidrasyonuna öncelik verir.      </li>
+            <li>Hidrasyondan sonra, form gönderimi sırasında tarayıcı yenilenmez.</li>
           </ul>
         </li>
-        <li>
-          Server Actions are not limited to <code translate="no">&lt;form&gt;</code> and can be invoked from event handlers,
-          <code translate="no">useEffect</code>, third-party libraries, and other form elements like <code translate="no">&lt;button&gt;</code>.
-        </li>
-        <li>
-          Server Actions integrate with the Next.js
-          <a href="/docs/app/building-your-application/caching" title="caching and revalidation">caching and revalidation</a> architecture. When an
-          action is invoked, Next.js can return both the updated UI and new data in a single server roundtrip.
-        </li>
-        <li>Behind the scenes, actions use the <code translate="no">POST</code> method, and only this HTTP method can invoke them.</li>
-        <li>
-          The arguments and return value of Server Actions must be serializable by React. See the React docs for a list of
-          <a href="https://react.dev/reference/react/use-server#serializable-parameters-and-return-values" rel="noopener noreferrer nofollow" target="_blank" title="serializable arguments and values">serializable arguments and values<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+          Sunucu Eylemleri <code translate="no">&lt;form&gt;</code> ile sınırlı değildir ve olay işleyicilerinden, <code translate="no">useEffect</code>, üçüncü taraf kütüphanelerinden ve <code translate="no">&lt;button&gt;</code> gibi diğer form öğelerinden çağrılabilir.        </li>
+        <li translated="true">
+          Sunucu Eylemleri Next.js <a href="/docs/app/building-your-application/caching" title="caching and revalidation">önbelleğe alma ve yeniden doğrul</a> ama mimarisiyle bütünleşir. Bir eylem çağrıldığında, Next.js hem güncellenmiş kullanıcı arayüzünü hem de yeni verileri tek bir sunucu gidiş gelişinde döndürebilir.        </li>
+        <li translated="true">Perde arkasında, eylemler <code translate="no">POST</code> yöntemini kullanır ve yalnızca bu HTTP yöntemi onları çağırabilir.</li>
+        <li translated="true">
+          Sunucu Eylemlerinin argümanları ve dönüş değeri React tarafından serileştirilebilir olmalıdır. Serileştirilebilir <a href="https://react.dev/reference/react/use-server#serializable-parameters-and-return-values" rel="noopener noreferrer nofollow" target="_blank" title="serializable arguments and values">argümanların ve değerlerin</a> bir listesi için React dokümanlarına bakın <a href="https://react.dev/reference/react/use-server#serializable-parameters-and-return-values" rel="noopener noreferrer nofollow" target="_blank" title="serializable arguments and values"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>.
-        </li>
-        <li>Server Actions are functions. This means they can be reused anywhere in your application.</li>
-        <li>
-          Server Actions inherit the <a href="/docs/app/building-your-application/rendering/edge-and-nodejs-runtimes" title="runtime">runtime</a> from
-          the page or layout they are used on.
-        </li>
+                <path d="M7 7h10v10"></path></svg></span>.</a></li>
+        <li translated="true">Sunucu Eylemleri fonksiyonlardır. Bu, uygulamanızın herhangi bir yerinde yeniden kullanılabilecekleri anlamına gelir.</li>
+        <li translated="true">
+          Sunucu Eylemleri, <a href="/docs/app/building-your-application/rendering/edge-and-nodejs-runtimes" title="runtime">çalışma zamanını</a> kullanıldıkları sayfa veya düzenden devralır.        </li>
       </ul>
       <h2 id="examples" data-docs-heading="" translate="no">
         <a href="#examples" title="Examples">Examples<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -343,31 +326,24 @@
       </div>
       <!-- -->
       <blockquote class="p-3 text-sm">
-        <p><strong>Bilmekte fayda var:</strong></p>
+        <p translated="true"><strong>Bilmekte fayda var:</strong></p>
         <ul>
-          <li>
-            Example:
-            <a href="https://github.com/vercel/next.js/tree/canary/examples/next-forms" rel="noopener noreferrer" target="_blank" title="Form with Loading &amp; Error States">Form with Loading &amp; Error States<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+          <li translated="true">
+            Örnek: <a href="https://github.com/vercel/next.js/tree/canary/examples/next-forms" rel="noopener noreferrer" target="_blank" title="Form with Loading &amp; Error States">Yükleme ve Hata Durumlarına Sahip Form<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                  <path d="M7 17L17 7"></path>
+                  <path d="M7 7h10v10"></path></svg></span></a></li>
+          <li translated="true">
+            Çok sayıda alana sahip formlarla çalışırken            <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/entries" rel="noopener noreferrer nofollow" target="_blank" title="entries()"><code translate="no">entries()</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                   <path d="M7 17L17 7"></path>
                   <path d="M7 7h10v10"></path></svg></span></a>
-          </li>
-          <li>
-            When working with forms that have many fields, you may want to consider using the
-            <a href="https://developer.mozilla.org/en-US/docs/Web/API/FormData/entries" rel="noopener noreferrer nofollow" target="_blank" title="entries()"><code translate="no">entries()</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+            metodu ile JavaScript'in            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries" rel="noopener noreferrer nofollow" target="_blank" title="Object.fromEntries()"><code translate="no">Object.fromEntries()</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                   <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path></svg></span></a>
-            method with JavaScript's
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries" rel="noopener noreferrer nofollow" target="_blank" title="Object.fromEntries()"><code translate="no">Object.fromEntries()</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
-                  <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path></svg></span></a>. For example: <code translate="no">const rawFormData = Object.fromEntries(formData.entries())</code>
+                  <path d="M7 7h10v10"></path></svg></span></a>. Örneğin: <code translate="no">const rawFormData = Object.fromEntries(formData.entries())</code>
           </li>
-          <li>
-            See
-            <a href="https://react.dev/reference/react-dom/components/form#handle-form-submission-with-a-server-action" rel="noopener noreferrer nofollow" target="_blank" title="React &lt;form&gt; documentation">React <code translate="no">&lt;form&gt;</code> documentation<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+          <li translated="true">
+            Daha fazla bilgi edinmek için <a href="https://react.dev/reference/react-dom/components/form#handle-form-submission-with-a-server-action" rel="noopener noreferrer nofollow" target="_blank" title="React &lt;form&gt; documentation">React <code translate="no">&lt;form&gt;</code> belgelerine<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                   <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path></svg></span></a>
-            to learn more.
-          </li>
+                  <path d="M7 7h10v10"></path></svg></span></a>bakın.       </li>
         </ul>
       </blockquote>
       <h4 id="passing-additional-arguments" data-docs-heading="" translate="no">
@@ -451,14 +427,11 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre>
       </div>
       <blockquote class="p-3 text-sm">
-        <p><strong>Good to know</strong>:</p>
+        <p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
         <ul>
-          <li>
-            An alternative is to pass arguments as hidden input fields in the form (e.g.
-            <code translate="no">&lt;input type="hidden" name="userId" value={userId} /&gt;</code>). However, the value will be part of the rendered
-            HTML and will not be encoded.
-          </li>
-          <li><code translate="no">.bind</code> works in both Server and Client Components. It also supports progressive enhancement.</li>
+          <li translated="true">
+            Bir alternatif de argümanları formda gizli girdi alanları olarak iletmektir (örn. <code translate="no">&lt;input type="hidden" name="userId" value={userId} /&gt;</code>). Ancak, değer işlenen HTML'nin bir parçası olacak ve kodlanmayacaktır.          </li>
+          <li translated="true"><code translate="no">.bind</code> hem Sunucu hem de İstemci Bileşenlerinde çalışır. Ayrıca aşamalı geliştirmeyi de destekler.</li>
         </ul>
       </blockquote>
       <h4 id="pending-states" data-docs-heading="" translate="no">
@@ -476,11 +449,9 @@
         Form gönderilirken beklemede durumunu göstermek için kanca.
       </p>
       <ul>
-        <li>
-          <code translate="no">useFormStatus</code> returns the status for a specific <code translate="no">&lt;form&gt;</code>, so it
-          <strong>must be defined as a child of the <code translate="no">&lt;form&gt;</code> element</strong>.
-        </li>
-        <li><code translate="no">useFormStatus</code> is a React hook and therefore must be used in a Client Component.</li>
+        <li translated="true">
+          <code translate="no">useFormStatus</code> belirli bir <code translate="no">&lt;form&gt;</code> için durumu döndürür, bu nedenle <strong> <code translate="no">&lt;form&gt;</code> öğesinin bir alt öğesi olarak tanımlanmalıdır</strong>.        </li>
+        <li translated="true"><code translate="no">useFormStatus</code> bir React kancasıdır ve bu nedenle bir İstemci Bileşeninde kullanılmalıdır.</li>
       </ul>
       <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no">
         <div class="code-block_header__t3NRd">
@@ -648,11 +619,9 @@
         kullanıcıya bir mesaj göstermek için kanca.
       </p>
       <ul>
-        <li>
-          By passing the action to <code translate="no">useFormState</code>, the action's function signature changes to receive a new
-          <code translate="no">prevState</code> or <code translate="no">initialState</code> parameter as its first argument.
-        </li>
-        <li><code translate="no">useFormState</code> is a React hook and therefore must be used in a Client Component.</li>
+        <li translated="true">
+          Eylem <code translate="no">useFormState</code> adresine iletildiğinde, eylemin işlev imzası ilk bağımsız değişkeni olarak yeni bir <code translate="no">prevState</code> veya <code translate="no">initialState</code> parametresi alacak şekilde değişir.        </li>
+        <li translated="true"><code translate="no">useFormState</code> bir React kancasıdır ve bu nedenle bir İstemci Bileşeninde kullanılmalıdır.</li>
       </ul>
       <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no">
         <div class="code-block_header__t3NRd">
@@ -751,12 +720,10 @@
       </div>
       <!-- -->
       <blockquote class="p-3 text-sm">
-        <p><strong>Bilmekte fayda var:</strong></p>
+        <p translated="true"><strong>Bilmekte fayda var:</strong></p>
         <ul>
-          <li>
-            Before mutating data, you should always ensure a user is also authorized to perform the action. See
-            <a href="#authentication-and-authorization" title="Authentication and Authorization">Authentication and Authorization</a>.
-          </li>
+          <li translated="true">
+            Verileri değiştirmeden önce, her zaman bir kullanıcının eylemi gerçekleştirme yetkisine sahip olduğundan emin olmalısınız. <a href="#authentication-and-authorization" title="Authentication and Authorization">Kimlik Doğrulama ve Yetkilendirme</a> bölümüne bakın.       </li>
         </ul>
       </blockquote>
       <h4 id="optimistic-updates" data-docs-heading="" translate="no">
@@ -1185,12 +1152,10 @@
       </div>
       <!-- -->
       <blockquote class="p-3 text-sm">
-        <p><strong>Bilmekte fayda var:</strong></p>
+        <p translated="true"><strong>Bilmekte fayda var:</strong></p>
         <ul>
-          <li>
-            Aside from throwing the error, you can also return an object to be handled by <code translate="no">useFormState</code>. See
-            <a href="#server-side-validation-and-error-handling" title="Server-side validation and error handling">Server-side validation and error handling</a>.
-          </li>
+          <li translated="true">
+            Hatayı fırlatmanın yanı sıra, <code translate="no">useFormState</code> tarafından işlenecek bir nesne de döndürebilirsiniz. <a href="#server-side-validation-and-error-handling" title="Server-side validation and error handling">Sunucu tarafı doğrulama ve hata işleme</a> bölümüne bakın.       </li>
         </ul>
       </blockquote>
       <h3 id="revalidating-data" data-docs-heading="" translate="no">
@@ -1531,12 +1496,8 @@
         eylem için yeni bir özel anahtar oluşturulur. Bu, eylemlerin yalnızca belirli bir yapı için çağrılabileceği anlamına gelir.
       </p>
       <blockquote class="p-3 text-sm">
-        <p>
-          <strong>Bilmekte fayda var:</strong> We don't recommend relying on encryption alone to prevent sensitive values from being exposed on the
-          client. Instead, you should use the
-          <a href="/docs/app/building-your-application/data-fetching/patterns#preventing-sensitive-data-from-being-exposed-to-the-client" title="React taint APIs">React taint APIs</a>
-          to proactively prevent specific data from being sent to the client.
-        </p>
+        <p translated="true">
+         <strong>Bilmekte fayda var:</strong> Hassas değerlerin istemcide açığa çıkmasını önlemek için yalnızca şifrelemeye güvenmenizi önermiyoruz. Bunun yerine, belirli verilerin istemciye gönderilmesini proaktif olarak önlemek için <a href="/docs/app/building-your-application/data-fetching/patterns#preventing-sensitive-data-from-being-exposed-to-the-client" title="React taint APIs">React taint API</a>'lerini kullanmalısınız.        </p>
       </blockquote>
       <h3 id="overwriting-encryption-keys-advanced" data-docs-heading="" translate="no">
         <a href="#overwriting-encryption-keys-advanced" title="Overwriting encryption keys (advanced)">Overwriting encryption keys (advanced)<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -1559,7 +1520,7 @@
         imzalama gibi standart güvenlik uygulamalarını göz önünde bulundurmalısınız.
       </p>
       <blockquote class="p-3 text-sm">
-        <p><strong>Bilmekte fayda var:</strong> Next.js applications deployed to Vercel automatically handle this.</p>
+        <p translated="true"><strong>Bilmekte fayda var:</strong> Vercel'e dağıtılan Next.js uygulamaları bunu otomatik olarak halleder.</p>
       </blockquote>
       <h3 id="allowed-origins-advanced" data-docs-heading="" translate="no">
         <a href="#allowed-origins-advanced" title="Allowed origins (advanced)">Allowed origins (advanced)<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -1649,27 +1610,27 @@
       </h2>
       <p translated="true">Sunucu Eylemleri hakkında daha fazla bilgi için aşağıdaki React dokümanlarına göz atın:</p>
       <ul>
-        <li>
+        <li translated="true">
           <a href="https://react.dev/reference/react/use-server" rel="noopener noreferrer nofollow" target="_blank" title='"use server"'><code translate="no">"use server"</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
                 <path d="M7 7h10v10"></path></svg></span></a>
         </li>
-        <li>
+        <li translated="true">
           <a href="https://react.dev/reference/react-dom/components/form" rel="noopener noreferrer nofollow" target="_blank" title="&lt;form&gt;"><code translate="no">&lt;form&gt;</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
                 <path d="M7 7h10v10"></path></svg></span></a>
         </li>
-        <li>
+        <li translated="true">
           <a href="https://react.dev/reference/react-dom/hooks/useFormStatus" rel="noopener noreferrer nofollow" target="_blank" title="useFormStatus"><code translate="no">useFormStatus</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
                 <path d="M7 7h10v10"></path></svg></span></a>
         </li>
-        <li>
+        <li translated="true">
           <a href="https://react.dev/reference/react-dom/hooks/useFormState" rel="noopener noreferrer nofollow" target="_blank" title="useFormState"><code translate="no">useFormState</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
                 <path d="M7 7h10v10"></path></svg></span></a>
         </li>
-        <li>
+        <li translated="true">
           <a href="https://react.dev/reference/react/useOptimistic" rel="noopener noreferrer nofollow" target="_blank" title="useOptimistic"><code translate="no">useOptimistic</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
                 <path d="M7 7h10v10"></path></svg></span></a>

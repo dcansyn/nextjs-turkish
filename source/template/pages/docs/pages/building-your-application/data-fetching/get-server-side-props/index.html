@@ -103,48 +103,29 @@
               </g></svg></span></a>
       </h2>
       <ul>
-        <li><code translate="no">getServerSideProps</code> runs on the server.</li>
-        <li><code translate="no">getServerSideProps</code> can only be exported from a <strong>page</strong>.</li>
-        <li><code translate="no">getServerSideProps</code> returns JSON.</li>
-        <li>
-          When a user visits a page, <code translate="no">getServerSideProps</code> will be used to fetch data at request time, and the data is used
-          to render the initial HTML of the page.
-        </li>
-        <li>
-          <code translate="no">props</code> passed to the page component can be viewed on the client as part of the initial HTML. This is to allow the
-          page to be
-          <a href="https://react.dev/reference/react-dom/hydrate" rel="noopener noreferrer nofollow" target="_blank" title="hydrated">hydrated<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true"><code translate="no">getServerSideProps</code> sunucu üzerinde çalışır.</li>
+        <li translated="true"><code translate="no">getServerSideProps</code> yalnızca bir <strong>sayfadan</strong> dışa aktarılabilir.</li>
+        <li translated="true"><code translate="no">getServerSideProps</code> JSON döndürür.</li>
+        <li translated="true">
+          Bir kullanıcı bir sayfayı ziyaret ettiğinde, <code translate="no">getServerSideProps</code> istek anında veri getirmek için kullanılır ve veriler sayfanın ilk HTML'sini oluşturmak için kullanılır.        </li>
+        <li translated="true">
+          <code translate="no">props</code> Sayfa bileşenine aktarılan bilgiler istemcide ilk HTML'nin bir parçası olarak görüntülenebilir. Bu, sayfanın <a href="https://react.dev/reference/react-dom/hydrate" rel="noopener noreferrer nofollow" target="_blank" title="hydrated"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-          correctly. Make sure that you don't pass any sensitive information that shouldn't be available on the client in
-          <code translate="no">props</code>.
-        </li>
-        <li>
-          When a user visits the page through
-          <a href="/docs/pages/api-reference/components/link" title="next/link"><code translate="no">next/link</code></a> or
-          <a href="/docs/pages/api-reference/functions/use-router" title="next/router"><code translate="no">next/router</code></a>, Next.js sends an API request to the server, which runs <code translate="no">getServerSideProps</code>.
-        </li>
-        <li>
-          You do not have to call a Next.js <a href="/docs/pages/building-your-application/routing/api-routes" title="API Route">API Route</a> to
-          fetch data when using <code translate="no">getServerSideProps</code> since the function runs on the server. Instead, you can call a CMS,
-          database, or other third-party APIs directly from inside <code translate="no">getServerSideProps</code>.
-        </li>
+                <path d="M7 7h10v10"></path></svg></span> doğru şekilde</a> <a href="https://react.dev/reference/react-dom/hydrate" rel="noopener noreferrer nofollow" target="_blank" title="hydrated">hidratlanmasını</a>sağlamak içindir. İstemcide bulunmaması gereken hassas bilgileri <code translate="no">props</code> adresine aktarmadığınızdan emin olun.     </li>
+        <li translated="true">
+          Bir kullanıcı sayfayı şu yolla ziyaret ettiğinde          <a href="/docs/pages/api-reference/components/link" title="next/link"><code translate="no">next/link</code></a> veya    <a href="/docs/pages/api-reference/functions/use-router" title="next/router"><code translate="no">next/router</code></a>Next.js, <code translate="no">getServerSideProps</code> adresini çalıştıran sunucuya bir API isteği gönderir.        </li>
+        <li translated="true">
+          İşlev sunucuda çalıştığından, <code translate="no">getServerSideProps</code> adresini kullanırken veri almak için bir Next.js <a href="/docs/pages/building-your-application/routing/api-routes" title="API Route">API Rotası</a> çağırmanız gerekmez. Bunun yerine, bir CMS, veritabanı veya diğer üçüncü taraf API'lerini doğrudan <code translate="no">getServerSideProps</code> içinden çağırabilirsiniz.        </li>
       </ul>
       <blockquote class="p-3 text-sm">
         <p><strong>Bilmekte fayda var:</strong></p>
         <ul>
-          <li>
-            See
-            <a href="/docs/pages/api-reference/functions/get-server-side-props" title="getServerSideProps API reference"><code translate="no">getServerSideProps</code> API reference</a>
-            for parameters and props that can be used with <code translate="no">getServerSideProps</code>.
-          </li>
-          <li>
-            You can use the
-            <a href="https://next-code-elimination.vercel.app/" rel="noopener noreferrer nofollow" target="_blank" title="next-code-elimination tool">next-code-elimination tool<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+          <li translated="true">
+            <code translate="no">getServerSideProps</code> ile kullanılabilecek parametreler ve proplar için <a href="/docs/pages/api-reference/functions/get-server-side-props" title="getServerSideProps API reference"><code translate="no">getServerSideProps</code> API referansına</a>bakın.       </li>
+          <li translated="true">
+            Next.js'nin istemci tarafı paketinden neleri elediğini doğrulamak için <a href="https://next-code-elimination.vercel.app/" rel="noopener noreferrer nofollow" target="_blank" title="next-code-elimination tool"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                   <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path></svg></span></a>
-            to verify what Next.js eliminates from the client-side bundle.
-          </li>
+                  <path d="M7 7h10v10"></path></svg></span> next-code-elimination aracını</a>kullanabilirsiniz.          </li>
         </ul>
       </blockquote>
       <h2 id="error-handling" data-docs-heading="" translate="no">

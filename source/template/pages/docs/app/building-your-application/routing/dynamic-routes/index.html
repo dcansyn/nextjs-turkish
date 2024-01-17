@@ -30,7 +30,7 @@
 <div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th>Route</th><th>Example URL</th><th><code translate="no">params</code></th></tr></thead><tbody><tr><td><code translate="no">app/blog/[slug]/page.js</code></td><td><code translate="no">/blog/a</code></td><td><code translate="no">{ slug: 'a' }</code></td></tr><tr><td><code translate="no">app/blog/[slug]/page.js</code></td><td><code translate="no">/blog/b</code></td><td><code translate="no">{ slug: 'b' }</code></td></tr><tr><td><code translate="no">app/blog/[slug]/page.js</code></td><td><code translate="no">/blog/c</code></td><td><code translate="no">{ slug: 'c' }</code></td></tr></tbody></table></div>
 <p translated="true">Segment için paramların nasıl oluşturulacağını öğrenmek için <a href="#generating-static-params" title="generateStaticParams()">generateStaticParams()</a> sayfasına bakın.</p>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: Dynamic Segments are equivalent to <a href="/docs/app/building-your-application/routing/dynamic-routes" title="Dynamic Routes">Dynamic Routes</a> in the <code translate="no">pages</code> directory.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: Dinamik Segmentler, <code translate="no">pages</code> dizinindeki Dinamik <a href="/docs/app/building-your-application/routing/dynamic-routes" title="Dynamic Routes">Rotalara</a> eşdeğerdir.</p>
 </blockquote>
 <h2 id="generating-static-params" data-docs-heading="" translate="no"><a href="#generating-static-params" title="Generating Static Params">Generating Static Params<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -82,7 +82,7 @@
 <!-- -->
 <div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th>Route</th><th><code translate="no">params</code> Type Definition</th></tr></thead><tbody><tr><td><code translate="no">app/blog/[slug]/page.js</code></td><td><code translate="no">{ slug: string }</code></td></tr><tr><td><code translate="no">app/shop/[...slug]/page.js</code></td><td><code translate="no">{ slug: string[] }</code></td></tr><tr><td><code translate="no">app/shop/[[...slug]]/page.js</code></td><td><code translate="no">{ slug?: string[] }</code></td></tr><tr><td><code translate="no">app/[categoryId]/[itemId]/page.js</code></td><td><code translate="no">{ categoryId: string, itemId: string }</code></td></tr></tbody></table></div>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: This may be done automatically by the <a href="/docs/app/building-your-application/configuring/typescript#typescript-plugin" title="TypeScript plugin">TypeScript plugin</a> in the future.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: Bu, gelecekte <a href="/docs/app/building-your-application/configuring/typescript#typescript-plugin" title="TypeScript plugin">TypeScript eklentisi</a> tarafından otomatik olarak yapılabilir.</p>
 </blockquote></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')

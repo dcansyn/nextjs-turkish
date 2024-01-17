@@ -17,15 +17,15 @@
 <p translated="true">Öncelikle, bu terimlerin dokümantasyon boyunca kullanıldığını göreceksiniz. İşte hızlı bir referans:</p>
 <figure><img alt="Terminology for Component Tree" loading="lazy" width="1600" height="832" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/terminology-component-tree.png"><img alt="Terminology for Component Tree" loading="lazy" width="1600" height="832" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/terminology-component-tree.png"></figure>
 <ul>
-<li><strong>Tree:</strong> A convention for visualizing a hierarchical structure. For example, a component tree with parent and children components, a folder structure, etc.</li>
-<li><strong>Subtree:</strong> Part of a tree, starting at a new root (first) and ending at the leaves (last).</li>
-<li><strong>Root</strong>: The first node in a tree or subtree, such as a root layout.</li>
-<li><strong>Leaf:</strong> Nodes in a subtree that have no children, such as the last segment in a URL path.</li>
+<li translated="true"><strong>Ağaç:</strong> Hiyerarşik bir yapıyı görselleştirmek için kullanılan bir kural. Örneğin, üst ve alt bileşenleri olan bir bileşen ağacı, bir klasör yapısı vb.</li>
+<li translated="true"><strong>Alt ağaç:</strong> Yeni bir kökten (ilk) başlayan ve yapraklarda (son) biten bir ağacın parçası.</li>
+<li translated="true"><strong>Kök</strong>: Kök düzeni gibi bir ağaç veya alt ağaçtaki ilk düğüm.</li>
+<li translated="true"><strong>Yaprak:</strong> Bir URL yolundaki son segment gibi, bir alt ağaçta çocuğu olmayan düğümler.</li>
 </ul>
 <figure><img alt="Terminology for URL Anatomy" loading="lazy" width="1600" height="371" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/terminology-url-anatomy.png"><img alt="Terminology for URL Anatomy" loading="lazy" width="1600" height="371" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/terminology-url-anatomy.png"></figure>
 <ul>
-<li><strong>URL Segment:</strong> Part of the URL path delimited by slashes.</li>
-<li><strong>URL Path:</strong> Part of the URL that comes after the domain (composed of segments).</li>
+<li translated="true"><strong>URL Segmenti:</strong> URL yolunun eğik çizgilerle ayrılmış bölümü.</li>
+<li translated="true"><strong>URL Yolu:</strong> URL'nin etki alanından sonra gelen kısmı (segmentlerden oluşur).</li>
 </ul>
 <h2 id="the-app-router" data-docs-heading="" translate="no"><a href="#the-app-router" title="The app Router">The <code translate="no">app</code> Router<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -36,12 +36,12 @@
 <p translated="true">Next.js, 13. sürümde <a href="/docs/app/building-your-application/rendering/server-components" title="React Server Components">React Sunucu Bileşenleri</a> üzerine inşa edilen ve paylaşılan düzenleri, iç içe yönlendirmeyi, yükleme durumlarını, hata işlemeyi ve daha fazlasını destekleyen yeni bir <strong>Uygulama Yön</strong> lendiricisi sundu.</p>
 <p translated="true">Uygulama Yönlendirici, <code translate="no">app</code> adlı yeni bir dizinde çalışır. <code translate="no">app</code> dizini, kademeli uyarlamaya izin vermek için <code translate="no">pages</code> dizini ile birlikte çalışır. Bu, önceki davranış için <code translate="no">pages</code> dizinindeki diğer rotaları tutarken uygulamanızın bazı rotalarını yeni davranışa seçmenize olanak tanır. Uygulamanız <code translate="no">pages</code> dizinini kullanıyorsa, lütfen <a href="/docs/pages/building-your-application/routing" title="Pages Router">Pages Router</a> belgelerine de bakın.</p>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: The App Router takes priority over the Pages Router. Routes across directories should not resolve to the same URL path and will cause a build-time error to prevent a conflict.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: Uygulama Yönlendiricisi, Sayfa Yönlendiricisine göre önceliklidir. Dizinler arasındaki yönlendirmeler aynı URL yoluna çözümlenmemelidir ve bir çakışmayı önlemek için derleme zamanı hatasına neden olur.</p>
 </blockquote>
 <figure><img alt="Next.js App Directory" loading="lazy" width="1600" height="444" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/next-router-directories.png"><img alt="Next.js App Directory" loading="lazy" width="1600" height="444" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/next-router-directories.png"></figure>
 <p translated="true">Varsayılan olarak, <code translate="no">app</code> içindeki bileşenler <a href="/docs/app/building-your-application/rendering/server-components" title="React Server Components">React Sunucu</a> Bileşenleridir. Bu bir performans optimizasyonudur ve bunları kolayca benimsemenizi sağlar ve <a href="/docs/app/building-your-application/rendering/client-components" title="Client Components">İstemci Bileşe</a>nlerini de kullanabilirsiniz.</p>
 <blockquote class="p-3 text-sm">
-<p><strong>Recommendation:</strong> Check out the <a href="/docs/app/building-your-application/rendering/server-components" title="Server">Server</a> page if you're new to Server Components.</p>
+<p translated="true"><strong>Öneri:</strong> Sunucu Bileşenleri konusunda yeniyseniz <a href="/docs/app/building-your-application/rendering/server-components" title="Server">Sunucu</a> sayfasına göz atın.</p>
 </blockquote>
 <h2 id="roles-of-folders-and-files" data-docs-heading="" translate="no"><a href="#roles-of-folders-and-files" title="Roles of Folders and Files">Roles of Folders and Files<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -51,8 +51,8 @@
 </svg></span></a></h2>
 <p translated="true">Next.js dosya sistemi tabanlı bir yönlendirici kullanır:</p>
 <ul>
-<li><strong>Folders</strong> are used to define routes. A route is a single path of nested folders, following the file-system hierarchy from the <strong>root folder</strong> down to a final <strong>leaf folder</strong> that includes a <code translate="no">page.js</code> file. See <a href="/docs/app/building-your-application/routing/defining-routes" title="Defining Routes">Defining Routes</a>.</li>
-<li><strong>Files</strong> are used to create UI that is shown for a route segment. See <a href="#file-conventions" title="special files">special files</a>.</li>
+<li translated="true"><strong>Klasörler</strong> rotaları tanımlamak için kullanılır. Rota, <strong>kök</strong> klasörden <code translate="no">page.js</code> dosyasını içeren son <strong>yaprak</strong> klasöre kadar dosya sistemi hiyerarşisini takip eden, iç içe geçmiş klasörlerden oluşan tek bir yoldur. <a href="/docs/app/building-your-application/routing/defining-routes" title="Defining Routes">Rotaları Tanımlama</a> bölümüne bakın.</li>
+<li translated="true"><strong>Dosyalar</strong>, bir rota segmenti için gösterilen kullanıcı arayüzünü oluşturmak için kullanılır. <a href="#file-conventions" title="special files">Özel dosy</a>alar bölümüne bakın.</li>
 </ul>
 <h2 id="route-segments" data-docs-heading="" translate="no"><a href="#route-segments" title="Route Segments">Route Segments<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -71,9 +71,9 @@
 <p translated="true">İç içe bir rota oluşturmak için klasörleri birbirinin içine yerleştirebilirsiniz. Örneğin, <code translate="no">app</code> dizininde iki yeni klasörü iç içe geçirerek yeni bir <code translate="no">/dashboard/settings</code> rotası ekleyebilirsiniz.</p>
 <p translated="true"><code translate="no">/dashboard/settings</code> rotası üç segmentten oluşmaktadır:</p>
 <ul>
-<li><code translate="no">/</code> (Root segment)</li>
+<li translated="true"><code translate="no">/</code> (Kök segment)</li>
 <li><code translate="no">dashboard</code> (Segment)</li>
-<li><code translate="no">settings</code> (Leaf segment)</li>
+<li translated="true"><code translate="no">settings</code> (Yaprak segmenti)</li>
 </ul>
 <h2 id="file-conventions" data-docs-heading="" translate="no"><a href="#file-conventions" title="File Conventions">File Conventions<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -84,7 +84,7 @@
 <p translated="true">Next.js, iç içe rotalarda belirli davranışlara sahip kullanıcı arayüzü oluşturmak için bir dizi özel dosya sağlar:</p>
 <div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><a href="/docs/app/building-your-application/routing/pages-and-layouts#layouts" title="layout"><code translate="no">layout</code></a></td><td>Shared UI for a segment and its children</td></tr><tr><td><a href="/docs/app/building-your-application/routing/pages-and-layouts#pages" title="page"><code translate="no">page</code></a></td><td>Unique UI of a route and make routes publicly accessible</td></tr><tr><td><a href="/docs/app/building-your-application/routing/loading-ui-and-streaming" title="loading"><code translate="no">loading</code></a></td><td>Loading UI for a segment and its children</td></tr><tr><td><a href="/docs/app/api-reference/file-conventions/not-found" title="not-found"><code translate="no">not-found</code></a></td><td>Not found UI for a segment and its children</td></tr><tr><td><a href="/docs/app/building-your-application/routing/error-handling" title="error"><code translate="no">error</code></a></td><td>Error UI for a segment and its children</td></tr><tr><td><a href="/docs/app/building-your-application/routing/error-handling" title="global-error"><code translate="no">global-error</code></a></td><td>Global Error UI</td></tr><tr><td><a href="/docs/app/building-your-application/routing/route-handlers" title="route"><code translate="no">route</code></a></td><td>Server-side API endpoint</td></tr><tr><td><a href="/docs/app/building-your-application/routing/pages-and-layouts#templates" title="template"><code translate="no">template</code></a></td><td>Specialized re-rendered Layout UI</td></tr><tr><td><a href="/docs/app/api-reference/file-conventions/default" title="default"><code translate="no">default</code></a></td><td>Fallback UI for <a href="/docs/app/building-your-application/routing/parallel-routes" title="Parallel Routes">Parallel Routes</a></td></tr></tbody></table></div>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: <code translate="no">.js</code>, <code translate="no">.jsx</code>, or <code translate="no">.tsx</code> file extensions can be used for special files.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: <code translate="no">.js</code>, <code translate="no">.jsx</code> veya <code translate="no">.tsx</code> dosya uzantıları özel dosyalar için kullanılabilir.</p>
 </blockquote>
 <h2 id="component-hierarchy" data-docs-heading="" translate="no"><a href="#component-hierarchy" title="Component Hierarchy">Component Hierarchy<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -96,10 +96,10 @@
 <ul>
 <li><code translate="no">layout.js</code></li>
 <li><code translate="no">template.js</code></li>
-<li><code translate="no">error.js</code> (React error boundary)</li>
-<li><code translate="no">loading.js</code> (React suspense boundary)</li>
-<li><code translate="no">not-found.js</code> (React error boundary)</li>
-<li><code translate="no">page.js</code> or nested <code translate="no">layout.js</code></li>
+<li translated="true"><code translate="no">error.js</code> (React hata sınırı)</li>
+<li translated="true"><code translate="no">loading.js</code> (React gerilim sınırı)</li>
+<li translated="true"><code translate="no">not-found.js</code> (React hata sınırı)</li>
+<li translated="true"><code translate="no">page.js</code> veya iç içe <code translate="no">layout.js</code></li>
 </ul>
 <figure><img alt="Component Hierarchy for File Conventions" loading="lazy" width="1600" height="643" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/file-conventions-component-hierarchy.png"><img alt="Component Hierarchy for File Conventions" loading="lazy" width="1600" height="643" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/file-conventions-component-hierarchy.png"></figure>
 <p translated="true">İç içe geçmiş bir rotada, bir segmentin bileşenleri üst segmentinin bileşenlerinin <strong>içinde iç</strong> içe geçecektir.</p>
@@ -122,8 +122,8 @@
 </svg></span></a></h2>
 <p translated="true">App Router ayrıca daha gelişmiş yönlendirme modellerini uygulamanıza yardımcı olacak bir dizi kural sunar. Bunlar şunları içerir:</p>
 <ul>
-<li><a href="/docs/app/building-your-application/routing/parallel-routes" title="Parallel Routes">Parallel Routes</a>: Allow you to simultaneously show two or more pages in the same view that can be navigated independently. You can use them for split views that have their own sub-navigation. E.g. Dashboards.</li>
-<li><a href="/docs/app/building-your-application/routing/intercepting-routes" title="Intercepting Routes">Intercepting Routes</a>: Allow you to intercept a route and show it in the context of another route. You can use these when keeping the context for the current page is important. E.g. Seeing all tasks while editing one task or expanding a photo in a feed.</li>
+<li translated="true"><a href="/docs/app/building-your-application/routing/parallel-routes" title="Parallel Routes">Paralel Rotalar</a>: Aynı görünümde bağımsız olarak gezinilebilen iki veya daha fazla sayfayı aynı anda göstermenizi sağlar. Bunları, kendi alt navigasyonları olan bölünmüş görünümler için kullanabilirsiniz. Örn. Gösterge Tabloları.</li>
+<li translated="true"><a href="/docs/app/building-your-application/routing/intercepting-routes" title="Intercepting Routes">Rotaları Yak</a>alama: Bir rotayı kesmenize ve başka bir rota bağlamında göstermenize izin verir. Geçerli sayfanın bağlamını korumak önemli olduğunda bunları kullanabilirsiniz. Örneğin, bir görevi düzenlerken tüm görevleri görmek veya bir akıştaki bir fotoğrafı genişletmek.</li>
 </ul>
 <p translated="true">Bu kalıplar daha zengin ve daha karmaşık kullanıcı arayüzleri oluşturmanıza olanak tanıyarak, geçmişte küçük ekipler ve bireysel geliştiriciler tarafından uygulanması karmaşık olan özellikleri demokratikleştirir.</p>
 <h2 id="next-steps" data-docs-heading="" translate="no"><a href="#next-steps" title="Next Steps">Next Steps<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">

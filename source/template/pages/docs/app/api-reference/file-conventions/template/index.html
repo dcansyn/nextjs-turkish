@@ -15,8 +15,8 @@
 <figure><img alt="template.js special file" loading="lazy" width="1600" height="444" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/template-special-file.png"><img alt="template.js special file" loading="lazy" width="1600" height="444" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/template-special-file.png"></figure>
 <p translated="true">Daha az yaygın olmakla birlikte, isterseniz bir düzen yerine bir şablon seçebilirsiniz:</p>
 <ul>
-<li>Features that rely on <code translate="no">useEffect</code> (e.g logging page views) and <code translate="no">useState</code> (e.g a per-page feedback form).</li>
-<li>To change the default framework behavior. For example, Suspense Boundaries inside layouts only show the fallback the first time the Layout is loaded and not when switching pages. For templates, the fallback is shown on each navigation.</li>
+<li translated="true"><code translate="no">useEffect</code> (örn. sayfa görüntülemelerinin kaydedilmesi) ve <code translate="no">useState</code> (örn. sayfa başına geri bildirim formu) adreslerine dayanan özellikler.</li>
+<li translated="true">Varsayılan çerçeve davranışını değiştirmek için. Örneğin, düzenlerin içindeki Askıya Alma Sınırları, geri dönüşü yalnızca Düzen ilk kez yüklendiğinde gösterir ve sayfalar arasında geçiş yaparken göstermez. Şablonlar için, geri dönüş her gezinmede gösterilir.</li>
 </ul>
 <h2 id="props" data-docs-heading="" translate="no"><a href="#props" title="Props">Props<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -36,10 +36,10 @@
 <span class="line"><span style="color:var(--shiki-color-text)">  &lt;</span><span style="color:var(--shiki-token-constant)">Template</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">key</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-color-text)">{routeParam}&gt;{children}&lt;/</span><span style="color:var(--shiki-token-constant)">Template</span><span style="color:var(--shiki-color-text)">&gt;</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">&lt;/</span><span style="color:var(--shiki-token-constant)">Layout</span><span style="color:var(--shiki-color-text)">&gt;</span></span></code></pre></div>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>By default, <code translate="no">template</code> is a <a href="/docs/app/building-your-application/rendering/server-components" title="Server Component">Server Component</a>, but can also be used as a <a href="/docs/app/building-your-application/rendering/client-components" title="Client Component">Client Component</a> through the <code translate="no">"use client"</code> directive.</li>
-<li>When a user navigates between routes that share a <code translate="no">template</code>, a new instance of the component is mounted, DOM elements are recreated, state is <strong>not</strong> preserved, and effects are re-synchronized.</li>
+<li translated="true">Varsayılan olarak, <code translate="no">template</code> bir <a href="/docs/app/building-your-application/rendering/server-components" title="Server Component">Sunucu Bileşenidir</a>, ancak <code translate="no">"use client"</code> yönergesi aracılığıyla bir <a href="/docs/app/building-your-application/rendering/client-components" title="Client Component">İstemci Bileşe</a> ni olarak da kullanılabilir.</li>
+<li translated="true">Bir kullanıcı <code translate="no">template</code> adresini paylaşan rotalar arasında gezindiğinde, bileşenin yeni bir örneği monte edilir, DOM öğeleri yeniden oluşturulur, durum <strong>korunmaz</strong> ve etkiler yeniden senkronize edilir.</li>
 </ul>
 </blockquote>
 <h2 id="version-history" data-docs-heading="" translate="no"><a href="#version-history" title="Version History">Version History<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">

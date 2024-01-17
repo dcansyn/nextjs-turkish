@@ -165,17 +165,17 @@
 </svg></span></a></h2>
 <p translated="true">Node.js sunucusu gerektiren özellikler veya derleme işlemi sırasında hesaplanamayan dinamik mantık <strong>desteklenmez</strong>:</p>
 <ul>
-<li><a href="/docs/app/building-your-application/routing/dynamic-routes" title="Dynamic Routes">Dynamic Routes</a> with <code translate="no">dynamicParams: true</code></li>
-<li><a href="/docs/app/building-your-application/routing/dynamic-routes" title="Dynamic Routes">Dynamic Routes</a> without <code translate="no">generateStaticParams()</code></li>
-<li><a href="/docs/app/building-your-application/routing/route-handlers" title="Route Handlers">Route Handlers</a> that rely on Request</li>
-<li><a href="/docs/app/api-reference/functions/cookies" title="Cookies">Cookies</a></li>
-<li><a href="/docs/app/api-reference/next-config-js/rewrites" title="Rewrites">Rewrites</a></li>
-<li><a href="/docs/app/api-reference/next-config-js/redirects" title="Redirects">Redirects</a></li>
-<li><a href="/docs/app/api-reference/next-config-js/headers" title="Headers">Headers</a></li>
-<li><a href="/docs/app/building-your-application/routing/middleware" title="Middleware">Middleware</a></li>
-<li><a href="/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating" title="Incremental Static Regeneration">Incremental Static Regeneration</a></li>
-<li><a href="/docs/app/building-your-application/optimizing/images" title="Image Optimization">Image Optimization</a> with the default <code translate="no">loader</code></li>
-<li><a href="/docs/app/building-your-application/configuring/draft-mode" title="Draft Mode">Draft Mode</a></li>
+<li translated="true"><a href="/docs/app/building-your-application/routing/dynamic-routes" title="Dynamic Routes">Dinamik Rotalar</a> ile <code translate="no">dynamicParams: true</code></li>
+<li translated="true"><a href="/docs/app/building-your-application/routing/dynamic-routes" title="Dynamic Routes">Dinamik Rotalar</a> olmadan <code translate="no">generateStaticParams()</code></li>
+<li translated="true">İstek'e dayanan <a href="/docs/app/building-your-application/routing/route-handlers" title="Route Handlers">Rota İşleyicileri</a> </li>
+<li translated="true"><a href="/docs/app/api-reference/functions/cookies" title="Cookies">Çerezler</a></li>
+<li translated="true"><a href="/docs/app/api-reference/next-config-js/rewrites" title="Rewrites">Yeniden Yazma</a></li>
+<li translated="true"><a href="/docs/app/api-reference/next-config-js/redirects" title="Redirects">Yönlendirmeler</a></li>
+<li translated="true"><a href="/docs/app/api-reference/next-config-js/headers" title="Headers">Başlıklar</a></li>
+<li translated="true"><a href="/docs/app/building-your-application/routing/middleware" title="Middleware">Orta Yazılım</a></li>
+<li translated="true"><a href="/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating" title="Incremental Static Regeneration">Artımlı Statik Rejenerasyon</a></li>
+<li translated="true">Varsayılan ile <a href="/docs/app/building-your-application/optimizing/images" title="Image Optimization">Görüntü Optimizasyonu</a> <code translate="no">loader</code></li>
+<li translated="true"><a href="/docs/app/building-your-application/configuring/draft-mode" title="Draft Mode">Taslak Modu</a></li>
 </ul><p translated="true">Bu özelliklerden herhangi birini <code translate="no">next dev</code> ile kullanmaya çalışmak, aşağıdaki ayarlara benzer bir hatayla sonuçlanacaktır <a href="/docs/app/api-reference/file-conventions/route-segment-config#dynamic" title="dynamic"><code translate="no">dynamic</code></a> seçeneğini kök düzende <code translate="no">error</code> olarak değiştirin.</p><div class="code-block_wrapper__t6FCO code-block_hideLineNumbers__52YKH not-prose" translate="no"><button aria-label="Copy code" class="code-block_copyButton__uo5Yu code-block_copyFloatingButton__PsMvB" type="button"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M20 6L9 17l-5-5"></path></svg></button><pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">const</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-constant)">dynamic</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'error'</span></span></code></pre></div>
 <!-- -->
 <h2 id="deploying" data-docs-heading="" translate="no"><a href="#deploying" title="Deploying">Deploying<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -187,15 +187,15 @@
 <p translated="true">Statik bir dışa aktarma ile Next.js, HTML/CSS/JS statik varlıkları sunabilen herhangi bir web sunucusunda dağıtılabilir ve barındırılabilir.</p>
 <p translated="true"><code translate="no">next build</code> çalıştırıldığında, Next.js statik dışa aktarımı <code translate="no">out</code> klasörüne oluşturur. Örneğin, aşağıdaki rotalara sahip olduğunuzu varsayalım:</p>
 <ul>
-<li><code translate="no">/</code></li>
-<li><code translate="no">/blog/[id]</code></li>
+<li translated="true"><code translate="no">/</code></li>
+<li translated="true"><code translate="no">/blog/[id]</code></li>
 </ul>
 <p translated="true"><code translate="no">next build</code> çalıştırıldıktan sonra Next.js aşağıdaki dosyaları oluşturacaktır:</p>
 <ul>
-<li><code translate="no">/out/index.html</code></li>
-<li><code translate="no">/out/404.html</code></li>
-<li><code translate="no">/out/blog/post-1.html</code></li>
-<li><code translate="no">/out/blog/post-2.html</code></li>
+<li translated="true"><code translate="no">/out/index.html</code></li>
+<li translated="true"><code translate="no">/out/404.html</code></li>
+<li translated="true"><code translate="no">/out/blog/post-1.html</code></li>
+<li translated="true"><code translate="no">/out/blog/post-2.html</code></li>
 </ul>
 <p translated="true">Nginx gibi statik bir ana bilgisayar kullanıyorsanız, gelen isteklerden doğru dosyalara yeniden yazmaları yapılandırabilirsiniz:</p>
 <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no"><div class="code-block_header__t3NRd"><div class="code-block_fileName__HmSv1"><div aria-hidden="true" class="code-block_iconWrapper__TuHFk"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:16px;height:16px"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"></path><path d="M13 2v7h7"></path></svg></div><span class="code-block_filenameP__02nok">nginx.conf</span></div><div class="code-block_actions__yphRf"><button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M20 6L9 17l-5-5"></path></svg></button></div></div><pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">server</span><span style="color:var(--shiki-color-text)"> {</span></span>

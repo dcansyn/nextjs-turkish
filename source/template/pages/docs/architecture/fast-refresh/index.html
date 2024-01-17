@@ -15,22 +15,9 @@
   </g>
 </svg></span></a></h2>
 <ul>
-<li>If you edit a file that <strong>only exports React component(s)</strong>, Fast Refresh will
-update the code only for that file, and re-render your component. You can edit
-anything in that file, including styles, rendering logic, event handlers, or
-effects.</li>
-<li>If you edit a file with exports that <em>aren't</em> React components, Fast Refresh
-will re-run both that file, and the other files importing it. So if both
-<code translate="no">Button.js</code> and <code translate="no">Modal.js</code> import <code translate="no">theme.js</code>, editing <code translate="no">theme.js</code> will update
-both components.</li>
-<li>Finally, if you <strong>edit a file</strong> that's <strong>imported by files outside of the
-React tree</strong>, Fast Refresh <strong>will fall back to doing a full reload</strong>. You
-might have a file which renders a React component but also exports a value
-that is imported by a <strong>non-React component</strong>. For example, maybe your
-component also exports a constant, and a non-React utility file imports it. In
-that case, consider migrating the constant to a separate file and importing it
-into both files. This will re-enable Fast Refresh to work. Other cases can
-usually be solved in a similar way.</li>
+<li translated="true"><strong>Yalnızca React bileşenlerini dışa aktaran</strong> bir dosyayı düzenlerseniz, Hızlı Yenileme yalnızca o dosyanın kodunu günceller ve bileşeninizi yeniden oluşturur. Stiller, işleme mantığı, olay işleyicileri veya efektler dahil olmak üzere bu dosyadaki her şeyi düzenleyebilirsiniz.</li>
+<li translated="true">React bileşenleri <em>olmayan</em> dışa aktarımlara sahip bir dosyayı düzenlerseniz, Fast Refresh hem o dosyayı hem de onu içe aktaran diğer dosyaları yeniden çalıştırır. Yani hem<code translate="no">Button.js</code> hem de <code translate="no">Modal.js</code>, <code translate="no">theme.js</code>'yi içe aktarıyorsa, <code translate="no">theme.js</code> 'u düzenlemek her iki bileşeni de güncelleyecektir.</li>
+<li translated="true">Son olarak, <strong>React ağacının dışındaki dosyalar tarafından içe aktar</strong>ılan <strong>bir dosyayı düzenlerseniz</strong>, Hızlı Yenileme <strong>tam bir yeniden yükleme yapmaya geri dönecektir</strong>. Bir React bileşenini oluşturan ama aynı zamanda React <strong>olmayan</strong> bir bileşen tarafından içe aktarılan bir değeri dışa aktaran bir dosyanız olabilir. Örneğin, bileşeniniz bir sabiti de dışa aktarıyor ve React olmayan bir yardımcı program dosyası bunu içe aktarıyor olabilir. Bu durumda, sabiti ayrı bir dosyaya taşımayı ve her iki dosyaya da içe aktarmayı düşünün. Bu, Hızlı Yenileme'nin çalışmasını yeniden etkinleştirecektir. Diğer durumlar genellikle benzer şekilde çözülebilir.</li>
 </ul>
 <h2 id="error-resilience" data-docs-heading="" translate="no"><a href="#error-resilience" title="Error Resilience">Error Resilience<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -62,14 +49,10 @@ usually be solved in a similar way.</li>
 </svg></span></a></h2>
 <p translated="true">Hızlı Yenileme, düzenlediğiniz bileşendeki yerel React durumunu korumaya çalışır, ancak bunu yapmak güvenliyse. İşte bir dosyadaki her düzenlemede yerel durumun sıfırlandığını görmenizin birkaç nedeni:</p>
 <ul>
-<li>Local state is not preserved for class components (only function components
-and Hooks preserve state).</li>
-<li>The file you're editing might have <em>other</em> exports in addition to a React
-component.</li>
-<li>Sometimes, a file would export the result of calling a higher-order component
-like <code translate="no">HOC(WrappedComponent)</code>. If the returned component is a
-class, its state will be reset.</li>
-<li>Anonymous arrow functions like <code translate="no">export default () =&gt; &lt;div /&gt;;</code> cause Fast Refresh to not preserve local component state. For large codebases you can use our <a href="/docs/pages/building-your-application/upgrading/codemods#name-default-component" title="name-default-component codemod"><code translate="no">name-default-component</code> codemod</a>.</li>
+<li translated="true">Sınıf bileşenleri için yerel durum korunmaz (yalnızca işlev bileşenleri ve Kancalar durumu korur).</li>
+<li translated="true">Düzenlediğiniz dosyada bir React bileşenine ek olarak <em>başka</em> dışa aktarımlar da olabilir.</li>
+<li translated="true">Bazen bir dosya, <code translate="no">HOC(WrappedComponent)</code> gibi daha üst düzey bir bileşenin çağrılmasının sonucunu dışa aktarır. Döndürülen bileşen bir sınıf ise, durumu sıfırlanacaktır.</li>
+<li translated="true"><code translate="no">export default () =&gt; &lt;div /&gt;;</code> gibi anonim ok işlevleri Hızlı Yenileme'nin yerel bileşen durumunu korumamasına neden olur. Büyük kod tabanları için <a href="/docs/pages/building-your-application/upgrading/codemods#name-default-component" title="name-default-component codemod"><code translate="no">name-default-component</code> codemod</a>'umuzu kullanabilirsiniz.</li>
 </ul>
 <p translated="true">Kod tabanınızın daha büyük bir kısmı fonksiyon bileşenlerine ve Hook'lara geçtikçe, durumun daha fazla durumda korunmasını bekleyebilirsiniz.</p>
 <h2 id="tips" data-docs-heading="" translate="no"><a href="#tips" title="Tips">Tips<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -79,19 +62,10 @@ class, its state will be reset.</li>
   </g>
 </svg></span></a></h2>
 <ul>
-<li>Fast Refresh preserves React local state in function components (and Hooks) by
-default.</li>
-<li>Sometimes you might want to <em>force</em> the state to be reset, and a component to
-be remounted. For example, this can be handy if you're tweaking an animation
-that only happens on mount. To do this, you can add <code translate="no">// @refresh reset</code>
-anywhere in the file you're editing. This directive is local to the file, and
-instructs Fast Refresh to remount components defined in that file on every
-edit.</li>
-<li>You can put <code translate="no">console.log</code> or <code translate="no">debugger;</code> into the components you edit during
-development.</li>
-<li>Remember that imports are case sensitive. Both fast and full refresh can fail,
-when your import doesn't match the actual filename.
-For example, <code translate="no">'./header'</code> vs <code translate="no">'./Header'</code>.</li>
+<li translated="true">Hızlı Yenileme, varsayılan olarak işlev bileşenlerinde (ve Hook'larda) React yerel durumunu korur.</li>
+<li translated="true">Bazen durumun sıfırlanmasını ve bir bileşenin yeniden monte edilmesini isteyebilirsiniz. Örneğin, yalnızca montaj sırasında gerçekleşen bir animasyonu değiştiriyorsanız bu kullanışlı olabilir. Bunu yapmak için, düzenlediğiniz dosyanın herhangi bir yerine <code translate="no">// @refresh reset</code>ekleyebilirsiniz. Bu yönerge dosya için yereldir ve Fast Refresh'e her düzenlemede o dosyada tanımlanan bileşenleri yeniden monte etmesi talimatını verir.</li>
+<li translated="true">Geliştirme sırasında düzenlediğiniz bileşenlere <code translate="no">console.log</code> veya <code translate="no">debugger;</code> adreslerini koyabilirsiniz.</li>
+<li translated="true">İçe aktarmaların büyük/küçük harfe duyarlı olduğunu unutmayın. İçe aktarma işleminiz gerçek dosya adıyla eşleşmediğinde hem hızlı hem de tam yenileme başarısız olabilir. Örneğin, <code translate="no">'./header'</code> vs <code translate="no">'./Header'</code>.</li>
 </ul>
 <h2 id="fast-refresh-and-hooks" data-docs-heading="" translate="no"><a href="#fast-refresh-and-hooks" title="Fast Refresh and Hooks">Fast Refresh and Hooks<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">

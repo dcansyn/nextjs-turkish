@@ -8,13 +8,13 @@
     @@include('../../../../../../layouts/header.html')
 
     <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Multi Zones</h1><details open=""><summary>Examples</summary><ul>
-<li><a href="https://github.com/vercel/next.js/tree/canary/examples/with-zones" rel="noopener noreferrer" target="_blank" title="With Zones">With Zones<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a></li>
+<li translated="true"><a href="https://github.com/vercel/next.js/tree/canary/examples/with-zones" rel="noopener noreferrer" target="_blank" title="With Zones">Bölgeler ile<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a></li>
 </ul></details>
 <p translated="true">Bölge, bir Next.js uygulamasının tek bir dağıtımıdır. Birden fazla bölgeye sahip olabilir ve bunları tek bir uygulama olarak birleştirebilirsiniz.</p>
 <p translated="true">Örneğin, aşağıdaki uygulamalara sahip olduğunuzu varsayalım:</p>
 <ul>
-<li>An app for serving <code translate="no">/blog/**</code></li>
-<li>Another app for serving all other pages</li>
+<li translated="true">Servis için bir uygulama <code translate="no">/blog/**</code></li>
+<li translated="true">Diğer tüm sayfaları sunmak için başka bir uygulama</li>
 </ul>
 <p translated="true">Çoklu bölge desteğiyle, bu iki uygulamayı tek bir uygulamada birleştirerek müşterilerinizin tek bir URL kullanarak göz atmasını sağlayabilirsiniz, ancak her iki uygulamayı da bağımsız olarak geliştirebilir ve dağıtabilirsiniz.</p>
 <h2 id="how-to-define-a-zone" data-docs-heading="" translate="no"><a href="#how-to-define-a-zone" title="How to define a zone">How to define a zone<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -25,8 +25,8 @@
 </svg></span></a></h2>
 <p translated="true">Bölge ile ilgili API'ler yoktur. Yalnızca aşağıdakileri yapmanız gerekir:</p>
 <ul>
-<li>Make sure to keep only the pages you need in your app, meaning that an app can't have pages from another app, if app <code translate="no">A</code> has <code translate="no">/blog</code> then app <code translate="no">B</code> shouldn't have it too.</li>
-<li>Make sure to configure a <a href="/docs/app/api-reference/next-config-js/basePath" title="basePath">basePath</a> to avoid conflicts with pages and static files.</li>
+<li translated="true">Uygulamanızda yalnızca ihtiyacınız olan sayfaları tuttuğunuzdan emin olun, yani bir uygulama başka bir uygulamadan sayfa alamaz, <code translate="no">A</code> uygulamasında <code translate="no">/blog</code> varsa <code translate="no">B</code> uygulamasında da olmamalıdır.</li>
+<li translated="true">Sayfalar ve statik dosyalarla çakışmaları önlemek için bir <a href="/docs/app/api-reference/next-config-js/basePath" title="basePath">basePath</a> yapılandırdığınızdan emin olun.</li>
 </ul>
 <h2 id="how-to-merge-zones" data-docs-heading="" translate="no"><a href="#how-to-merge-zones" title="How to merge zones">How to merge zones<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">

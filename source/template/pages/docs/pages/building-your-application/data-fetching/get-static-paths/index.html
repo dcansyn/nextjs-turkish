@@ -56,11 +56,11 @@
 </svg></span></a></h2>
 <p translated="true">Dinamik rotalar kullanan sayfaları statik olarak önceden oluşturuyorsanız <code translate="no">getStaticPaths</code> adresini kullanmalısınız:</p>
 <ul>
-<li>The data comes from a headless CMS</li>
-<li>The data comes from a database</li>
-<li>The data comes from the filesystem</li>
-<li>The data can be publicly cached (not user-specific)</li>
-<li>The page must be pre-rendered (for SEO) and be very fast — <code translate="no">getStaticProps</code> generates <code translate="no">HTML</code> and <code translate="no">JSON</code> files, both of which can be cached by a CDN for performance</li>
+<li translated="true">Veriler başsız bir CMS'den geliyor</li>
+<li translated="true">Veriler bir veritabanından gelir</li>
+<li translated="true">Veriler dosya sisteminden gelir</li>
+<li translated="true">Veriler genel olarak önbelleğe alınabilir (kullanıcıya özel değil)</li>
+<li translated="true">Sayfa önceden işlenmeli (SEO için) ve çok hızlı olmalıdır - <code translate="no">getStaticProps</code>, <code translate="no">HTML</code> ve <code translate="no">JSON</code> dosyalarını oluşturur, her ikisi de performans için bir CDN tarafından önbelleğe alınabilir</li>
 </ul>
 <h2 id="when-does-getstaticpaths-run" data-docs-heading="" translate="no"><a href="#when-does-getstaticpaths-run" title="When does getStaticPaths run">When does getStaticPaths run<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -76,9 +76,9 @@
   </g>
 </svg></span></a></h3>
 <ul>
-<li><code translate="no">getStaticProps</code> runs during <code translate="no">next build</code> for any <code translate="no">paths</code> returned during build</li>
-<li><code translate="no">getStaticProps</code> runs in the background when using <code translate="no">fallback: true</code></li>
-<li><code translate="no">getStaticProps</code> is called before initial render when using <code translate="no">fallback: blocking</code></li>
+<li translated="true"><code translate="no">getStaticProps</code> derleme sırasında döndürülen herhangi bir <code translate="no">paths</code> için <code translate="no">next build</code> sırasında çalışır</li>
+<li translated="true"><code translate="no">getStaticProps</code> kullanırken arka planda çalışır <code translate="no">fallback: true</code></li>
+<li translated="true"><code translate="no">getStaticProps</code> kullanıldığında ilk render işleminden önce çağrılır <code translate="no">fallback: blocking</code></li>
 </ul>
 <h2 id="where-can-i-use-getstaticpaths" data-docs-heading="" translate="no"><a href="#where-can-i-use-getstaticpaths" title="Where can I use getStaticPaths">Where can I use getStaticPaths<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -87,11 +87,11 @@
   </g>
 </svg></span></a></h2>
 <ul>
-<li><code translate="no">getStaticPaths</code> <strong>must</strong> be used with <code translate="no">getStaticProps</code></li>
-<li>You <strong>cannot</strong> use <code translate="no">getStaticPaths</code> with <a href="/docs/pages/building-your-application/data-fetching/get-server-side-props" title="getServerSideProps"><code translate="no">getServerSideProps</code></a></li>
-<li>You can export <code translate="no">getStaticPaths</code> from a <a href="/docs/pages/building-your-application/routing/dynamic-routes" title="Dynamic Route">Dynamic Route</a> that also uses <code translate="no">getStaticProps</code></li>
-<li>You <strong>cannot</strong> export <code translate="no">getStaticPaths</code> from non-page file (e.g. your <code translate="no">components</code> folder)</li>
-<li>You must export <code translate="no">getStaticPaths</code> as a standalone function, and not a property of the page component</li>
+<li translated="true"><code translate="no">getStaticPaths</code> ile birlikte <strong>kullanılmalıdır</strong> <code translate="no">getStaticProps</code></li>
+<li translated="true"><code translate="no">getStaticPaths</code> ile birlikte <strong>kullanamazsınız</strong>. <a href="/docs/pages/building-your-application/data-fetching/get-server-side-props" title="getServerSideProps"><code translate="no">getServerSideProps</code></a></li>
+<li translated="true"><code translate="no">getStaticPaths</code> adresini de kullanan bir <a href="/docs/pages/building-your-application/routing/dynamic-routes" title="Dynamic Route">Dinamik Rot</a> adan dışa aktarabilirsiniz <code translate="no">getStaticProps</code></li>
+<li translated="true"><code translate="no">getStaticPaths</code> adresini sayfa olmayan bir dosyadan (örneğin <code translate="no">components</code> klasörünüzden) dışa <strong>aktaramazsınız</strong> </li>
+<li translated="true"><code translate="no">getStaticPaths</code> adresini sayfa bileşeninin bir özelliği olarak değil, bağımsız bir işlev olarak dışa aktarmalısınız</li>
 </ul>
 <h2 id="runs-on-every-request-in-development" data-docs-heading="" translate="no"><a href="#runs-on-every-request-in-development" title="Runs on every request in development">Runs on every request in development<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">

@@ -10,7 +10,7 @@
     <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Font Optimization</h1>
 <p translated="true"><a href="/docs/app/api-reference/components/font" title="next/font"><strong><code translate="no">next/font</code></strong></a> yazı tiplerinizi (özel yazı tipleri dahil) otomatik olarak optimize edecek ve gelişmiş gizlilik ve performans için harici ağ isteklerini kaldıracaktır.</p>
 <blockquote class="p-3 text-sm">
-<p><strong>🎥 Watch:</strong> Learn more about how to use <code translate="no">next/font</code> → <a href="https://www.youtube.com/watch?v=L8_98i_bMMA" rel="noopener noreferrer nofollow" target="_blank" title="YouTube (6 minutes)">YouTube (6 minutes)<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>.</p>
+<p translated="true"><strong>🎥 İzleyin:</strong> <code translate="no">next/font</code> → <a href="https://www.youtube.com/watch?v=L8_98i_bMMA" rel="noopener noreferrer nofollow" target="_blank" title="YouTube (6 minutes)">YouTube</a>'u nasıl kullanacağınız hakkında daha fazla bilgi edinin <a href="https://www.youtube.com/watch?v=L8_98i_bMMA" rel="noopener noreferrer nofollow" target="_blank" title="YouTube (6 minutes)">(6 dakika)<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>.</p>
 </blockquote>
 <p translated="true"><code translate="no">next/font</code> <em>herhangi bir</em> yazı tipi dosyası için <strong>yerleşik otomatik kendi kendine barındırma</strong> içerir. Bu, kullanılan temel CSS <code translate="no">size-adjust</code> özelliği sayesinde web yazı tiplerini sıfır düzen kayması ile en iyi şekilde yükleyebileceğiniz anlamına gelir.</p>
 <p translated="true">Bu yeni yazı tipi sistemi, performans ve gizliliği göz önünde bulundurarak tüm Google Yazı Tiplerini rahatça kullanmanıza da olanak tanır. CSS ve yazı tipi dosyaları derleme sırasında indirilir ve statik varlıklarınızın geri kalanıyla birlikte kendi kendine barındırılır. <strong>Tarayıcı tarafından Google'a hiçbir istek gönderilmez.</strong></p>
@@ -68,7 +68,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">  display</span><span style="color:var(--shiki-token-keyword)">:</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'swap'</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">})</span></span></code></pre></div>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: Use an underscore (_) for font names with multiple words. E.g. <code translate="no">Roboto Mono</code> should be imported as <code translate="no">Roboto_Mono</code>.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: Birden fazla sözcük içeren yazı tipi adları için alt çizgi (_) kullanın. Örneğin <code translate="no">Roboto Mono</code>, <code translate="no">Roboto_Mono</code> olarak içe aktarılmalıdır.</p>
 </blockquote>
 <!-- -->
 <h3 id="specifying-a-subset" data-docs-heading="" translate="no"><a href="#specifying-a-subset" title="Specifying a subset">Specifying a subset<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -161,7 +161,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <p translated="true">Yukarıdaki örnekte, <code translate="no">Inter</code> global olarak uygulanacak ve tüm <code translate="no">&lt;h1&gt;</code> etiketleri <code translate="no">Roboto Mono</code> ile şekillendirilecektir.</p>
 <blockquote class="p-3 text-sm">
-<p><strong>Recommendation</strong>: Use multiple fonts conservatively since each new font is an additional resource the client has to download.</p>
+<p translated="true"><strong>Öneri</strong>: Her yeni yazı tipi müşterinin indirmesi gereken ek bir kaynak olduğundan, birden fazla yazı tipini ihtiyatlı bir şekilde kullanın.</p>
 </blockquote>
 <h2 id="local-fonts" data-docs-heading="" translate="no"><a href="#local-fonts" title="Local Fonts">Local Fonts<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -276,9 +276,9 @@
   </g>
 </svg></span></a></h2>
 <p translated="true">Sitenizin bir sayfasında bir yazı tipi işlevi çağrıldığında, bu işlev genel olarak kullanılamaz ve tüm rotalara önceden yüklenmez. Bunun yerine, yazı tipi yalnızca kullanıldığı dosya türüne bağlı olarak ilgili rotalara önceden yüklenir:</p><ul>
-<li>If it's a <a href="/docs/app/building-your-application/routing/pages-and-layouts#pages" title="unique page">unique page</a>, it is preloaded on the unique route for that page.</li>
-<li>If it's a <a href="/docs/app/building-your-application/routing/pages-and-layouts#layouts" title="layout">layout</a>, it is preloaded on all the routes wrapped by the layout.</li>
-<li>If it's the <a href="/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required" title="root layout">root layout</a>, it is preloaded on all routes.</li>
+<li translated="true"><a href="/docs/app/building-your-application/routing/pages-and-layouts#pages" title="unique page">Benzersiz</a> bir sayfaysa, o sayfa için benzersiz rotaya önceden yüklenir.</li>
+<li translated="true">Eğer bu bir <a href="/docs/app/building-your-application/routing/pages-and-layouts#layouts" title="layout">düzen</a> ise, düzen tarafından sarılan tüm rotalara önceden yüklenir.</li>
+<li translated="true"><a href="/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required" title="root layout">Kök düzen</a> ise, tüm rotalara önceden yüklenir.</li>
 </ul>
 <!-- -->
 <h2 id="reusing-fonts" data-docs-heading="" translate="no"><a href="#reusing-fonts" title="Reusing fonts">Reusing fonts<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -289,9 +289,9 @@
 </svg></span></a></h2>
 <p translated="true"><code translate="no">localFont</code> veya Google font işlevini her çağırdığınızda, bu font uygulamanızda bir örnek olarak barındırılır. Bu nedenle, aynı font işlevini birden fazla dosyaya yüklerseniz, aynı fontun birden fazla örneği barındırılır. Bu durumda aşağıdakileri yapmanız önerilir:</p>
 <ul>
-<li>Call the font loader function in one shared file</li>
-<li>Export it as a constant</li>
-<li>Import the constant in each file where you would like to use this font</li>
+<li translated="true">Yazı tipi yükleyici işlevini tek bir paylaşılan dosyada çağırın</li>
+<li translated="true">Sabit olarak dışa aktarın</li>
+<li translated="true">Bu yazı tipini kullanmak istediğiniz her dosyadaki sabiti içe aktarın</li>
 </ul></article>@@include('../../../../../../layouts/sidebar.html')</main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')

@@ -84,9 +84,9 @@
 <p translated="true"><a href="/docs/pages/building-your-application/data-fetching/incremental-static-regeneration" title="Incremental Static Regeneration">Artımlı Statik Rejenerasyon</a> hakkında daha fazla bilgi edinin.</p>
 <p translated="true">ISR'den yararlanan bir sayfanın önbellek durumu <code translate="no">x-nextjs-cache</code> yanıt başlığının değeri okunarak belirlenebilir. Olası değerler şunlardır:</p>
 <ul>
-<li><code translate="no">MISS</code> - the path is not in the cache (occurs at most once, on the first visit)</li>
-<li><code translate="no">STALE</code> - the path is in the cache but exceeded the revalidate time so it will be updated in the background</li>
-<li><code translate="no">HIT</code> - the path is in the cache and has not exceeded the revalidate time</li>
+<li translated="true"><code translate="no">MISS</code> - yol önbellekte değil (en fazla bir kez, ilk ziyarette gerçekleşir)</li>
+<li translated="true"><code translate="no">STALE</code> - yol önbellektedir ancak yeniden doğrulama süresini aşmıştır, bu nedenle arka planda güncellenecektir</li>
+<li translated="true"><code translate="no">HIT</code> - yol önbellektedir ve yeniden doğrulama süresini aşmamıştır</li>
 </ul>
 <h3 id="notfound" data-docs-heading="" translate="no"><a href="#notfound" title="notFound"><code translate="no">notFound</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -110,7 +110,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">  }</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: <code translate="no">notFound</code> is not needed for <a href="/docs/pages/api-reference/functions/get-static-paths#fallback-false" title="fallback: false"><code translate="no">fallback: false</code></a> mode as only paths returned from <code translate="no">getStaticPaths</code> will be pre-rendered.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: <code translate="no">notFound</code> için gerekli değildir <a href="/docs/pages/api-reference/functions/get-static-paths#fallback-false" title="fallback: false"><code translate="no">fallback: false</code></a> modunda yalnızca <code translate="no">getStaticPaths</code> adresinden döndürülen yollar önceden işlenecektir.</p>
 </blockquote>
 <h3 id="redirect" data-docs-heading="" translate="no"><a href="#redirect" title="redirect"><code translate="no">redirect</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">

@@ -11,11 +11,10 @@
 <p translated="true">Bu, URL yolu yapısını etkilemeden rota segmentlerinizi ve proje dosyalarınızı mantıksal gruplar halinde düzenlemenizi sağlar.</p>
 <p translated="true">Rota grupları şunlar için kullanışlıdır:</p>
 <ul>
-<li><a href="#organize-routes-without-affecting-the-url-path" title="Organizing routes into groups">Organizing routes into groups</a> e.g. by site section, intent, or team.</li>
-<li>Enabling <a href="/docs/app/building-your-application/routing/pages-and-layouts" title="nested layouts">nested layouts</a> in the same route segment level:<!-- -->
-<ul>
-<li><a href="#creating-multiple-root-layouts" title="Creating multiple nested layouts in the same segment, including multiple root layouts">Creating multiple nested layouts in the same segment, including multiple root layouts</a></li>
-<li><a href="#opting-specific-segments-into-a-layout" title="Adding a layout to a subset of routes in a common segment">Adding a layout to a subset of routes in a common segment</a></li>
+<li translated="true"><a href="#organize-routes-without-affecting-the-url-path" title="Organizing routes into groups">Rotaların gruplar halinde düzenlenmesi</a>, örneğin saha bölümüne, amaca veya ekibe göre.</li>
+<li translated="true">Aynı rota segmenti düzeyinde iç içe <a href="/docs/app/building-your-application/routing/pages-and-layouts" title="nested layouts">düzenleri</a> etkinleştirme:<!-- --><ul>
+<li><a href="#creating-multiple-root-layouts" title="Creating multiple nested layouts in the same segment, including multiple root layouts">Birden fazla kök düzen dahil olmak üzere aynı segmentte birden fazla iç içe düzen oluşturma</a></li>
+<li><a href="#opting-specific-segments-into-a-layout" title="Adding a layout to a subset of routes in a common segment">Ortak bir segmentteki rotaların alt kümesine bir düzen ekleme</a></li>
 </ul>
 </li>
 </ul>
@@ -61,12 +60,12 @@
 <p translated="true">Yukarıdaki örnekte, hem <code translate="no">(marketing)</code> hem de <code translate="no">(shop)</code> kendi kök düzenine sahiptir.</p>
 <hr>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>The naming of route groups has no special significance other than for organization. They do not affect the URL path.</li>
-<li>Routes that include a route group <strong>should not</strong> resolve to the same URL path as other routes. For example, since route groups don't affect URL structure, <code translate="no">(marketing)/about/page.js</code> and <code translate="no">(shop)/about/page.js</code> would both resolve to <code translate="no">/about</code> and cause an error.</li>
-<li>If you use multiple root layouts without a top-level <code translate="no">layout.js</code> file, your home <code translate="no">page.js</code> file should be defined in one of the route groups, For example: <code translate="no">app/(marketing)/page.js</code>.</li>
-<li>Navigating <strong>across multiple root layouts</strong> will cause a <strong>full page load</strong> (as opposed to a client-side navigation). For example, navigating from <code translate="no">/cart</code> that uses <code translate="no">app/(shop)/layout.js</code> to <code translate="no">/blog</code> that uses <code translate="no">app/(marketing)/layout.js</code> will cause a full page load. This <strong>only</strong> applies to multiple root layouts.</li>
+<li translated="true">Rota gruplarının adlandırılmasının organizasyon dışında özel bir önemi yoktur. URL yolunu etkilemezler.</li>
+<li translated="true">Bir rota grubu içeren rotalar, diğer rotalarla aynı URL yoluna <strong>çözümlenmemelidir</strong>. Örneğin, rota grupları URL yapısını etkilemediğinden, <code translate="no">(marketing)/about/page.js</code> ve <code translate="no">(shop)/about/page.js</code> adreslerinin her ikisi de <code translate="no">/about</code> adresine çözümlenir ve bir hataya neden olur.</li>
+<li translated="true">Üst düzey bir <code translate="no">layout.js</code> dosyası olmadan birden fazla kök düzen kullanıyorsanız, ana <code translate="no">page.js</code> dosyanız rota gruplarından birinde tanımlanmalıdır, Örneğin: <code translate="no">app/(marketing)/page.js</code>.</li>
+<li translated="true"><strong>Birden fazla kök düzen arasında</strong> gezinmek <strong>tam sayfa yüklemeye</strong> neden olacaktır (istemci tarafı gezinmenin aksine). Örneğin, <code translate="no">app/(shop)/layout.js</code> kullanan <code translate="no">/cart</code> adresinden <code translate="no">app/(marketing)/layout.js</code> kullanan <code translate="no">/blog</code> adresine gitmek tam sayfa yüklemeye neden olacaktır. Bu <strong>yalnızca</strong> birden fazla kök düzen için geçerlidir.</li>
 </ul>
 </blockquote></article>@@include('../../../../../../layouts/sidebar.html')</main>
 

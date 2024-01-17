@@ -9,9 +9,9 @@
 
     <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Linking and Navigating</h1><p translated="true">Next.js'de rotalar arasında gezinmenin üç yolu vardır:</p>
 <ul>
-<li>Using the <a href="#link-component" title="&lt;Link&gt; Component"><code translate="no">&lt;Link&gt;</code> Component</a></li>
-<li>Using the <a href="#userouter-hook" title="useRouter Hook"><code translate="no">useRouter</code> Hook</a></li>
-<li>Using the native <a href="#using-the-native-history-api" title="History API">History API</a></li>
+<li translated="true"><a href="#link-component" title="&lt;Link&gt; Component"><code translate="no">&lt;Link&gt;</code> Bileşenini</a> Kullanma</li>
+<li translated="true"><a href="#userouter-hook" title="useRouter Hook"><code translate="no">useRouter</code> Kancasını</a> Kullanma</li>
+<li translated="true">Yerel <a href="#using-the-native-history-api" title="History API">Geçmiş API</a>'sini kullanma</li>
 </ul>
 <p translated="true">Bu sayfada, bu seçeneklerin her birinin nasıl kullanılacağı anlatılacak ve navigasyonun nasıl çalıştığı derinlemesine incelenecektir.</p>
 <h2 id="link-component" data-docs-heading="" translate="no"><a href="#link-component" title="&lt;Link&gt; Component"><code translate="no">&lt;Link&gt;</code> Component<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -142,7 +142,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <p translated="true"><code translate="no">useRouter</code> yöntemlerinin tam listesi için <a href="/docs/app/api-reference/functions/use-router" title="API reference">API referansına</a> bakın.</p>
 <blockquote class="p-3 text-sm">
-<p><strong>Recommendation:</strong> Use the <code translate="no">&lt;Link&gt;</code> component to navigate between routes unless you have a specific requirement for using <code translate="no">useRouter</code>.</p>
+<p translated="true"><strong>Öneri:</strong> <code translate="no">useRouter</code> adresini kullanmak için özel bir gereksiniminiz olmadığı sürece rotalar arasında gezinmek için <code translate="no">&lt;Link&gt;</code> bileşenini kullanın.</p>
 </blockquote>
 <h2 id="using-the-native-history-api" data-docs-heading="" translate="no"><a href="#using-the-native-history-api" title="Using the native History API">Using the native History API<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -232,20 +232,20 @@
 <p translated="true">Prefetching, bir rotayı kullanıcı ziyaret etmeden önce arka planda önceden yüklemenin bir yoludur.</p>
 <p translated="true">Next.js'de rotaların önceden taranmasının iki yolu vardır:</p>
 <ul>
-<li><strong><code translate="no">&lt;Link&gt;</code> component</strong>: Routes are automatically prefetched as they become visible in the user's viewport. Prefetching happens when the page first loads or when it comes into view through scrolling.</li>
-<li><strong><code translate="no">router.prefetch()</code></strong>: The <code translate="no">useRouter</code> hook can be used to prefetch routes programmatically.</li>
+<li translated="true"><strong><code translate="no">&lt;Link&gt;</code> Bileşen</strong>: Rotalar, kullanıcının görüntü alanında görünür hale geldiklerinde otomatik olarak önceden hazırlanır. Sayfa ilk yüklendiğinde veya kaydırma yoluyla görüntüye geldiğinde ön yükleme gerçekleşir.</li>
+<li translated="true"><strong><code translate="no">router.prefetch()</code></strong>: Rotaları programlı olarak önceden almak için <code translate="no">useRouter</code> kancası kullanılabilir.</li>
 </ul>
 <p translated="true"><code translate="no">&lt;Link&gt;</code>'un ön-getirme davranışı statik ve dinamik rotalar için farklıdır:</p>
 <ul>
-<li><a href="/docs/app/building-your-application/rendering/server-components#static-rendering-default" title="Static Routes"><strong>Static Routes</strong></a>: <code translate="no">prefetch</code> defaults to <code translate="no">true</code>. The entire route is prefetched and cached.</li>
-<li><a href="/docs/app/building-your-application/rendering/server-components#dynamic-rendering" title="Dynamic Routes"><strong>Dynamic Routes</strong></a>: <code translate="no">prefetch</code> default to automatic. Only the shared layout, down the rendered "tree" of components until the first <code translate="no">loading.js</code> file, is prefetched and cached for <code translate="no">30s</code>. This reduces the cost of fetching an entire dynamic route, and it means you can show an <a href="/docs/app/building-your-application/routing/loading-ui-and-streaming#instant-loading-states" title="instant loading state">instant loading state</a> for better visual feedback to users.</li>
+<li translated="true"><a href="/docs/app/building-your-application/rendering/server-components#static-rendering-default" title="Static Routes"><strong>Statik Rot</strong></a>alar: <code translate="no">prefetch</code> varsayılan olarak <code translate="no">true</code> şeklindedir. Tüm rota önceden taranır ve önbelleğe alınır.</li>
+<li translated="true"><a href="/docs/app/building-your-application/rendering/server-components#dynamic-rendering" title="Dynamic Routes"><strong>Dinamik Rotalar</strong></a>: <code translate="no">prefetch</code> varsayılan olarak otomatiktir. Yalnızca paylaşılan düzen, ilk <code translate="no">loading.js</code> dosyasına kadar bileşenlerin işlenmiş "ağacından" aşağıya doğru önceden taranır ve <code translate="no">30s</code> için önbelleğe alınır. Bu, dinamik bir rotanın tamamını getirme maliyetini azaltır ve kullanıcılara daha iyi görsel geri bildirim için <a href="/docs/app/building-your-application/routing/loading-ui-and-streaming#instant-loading-states" title="instant loading state">anında yükleme durumunu</a> gösterebileceğiniz anlamına gelir.</li>
 </ul>
 <p translated="true"><code translate="no">prefetch</code> prop'unu <code translate="no">false</code> olarak ayarlayarak ön-getirmeyi devre dışı bırakabilirsiniz.</p>
 <p translated="true">Daha fazla bilgi için <a href="/docs/app/api-reference/components/link" title="&lt;Link&gt; API reference"><code translate="no">&lt;Link&gt;</code> API referansına</a> bakın.</p>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>Prefetching is not enabled in development, only in production.</li>
+<li translated="true">Prefetching geliştirme aşamasında etkinleştirilmez, yalnızca üretim aşamasında etkinleştirilir.</li>
 </ul>
 </blockquote>
 <h3 id="3-caching" data-docs-heading="" translate="no"><a href="#3-caching" title="3. Caching">3. Caching<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">

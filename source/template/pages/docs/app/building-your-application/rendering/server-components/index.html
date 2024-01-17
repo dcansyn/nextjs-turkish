@@ -9,9 +9,9 @@
 
     <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Server Components</h1><p translated="true">React Sunucu Bileşenleri, sunucuda render edilebilen ve isteğe bağlı olarak önbelleğe alınabilen kullanıcı arayüzü yazmanıza olanak tanır. Next.js'de render işi, akış ve kısmi render'ı etkinleştirmek için rota segmentleri ile daha da bölünmüştür ve üç farklı sunucu render stratejisi vardır:</p>
 <ul>
-<li><a href="#static-rendering-default" title="Static Rendering">Static Rendering</a></li>
-<li><a href="#dynamic-rendering" title="Dynamic Rendering">Dynamic Rendering</a></li>
-<li><a href="#streaming" title="Streaming">Streaming</a></li>
+<li translated="true"><a href="#static-rendering-default" title="Static Rendering">Statik Rendering</a></li>
+<li translated="true"><a href="#dynamic-rendering" title="Dynamic Rendering">Dinamik Rendering</a></li>
+<li translated="true"><a href="#streaming" title="Streaming">Akış</a></li>
 </ul>
 <p translated="true">Bu sayfada Sunucu Bileşenlerinin nasıl çalıştığı, ne zaman kullanabileceğiniz ve farklı sunucu işleme stratejileri ele alınacaktır.</p>
 <h2 id="benefits-of-server-rendering" data-docs-heading="" translate="no"><a href="#benefits-of-server-rendering" title="Benefits of Server Rendering">Benefits of Server Rendering<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -22,13 +22,13 @@
 </svg></span></a></h2>
 <p translated="true">Render işini sunucu üzerinde yapmanın birkaç avantajı vardır:</p>
 <ul>
-<li><strong>Data Fetching</strong>: Server Components allow you to move data fetching to the server, closer to your data source. This can improve performance by reducing time it takes to fetch data needed for rendering, and the number of requests the client needs to make.</li>
-<li><strong>Security</strong>: Server Components allow you to keep sensitive data and logic on the server, such as tokens and API keys, without the risk of exposing them to the client.</li>
-<li><strong>Caching</strong>: By rendering on the server, the result can be cached and reused on subsequent requests and across users. This can improve performance and reduce cost by reducing the amount of rendering and data fetching done on each request.</li>
-<li><strong>Bundle Sizes</strong>: Server Components allow you to keep large dependencies that previously would impact the client JavaScript bundle size on the server. This is beneficial for users with slower internet or less powerful devices, as the client does not have to download, parse and execute any JavaScript for Server Components.</li>
-<li><strong>Initial Page Load and <a href="https://web.dev/fcp/" rel="noopener noreferrer nofollow" target="_blank" title="First Contentful Paint (FCP)">First Contentful Paint (FCP)<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a></strong>: On the server, we can generate HTML to allow users to view the page immediately, without waiting for the client to download, parse and execute the JavaScript needed to render the page.</li>
-<li><strong>Search Engine Optimization and Social Network Shareability</strong>: The rendered HTML can be used by search engine bots to index your pages and social network bots to generate social card previews for your pages.</li>
-<li><strong>Streaming</strong>: Server Components allow you to split the rendering work into chunks and stream them to the client as they become ready. This allows the user to see parts of the page earlier without having to wait for the entire page to be rendered on the server.</li>
+<li translated="true"><strong>Veri Get</strong>irme: Sunucu Bileşenleri, veri getirme işlemini veri kaynağınıza daha yakın olan sunucuya taşımanıza olanak tanır. Bu, işleme için gereken verileri getirme süresini ve istemcinin yapması gereken istek sayısını azaltarak performansı artırabilir.</li>
+<li translated="true"><strong>Güvenlik</strong>: Sunucu Bileşenleri, belirteçler ve API anahtarları gibi hassas verileri ve mantığı istemciye ifşa etme riski olmadan sunucuda tutmanıza olanak tanır.</li>
+<li translated="true"><strong>Önbelleğe</strong> alma: Sunucu üzerinde işleme yaparak, sonuç önbelleğe alınabilir ve sonraki isteklerde ve kullanıcılar arasında yeniden kullanılabilir. Bu, her istekte yapılan işleme ve veri getirme miktarını azaltarak performansı artırabilir ve maliyeti düşürebilir.</li>
+<li translated="true">Paket <strong>Boyutları</strong>: Sunucu Bileşenleri, daha önce istemci JavaScript paket boyutunu etkileyecek büyük bağımlılıkları sunucuda tutmanıza olanak tanır. İstemcinin Sunucu Bileşenleri için herhangi bir JavaScript indirmesi, ayrıştırması ve yürütmesi gerekmediğinden, bu daha yavaş internete veya daha az güçlü cihazlara sahip kullanıcılar için faydalıdır.</li>
+<li translated="true"><strong> <a href="https://web.dev/fcp/" rel="noopener noreferrer nofollow" target="_blank" title="First Contentful Paint (FCP)">İlk</a> Sayfa Yüklemesi ve <a href="https://web.dev/fcp/" rel="noopener noreferrer nofollow" target="_blank" title="First Contentful Paint (FCP)">İlk İçeriksel Boyama (FCP)<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a></strong>: Sunucuda, istemcinin sayfayı oluşturmak için gereken JavaScript'i indirmesini, ayrıştırmasını ve çalıştırmasını beklemeden kullanıcıların sayfayı hemen görüntülemesini sağlamak için HTML oluşturabiliriz.</li>
+<li translated="true"><strong>Arama Motoru Optimizasyonu ve Sosyal Ağlarda Paylaşılabilirlik</strong>: Oluşturulan HTML, arama motoru botları tarafından sayfalarınızı indekslemek ve sosyal ağ botları tarafından sayfalarınız için sosyal kart önizlemeleri oluşturmak için kullanılabilir.</li>
+<li translated="true"><strong>Akış</strong>: Sunucu Bileşenleri, işleme işini parçalara ayırmanıza ve hazır olduklarında bunları istemciye aktarmanıza olanak tanır. Bu, kullanıcının tüm sayfanın sunucuda işlenmesini beklemek zorunda kalmadan sayfanın bazı bölümlerini daha erken görmesini sağlar.</li>
 </ul>
 <h2 id="using-server-components-in-nextjs" data-docs-heading="" translate="no"><a href="#using-server-components-in-nextjs" title="Using Server Components in Next.js">Using Server Components in Next.js<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -46,23 +46,23 @@
 <p translated="true">Sunucuda Next.js, render işlemini düzenlemek için React'in API'lerini kullanır. Oluşturma işi parçalara ayrılır: bireysel rota segmentlerine ve <a href="https://react.dev/reference/react/Suspense" rel="noopener noreferrer nofollow" target="_blank" title="Suspense Boundaries">Askıya Alma Sınırlarına</a> göre <a href="https://react.dev/reference/react/Suspense" rel="noopener noreferrer nofollow" target="_blank" title="Suspense Boundaries"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span>.</a></p>
 <p translated="true">Her yığın iki adımda oluşturulur:</p>
 <ol>
-<li>React renders Server Components into a special data format called the <strong>React Server Component Payload (RSC Payload)</strong>.</li>
-<li>Next.js uses the RSC Payload and Client Component JavaScript instructions to render <strong>HTML</strong> on the server.</li>
+<li translated="true">React, Sunucu <strong>Bileşenlerini React Sunucu Bileşeni Yükü (RSC Payload)</strong> adı verilen özel bir veri biçiminde işler.</li>
+<li translated="true">Next.js, sunucuda <strong>HTML</strong> oluşturmak için RSC Payload ve Client Component JavaScript talimatlarını kullanır.</li>
 </ol>
 <!-- -->
 <p translated="true">Sonra, müşteride:</p>
 <ol>
-<li>The HTML is used to immediately show a fast non-interactive preview of the route - this is for the initial page load only.</li>
-<li>The React Server Components Payload is used to reconcile the Client and Server Component trees, and update the DOM.</li>
-<li>The JavaScript instructions are used to <a href="https://react.dev/reference/react-dom/client/hydrateRoot" rel="noopener noreferrer nofollow" target="_blank" title="hydrate">hydrate<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> Client Components and make the application interactive.</li>
+<li translated="true">HTML, rotanın etkileşimli olmayan hızlı bir önizlemesini hemen göstermek için kullanılır - bu yalnızca ilk sayfa yüklemesi içindir.</li>
+<li translated="true">React Sunucu Bileşenleri Yükü, İstemci ve Sunucu Bileşen ağaçlarını uzlaştırmak ve DOM'u güncellemek için kullanılır.</li>
+<li translated="true">JavaScript talimatları <a href="https://react.dev/reference/react-dom/client/hydrateRoot" rel="noopener noreferrer nofollow" target="_blank" title="hydrate"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span> İstemci Bileşenlerini</a> <a href="https://react.dev/reference/react-dom/client/hydrateRoot" rel="noopener noreferrer nofollow" target="_blank" title="hydrate">sulandırmak</a> ve uygulamayı etkileşimli hale getirmek için kullanılır.</li>
 </ol>
 <blockquote class="p-3 text-sm">
-<p><strong>What is the React Server Component Payload (RSC)?</strong></p>
-<p>The RSC Payload is a compact binary representation of the rendered React Server Components tree. It's used by React on the client to update the browser's DOM. The RSC Payload contains:</p>
+<p translated="true"><strong>React Server Bileşen Yükü (RSC) nedir?</strong></p>
+<p translated="true">RSC Payload, işlenmiş React Server Bileşenleri ağacının kompakt bir ikili gösterimidir. Tarayıcının DOM'unu güncellemek için istemcide React tarafından kullanılır. RSC Payload şunları içerir:</p>
 <ul>
-<li>The rendered result of Server Components</li>
-<li>Placeholders for where Client Components should be rendered and references to their JavaScript files</li>
-<li>Any props passed from a Server Component to a Client Component</li>
+<li translated="true">Sunucu Bileşenlerinin işlenmiş sonucu</li>
+<li translated="true">İstemci Bileşenlerinin nerede işlenmesi gerektiğine ilişkin yer tutucular ve JavaScript dosyalarına referanslar</li>
+<li translated="true">Bir Sunucu Bileşeninden bir İstemci Bileşenine aktarılan tüm proplar</li>
 </ul>
 </blockquote>
 <h2 id="server-rendering-strategies" data-docs-heading="" translate="no"><a href="#server-rendering-strategies" title="Server Rendering Strategies">Server Rendering Strategies<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -91,10 +91,10 @@
 <p translated="true">Dinamik Rendering ile rotalar her kullanıcı için <strong>istek anında</strong> oluşturulur.</p>
 <p translated="true">Dinamik oluşturma, bir rota kullanıcıya göre kişiselleştirilmiş verilere sahip olduğunda veya çerezler ya da URL'nin arama parametreleri gibi yalnızca istek sırasında bilinebilecek bilgilere sahip olduğunda kullanışlıdır.</p>
 <blockquote class="p-3 text-sm">
-<p><strong>Dynamic Routes with Cached Data</strong></p>
-<p>In most websites, routes are not fully static or fully dynamic - it's a spectrum. For example, you can have an e-commerce page that uses cached product data that's revalidated at an interval, but also has uncached, personalized customer data.</p>
-<p>In Next.js, you can have dynamically rendered routes that have both cached and uncached data. This is because the RSC Payload and data are cached separately. This allows you to opt into dynamic rendering without worrying about the performance impact of fetching all the data at request time.</p>
-<p>Learn more about the <a href="/docs/app/building-your-application/caching#full-route-cache" title="full-route cache">full-route cache</a> and <a href="/docs/app/building-your-application/caching#data-cache" title="Data Cache">Data Cache</a>.</p>
+<p translated="true"><strong>Önbelleğe Alınmış Verilerle Dinamik Rotalar</strong></p>
+<p translated="true">Çoğu web sitesinde rotalar tamamen statik veya tamamen dinamik değildir - bu bir spektrumdur. Örneğin, belirli aralıklarla yeniden doğrulanan önbelleğe alınmış ürün verilerini kullanan bir e-ticaret sayfanız olabilir, ancak aynı zamanda önbelleğe alınmamış, kişiselleştirilmiş müşteri verilerine de sahip olabilirsiniz.</p>
+<p translated="true">Next.js'de, hem önbelleğe alınmış hem de önbelleğe alınmamış verilere sahip dinamik olarak oluşturulmuş rotalarınız olabilir. Bunun nedeni, RSC Payload'unun ve verilerin ayrı ayrı önbelleğe alınmasıdır. Bu, istek zamanında tüm verileri getirmenin performans etkisi hakkında endişelenmeden dinamik oluşturmayı tercih etmenize olanak tanır.</p>
+<p translated="true"><a href="/docs/app/building-your-application/caching#full-route-cache" title="full-route cache">Tam yol önbelleği</a> ve <a href="/docs/app/building-your-application/caching#data-cache" title="Data Cache">Veri Ön</a>belleği hakkında daha fazla bilgi edinin.</p>
 </blockquote>
 <h4 id="switching-to-dynamic-rendering" data-docs-heading="" translate="no"><a href="#switching-to-dynamic-rendering" title="Switching to Dynamic Rendering">Switching to Dynamic Rendering<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -114,8 +114,8 @@
 </svg></span></a></h4>
 <p translated="true">Dinamik fonksiyonlar, kullanıcının çerezleri, mevcut istek başlıkları veya URL'nin arama paramları gibi yalnızca istek sırasında bilinebilecek bilgilere dayanır. Next.js'de bu dinamik fonksiyonlar şunlardır:</p>
 <ul>
-<li><strong><a href="/docs/app/api-reference/functions/cookies" title="cookies()"><code translate="no">cookies()</code></a> and <a href="/docs/app/api-reference/functions/headers" title="headers()"><code translate="no">headers()</code></a></strong>: Using these in a Server Component will opt the whole route into dynamic rendering at request time.</li>
-<li><strong><a href="/docs/app/api-reference/file-conventions/page#searchparams-optional" title="searchParams"><code translate="no">searchParams</code></a></strong>: Using the <a href="/docs/app/api-reference/file-conventions/page" title="Pages">Pages</a> prop will opt the page into dynamic rendering at request time.</li>
+<li translated="true"><strong><a href="/docs/app/api-reference/functions/cookies" title="cookies()"><code translate="no">cookies()</code></a> ve <a href="/docs/app/api-reference/functions/headers" title="headers()"><code translate="no">headers()</code></a></strong>: Bunları bir Sunucu Bileşeninde kullanmak, tüm rotayı istek zamanında dinamik oluşturmaya tercih edecektir.</li>
+<li translated="true"><strong><a href="/docs/app/api-reference/file-conventions/page#searchparams-optional" title="searchParams"><code translate="no">searchParams</code></a></strong>: <a href="/docs/app/api-reference/file-conventions/page" title="Pages">Pages</a> prop'unu kullanmak, sayfayı istek anında dinamik oluşturmaya tercih edecektir.</li>
 </ul>
 <p translated="true">Bu işlevlerden herhangi birinin kullanılması, istek zamanında tüm rotayı dinamik oluşturmaya tercih edecektir.</p>
 <h3 id="streaming" data-docs-heading="" translate="no"><a href="#streaming" title="Streaming">Streaming<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">

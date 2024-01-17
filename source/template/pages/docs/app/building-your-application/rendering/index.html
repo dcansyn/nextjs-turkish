@@ -16,9 +16,9 @@
 </svg></span></a></h2>
 <p translated="true">Başlangıç olarak, üç temel web kavramına aşina olmak faydalı olacaktır:</p>
 <ul>
-<li>The <a href="#rendering-environments" title="Environments">Environments</a> your application code can be executed in: the server and the client.</li>
-<li>The <a href="#request-response-lifecycle" title="Request-Response Lifecycle">Request-Response Lifecycle</a> that's initiated when a user visits or interacts with your application.</li>
-<li>The <a href="#network-boundary" title="Network Boundary">Network Boundary</a> that separates server and client code.</li>
+<li translated="true">Uygulama kodunuzun çalıştırılabileceği <a href="#rendering-environments" title="Environments">ortamlar</a>: sunucu ve istemci.</li>
+<li translated="true">Bir kullanıcı uygulamanızı ziyaret ettiğinde veya uygulamanızla etkileşime girdiğinde başlatılan <a href="#request-response-lifecycle" title="Request-Response Lifecycle">İstek-Yanıt Yaşam Döngüsü.</a> </li>
+<li translated="true">Sunucu ve istemci kodunu ayıran <a href="#network-boundary" title="Network Boundary">Ağ Sınırı</a>.</li>
 </ul>
 <h3 id="rendering-environments" data-docs-heading="" translate="no"><a href="#rendering-environments" title="Rendering Environments">Rendering Environments<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -29,8 +29,8 @@
 <p translated="true">Web uygulamalarının işlenebileceği iki ortam vardır: istemci ve sunucu.</p>
 <figure><img alt="Client and Server Environments" loading="lazy" width="1600" height="672" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/client-and-server-environments.png"><img alt="Client and Server Environments" loading="lazy" width="1600" height="672" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/client-and-server-environments.png"></figure>
 <ul>
-<li>The <strong>client</strong> refers to the browser on a user's device that sends a request to a server for your application code. It then turns the response from the server into a user interface.</li>
-<li>The <strong>server</strong> refers to the computer in a data center that stores your application code, receives requests from a client, and sends back an appropriate response.</li>
+<li translated="true"><strong>İstemci</strong>, uygulama kodunuz için bir sunucuya istek gönderen bir kullanıcının cihazındaki tarayıcıyı ifade eder. Daha sonra sunucudan gelen yanıtı bir kullanıcı arayüzüne dönüştürür.</li>
+<li translated="true"><strong>Sunucu</strong>, uygulama kodunuzu depolayan, bir istemciden gelen istekleri alan ve uygun bir yanıtı geri gönderen bir veri merkezindeki bilgisayarı ifade eder.</li>
 </ul>
 <p translated="true">Geçmişte, geliştiriciler sunucu ve istemci için kod yazarken farklı diller (ör. JavaScript, PHP) ve çerçeveler kullanmak zorundaydı. React ile geliştiriciler <strong>aynı dili</strong> (JavaScript) ve <strong>aynı</strong> çerçeveyi (örneğin Next.js veya tercih ettiğiniz çerçeve) kullanabilir. Bu esneklik, bağlam değiştirmeden her iki ortam için de sorunsuz bir şekilde kod yazmanıza olanak tanır.</p>
 <p translated="true">Ancak, her ortamın kendine özgü yetenekleri ve kısıtlamaları vardır. Bu nedenle, sunucu ve istemci için yazdığınız kod her zaman aynı değildir. Bir ortam için diğerine göre daha uygun olan belirli işlemler (örneğin veri getirme veya kullanıcı durumunu yönetme) vardır.</p>
@@ -43,12 +43,12 @@
 </svg></span></a></h3>
 <p translated="true">Genel olarak, tüm web siteleri aynı <strong>İstek-Yanıt Yaşam Döngüsünü</strong> takip eder:</p>
 <ol>
-<li><strong>User Action:</strong> The user interacts with a web application. This could be clicking a link, submitting a form, or typing a URL directly into the browser's address bar.</li>
-<li><strong>HTTP Request:</strong> The client sends an <a href="https://developer.mozilla.org/docs/Web/HTTP" rel="noopener noreferrer nofollow" target="_blank" title="HTTP">HTTP<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> request to the server that contains necessary information about what resources are being requested, what method is being used (e.g. <code translate="no">GET</code>, <code translate="no">POST</code>), and additional data if necessary.</li>
-<li><strong>Server:</strong> The server processes the request and responds with the appropriate resources. This process may take a couple of steps like routing, fetching data, etc.</li>
-<li><strong>HTTP Response:</strong> After processing the request, the server sends an HTTP response back to the client. This response contains a status code (which tells the client whether the request was successful or not) and requested resources (e.g. HTML, CSS, JavaScript, static assets, etc).</li>
-<li><strong>Client:</strong> The client parses the resources to render the user interface.</li>
-<li><strong>User Action:</strong> Once the user interface is rendered, the user can interact with it, and the whole process starts again.</li>
+<li translated="true"><strong>Kullanıcı Eylemi:</strong> Kullanıcı bir web uygulaması ile etkileşime girer. Bu, bir bağlantıya tıklamak, bir form göndermek veya doğrudan tarayıcının adres çubuğuna bir URL yazmak olabilir.</li>
+<li translated="true"><strong>HTTP İsteği:</strong> İstemci, sunucuya hangi kaynakların talep edildiği, hangi yöntemin kullanıldığı (örneğin <code translate="no">GET</code>, <code translate="no">POST</code>) ve gerekirse ek veriler hakkında gerekli bilgileri içeren bir <a href="https://developer.mozilla.org/docs/Web/HTTP" rel="noopener noreferrer nofollow" target="_blank" title="HTTP">HTTP<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> isteği gönderir.</li>
+<li translated="true"><strong>Sunucu:</strong> Sunucu isteği işler ve uygun kaynaklarla yanıt verir. Bu işlem yönlendirme, veri getirme vb. gibi birkaç adımda gerçekleşebilir.</li>
+<li translated="true"><strong>HTTP Yanıtı:</strong> İsteği işledikten sonra sunucu istemciye bir HTTP yanıtı gönderir. Bu yanıt bir durum kodu (istemciye isteğin başarılı olup olmadığını bildirir) ve istenen kaynakları (örn. HTML, CSS, JavaScript, statik varlıklar, vb.) içerir.</li>
+<li translated="true"><strong>İstemci:</strong> İstemci, kullanıcı arayüzünü oluşturmak için kaynakları ayrıştırır.</li>
+<li translated="true"><strong>Kullanıcı Eylemi:</strong> Kullanıcı arayüzü oluşturulduktan sonra, kullanıcı onunla etkileşime girebilir ve tüm süreç yeniden başlar.</li>
 </ol>
 <p translated="true">Hibrit bir web uygulaması oluşturmanın önemli bir kısmı, yaşam döngüsünde işin nasıl bölüneceğine ve Ağ Sınırının nereye yerleştirileceğine karar vermektir.</p>
 <h3 id="network-boundary" data-docs-heading="" translate="no"><a href="#network-boundary" title="Network Boundary">Network Boundary<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">

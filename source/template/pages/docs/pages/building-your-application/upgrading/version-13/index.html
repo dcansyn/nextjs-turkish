@@ -106,10 +106,8 @@
         <pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-color-text)">bun </span><span style="color:var(--shiki-token-string)">add</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">next@</span><span style="color:var(--shiki-token-constant)">13</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">react-dom@latest</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string)">eslint-config-next@</span><span style="color:var(--shiki-token-constant)">13</span></span></code></pre>
       </div>
       <blockquote class="p-3 text-sm">
-        <p>
-          <strong>Bilmekte fayda var:</strong> If you are using TypeScript, ensure you also upgrade <code translate="no">@types/react</code> and
-          <code translate="no">@types/react-dom</code> to their latest versions.
-        </p>
+        <p translated="true">
+         <strong>Bilmekte fayda var:</strong> TypeScript kullanıyorsanız, <code translate="no">@types/react</code> ve <code translate="no">@types/react-dom</code> adreslerini de en son sürümlerine yükselttiğinizden emin olun.     </p>
       </blockquote>
       <h3 id="v13-summary" data-docs-heading="" translate="no">
         <a href="#v13-summary" title="v13 Summary">v13 Summary<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -119,33 +117,18 @@
               </g></svg></span></a>
       </h3>
       <ul>
-        <li>
-          The <a href="/docs/architecture/supported-browsers" title="Supported Browsers">Supported Browsers</a> have been changed to drop Internet
-          Explorer and target modern browsers.
-        </li>
-        <li>The minimum Node.js version has been bumped from 12.22.0 to 16.14.0, since 12.x and 14.x have reached end-of-life.</li>
-        <li>The minimum React version has been bumped from 17.0.2 to 18.2.0.</li>
-        <li>
-          The <code translate="no">swcMinify</code> configuration property was changed from <code translate="no">false</code> to
-          <code translate="no">true</code>. See <a href="/docs/architecture/nextjs-compiler" title="Next.js Compiler">Next.js Compiler</a> for more
-          info.
-        </li>
-        <li>
-          The <code translate="no">next/image</code> import was renamed to <code translate="no">next/legacy/image</code>. The
-          <code translate="no">next/future/image</code> import was renamed to <code translate="no">next/image</code>. A
-          <a href="/docs/pages/building-your-application/upgrading/codemods#next-image-to-legacy-image" title="codemod is available">codemod is available</a>
-          to safely and automatically rename your imports.
-        </li>
-        <li>
-          The <code translate="no">next/link</code> child can no longer be <code translate="no">&lt;a&gt;</code>. Add the
-          <code translate="no">legacyBehavior</code> prop to use the legacy behavior or remove the <code translate="no">&lt;a&gt;</code> to upgrade. A
-          <a href="/docs/pages/building-your-application/upgrading/codemods#new-link" title="codemod is available">codemod is available</a> to
-          automatically upgrade your code.
-        </li>
-        <li>
-          The <code translate="no">target</code> configuration property has been removed and superseded by
-          <a href="/docs/pages/api-reference/next-config-js/output" title="Output File Tracing">Output File Tracing</a>.
-        </li>
+        <li translated="true">
+         <a href="/docs/architecture/supported-browsers" title="Supported Browsers">Desteklenen Tarayıcılar</a>, Internet Explorer'ı bırakacak ve modern tarayıcıları hedefleyecek şekilde değiştirildi.        </li>
+        <li translated="true">Minimum Node.js sürümü 12.22.0'dan 16.14.0'a yükseltildi, çünkü 12.x ve 14.x kullanım ömrünün sonuna ulaştı.</li>
+        <li translated="true">Minimum React sürümü 17.0.2'den 18.2.0'a yükseltildi.</li>
+        <li translated="true">
+          <code translate="no">swcMinify</code> yapılandırma özelliği <code translate="no">false</code> yerine <code translate="no">true</code> olarak değiştirildi. Daha fazla bilgi için <a href="/docs/architecture/nextjs-compiler" title="Next.js Compiler">Next.js Derleyici</a> bölümüne bakın.       </li>
+        <li translated="true">
+          <code translate="no">next/image</code> içe aktarımı <code translate="no">next/legacy/image</code> olarak yeniden adlandırıldı. <code translate="no">next/future/image</code> içe aktarımı <code translate="no">next/image</code> olarak yeniden adlandırıldı. İçe aktarımlarınızı güvenli ve otomatik bir şekilde yeniden adlandırmak için bir <a href="/docs/pages/building-your-application/upgrading/codemods#next-image-to-legacy-image" title="codemod is available">codemod mevcuttur</a>.        </li>
+        <li translated="true">
+          <code translate="no">next/link</code> alt öğesi artık <code translate="no">&lt;a&gt;</code> olamaz. Eski davranışı kullanmak için <code translate="no">legacyBehavior</code> prop'unu ekleyin veya yükseltmek için <code translate="no">&lt;a&gt;</code> prop'unu kaldırın. Kodunuzu otomatik olarak yükseltmek için bir <a href="/docs/pages/building-your-application/upgrading/codemods#new-link" title="codemod is available">codemod mevcuttur</a>.        </li>
+        <li translated="true">
+          <code translate="no">target</code> yapılandırma özelliği kaldırılmış ve yerini <a href="/docs/pages/api-reference/next-config-js/output" title="Output File Tracing">Çıktı Dosyası İzleme</a> almıştır.        </li>
       </ul>
       <h2 id="migrating-shared-features" data-docs-heading="" translate="no">
         <a href="#migrating-shared-features" title="Migrating shared features">Migrating shared features<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -183,18 +166,10 @@
       <p translated="true">Next.js 13'ten itibaren, bu yeni davranış artık <code translate="no">next/image</code> için varsayılandır.</p>
       <p translated="true">Yeni Görüntü Bileşenine geçiş yapmanıza yardımcı olacak iki kodmod vardır:</p>
       <ul>
-        <li>
-          <a href="/docs/pages/building-your-application/upgrading/codemods#next-image-to-legacy-image" title="next-image-to-legacy-image">next-image-to-legacy-image</a>: This codemod will safely and automatically rename <code translate="no">next/image</code> imports to
-          <code translate="no">next/legacy/image</code> to maintain the same behavior as Next.js 12. We recommend running this codemod to quickly
-          update to Next.js 13 automatically.
-        </li>
-        <li>
-          <a href="/docs/pages/building-your-application/upgrading/codemods#next-image-experimental" title="next-image-experimental">next-image-experimental</a>: After running the previous codemod, you can optionally run this experimental codemod to upgrade
-          <code translate="no">next/legacy/image</code> to the new <code translate="no">next/image</code>, which will remove unused props and add
-          inline styles. Please note this codemod is experimental and only covers static usage (such as
-          <code translate="no">&lt;Image src={img} layout="responsive" /&gt;</code>) but not dynamic usage (such as
-          <code translate="no">&lt;Image {...props} /&gt;</code>).
-        </li>
+        <li translated="true">
+         <a href="/docs/pages/building-your-application/upgrading/codemods#next-image-to-legacy-image" title="next-image-to-legacy-image">next-image-to-legacy-image</a>: Bu codemod, Next.js 12 ile aynı davranışı sürdürmek için <code translate="no">next/image</code> içe aktarmalarını güvenli ve otomatik olarak <code translate="no">next/legacy/image</code> olarak yeniden adlandıracaktır. Next.js 13'e otomatik olarak hızlı bir şekilde güncellemek için bu codemod'u çalıştırmanızı öneririz.        </li>
+        <li translated="true">
+         <a href="/docs/pages/building-your-application/upgrading/codemods#next-image-experimental" title="next-image-experimental">next-image-experimental</a>: Önceki codemod'u çalıştırdıktan sonra, isteğe bağlı olarak <code translate="no">next/legacy/image</code> adresini yeni <code translate="no">next/image</code> adresine yükseltmek için bu deneysel codemod'u çalıştırabilirsiniz; bu, kullanılmayan sahne öğelerini kaldıracak ve satır içi stiller ekleyecektir. Lütfen bu codemod'un deneysel olduğunu ve yalnızca statik kullanımı ( <code translate="no">&lt;Image src={img} layout="responsive" /&gt;</code> gibi) kapsadığını, dinamik kullanımı ( <code translate="no">&lt;Image {...props} /&gt;</code> gibi) kapsamadığını unutmayın.        </li>
       </ul>
       <p translated="true">
         Alternatif olarak,

@@ -14,11 +14,8 @@
         size Next.js ile Jest'i nasıl kuracağınızı ve ilk testlerinizi nasıl yazacağınızı gösterecektir.
       </p>
       <blockquote class="p-3 text-sm">
-        <p>
-          <strong>Bilmekte fayda var:</strong> Since <code translate="no">async</code> Server Components are new to the React ecosystem, Jest
-          currently does not support them. While you can still run <strong>unit tests</strong> for synchronous Server and Client Components, we
-          recommend using an <strong>E2E tests</strong> for <code translate="no">async</code> components.
-        </p>
+        <p translated="true">
+         <strong>Bilmekte fayda var:</strong> <code translate="no">async</code> Sunucu Bileşenleri React ekosistemi için yeni olduğundan, Jest şu anda bunları desteklemiyor. Senkron Sunucu ve İstemci Bileşenleri için hala <strong>birim test</strong> leri çalıştırabilseniz de, <code translate="no">async</code> bileşenleri için bir <strong>E2E testleri</strong> kullanmanızı öneririz.        </p>
       </blockquote>
       <h2 id="quickstart" data-docs-heading="" translate="no">
         <a href="#quickstart" title="Quickstart">Quickstart<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -181,25 +178,19 @@
       <!-- -->
       <p translated="true">Kaputun altında, <code translate="no">next/jest</code> Jest'i sizin için otomatik olarak yapılandırıyor:</p>
       <ul>
-        <li>
-          Setting up <code translate="no">transform</code> using the
-          <a href="/docs/architecture/nextjs-compiler" title="Next.js Compiler">Next.js Compiler</a>
+        <li translated="true">
+         <a href="/docs/architecture/nextjs-compiler" title="Next.js Compiler">Next.js Derleyicisini</a>kullanarak <code translate="no">transform</code> 'u kurma     </li>
+        <li translated="true">
+          Otomatik alay stil sayfaları (<code translate="no">.css</code>, <code translate="no">.module.css</code> ve bunların scss varyantları), görüntü içe aktarma ve <a href="/docs/pages/building-your-application/optimizing/fonts" title="next/font"><code translate="no">next/font</code></a>
         </li>
-        <li>
-          Auto mocking stylesheets (<code translate="no">.css</code>, <code translate="no">.module.css</code>, and their scss variants), image imports
-          and <a href="/docs/pages/building-your-application/optimizing/fonts" title="next/font"><code translate="no">next/font</code></a>
-        </li>
-        <li>Loading <code translate="no">.env</code> (and all variants) into <code translate="no">process.env</code></li>
-        <li>Ignoring <code translate="no">node_modules</code> from test resolving and transforms</li>
-        <li>Ignoring <code translate="no">.next</code> from test resolving</li>
-        <li>Loading <code translate="no">next.config.js</code> for flags that enable SWC transforms</li>
+        <li translated="true"><code translate="no">.env</code> (ve tüm varyantları) içine yükleme <code translate="no">process.env</code></li>
+        <li translated="true">Test çözümleme ve dönüşümlerden <code translate="no">node_modules</code> adresini yok sayma</li>
+        <li translated="true">Test çözümlemeden <code translate="no">.next</code> adresini yok sayma</li>
+        <li translated="true">SWC dönüşümlerini etkinleştiren bayraklar için <code translate="no">next.config.js</code> adresini yükleme</li>
       </ul>
       <blockquote class="p-3 text-sm">
-        <p>
-          <strong>Good to know</strong>: To test environment variables directly, load them manually in a separate setup script or in your
-          <code translate="no">jest.config.ts</code> file. For more information, please see
-          <a href="/docs/pages/building-your-application/configuring/environment-variables#test-environment-variables" title="Test Environment Variables">Test Environment Variables</a>.
-        </p>
+        <p translated="true">
+         <strong>Bilmekte</strong> fayda var: Ortam değişkenlerini doğrudan test etmek için, bunları ayrı bir kurulum betiğine veya <code translate="no">jest.config.ts</code> dosyanıza manuel olarak yükleyin. Daha fazla bilgi için lütfen <a href="/docs/pages/building-your-application/configuring/environment-variables#test-environment-variables" title="Test Environment Variables">Ortam Değişkenlerini Test</a> Etme bölümüne bakın.       </p>
       </blockquote>
       <!-- -->
       <h2 id="optional-handling-absolute-imports-and-module-path-aliases" data-docs-heading="" translate="no">
@@ -350,12 +341,10 @@
       </div>
       <!-- -->
       <blockquote class="p-3 text-sm">
-        <p>
-          <strong>Bilmekte fayda var:</strong><a href="https://github.com/testing-library/jest-dom/releases/tag/v6.0.0" rel="noopener noreferrer nofollow" target="_blank" title="extend-expect was removed in v6.0"><code translate="no">extend-expect</code> was removed in <code translate="no">v6.0</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <p translated="true">
+         <strong>Bilmekte fayda var:</strong><a href="https://github.com/testing-library/jest-dom/releases/tag/v6.0.0" rel="noopener noreferrer nofollow" target="_blank" title="extend-expect was removed in v6.0"><code translate="no">extend-expect</code> </a>,<a href="https://github.com/testing-library/jest-dom/releases/tag/v6.0.0" rel="noopener noreferrer nofollow" target="_blank" title="extend-expect was removed in v6.0"> <code translate="no">v6.0</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>, so if you are using <code translate="no">@testing-library/jest-dom</code> before version 6, you will need to import
-          <code translate="no">@testing-library/jest-dom/extend-expect</code> instead.
-        </p>
+                <path d="M7 7h10v10"></path></svg></span> içinde kaldırıldı</a>, bu nedenle sürüm 6'dan önce <code translate="no">@testing-library/jest-dom</code> kullanıyorsanız, bunun yerine <code translate="no">@testing-library/jest-dom/extend-expect</code> içe aktarmanız gerekecektir.        </p>
       </blockquote>
       <p translated="true">
         Her testten önce daha fazla kurulum seçeneği eklemeniz gerekiyorsa, bunları yukarıdaki <code translate="no">jest.setup.js</code> dosyasına
@@ -557,27 +546,22 @@
       </h2>
       <p translated="true">Daha fazla okuma için bu kaynakları faydalı bulabilirsiniz:</p>
       <ul>
-        <li>
-          <a href="https://github.com/vercel/next.js/tree/canary/examples/with-jest" rel="noopener noreferrer" target="_blank" title="Next.js with Jest example">Next.js with Jest example<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+         <a href="https://github.com/vercel/next.js/tree/canary/examples/with-jest" rel="noopener noreferrer" target="_blank" title="Next.js with Jest example">Next.js ile Jest örneği<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-        </li>
-        <li>
-          <a href="https://jestjs.io/docs/getting-started" rel="noopener noreferrer nofollow" target="_blank" title="Jest Docs">Jest Docs<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 7h10v10"></path></svg></span></a></li>
+        <li translated="true">
+         <a href="https://jestjs.io/docs/getting-started" rel="noopener noreferrer nofollow" target="_blank" title="Jest Docs">Jest Docs<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-        </li>
-        <li>
-          <a href="https://testing-library.com/docs/react-testing-library/intro/" rel="noopener noreferrer nofollow" target="_blank" title="React Testing Library Docs">React Testing Library Docs<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 7h10v10"></path></svg></span></a></li>
+        <li translated="true">
+         <a href="https://testing-library.com/docs/react-testing-library/intro/" rel="noopener noreferrer nofollow" target="_blank" title="React Testing Library Docs">React Test Kütüphanesi Dokümanları<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-        </li>
-        <li>
-          <a href="https://testing-playground.com/" rel="noopener noreferrer nofollow" target="_blank" title="Testing Playground">Testing Playground<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 7h10v10"></path></svg></span></a></li>
+        <li translated="true">
+         <a href="https://testing-playground.com/" rel="noopener noreferrer nofollow" target="_blank" title="Testing Playground">Oyun Alanının Test</a>Edilmesi <a href="https://testing-playground.com/" rel="noopener noreferrer nofollow" target="_blank" title="Testing Playground"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-          - use good testing practices to match elements.
-        </li>
+                <path d="M7 7h10v10"></path></svg></span> - öğeleri eşleştirmek için iyi test uygulamalarını kullanın.       </a></li>
       </ul>
     </article>@@include('../../../../../../layouts/sidebar.html')</main>
 

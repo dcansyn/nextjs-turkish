@@ -29,36 +29,16 @@
       </h2>
       <p translated="true">Bu Next.js optimizasyonları varsayılan olarak etkindir ve yapılandırma gerektirmez:</p>
       <ul>
-        <li>
-          <strong><a href="/docs/app/building-your-application/rendering/server-components" title="Server Components">Server Components</a>:</strong>
-          Next.js uses Server Components by default. Server Components run on the server, and don't require JavaScript to render on the client. As
-          such, they have no impact on the size of your client-side JavaScript bundles. You can then use
-          <a href="/docs/app/building-your-application/rendering/client-components" title="Client Components">Client Components</a> as needed for
-          interactivity.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/routing/linking-and-navigating#how-routing-and-navigation-works" title="Code-splitting">Code-splitting</a>:</strong>
-          Server Components enable automatic code-splitting by route segments. You may also consider
-          <a href="/docs/app/building-your-application/optimizing/lazy-loading" title="lazy loading">lazy loading</a> Client Components and
-          third-party libraries, where appropriate.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/routing/linking-and-navigating#2-prefetching" title="Prefetching">Prefetching</a>:</strong>
-          When a link to a new route enters the user's viewport, Next.js prefetches the route in background. This makes navigation to new routes
-          almost instant. You can opt out of prefetching, where appropriate.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/rendering/server-components#static-rendering-default" title="Static Rendering">Static Rendering</a>:</strong>
-          Next.js statically renders Server and Client Components on the server at build time and caches the rendered result to improve your
-          application's performance. You can opt into
-          <a href="/docs/app/building-your-application/rendering/server-components#dynamic-rendering" title="Dynamic Rendering">Dynamic Rendering</a>
-          for specific routes, where appropriate.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/caching" title="Caching">Caching</a>:</strong> Next.js caches data requests, the
-          rendered result of Server and Client Components, static assets, and more, to reduce the number of network requests to your server, database,
-          and backend services. You may opt out of caching, where appropriate.
-        </li>
+        <li translated="true">
+          Sunucu <strong><a href="/docs/app/building-your-application/rendering/server-components" title="Server Components">Bileşenleri</a>:</strong>Next.js varsayılan olarak Sunucu Bileşenlerini kullanır. Sunucu Bileşenleri sunucuda çalışır ve JavaScript'in istemcide işlenmesini gerektirmez. Bu nedenle, istemci tarafı JavaScript paketlerinizin boyutu üzerinde hiçbir etkileri yoktur. Daha sonra etkileşim için gerektiğinde <a href="/docs/app/building-your-application/rendering/client-components" title="Client Components">İstemci Bileşe</a> nlerini kullanabilirsiniz.        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/routing/linking-and-navigating#how-routing-and-navigation-works" title="Code-splitting">Kod</a></strong>bölme <strong>:</strong>Sunucu Bileşenleri, rota segmentlerine göre otomatik kod bölmeyi etkinleştirir. Uygun olduğunda İstemci Bileşenlerini ve üçüncü taraf kütüphanelerini <a href="/docs/app/building-your-application/optimizing/lazy-loading" title="lazy loading">tembel yüklemeyi</a> de düşünebilirsiniz.        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/routing/linking-and-navigating#2-prefetching" title="Prefetching">Prefetching</a>:</strong>Yeni bir rotaya giden bir bağlantı kullanıcının görüntü alanına girdiğinde Next.js rotayı arka planda prefetches eder. Bu, yeni rotalarda gezinmeyi neredeyse anında yapar. Uygun olduğu durumlarda ön getirmeyi devre dışı bırakabilirsiniz.        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/rendering/server-components#static-rendering-default" title="Static Rendering">Statik</a></strong>İşleme: Next.js, Sunucu ve İstemci Bileşenlerini derleme zamanında sunucuda <strong><a href="/docs/app/building-your-application/rendering/server-components#static-rendering-default" title="Static Rendering">statik</a></strong>olarak işler ve uygulamanızın performansını artırmak için işlenen sonucu önbelleğe alır. Uygun olduğunda belirli rotalar için <a href="/docs/app/building-your-application/rendering/server-components#dynamic-rendering" title="Dynamic Rendering">Dinamik</a>Oluşturmayı seçebilirsiniz.        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/caching" title="Caching">Önbelleğe</a></strong> alma <strong>:</strong> Next.js, sunucunuza, veritabanınıza ve arka uç hizmetlerinize yapılan ağ isteklerinin sayısını azaltmak için veri isteklerini, Sunucu ve İstemci Bileşenlerinin işlenmiş sonuçlarını, statik varlıkları ve daha fazlasını önbelleğe alır. Uygun olduğunda önbelleğe almayı devre dışı bırakabilirsiniz.        </li>
       </ul>
       <!-- -->
       <p translated="true">
@@ -82,46 +62,21 @@
               </g></svg></span></a>
       </h3>
       <ul>
-        <li>
-          <strong><a href="/docs/app/building-your-application/routing/pages-and-layouts#layouts" title="Layouts">Layouts</a>:</strong> Use layouts to
-          share UI across pages and enable
-          <a href="/docs/app/building-your-application/routing/linking-and-navigating#4-partial-rendering" title="partial rendering">partial rendering</a>
-          on navigation.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/routing/linking-and-navigating#link-component" title="&lt;Link&gt; component"><code translate="no">&lt;Link&gt;</code> component</a>:</strong>
-          Use the <code translate="no">&lt;Link&gt;</code> component for
-          <a href="/docs/app/building-your-application/routing/linking-and-navigating#how-routing-and-navigation-works" title="client-side navigation and prefetching">client-side navigation and prefetching</a>.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/routing/error-handling" title="Error Handling">Error Handling</a>:</strong> Gracefully
-          handle <a href="/docs/app/building-your-application/routing/error-handling" title="catch-all errors">catch-all errors</a> and
-          <a href="/docs/app/api-reference/file-conventions/not-found" title="404 errors">404 errors</a> in production by creating custom error pages.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/rendering/composition-patterns" title="Composition Patterns">Composition Patterns</a>:</strong>
-          Follow the recommended composition patterns for Server and Client Components, and check the placement of your
-          <a href="/docs/app/building-your-application/rendering/composition-patterns#moving-client-components-down-the-tree" title='"use client" boundaries'><code translate="no">"use client"</code> boundaries</a>
-          to avoid unnecessarily increasing your client-side JavaScript bundle.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/rendering/server-components#dynamic-functions" title="Dynamic Functions">Dynamic Functions</a>:</strong>
-          Be aware that dynamic functions like
-          <a href="/docs/app/api-reference/functions/cookies" title="cookies()"><code translate="no">cookies()</code></a> and the
-          <a href="/docs/app/api-reference/file-conventions/page#searchparams-optional" title="searchParams"><code translate="no">searchParams</code></a>
-          prop will opt the entire route into
-          <a href="/docs/app/building-your-application/rendering/server-components#dynamic-rendering" title="Dynamic Rendering">Dynamic Rendering</a>
-          (or your whole application if used in the
-          <a href="/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required" title="Root Layout">Root Layout</a>). Ensure
-          dynamic function usage is intentional and wrap them in <code translate="no">&lt;Suspense&gt;</code> boundaries where appropriate.
-        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/routing/pages-and-layouts#layouts" title="Layouts">Düzenler</a>:</strong> Kullanıcı arayüzünü sayfalar arasında paylaşmak ve gezinme sırasında <a href="/docs/app/building-your-application/routing/linking-and-navigating#4-partial-rendering" title="partial rendering">kısmi</a>oluşturmayı etkinleştirmek için düzenleri kullanın.        </li>
+        <li translated="true">
+          <strong><a href="/docs/app/building-your-application/routing/linking-and-navigating#link-component" title="&lt;Link&gt; component"><code translate="no">&lt;Link&gt;</code> bileşeni</a></strong> <strong>:</strong> <a href="/docs/app/building-your-application/routing/linking-and-navigating#how-routing-and-navigation-works" title="client-side navigation and prefetching">İstemci tarafında gezinme ve ön-getirme</a> için <code translate="no">&lt;Link&gt;</code> <strong><a href="/docs/app/building-your-application/routing/linking-and-navigating#link-component" title="&lt;Link&gt; component">bileşenini</a></strong>kullanın.        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/routing/error-handling" title="Error Handling">Hata İşleme</a>:</strong> Özel hata sayfaları oluşturarak üretimde <a href="/docs/app/building-your-application/routing/error-handling" title="catch-all errors">tümünü yakalama hat</a> alarını ve <a href="/docs/app/api-reference/file-conventions/not-found" title="404 errors">404 hat</a> alarını zarif bir şekilde işleyin.        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/rendering/composition-patterns" title="Composition Patterns">Kompozisyon Kalıpları</a>:</strong>Sunucu ve İstemci Bileşenleri için önerilen kompozisyon kalıplarını izleyin ve istemci tarafı JavaScript paketinizi gereksiz yere artırmamak için <a href="/docs/app/building-your-application/rendering/composition-patterns#moving-client-components-down-the-tree" title='"use client" boundaries'><code translate="no">"use client"</code> sınırlarınızın</a>yerleşimini kontrol edin.     </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/rendering/server-components#dynamic-functions" title="Dynamic Functions">Dinamik İşlev</a></strong>ler: Aşağıdaki gibi dinamik işlevlerin          <a href="/docs/app/api-reference/functions/cookies" title="cookies()"><code translate="no">cookies()</code></a> ve  <a href="/docs/app/api-reference/file-conventions/page#searchparams-optional" title="searchParams"><code translate="no">searchParams</code></a>
+          prop tüm rotayı <a href="/docs/app/building-your-application/rendering/server-components#dynamic-rendering" title="Dynamic Rendering">Dinamik</a>Oluşturmaya (veya <a href="/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required" title="Root Layout">Kök Düzende</a> kullanılıyorsa tüm uygulamanızı) tercih edecektir. Dinamik işlev kullanımının kasıtlı olduğundan emin olun ve uygun olduğunda bunları <code translate="no">&lt;Suspense&gt;</code> sınırlarına sarın.       </li>
       </ul>
       <blockquote class="p-3 text-sm">
-        <p>
-          <strong>Good to know</strong>:
-          <a href="/blog/next-14#partial-prerendering-preview" title="Partial Prerendering (Experimental)">Partial Prerendering (Experimental)</a>
-          will allow parts of a route to be dynamic without opting the whole route into dynamic rendering.
-        </p>
+        <p translated="true">
+         <strong>Bilmekte</strong> fayda var: <a href="/blog/next-14#partial-prerendering-preview" title="Partial Prerendering (Experimental)">Kısmi Önceden Oluşturma (Deneysel)</a>, tüm rotayı dinamik oluşturmaya seçmeden bir rotanın bazı bölümlerinin dinamik olmasına izin verir.      </p>
       </blockquote>
       <!-- -->
       <h3 id="data-fetching-and-caching" data-docs-heading="" translate="no">
@@ -132,35 +87,18 @@
               </g></svg></span></a>
       </h3>
       <ul>
-        <li>
-          <strong><a href="/docs/app/building-your-application/data-fetching/patterns#fetching-data-on-the-server" title="Server Components">Server Components</a>:</strong>
-          Leverage the benefits of fetching data on the server using Server Components.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/routing/route-handlers" title="Route Handlers">Route Handlers</a>:</strong> Use Route
-          Handlers to access your backend resources from Client Components. But do not call Route Handlers from Server Components to avoid an
-          additional server request.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/routing/loading-ui-and-streaming" title="Streaming">Streaming</a>:</strong> Use Loading
-          UI and React Suspense to progressively send UI from the server to the client, and prevent the whole route from blocking while data is being
-          fetched.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/data-fetching/patterns#parallel-and-sequential-data-fetching" title="Parallel Data Fetching">Parallel Data Fetching</a>:</strong>
-          Reduce network waterfalls by fetching data in parallel, where appropriate. Also, consider
-          <a href="/docs/app/building-your-application/data-fetching/patterns#preloading-data" title="preloading data">preloading data</a> where
-          appropriate.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/caching#data-cache" title="Data Caching">Data Caching</a>:</strong> Verify whether your
-          data requests are being cached or not, and opt into caching, where appropriate. Ensure requests that don't use
-          <code translate="no">fetch</code> are <a href="/docs/app/api-reference/functions/unstable_cache" title="cached">cached</a>.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/optimizing/static-assets" title="Static Images">Static Images</a>:</strong> Use the
-          <code translate="no">public</code> directory to automatically cache your application's static assets, e.g. images.
-        </li>
+        <li translated="true">
+          Sunucu <strong><a href="/docs/app/building-your-application/data-fetching/patterns#fetching-data-on-the-server" title="Server Components">Bileşenleri</a>:</strong>Sunucu Bileşenlerini kullanarak sunucuda veri getirmenin avantajlarından yararlanın.        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/routing/route-handlers" title="Route Handlers">Rota İşleyicileri</a>:</strong> İstemci Bileşenlerinden arka uç kaynaklarınıza erişmek için Rota İşleyicilerini kullanın. Ancak ek bir sunucu isteğinden kaçınmak için Sunucu Bileşenlerinden Rota İşleyicileri çağırmayın.        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/routing/loading-ui-and-streaming" title="Streaming">Akış</a>:</strong> UI'yi sunucudan istemciye aşamalı olarak göndermek için Loading UI ve React Suspense'i kullanın ve veri getirilirken tüm rotanın engellenmesini önleyin.        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/data-fetching/patterns#parallel-and-sequential-data-fetching" title="Parallel Data Fetching">Paralel Veri Getirme</a>:</strong>Uygun olduğunda verileri paralel olarak getirerek ağ şelalelerini azaltın. Ayrıca, uygun olduğunda <a href="/docs/app/building-your-application/data-fetching/patterns#preloading-data" title="preloading data">verileri önceden yüklemeyi</a> düşünün.        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/caching#data-cache" title="Data Caching">Veri</a></strong> Önbelleğe Alma <strong>:</strong> Veri taleplerinizin önbelleğe alınıp alınmadığını doğrulayın ve uygun olduğunda önbelleğe almayı tercih edin. <code translate="no">fetch</code> adresini kullanmayan isteklerin <a href="/docs/app/api-reference/functions/unstable_cache" title="cached">önbelleğe</a> alındığından emin olun.     </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/optimizing/static-assets" title="Static Images">Statik Görüntüler</a>:</strong> Görüntüler gibi uygulamanızın statik varlıklarını otomatik olarak önbelleğe almak için <code translate="no">public</code> dizinini kullanın.        </li>
       </ul>
       <!-- -->
       <h3 id="ui-and-accessibility" data-docs-heading="" translate="no">
@@ -171,33 +109,20 @@
               </g></svg></span></a>
       </h3>
       <ul>
-        <li>
-          <strong><a href="/docs/app/building-your-application/data-fetching/server-actions-and-mutations#forms" title="Forms and Validation">Forms and Validation</a>:</strong>
-          Use Server Actions to handle form submissions, server-side validation, and handle errors.
-        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/data-fetching/server-actions-and-mutations#forms" title="Forms and Validation">Formlar ve</a></strong>Doğrulama <strong>:<a href="/docs/app/building-your-application/data-fetching/server-actions-and-mutations#forms" title="Forms and Validation">Form</a></strong>gönderimleri, sunucu tarafı doğrulama ve hataları işlemek için Sunucu Eylemlerini kullanın.        </li>
       </ul>
       <ul>
-        <li>
-          <strong><a href="/docs/app/building-your-application/optimizing/fonts" title="Font Module">Font Module</a>:</strong> Optimize fonts by using
-          the Font Module, which automatically hosts your font files with other static assets, removes external network requests, and reduces
-          <a href="https://web.dev/articles/cls" rel="noopener noreferrer nofollow" target="_blank" title="layout shift">layout shift<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+         <strong>Yazı Tipi<a href="/docs/app/building-your-application/optimizing/fonts" title="Font Module">Modülü</a>:</strong> Yazı tipi dosyalarınızı diğer statik varlıklarla birlikte otomatik olarak barındıran, harici ağ isteklerini kaldıran ve <a href="https://web.dev/articles/cls" rel="noopener noreferrer nofollow" target="_blank" title="layout shift">düzen kaymasını</a> azaltan Yazı Tipi Modülünü kullanarak yazı tiplerini optimize edin <a href="https://web.dev/articles/cls" rel="noopener noreferrer nofollow" target="_blank" title="layout shift"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/optimizing/images" title="&lt;Image&gt; Component"><code translate="no">&lt;Image&gt;</code> Component</a>:</strong>
-          Optimize images by using the Image Component, which automatically optimizes images, prevents layout shift, and serves them in modern formats
-          like WebP or AVIF.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/optimizing/scripts" title="&lt;Script&gt; Component"><code translate="no">&lt;Script&gt;</code> Component</a>:</strong>
-          Optimize third-party scripts by using the Script Component, which automatically defers scripts and prevents them from blocking the main
-          thread.
-        </li>
-        <li>
-          <strong><a href="/docs/architecture/accessibility#linting" title="ESLint">ESLint</a>:</strong> Use the built-in
-          <code translate="no">eslint-plugin-jsx-a11y</code> plugin to catch accessibility issues early.
-        </li>
+                <path d="M7 7h10v10"></path></svg></span>.</a></li>
+        <li translated="true">
+          <strong><a href="/docs/app/building-your-application/optimizing/images" title="&lt;Image&gt; Component"><code translate="no">&lt;Image&gt;</code> Bileşen</a>:</strong>Görüntüleri otomatik olarak optimize eden, düzen kaymasını önleyen ve WebP veya AVIF gibi modern formatlarda sunan Görüntü Bileşenini kullanarak görüntüleri optimize edin.     </li>
+        <li translated="true">
+          <strong><a href="/docs/app/building-your-application/optimizing/scripts" title="&lt;Script&gt; Component"><code translate="no">&lt;Script&gt;</code> Bileşen</a>:</strong>Komut dosyalarını otomatik olarak erteleyen ve ana iş parçacığını engellemelerini önleyen Komut Dosyası Bileşenini kullanarak üçüncü taraf komut dosyalarını optimize edin.     </li>
+        <li translated="true">
+         <strong><a href="/docs/architecture/accessibility#linting" title="ESLint">ESLint</a>:</strong> Erişilebilirlik sorunlarını erkenden yakalamak için yerleşik <code translate="no">eslint-plugin-jsx-a11y</code> eklentisini kullanın.        </li>
       </ul>
       <h3 id="security" data-docs-heading="" translate="no">
         <a href="#security" title="Security">Security<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -207,27 +132,16 @@
               </g></svg></span></a>
       </h3>
       <ul>
-        <li>
-          <strong><a href="/docs/app/building-your-application/data-fetching/patterns#preventing-sensitive-data-from-being-exposed-to-the-client" title="Tainting">Tainting</a>:</strong>
-          Prevent sensitive data from being exposed to the client by tainting data objects and/or specific values.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/data-fetching/server-actions-and-mutations#authentication-and-authorization" title="Server Actions">Server Actions</a>:</strong>
-          Ensure users are authorized to call Server Actions. Review the the recommended
-          <a href="/blog/security-nextjs-server-components-actions" title="security practices">security practices</a>.
-        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/data-fetching/patterns#preventing-sensitive-data-from-being-exposed-to-the-client" title="Tainting">Lekeleme</a>:</strong>Veri nesnelerini ve/veya belirli değerleri lekeleyerek hassas verilerin istemciye ifşa edilmesini önleyin.        </li>
+        <li translated="true">
+          Sunucu <strong><a href="/docs/app/building-your-application/data-fetching/server-actions-and-mutations#authentication-and-authorization" title="Server Actions">Eylemleri</a>:</strong>Kullanıcıların Sunucu Eylemlerini çağırma yetkisine sahip olduğundan emin olun. Önerilen <a href="/blog/security-nextjs-server-components-actions" title="security practices">güvenlik uygulamalarını</a> gözden geçirin.        </li>
       </ul>
       <ul>
-        <li>
-          <strong><a href="/docs/app/building-your-application/configuring/environment-variables" title="Environment Variables">Environment Variables</a>:</strong>
-          Ensure your <code translate="no">.env.*</code> files are added to <code translate="no">.gitignore</code> and only public variables are
-          prefixed with <code translate="no">NEXT_PUBLIC_</code>.
-        </li>
-        <li>
-          <strong><a href="/docs/app/building-your-application/configuring/content-security-policy" title="Content Security Policy">Content Security Policy</a>:</strong>
-          Consider adding a Content Security Policy to protect your application against various security threats such as cross-site scripting,
-          clickjacking, and other code injection attacks.
-        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/configuring/environment-variables" title="Environment Variables">Ortam Değişkenleri</a>:</strong> <code translate="no">.env.*</code> dosyalarınızın <code translate="no">.gitignore</code> adresine eklendiğinden ve yalnızca genel değişkenlerin <code translate="no">NEXT_PUBLIC_</code> ile öneklendiğinden emin olun.     </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/configuring/content-security-policy" title="Content Security Policy">İçerik Güvenliği Politikası:</a></strong>Uygulamanızı siteler arası komut dosyası oluşturma, clickjacking ve diğer kod enjeksiyon saldırıları gibi çeşitli güvenlik tehditlerine karşı korumak için bir İçerik Güvenliği Politikası eklemeyi düşünün.        </li>
       </ul>
       <h3 id="metadata-and-seo" data-docs-heading="" translate="no">
         <a href="#metadata-and-seo" title="Metadata and SEO">Metadata and SEO<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -237,19 +151,12 @@
               </g></svg></span></a>
       </h3>
       <ul>
-        <li>
-          <strong><a href="/docs/app/building-your-application/optimizing/metadata" title="Metadata API">Metadata API</a>:</strong> Use the Metadata
-          API to improve your application's Search Engine Optimization (SEO) by adding page titles, descriptions, and more.
-        </li>
-        <li>
-          <strong><a href="/docs/app/api-reference/file-conventions/metadata/opengraph-image" title="Open Graph (OG) images">Open Graph (OG) images</a>:</strong>
-          Create OG images to prepare your application for social sharing.
-        </li>
-        <li>
-          <strong><a href="/docs/app/api-reference/functions/generate-sitemaps" title="Sitemaps">Sitemaps</a> and
-            <a href="/docs/app/api-reference/file-conventions/metadata/robots" title="Robots">Robots</a>:</strong>
-          Help Search Engines crawl and index your pages by generating sitemaps and robots files.
-        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/building-your-application/optimizing/metadata" title="Metadata API">Meta Veri</a> API'si:</strong> Sayfa başlıkları, açıklamalar ve daha fazlasını ekleyerek uygulamanızın Arama Motoru Optimizasyonunu (SEO) iyileştirmek için Metadata API'sini kullanın.        </li>
+        <li translated="true">
+         <strong><a href="/docs/app/api-reference/file-conventions/metadata/opengraph-image" title="Open Graph (OG) images">Open Graph (OG) görüntüleri</a>:</strong>Uygulamanızı sosyal paylaşıma hazırlamak için OG görüntüleri oluşturun.        </li>
+        <li translated="true">
+          Site <strong><a href="/docs/app/api-reference/functions/generate-sitemaps" title="Sitemaps">Haritaları</a></strong>ve <strong> <a href="/docs/app/api-reference/file-conventions/metadata/robots" title="Robots">Robotlar</a>:</strong>Site haritaları ve robot dosyaları oluşturarak Arama Motorlarının sayfalarınızı taramasına ve dizine eklemesine yardımcı olun.     </li>
       </ul>
       <!-- -->
       <h3 id="type-safety" data-docs-heading="" translate="no">
@@ -260,10 +167,8 @@
               </g></svg></span></a>
       </h3>
       <ul>
-        <li>
-          <strong>TypeScript and <a href="/docs/app/building-your-application/configuring/typescript" title="TS Plugin">TS Plugin</a>:</strong> Use
-          TypeScript and the TypeScript plugin for better type-safety, and to help you catch errors early.
-        </li>
+        <li translated="true">
+         <strong>TypeScript ve <a href="/docs/app/building-your-application/configuring/typescript" title="TS Plugin">TS Eklentisi</a>:</strong> Daha iyi tip güvenliği ve hataları erken yakalamanıza yardımcı olması için TypeScript ve TypeScript eklentisini kullanın.        </li>
       </ul>
       <h2 id="before-going-to-production" data-docs-heading="" translate="no">
         <a href="#before-going-to-production" title="Before going to production">Before going to production<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -285,23 +190,16 @@
               </g></svg></span></a>
       </h3>
       <ul>
-        <li>
-          <strong><a href="https://developers.google.com/web/tools/lighthouse" rel="noopener noreferrer nofollow" target="_blank" title="Lighthouse">Lighthouse<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+         <strong><a href="https://developers.google.com/web/tools/lighthouse" rel="noopener noreferrer nofollow" target="_blank" title="Lighthouse">Lighthouse<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                   <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path></svg></span></a>:</strong>
-          Run lighthouse in incognito to gain a better understanding of how your users will experience your site, and to identify areas for
-          improvement. This is a simulated test and should be paired with looking at field data (such as Core Web Vitals).
-        </li>
+                  <path d="M7 7h10v10"></path></svg></span></a></strong>: Kullanıcılarınızın sitenizi nasıl deneyimleyeceğini daha iyi anlamak ve iyileştirme alanlarını belirlemek için lighthouse'u gizli olarak çalıştırın. Bu simüle edilmiş bir testtir ve saha verilerine (Core Web Vitals gibi) bakmakla eşleştirilmelidir.        </li>
       </ul>
       <ul>
-        <li>
-          <strong><a href="/docs/app/api-reference/functions/use-report-web-vitals" title="useReportWebVitals hook"><code translate="no">useReportWebVitals</code> hook</a>:</strong>
-          Use this hook to send
-          <a href="https://web.dev/articles/vitals" rel="noopener noreferrer nofollow" target="_blank" title="Core Web Vitals">Core Web Vitals<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+          <strong><a href="/docs/app/api-reference/functions/use-report-web-vitals" title="useReportWebVitals hook"><code translate="no">useReportWebVitals</code> hook</a>:</strong> <a href="https://web.dev/articles/vitals" rel="noopener noreferrer nofollow" target="_blank" title="Core Web Vitals">Core Web Vitals<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-          data to analytics tools.
-        </li>
+                <path d="M7 7h10v10"></path></svg></span></a>verilerini analiz araçlarına göndermek için bu kancayı kullanın.        </li>
       </ul>
       <h3 id="analyzing-bundles" data-docs-heading="" translate="no">
         <a href="#analyzing-bundles" title="Analyzing bundles">Analyzing bundles<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -318,26 +216,22 @@
       </p>
       <p translated="true">Ayrıca, aşağıdaki araçlar uygulamanıza yeni bağımlılıklar eklemenin etkisini anlamanızı sağlayabilir:</p>
       <ul>
-        <li>
-          <a href="https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost" rel="noopener noreferrer nofollow" target="_blank" title="Import Cost">Import Cost<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+         <a href="https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost" rel="noopener noreferrer nofollow" target="_blank" title="Import Cost">İthalat Maliyeti<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-        </li>
-        <li>
-          <a href="https://packagephobia.com/" rel="noopener noreferrer nofollow" target="_blank" title="Package Phobia">Package Phobia<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 7h10v10"></path></svg></span></a></li>
+        <li translated="true">
+         <a href="https://packagephobia.com/" rel="noopener noreferrer nofollow" target="_blank" title="Package Phobia">Paket Fobisi<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-        </li>
-        <li>
-          <a href="https://bundlephobia.com/" rel="noopener noreferrer nofollow" target="_blank" title="Bundle Phobia">Bundle Phobia<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 7h10v10"></path></svg></span></a></li>
+        <li translated="true">
+         <a href="https://bundlephobia.com/" rel="noopener noreferrer nofollow" target="_blank" title="Bundle Phobia">Bundle Phobia<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-        </li>
-        <li>
-          <a href="https://bundlejs.com/" rel="noopener noreferrer nofollow" target="_blank" title="bundlejs">bundlejs<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 7h10v10"></path></svg></span></a></li>
+        <li translated="true">
+         <a href="https://bundlejs.com/" rel="noopener noreferrer nofollow" target="_blank" title="bundlejs">bundlejs<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-        </li>
+                <path d="M7 7h10v10"></path></svg></span></a></li>
       </ul>
       <h2 id="after-deployment" data-docs-heading="" translate="no">
         <a href="#after-deployment" title="After deployment">After deployment<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -352,39 +246,27 @@
       </p>
       <p translated="true">Vercel dağıtımları için aşağıdakileri öneriyoruz:</p>
       <ul>
-        <li>
-          <strong><a href="https://vercel.com/analytics?utm_source=next-site&amp;utm_campaign=nextjs-docs&amp;utm_medium=docs" rel="noopener noreferrer" target="_blank" title="Analytics">Analytics<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+         <strong><a href="https://vercel.com/analytics?utm_source=next-site&amp;utm_campaign=nextjs-docs&amp;utm_medium=docs" rel="noopener noreferrer" target="_blank" title="Analytics">Analytics<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                   <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path></svg></span></a>:</strong>
-          A built-in analytics dashboard to help you understand your application's traffic, including the number of unique visitors, page views, and
-          more.
-        </li>
-        <li>
-          <strong><a href="https://vercel.com/docs/speed-insights?utm_source=next-site&amp;utm_campaign=nextjs-docs&amp;utm_medium=docs" rel="noopener noreferrer" target="_blank" title="Speed Insights">Speed Insights<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                  <path d="M7 7h10v10"></path></svg></span></a></strong>: Tekil ziyaretçi sayısı, sayfa görüntülemeleri ve daha fazlası dahil olmak üzere uygulamanızın trafiğini anlamanıza yardımcı olacak yerleşik bir analitik gösterge tablosu.        </li>
+        <li translated="true">
+         <strong><a href="https://vercel.com/docs/speed-insights?utm_source=next-site&amp;utm_campaign=nextjs-docs&amp;utm_medium=docs" rel="noopener noreferrer" target="_blank" title="Speed Insights">Speed Insights<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                   <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path></svg></span></a>:</strong>
-          Real-world performance insights based on visitor data, offering a practical view of how your website is performing in the field.
-        </li>
-        <li>
-          <strong><a href="https://vercel.com/docs/observability/runtime-logs?utm_source=next-site&amp;utm_campaign=nextjs-docs&amp;utm_medium=docs" rel="noopener noreferrer" target="_blank" title="Logging">Logging<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                  <path d="M7 7h10v10"></path></svg></span></a></strong>: Ziyaretçi verilerine dayalı gerçek dünya performans bilgileri, web sitenizin sahada nasıl performans gösterdiğine dair pratik bir görünüm sunar.      </li>
+        <li translated="true">
+         <strong><a href="https://vercel.com/docs/observability/runtime-logs?utm_source=next-site&amp;utm_campaign=nextjs-docs&amp;utm_medium=docs" rel="noopener noreferrer" target="_blank" title="Logging">Günlük kaydı<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                   <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path></svg></span></a>:</strong>
-          Runtime and Activity logs to help you debug issues and monitor your application in production. Alternatively, see the
-          <a href="https://vercel.com/integrations?utm_source=next-site&amp;utm_campaign=nextjs-docs&amp;utm_medium=docs" rel="noopener noreferrer" target="_blank" title="integrations page">integrations page<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                  <path d="M7 7h10v10"></path></svg></span></a></strong>: Sorunları ayıklamanıza ve uygulamanızı üretimde izlemenize yardımcı olacak Çalışma Zamanı ve Etkinlik günlükleri. Alternatif olarak, üçüncü taraf araç ve hizmetlerin bir listesi için <a href="https://vercel.com/integrations?utm_source=next-site&amp;utm_campaign=nextjs-docs&amp;utm_medium=docs" rel="noopener noreferrer" target="_blank" title="integrations page"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-          for a list of third-party tools and services.
-        </li>
+                <path d="M7 7h10v10"></path></svg></span> entegrasyonlar sayfasına</a>bakın.       </li>
       </ul>
       <blockquote class="p-3 text-sm">
-        <p><strong>Bilmekte fayda var:</strong></p>
-        <p>
-          To get a comprehensive understanding of the best practices for production deployments on Vercel, including detailed strategies for improving
-          website performance, refer to the
-          <a href="https://vercel.com/docs/production-checklist?utm_source=next-site&amp;utm_campaign=nextjs-docs&amp;utm_medium=docs" rel="noopener noreferrer" target="_blank" title="Vercel Production Checklist">Vercel Production Checklist<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <p translated="true"><strong>Bilmekte fayda var:</strong></p>
+        <p translated="true">
+          Web sitesi performansını iyileştirmeye yönelik ayrıntılı stratejiler de dahil olmak üzere Vercel'de üretim dağıtımlarına yönelik en iyi uygulamaları kapsamlı bir şekilde anlamak için <a href="https://vercel.com/docs/production-checklist?utm_source=next-site&amp;utm_campaign=nextjs-docs&amp;utm_medium=docs" rel="noopener noreferrer" target="_blank" title="Vercel Production Checklist">Vercel Üretim Kontrol Listesine<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>.
-        </p>
+                <path d="M7 7h10v10"></path></svg></span></a> bakın.       </p>
       </blockquote>
       <p translated="true">
         Bu önerilere uymanız, kullanıcılarınız için daha hızlı, daha güvenilir ve güvenli bir uygulama oluşturmanıza yardımcı olacaktır.

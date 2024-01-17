@@ -22,20 +22,16 @@
       </h2>
       <p translated="true">Mümkün olduğunda, Sunucu Bileşenleri ile sunucudan veri almanızı öneririz. Bu size şunları sağlar:</p>
       <ul>
-        <li>Have direct access to backend data resources (e.g. databases).</li>
-        <li>
-          Keep your application more secure by preventing sensitive information, such as access tokens and API keys, from being exposed to the client.
-        </li>
-        <li>
-          Fetch data and render in the same environment. This reduces both the back-and-forth communication between client and server, as well as the
-          <a href="https://vercel.com/blog/how-react-18-improves-application-performance" rel="noopener noreferrer" target="_blank" title="work on the main thread">work on the main thread<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">Arka uç veri kaynaklarına (ör. veritabanları) doğrudan erişime sahip olun.</li>
+        <li translated="true">
+          Erişim belirteçleri ve API anahtarları gibi hassas bilgilerin istemciye ifşa edilmesini önleyerek uygulamanızı daha güvenli tutun.      </li>
+        <li translated="true">
+          Verileri alın ve aynı ortamda render edin. Bu, hem istemci ve sunucu arasındaki ileri geri iletişimi hem de istemcideki <a href="https://vercel.com/blog/how-react-18-improves-application-performance" rel="noopener noreferrer" target="_blank" title="work on the main thread"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-          on the client.
-        </li>
-        <li>Perform multiple data fetches with single round-trip instead of multiple individual requests on the client.</li>
-        <li>Reduce client-server <a href="#parallel-and-sequential-data-fetching" title="waterfalls">waterfalls</a>.</li>
-        <li>Depending on your region, data fetching can also happen closer to your data source, reducing latency and improving performance.</li>
+                <path d="M7 7h10v10"></path></svg></span> ana iş parçacığı üzerindeki çalışmayı</a>azaltır.        </li>
+        <li translated="true">İstemcide birden fazla bireysel istek yerine tek bir gidiş-dönüş ile birden fazla veri getirme işlemi gerçekleştirin.</li>
+        <li translated="true">İstemci-sunucu <a href="#parallel-and-sequential-data-fetching" title="waterfalls">şelalelerini</a> azaltın.</li>
+        <li translated="true">Bölgenize bağlı olarak, veri getirme işlemi veri kaynağınıza daha yakın bir yerde de gerçekleşebilir, böylece gecikme süresi azalır ve performans artar.</li>
       </ul>
       <p translated="true">
         Ardından,
@@ -61,9 +57,8 @@
         fazla bilgi edinin
       </p>
       <blockquote class="p-3 text-sm">
-        <p>
-          <strong>Good to know</strong>: This also applies to layouts, since it's not possible to pass data between a parent layout and its children.
-        </p>
+        <p translated="true">
+         <strong>Bilmekte</strong> fayda var: Bir üst düzen ile onun alt düzenleri arasında veri aktarımı mümkün olmadığından, bu durum düzenler için de geçerlidir.        </p>
       </blockquote>
       <h2 id="streaming" data-docs-heading="" translate="no">
         <a href="#streaming" title="Streaming">Streaming<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -106,15 +101,10 @@
         <img alt="Sequential and Parallel Data Fetching" loading="lazy" width="1600" height="525" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color: transparent" src="/docs/light/sequential-parallel-data-fetching.png"><img alt="Sequential and Parallel Data Fetching" loading="lazy" width="1600" height="525" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color: transparent" src="/docs/dark/sequential-parallel-data-fetching.png">
       </figure>
       <ul>
-        <li>
-          With <strong>sequential data fetching</strong>, requests in a route are dependent on each other and therefore create waterfalls. There may
-          be cases where you want this pattern because one fetch depends on the result of the other, or you want a condition to be satisfied before
-          the next fetch to save resources. However, this behavior can also be unintentional and lead to longer loading times.
-        </li>
-        <li>
-          With <strong>parallel data fetching</strong>, requests in a route are eagerly initiated and will load data at the same time. This reduces
-          client-server waterfalls and the total time it takes to load data.
-        </li>
+        <li translated="true">
+         <strong>Sıralı veri getirme</strong> ile, bir rotadaki istekler birbirine bağımlıdır ve bu nedenle şelaleler oluşturur. Bu modeli istediğiniz durumlar olabilir çünkü bir getirme işlemi diğerinin sonucuna bağlıdır veya kaynakları korumak için bir sonraki getirme işleminden önce bir koşulun yerine getirilmesini istersiniz. Ancak bu davranış kasıtsız da olabilir ve daha uzun yükleme sürelerine yol açabilir.        </li>
+        <li translated="true">
+         <strong>Paralel veri getirme</strong> ile, bir rotadaki istekler istekli olarak başlatılır ve aynı anda veri yüklenir. Bu, istemci-sunucu şelalelerini ve veri yüklemek için gereken toplam süreyi azaltır.        </li>
       </ul>
       <h3 id="sequential-data-fetching" data-docs-heading="" translate="no">
         <a href="#sequential-data-fetching" title="Sequential Data Fetching">Sequential Data Fetching<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -206,18 +196,11 @@
         Bu, tüm rotanın veri getirme nedeniyle engellenmesini önleyecek ve kullanıcı sayfanın engellenmeyen bölümleriyle etkileşime girebilecektir.
       </p>
       <blockquote class="p-3 text-sm">
-        <p><strong>Blocking Data Requests:</strong></p>
-        <p>
-          An alternative approach to prevent waterfalls is to fetch data globally, at the root of your application, but this will block rendering for
-          all route segments beneath it until the data has finished loading. This can be described as "all or nothing" data fetching. Either you have
-          the entire data for your page or application, or none.
-        </p>
-        <p>
-          Any fetch requests with <code translate="no">await</code> will block rendering and data fetching for the entire tree beneath it, unless they
-          are wrapped in a <code translate="no">&lt;Suspense&gt;</code> boundary or <code translate="no">loading.js</code> is used. Another
-          alternative is to use <a href="#parallel-data-fetching" title="parallel data fetching">parallel data fetching</a> or the
-          <a href="#preloading-data" title="preload pattern">preload pattern</a>.
-        </p>
+        <p translated="true"><strong>Veri Taleplerini Engelleme:</strong></p>
+        <p translated="true">
+          Şelaleleri önlemek için alternatif bir yaklaşım, uygulamanızın kökünde global olarak veri getirmektir, ancak bu, verilerin yüklenmesi bitene kadar altındaki tüm rota segmentleri için oluşturmayı engelleyecektir. Bu, "ya hep ya hiç" veri getirme olarak tanımlanabilir. Ya sayfanız ya da uygulamanız için tüm verilere sahip olursunuz ya da hiçbirine sahip olmazsınız.        </p>
+        <p translated="true">
+          <code translate="no">await</code> içeren tüm getirme istekleri, bir <code translate="no">&lt;Suspense&gt;</code> sınırına sarılmadıkları veya <code translate="no">loading.js</code> kullanılmadıkları sürece, altındaki tüm ağacın oluşturulmasını ve veri getirilmesini engelleyecektir. Diğer bir alternatif ise <a href="#parallel-data-fetching" title="parallel data fetching">paralel veri getirme</a> veya <a href="#preloading-data" title="preload pattern">ön yükleme modelini</a> kullanmaktır.        </p>
       </blockquote>
       <h3 id="parallel-data-fetching" data-docs-heading="" translate="no">
         <a href="#parallel-data-fetching" title="Parallel Data Fetching">Parallel Data Fetching<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -459,13 +442,10 @@
         Düzenler, Sayfalar veya diğer bileşenler tarafından kullanılabilir.
       </p>
       <blockquote class="p-3 text-sm">
-        <p><strong>Bilmekte fayda var:</strong></p>
+        <p translated="true"><strong>Bilmekte fayda var:</strong></p>
         <ul>
-          <li>
-            We recommend using the
-            <a href="/docs/app/building-your-application/rendering/composition-patterns#keeping-server-only-code-out-of-the-client-environment" title="server-only package"><code translate="no">server-only</code> package</a>
-            to make sure server data fetching functions are never used on the client.
-          </li>
+          <li translated="true">
+            Sunucu veri getirme işlevlerinin istemcide asla kullanılmadığından emin olmak için <a href="/docs/app/building-your-application/rendering/composition-patterns#keeping-server-only-code-out-of-the-client-environment" title="server-only package"><code translate="no">server-only</code> paketini</a>kullanmanızı öneririz.          </li>
         </ul>
       </blockquote>
       <h2 id="preventing-sensitive-data-from-being-exposed-to-the-client" data-docs-heading="" translate="no">

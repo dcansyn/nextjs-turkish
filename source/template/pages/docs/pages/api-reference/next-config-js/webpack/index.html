@@ -9,16 +9,16 @@
 
     <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Custom Webpack Config</h1>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: changes to webpack config are not covered by semver so proceed at your own risk</p>
+<p translated="true"><strong>Bilmenizde</strong> fayda var: webpack yapılandırmasında yapılan değişiklikler semver tarafından kapsanmaz, bu nedenle riski size ait olmak üzere devam edin</p>
 </blockquote>
 <p translated="true">Uygulamanıza özel webpack yapılandırması eklemeye devam etmeden önce Next.js'nin kullanım durumunuzu zaten desteklemediğinden emin olun:</p>
 <!-- -->
 <ul>
-<li><a href="/docs/pages/building-your-application/styling" title="CSS imports">CSS imports</a></li>
-<li><a href="/docs/pages/building-your-application/styling/css-modules" title="CSS modules">CSS modules</a></li>
-<li><a href="/docs/pages/building-your-application/styling/sass" title="Sass/SCSS imports">Sass/SCSS imports</a></li>
-<li><a href="/docs/pages/building-your-application/styling/sass" title="Sass/SCSS modules">Sass/SCSS modules</a></li>
-<li><a href="/docs/pages/building-your-application/configuring/babel" title="Customizing babel configuration">Customizing babel configuration</a></li>
+<li translated="true"><a href="/docs/pages/building-your-application/styling" title="CSS imports">CSS içe aktarımları</a></li>
+<li translated="true"><a href="/docs/pages/building-your-application/styling/css-modules" title="CSS modules">CSS modülleri</a></li>
+<li translated="true"><a href="/docs/pages/building-your-application/styling/sass" title="Sass/SCSS imports">Sass/SCSS içe aktarımları</a></li>
+<li translated="true"><a href="/docs/pages/building-your-application/styling/sass" title="Sass/SCSS modules">Sass/SCSS modülleri</a></li>
+<li translated="true"><a href="/docs/pages/building-your-application/configuring/babel" title="Customizing babel configuration">Babel yapılandırmasını özelleştirme</a></li>
 </ul>
 <p translated="true">Sıkça sorulan bazı özellikler eklenti olarak mevcuttur:</p>
 <ul>
@@ -36,17 +36,16 @@
 <span class="line"><span style="color:var(--shiki-color-text)">  }</span><span style="color:var(--shiki-token-punctuation)">,</span></span>
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <blockquote class="p-3 text-sm">
-<p>The <code translate="no">webpack</code> function is executed three times, twice for the server (nodejs / edge runtime) and once for the client. This allows you to distinguish between client and server configuration using the <code translate="no">isServer</code> property.</p>
+<p translated="true"><code translate="no">webpack</code> işlevi, iki kez sunucu (nodejs / edge runtime) ve bir kez de istemci için olmak üzere üç kez çalıştırılır. Bu, <code translate="no">isServer</code> özelliğini kullanarak istemci ve sunucu yapılandırması arasında ayrım yapmanızı sağlar.</p>
 </blockquote>
 <p translated="true"><code translate="no">webpack</code> işlevinin ikinci bağımsız değişkeni, aşağıdaki özelliklere sahip bir nesnedir:</p>
 <ul>
-<li><code translate="no">buildId</code>: <code translate="no">String</code> - The build id, used as a unique identifier between builds</li>
-<li><code translate="no">dev</code>: <code translate="no">Boolean</code> - Indicates if the compilation will be done in development</li>
-<li><code translate="no">isServer</code>: <code translate="no">Boolean</code> - It's <code translate="no">true</code> for server-side compilation, and <code translate="no">false</code> for client-side compilation</li>
-<li><code translate="no">nextRuntime</code>: <code translate="no">String | undefined</code> - The target runtime for server-side compilation; either <code translate="no">"edge"</code> or <code translate="no">"nodejs"</code>, it's <code translate="no">undefined</code> for client-side compilation.</li>
-<li><code translate="no">defaultLoaders</code>: <code translate="no">Object</code> - Default loaders used internally by Next.js:<!-- -->
-<ul>
-<li><code translate="no">babel</code>: <code translate="no">Object</code> - Default <code translate="no">babel-loader</code> configuration</li>
+<li translated="true"><code translate="no">buildId</code>: <code translate="no">String</code> - Yapılar arasında benzersiz bir tanımlayıcı olarak kullanılan yapı kimliği</li>
+<li translated="true"><code translate="no">dev</code>: <code translate="no">Boolean</code> - Derlemenin geliştirme aşamasında yapılıp yapılmayacağını belirtir</li>
+<li translated="true"><code translate="no">isServer</code>: <code translate="no">Boolean</code> - Sunucu tarafı derleme için <code translate="no">true</code> ve istemci tarafı derleme için <code translate="no">false</code> </li>
+<li translated="true"><code translate="no">nextRuntime</code>: <code translate="no">String | undefined</code> - Sunucu tarafı derleme için hedef çalışma zamanı; <code translate="no">"edge"</code> veya <code translate="no">"nodejs"</code>, istemci tarafı derleme için <code translate="no">undefined</code>.</li>
+<li translated="true"><code translate="no">defaultLoaders</code>: <code translate="no">Object</code> - Next.js tarafından dahili olarak kullanılan varsayılan yükleyiciler:<!-- --><ul>
+<li><code translate="no">babel</code>: <code translate="no">Object</code> - Varsayılan <code translate="no">babel-loader</code> yapılandırması</li>
 </ul>
 </li>
 </ul>

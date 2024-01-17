@@ -35,11 +35,9 @@
           uygulamalar, genellikle yavaş ilk sayfa yükleme süresiyle karşılaşır. Bunun birkaç nedeni vardır:</a>
       </p>
       <ol>
-        <li>
-          The browser needs to wait for the React code and your entire application bundle to download and run before your code is able to send
-          requests to load some data.
-        </li>
-        <li>Your application code grows with every new feature and extra dependency you add.</li>
+        <li translated="true">
+          Kodunuzun bazı verileri yüklemek için istek gönderebilmesi için tarayıcının React kodunun ve tüm uygulama paketinizin indirilmesini ve çalışmasını beklemesi gerekir.        </li>
+        <li translated="true">Uygulama kodunuz, eklediğiniz her yeni özellik ve ekstra bağımlılıkla birlikte büyür.</li>
       </ol>
       <h3 id="no-automatic-code-splitting" data-docs-heading="" translate="no">
         <a href="#no-automatic-code-splitting" title="No automatic code splitting">No automatic code splitting<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -211,10 +209,8 @@
 <span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">default</span><span style="color:var(--shiki-color-text)"> nextConfig</span></span></code></pre>
       </div>
       <blockquote class="p-3 text-sm">
-        <p>
-          <strong>Bilmekte fayda var:</strong> You can use either <code translate="no">.js</code> or <code translate="no">.mjs</code> for your Next.js
-          configuration file.
-        </p>
+        <p translated="true">
+         <strong>Bilmekte fayda var:</strong> Next.js yapılandırma dosyanız için <code translate="no">.js</code> veya <code translate="no">.mjs</code> adreslerini kullanabilirsiniz.        </p>
       </blockquote>
       <h3 id="step-3-update-typescript-configuration" data-docs-heading="" translate="no">
         <a href="#step-3-update-typescript-configuration" title="Step 3: Update TypeScript Configuration">Step 3: Update TypeScript Configuration<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -228,65 +224,52 @@
         değişikliklerle güncellemeniz gerekir. TypeScript kullanmıyorsanız, bu adımı atlayabilirsiniz.
       </p>
       <ol>
-        <li>
-          Remove the
-          <a href="https://www.typescriptlang.org/tsconfig#references" rel="noopener noreferrer nofollow" target="_blank" title="project reference">project reference<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+          <a href="https://www.typescriptlang.org/tsconfig#references" rel="noopener noreferrer nofollow" target="_blank" title="project reference"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 17L17 7"></path>
+                <path d="M7 7h10v10"></path></svg></span> proje referansını</a> <code translate="no">tsconfig.node.json</code>adresinden kaldırın        </li>
+        <li translated="true">
+          <code translate="no">./dist/types/**/*.ts</code> ve <code translate="no">./next-env.d.ts</code> adreslerini <a href="https://www.typescriptlang.org/tsconfig#include" rel="noopener noreferrer nofollow" target="_blank" title="include array"><code translate="no">include</code> dizisine</a>ekleyin <a href="https://www.typescriptlang.org/tsconfig#include" rel="noopener noreferrer nofollow" target="_blank" title="include array"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 17L17 7"></path>
+                <path d="M7 7h10v10"></path></svg></span></a></li>
+        <li translated="true">
+          <code translate="no">./node_modules</code> adresini <a href="https://www.typescriptlang.org/tsconfig#exclude" rel="noopener noreferrer nofollow" target="_blank" title="exclude array"><code translate="no">exclude</code> dizisine</a>ekleyin <a href="https://www.typescriptlang.org/tsconfig#exclude" rel="noopener noreferrer nofollow" target="_blank" title="exclude array"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 17L17 7"></path>
+                <path d="M7 7h10v10"></path></svg></span></a></li>
+        <li translated="true">
+          <code translate="no">{ "name": "next" }</code> adresini <a href="https://www.typescriptlang.org/tsconfig#plugins" rel="noopener noreferrer nofollow" target="_blank" title="plugins array in compilerOptions"> <code translate="no">compilerOptions</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 17L17 7"></path>
+                <path d="M7 7h10v10"></path></svg></span> adresindeki<code translate="no">plugins</code> dizisine</a> ekleyin: <code translate="no">"plugins": [{ "name": "next" }]</code>
+        </li>
+        <li translated="true">
+          Set   <a href="https://www.typescriptlang.org/tsconfig#esModuleInterop" rel="noopener noreferrer nofollow" target="_blank" title="esModuleInterop"><code translate="no">esModuleInterop</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
                 <path d="M7 7h10v10"></path></svg></span></a>
-          to <code translate="no">tsconfig.node.json</code>
+          <code translate="no">true</code> adresine: <code translate="no">"esModuleInterop": true</code>
         </li>
-        <li>
-          Add <code translate="no">./dist/types/**/*.ts</code> and <code translate="no">./next-env.d.ts</code> to the
-          <a href="https://www.typescriptlang.org/tsconfig#include" rel="noopener noreferrer nofollow" target="_blank" title="include array"><code translate="no">include</code> array<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+          Set   <a href="https://www.typescriptlang.org/tsconfig#jsx" rel="noopener noreferrer nofollow" target="_blank" title="jsx"><code translate="no">jsx</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
                 <path d="M7 7h10v10"></path></svg></span></a>
+          <code translate="no">preserve</code> adresine: <code translate="no">"jsx": "preserve"</code>
         </li>
-        <li>
-          Add <code translate="no">./node_modules</code> to the
-          <a href="https://www.typescriptlang.org/tsconfig#exclude" rel="noopener noreferrer nofollow" target="_blank" title="exclude array"><code translate="no">exclude</code> array<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+          Set   <a href="https://www.typescriptlang.org/tsconfig#allowJs" rel="noopener noreferrer nofollow" target="_blank" title="allowJs"><code translate="no">allowJs</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
                 <path d="M7 7h10v10"></path></svg></span></a>
+          <code translate="no">true</code> adresine: <code translate="no">"allowJs": true</code>
         </li>
-        <li>
-          Add <code translate="no">{ "name": "next" }</code> to the
-          <a href="https://www.typescriptlang.org/tsconfig#plugins" rel="noopener noreferrer nofollow" target="_blank" title="plugins array in compilerOptions"><code translate="no">plugins</code> array in <code translate="no">compilerOptions</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
-                <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>: <code translate="no">"plugins": [{ "name": "next" }]</code>
-        </li>
-        <li>
-          Set
-          <a href="https://www.typescriptlang.org/tsconfig#esModuleInterop" rel="noopener noreferrer nofollow" target="_blank" title="esModuleInterop"><code translate="no">esModuleInterop</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+          Set   <a href="https://www.typescriptlang.org/tsconfig#forceConsistentCasingInFileNames" rel="noopener noreferrer nofollow" target="_blank" title="forceConsistentCasingInFileNames"><code translate="no">forceConsistentCasingInFileNames</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
                 <path d="M7 7h10v10"></path></svg></span></a>
-          to <code translate="no">true</code>: <code translate="no">"esModuleInterop": true</code>
+          <code translate="no">true</code> adresine: <code translate="no">"forceConsistentCasingInFileNames": true</code>
         </li>
-        <li>
-          Set
-          <a href="https://www.typescriptlang.org/tsconfig#jsx" rel="noopener noreferrer nofollow" target="_blank" title="jsx"><code translate="no">jsx</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+          Set   <a href="https://www.typescriptlang.org/tsconfig#incremental" rel="noopener noreferrer nofollow" target="_blank" title="incremental"><code translate="no">incremental</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
                 <path d="M7 7h10v10"></path></svg></span></a>
-          to <code translate="no">preserve</code>: <code translate="no">"jsx": "preserve"</code>
-        </li>
-        <li>
-          Set
-          <a href="https://www.typescriptlang.org/tsconfig#allowJs" rel="noopener noreferrer nofollow" target="_blank" title="allowJs"><code translate="no">allowJs</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
-                <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-          to <code translate="no">true</code>: <code translate="no">"allowJs": true</code>
-        </li>
-        <li>
-          Set
-          <a href="https://www.typescriptlang.org/tsconfig#forceConsistentCasingInFileNames" rel="noopener noreferrer nofollow" target="_blank" title="forceConsistentCasingInFileNames"><code translate="no">forceConsistentCasingInFileNames</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
-                <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-          to <code translate="no">true</code>: <code translate="no">"forceConsistentCasingInFileNames": true</code>
-        </li>
-        <li>
-          Set
-          <a href="https://www.typescriptlang.org/tsconfig#incremental" rel="noopener noreferrer nofollow" target="_blank" title="incremental"><code translate="no">incremental</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
-                <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-          to <code translate="no">true</code>: <code translate="no">"incremental": true</code>
+          <code translate="no">true</code> adresine: <code translate="no">"incremental": true</code>
         </li>
       </ol>
       <p translated="true">İşte bu değişikliklerle çalışan bir <code translate="no">tsconfig.json</code> örneği:</p>
@@ -361,8 +344,8 @@
       </p>
       <p translated="true">Bu adımda, <code translate="no">index.html</code> dosyanızı bir kök düzen dosyasına dönüştüreceksiniz:</p>
       <ol>
-        <li>Create a new <code translate="no">app</code> directory in your <code translate="no">src</code> directory.</li>
-        <li>Create a new <code translate="no">layout.tsx</code> file inside that <code translate="no">app</code> directory:</li>
+        <li translated="true"><code translate="no">src</code> dizininizde yeni bir <code translate="no">app</code> dizini oluşturun.</li>
+        <li translated="true">Bu <code translate="no">app</code> dizini içinde yeni bir <code translate="no">layout.tsx</code> dosyası oluşturun:</li>
       </ol>
       <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no">
         <div class="code-block_header__t3NRd">
@@ -402,17 +385,12 @@
       </div>
       <!-- -->
       <blockquote class="p-3 text-sm">
-        <p>
-          <strong>Good to know</strong>: <code translate="no">.js</code>, <code translate="no">.jsx</code>, or
-          <code translate="no">.tsx</code> extensions can be used for Layout files.
-        </p>
+        <p translated="true">
+         <strong>Bilmekte</strong> fayda var: <code translate="no">.js</code> Düzen dosyaları için , <code translate="no">.jsx</code> veya <code translate="no">.tsx</code> uzantıları kullanılabilir.        </p>
       </blockquote>
       <ol start="3">
-        <li>
-          Copy the content of your <code translate="no">index.html</code> file into the previously created
-          <code translate="no">&lt;RootLayout&gt;</code> component while replacing the <code translate="no">body.div#root</code> and
-          <code translate="no">body.script</code> tags with <code translate="no">&lt;div id="root"&gt;{children}&lt;/div&gt;</code>:
-        </li>
+        <li translated="true">
+          <code translate="no">index.html</code> dosyanızın içeriğini önceden oluşturulmuş <code translate="no">&lt;RootLayout&gt;</code> bileşenine kopyalayın ve <code translate="no">body.div#root</code> ve <code translate="no">body.script</code> etiketlerini <code translate="no">&lt;div id="root"&gt;{children}&lt;/div&gt;</code> ile değiştirin:        </li>
       </ol>
       <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no">
         <div class="code-block_header__t3NRd">
@@ -465,17 +443,12 @@
       </div>
       <!-- -->
       <ol start="4">
-        <li>
-          Next.js already includes by default the
-          <a href="https://developer.mozilla.org/docs/Web/HTML/Element/meta#charset" rel="noopener noreferrer nofollow" target="_blank" title="meta charset">meta charset<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+          Next.js zaten varsayılan olarak <a href="https://developer.mozilla.org/docs/Web/HTML/Element/meta#charset" rel="noopener noreferrer nofollow" target="_blank" title="meta charset">meta charset<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-          and
-          <a href="https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag" rel="noopener noreferrer nofollow" target="_blank" title="meta viewport">meta viewport<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 7h10v10"></path></svg></span></a>ve <a href="https://developer.mozilla.org/docs/Web/HTML/Viewport_meta_tag" rel="noopener noreferrer nofollow" target="_blank" title="meta viewport">meta viewport<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-          tags, so you can safely remove those from your <code translate="no">&lt;head&gt;</code>:
-        </li>
+                <path d="M7 7h10v10"></path></svg></span></a>etiketlerini içerir, bu nedenle bunları <code translate="no">&lt;head&gt;</code> adresinizden güvenle kaldırabilirsiniz:        </li>
       </ol>
       <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no">
         <div class="code-block_header__t3NRd">
@@ -526,14 +499,8 @@
       </div>
       <!-- -->
       <ol start="5">
-        <li>
-          Any <a href="/docs/app/building-your-application/optimizing/metadata#file-based-metadata" title="metadata files">metadata files</a> such as
-          <code translate="no">favicon.ico</code>, <code translate="no">icon.png</code>, <code translate="no">robots.txt</code> are automatically
-          added to the application <code translate="no">&lt;head&gt;</code> tag as long as you have them placed into the top level of the
-          <code translate="no">app</code> directory. After moving
-          <a href="/docs/app/building-your-application/optimizing/metadata#file-based-metadata" title="all supported files">all supported files</a>
-          into the <code translate="no">app</code> directory you can safely delete their <code translate="no">&lt;link&gt;</code> tags:
-        </li>
+        <li translated="true">
+          <code translate="no">favicon.ico</code> , <code translate="no">icon.png</code>, <code translate="no">robots.txt</code> gibi <a href="/docs/app/building-your-application/optimizing/metadata#file-based-metadata" title="metadata files">meta veri dosyaları</a>, <code translate="no">app</code> dizininin en üst seviyesine yerleştirdiğiniz sürece otomatik olarak <code translate="no">&lt;head&gt;</code> etiketine eklenir. <a href="/docs/app/building-your-application/optimizing/metadata#file-based-metadata" title="all supported files">Desteklenen tüm dosyaları</a> <code translate="no">app</code> dizinine taşıdıktan sonra <code translate="no">&lt;link&gt;</code> etiketlerini güvenle silebilirsiniz:        </li>
       </ol>
       <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no">
         <div class="code-block_header__t3NRd">
@@ -583,12 +550,8 @@
       </div>
       <!-- -->
       <ol start="6">
-        <li>
-          Finally, Next.js can manage your last <code translate="no">&lt;head&gt;</code> tags with the
-          <a href="/docs/app/building-your-application/optimizing/metadata" title="Metadata API">Metadata API</a>. Move your final metadata info into
-          an exported
-          <a href="/docs/app/api-reference/functions/generate-metadata#metadata-object" title="metadata object"><code translate="no">metadata</code> object</a>:
-        </li>
+        <li translated="true">
+          Son olarak Next.js, <a href="/docs/app/building-your-application/optimizing/metadata" title="Metadata API">Metadata API</a> ile son <code translate="no">&lt;head&gt;</code> etiketlerinizi yönetebilir. Son meta veri bilgilerinizi dışa aktarılan bir <a href="/docs/app/api-reference/functions/generate-metadata#metadata-object" title="metadata object"><code translate="no">metadata</code> nesnesine</a> taşıyın:        </li>
       </ol>
       <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no">
         <div class="code-block_header__t3NRd">
@@ -657,9 +620,8 @@
         Vite'daki en yakın karşılığı <code translate="no">main.tsx</code> dosyanızdır. Bu adımda, uygulamanızın giriş noktasını ayarlayacaksınız.
       </p>
       <ol>
-        <li>
-          <strong>Create a <code translate="no">[[...slug]]</code> directory in your <code translate="no">app</code> directory.</strong>
-        </li>
+        <li translated="true">
+          <strong> <code translate="no">app</code> dizininizde bir <code translate="no">[[...slug]]</code> dizini oluşturun</strong>.        </li>
       </ol>
       <p translated="true">
         Bu kılavuzda ilk olarak Next.js'imizi bir SPA (Tek Sayfa Uygulaması) olarak kurmayı hedeflediğimizden, uygulamanızın tüm olası rotalarını
@@ -673,10 +635,8 @@
         içeren dosyaya yönlendirilmesini sağlayacaktır.
       </p>
       <ol start="2">
-        <li>
-          <strong>Create a new <code translate="no">page.tsx</code> file inside the <code translate="no">app/[[...slug]]</code> directory with the
-            following content:</strong>
-        </li>
+        <li translated="true">
+          <strong> <code translate="no">app/[[...slug]]</code> dizini içinde aşağıdaki içeriğe sahip yeni bir <code translate="no">page.tsx</code> dosyası oluşturun</strong>:        </li>
       </ol>
       <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no">
         <div class="code-block_header__t3NRd">
@@ -719,10 +679,8 @@
       </div>
       <!-- -->
       <blockquote class="p-3 text-sm">
-        <p>
-          <strong>Good to know</strong>: <code translate="no">.js</code>, <code translate="no">.jsx</code>, or
-          <code translate="no">.tsx</code> extensions can be used for Page files.
-        </p>
+        <p translated="true">
+         <strong>Bilmekte</strong> fayda var: <code translate="no">.js</code> Sayfa dosyaları için , <code translate="no">.jsx</code> veya <code translate="no">.tsx</code> uzantıları kullanılabilir.        </p>
       </blockquote>
       <p translated="true">
         Bu dosya, <code translate="no">'use client'</code>yönergesi tarafından<a href="/docs/app/building-your-application/rendering/client-components" title="Client Component">İstemci</a>
@@ -803,9 +761,8 @@
         isteyeceksiniz.
       </p>
       <ol>
-        <li>
-          <strong>Convert absolute import paths for images imported from <code translate="no">/public</code> into relative imports:</strong>
-        </li>
+        <li translated="true">
+          <strong> <code translate="no">/public</code> adresinden içe aktarılan görüntüler için mutlak içe aktarma yollarını göreli içe aktarmalara dönüştürün</strong>:        </li>
       </ol>
       <div class="code-block_wrapper__t6FCO not-prose" translate="no">
         <button aria-label="Copy code" class="code-block_copyButton__uo5Yu code-block_copyFloatingButton__PsMvB" type="button">
@@ -821,10 +778,8 @@
 <span class="line"><span style="color:var(--shiki-token-keyword)">import</span><span style="color:var(--shiki-color-text)"> logo </span><span style="color:var(--shiki-token-keyword)">from</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-string-expression)">'../public/logo.png'</span></span></code></pre>
       </div>
       <ol start="2">
-        <li>
-          <strong>Pass the image <code translate="no">src</code> property instead of the whole image object to your
-            <code translate="no">&lt;img&gt;</code> tag:</strong>
-        </li>
+        <li translated="true">
+          <strong> <code translate="no">&lt;img&gt;</code> etiketinize tüm resim nesnesi yerine <code translate="no">src</code> özelliğini aktarın</strong>:        </li>
       </ol>
       <div class="code-block_wrapper__t6FCO not-prose" translate="no">
         <button aria-label="Copy code" class="code-block_copyButton__uo5Yu code-block_copyFloatingButton__PsMvB" type="button">
@@ -840,10 +795,8 @@
 <span class="line"><span style="color:var(--shiki-color-text)">&lt;</span><span style="color:var(--shiki-token-string-expression)">img</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-function)">src</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-color-text)">{</span><span style="color:var(--shiki-token-constant)">logo</span><span style="color:var(--shiki-color-text)">.src} /&gt;</span></span></code></pre>
       </div>
       <blockquote class="p-3 text-sm">
-        <p>
-          <strong>Warning:</strong> If you're using TypeScript, you might encounter type errors when accessing the
-          <code translate="no">src</code> property. You can safely ignore those for now. They will be fixed by the end of this guide.
-        </p>
+        <p translated="true">
+         <strong>Uyarı:</strong> TypeScript kullanıyorsanız, <code translate="no">src</code> özelliğine erişirken tür hatalarıyla karşılaşabilirsiniz. Bunları şimdilik görmezden gelebilirsiniz. Bu kılavuzun sonunda düzeltileceklerdir.        </p>
       </blockquote>
       <h3 id="step-7-migrate-the-environment-variables" data-docs-heading="" translate="no">
         <a href="#step-7-migrate-the-environment-variables" title="Step 7: Migrate the Environment Variables">Step 7: Migrate the Environment Variables<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -857,7 +810,7 @@
         desteğe sahiptir. Temel fark, istemci tarafında ortam değişkenlerini ortaya çıkarmak için kullanılan önektir.
       </p>
       <ul>
-        <li>Change all environment variables with the <code translate="no">VITE_</code> prefix to <code translate="no">NEXT_PUBLIC_</code>.</li>
+        <li translated="true"><code translate="no">VITE_</code> önekine sahip tüm ortam değişkenlerini <code translate="no">NEXT_PUBLIC_</code> olarak değiştirin.</li>
       </ul>
       <p translated="true">
         Vite, Next.js tarafından desteklenmeyen özel <code translate="no">import.meta.env</code> nesnesi üzerinde birkaç yerleşik ortam değişkeni
@@ -874,9 +827,8 @@
         yapılandırabilirsiniz:
       </p>
       <ol>
-        <li>
-          <strong>Add the following to your <code translate="no">.env</code> file:</strong>
-        </li>
+        <li translated="true">
+         <strong>Aşağıdakileri <code translate="no">.env</code> dosyanıza ekleyin</strong>:        </li>
       </ol>
       <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no">
         <div class="code-block_header__t3NRd">
@@ -902,10 +854,8 @@
 <span class="line"><span style="color:var(--shiki-color-text)">NEXT_PUBLIC_BASE_PATH</span><span style="color:var(--shiki-token-keyword)">=</span><span style="color:var(--shiki-token-string-expression)">"/some-base-path"</span></span></code></pre>
       </div>
       <ol start="2">
-        <li>
-          <strong>Set <a href="/docs/app/api-reference/next-config-js/basePath" title="basePath"><code translate="no">basePath</code></a> to
-            <code translate="no">process.env.NEXT_PUBLIC_BASE_PATH</code> in your <code translate="no">next.config.mjs</code> file:</strong>
-        </li>
+        <li translated="true">
+          <strong> <code translate="no">next.config.mjs</code> dosyanızda <a href="/docs/app/api-reference/next-config-js/basePath" title="basePath"><code translate="no">basePath</code></a> adresini <code translate="no">process.env.NEXT_PUBLIC_BASE_PATH</code> olarak ayarlayın</strong>:        </li>
       </ol>
       <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no">
         <div class="code-block_header__t3NRd">
@@ -936,10 +886,8 @@
 <span class="line"><span style="color:var(--shiki-token-keyword)">export</span><span style="color:var(--shiki-color-text)"> </span><span style="color:var(--shiki-token-keyword)">default</span><span style="color:var(--shiki-color-text)"> nextConfig</span></span></code></pre>
       </div>
       <ol start="3">
-        <li>
-          <strong>Update <code translate="no">import.meta.env.BASE_URL</code> usages to
-            <code translate="no">process.env.NEXT_PUBLIC_BASE_PATH</code></strong>
-        </li>
+        <li translated="true">
+          <strong> <code translate="no">import.meta.env.BASE_URL</code> kullanımlarını <code translate="no">process.env.NEXT_PUBLIC_BASE_PATH</code> olarak güncelleyin</strong>       </li>
       </ol>
       <h3 id="step-8-update-scripts-in-packagejson" data-docs-heading="" translate="no">
         <a href="#step-8-update-scripts-in-packagejson" title="Step 8: Update Scripts in package.json">Step 8: Update Scripts in <code translate="no">package.json</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -1016,13 +964,10 @@
         budur.
       </p>
       <blockquote class="p-3 text-sm">
-        <p>
-          <strong>Example:</strong> Check out
-          <a href="https://github.com/inngest/vite-to-nextjs/pull/1" rel="noopener noreferrer nofollow" target="_blank" title="this pull request">this pull request<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <p translated="true">
+         <strong>Örnek:</strong> Next.js'ye taşınmış bir Vite uygulamasının çalışan bir örneği için <a href="https://github.com/inngest/vite-to-nextjs/pull/1" rel="noopener noreferrer nofollow" target="_blank" title="this pull request">bu çekme isteğine<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-          for a working example of a Vite application migrated to Next.js.
-        </p>
+                <path d="M7 7h10v10"></path></svg></span></a>göz atın.      </p>
       </blockquote>
       <h3 id="step-9-clean-up" data-docs-heading="" translate="no">
         <a href="#step-9-clean-up" title="Step 9: Clean Up">Step 9: Clean Up<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -1033,12 +978,12 @@
       </h3>
       <p translated="true">Artık kod tabanınızı Vite ile ilgili eserlerden temizleyebilirsiniz:</p>
       <ul>
-        <li>Delete <code translate="no">main.tsx</code></li>
-        <li>Delete <code translate="no">index.html</code></li>
-        <li>Delete <code translate="no">vite-env.d.ts</code></li>
-        <li>Delete <code translate="no">tsconfig.node.json</code></li>
-        <li>Delete <code translate="no">vite.config.ts</code></li>
-        <li>Uninstall Vite dependencies</li>
+        <li translated="true">Silme <code translate="no">main.tsx</code></li>
+        <li translated="true">Silme <code translate="no">index.html</code></li>
+        <li translated="true">Silme <code translate="no">vite-env.d.ts</code></li>
+        <li translated="true">Silme <code translate="no">tsconfig.node.json</code></li>
+        <li translated="true">Silme <code translate="no">vite.config.ts</code></li>
+        <li translated="true">Vite bağımlılıklarını kaldırma</li>
       </ul>
       <h2 id="next-steps" data-docs-heading="" translate="no">
         <a href="#next-steps" title="Next Steps">Next Steps<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -1053,31 +998,23 @@
         yapmaya başlayabilirsiniz. İşte bundan sonra yapmak isteyebileceğiniz şeyler:
       </p>
       <ul>
-        <li>
-          Migrate from React Router to the <a href="/docs/app/building-your-application/routing" title="Next.js App Router">Next.js App Router</a> to
-          get:<!-- -->
-          <ul>
-            <li>Automatic code splitting</li>
+        <li translated="true">
+          React Router'dan <a href="/docs/app/building-your-application/routing" title="Next.js App Router">Next.js App Rout</a> er'a geçiş yapmak için:<!-- --><ul>
+            <li>Otomatik kod bölme</li>
             <li>
-              <a href="/docs/app/building-your-application/routing/loading-ui-and-streaming" title="Streaming Server-Rendering">Streaming Server-Rendering</a>
-            </li>
+             <a href="/docs/app/building-your-application/routing/loading-ui-and-streaming" title="Streaming Server-Rendering">Akış Sunucusu-Rendering</a>           </li>
             <li>
-              <a href="/docs/app/building-your-application/rendering/server-components" title="React Server Components">React Server Components</a>
-            </li>
+             <a href="/docs/app/building-your-application/rendering/server-components" title="React Server Components">React Sunucu Bileşenleri</a>           </li>
           </ul>
         </li>
-        <li>
-          <a href="/docs/app/building-your-application/optimizing/images" title="Optimize images with the &lt;Image&gt; component">Optimize images with the <code translate="no">&lt;Image&gt;</code> component</a>
-        </li>
-        <li>
-          <a href="/docs/app/building-your-application/optimizing/fonts" title="Optimize fonts with next/font">Optimize fonts with <code translate="no">next/font</code></a>
-        </li>
-        <li>
-          <a href="/docs/app/building-your-application/optimizing/scripts" title="Optimize third-party scripts with the &lt;Script&gt; component">Optimize third-party scripts with the <code translate="no">&lt;Script&gt;</code> component</a>
-        </li>
-        <li>
-          <a href="/docs/app/building-your-application/configuring/eslint" title="Update your ESLint configuration to support Next.js rules">Update your ESLint configuration to support Next.js rules</a>
-        </li>
+        <li translated="true">
+          <a href="/docs/app/building-your-application/optimizing/images" title="Optimize images with the &lt;Image&gt; component"> <code translate="no">&lt;Image&gt;</code> bileşeniyle görüntüleri optimize</a>edin    </li>
+        <li translated="true">
+         <a href="/docs/app/building-your-application/optimizing/fonts" title="Optimize fonts with next/font">Yazı tiplerini <code translate="no">next/font</code> ile optimize</a>edin    </li>
+        <li translated="true">
+          <a href="/docs/app/building-your-application/optimizing/scripts" title="Optimize third-party scripts with the &lt;Script&gt; component"> <code translate="no">&lt;Script&gt;</code> bileşeniyle üçüncü taraf komut dosyalarını optimize</a>edin    </li>
+        <li translated="true">
+         <a href="/docs/app/building-your-application/configuring/eslint" title="Update your ESLint configuration to support Next.js rules">Next.js kurallarını desteklemek için ESLint yapılandırmanızı güncelleyin</a>       </li>
       </ul>
     </article>@@include('../../../../../../layouts/sidebar.html')</main>
 

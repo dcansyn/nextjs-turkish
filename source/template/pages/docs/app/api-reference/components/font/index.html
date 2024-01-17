@@ -26,13 +26,13 @@
 <p translated="true">Font yükleyici işlevinin çağrıldığı dizine göre bir dize veya bir nesne dizisi ( <code translate="no">Array&lt;{path: string, weight?: string, style?: string}&gt;</code> türünde) olarak font dosyasının yolu.</p>
 <p translated="true">İçinde kullanılır <code translate="no">next/font/local</code></p>
 <ul>
-<li>Required</li>
+<li translated="true">Gerekli</li>
 </ul>
 <p translated="true">Örnekler:</p>
 <ul>
-<li><code translate="no">src:'./fonts/my-font.woff2'</code> where <code translate="no">my-font.woff2</code> is placed in a directory named <code translate="no">fonts</code> inside the <code translate="no">app</code> directory</li>
-<li><code translate="no">src:[{path: './inter/Inter-Thin.ttf', weight: '100',},{path: './inter/Inter-Regular.ttf',weight: '400',},{path: './inter/Inter-Bold-Italic.ttf', weight: '700',style: 'italic',},]</code></li>
-<li>if the font loader function is called in <code translate="no">app/page.tsx</code> using <code translate="no">src:'../styles/fonts/my-font.ttf'</code>, then <code translate="no">my-font.ttf</code> is placed in <code translate="no">styles/fonts</code> at the root of the project</li>
+<li translated="true"><code translate="no">src:'./fonts/my-font.woff2'</code> burada <code translate="no">my-font.woff2</code>, <code translate="no">app</code> dizininin içinde <code translate="no">fonts</code> adlı bir dizine yerleştirilir</li>
+<li translated="true"><code translate="no">src:[{path: './inter/Inter-Thin.ttf', weight: '100',},{path: './inter/Inter-Regular.ttf',weight: '400',},{path: './inter/Inter-Bold-Italic.ttf', weight: '700',style: 'italic',},]</code></li>
+<li translated="true">yazı tipi yükleyici işlevi <code translate="no">src:'../styles/fonts/my-font.ttf'</code> kullanılarak <code translate="no">app/page.tsx</code> içinde çağrılırsa, <code translate="no">my-font.ttf</code> projenin kökünde <code translate="no">styles/fonts</code> içine yerleştirilir</li>
 </ul>
 <h3 id="weight" data-docs-heading="" translate="no"><a href="#weight" title="weight"><code translate="no">weight</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -42,18 +42,18 @@
 </svg></span></a></h3>
 <p translated="true">Yazı tipi <a href="https://fonts.google.com/knowledge/glossary/weight" rel="noopener noreferrer nofollow" target="_blank" title="weight"><code translate="no">weight</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> aşağıdaki olasılıklarla:</p>
 <ul>
-<li>A string with possible values of the weights available for the specific font or a range of values if it's a <a href="https://fonts.google.com/variablefonts" rel="noopener noreferrer nofollow" target="_blank" title="variable">variable<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> font</li>
-<li>An array of weight values if the font is not a <a href="https://fonts.google.com/variablefonts" rel="noopener noreferrer nofollow" target="_blank" title="variable google font">variable google font<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>. It applies to <code translate="no">next/font/google</code> only.</li>
+<li translated="true">Belirli bir yazı tipi için mevcut ağırlıkların olası değerlerini içeren bir dize veya <a href="https://fonts.google.com/variablefonts" rel="noopener noreferrer nofollow" target="_blank" title="variable">değişken</a> bir <a href="https://fonts.google.com/variablefonts" rel="noopener noreferrer nofollow" target="_blank" title="variable"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span> yazı tipiyse bir değer aralığı</a> </li>
+<li translated="true">Yazı tipi <a href="https://fonts.google.com/variablefonts" rel="noopener noreferrer nofollow" target="_blank" title="variable google font">değişken</a> bir <a href="https://fonts.google.com/variablefonts" rel="noopener noreferrer nofollow" target="_blank" title="variable google font">google</a> yazı tipi değilse ağırlık değerleri dizisi <a href="https://fonts.google.com/variablefonts" rel="noopener noreferrer nofollow" target="_blank" title="variable google font"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span>. Yalnızca</a> <code translate="no">next/font/google</code> için geçerlidir.</li>
 </ul>
 <p translated="true"><code translate="no">next/font/google</code> ve <code translate="no">next/font/local</code></p>
 <ul>
-<li>Required if the font being used is <strong>not</strong> <a href="https://fonts.google.com/variablefonts" rel="noopener noreferrer nofollow" target="_blank" title="variable">variable<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a></li>
+<li translated="true">Kullanılan yazı tipi <a href="https://fonts.google.com/variablefonts" rel="noopener noreferrer nofollow" target="_blank" title="variable">değişken</a> <strong>değilse</strong> gereklidir <a href="https://fonts.google.com/variablefonts" rel="noopener noreferrer nofollow" target="_blank" title="variable"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a></li>
 </ul>
 <p translated="true">Örnekler:</p>
 <ul>
-<li><code translate="no">weight: '400'</code>: A string for a single weight value - for the font <a href="https://fonts.google.com/specimen/Inter?query=inter" rel="noopener noreferrer nofollow" target="_blank" title="Inter"><code translate="no">Inter</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>, the possible values are <code translate="no">'100'</code>, <code translate="no">'200'</code>, <code translate="no">'300'</code>, <code translate="no">'400'</code>, <code translate="no">'500'</code>, <code translate="no">'600'</code>, <code translate="no">'700'</code>, <code translate="no">'800'</code>, <code translate="no">'900'</code> or <code translate="no">'variable'</code> where <code translate="no">'variable'</code> is the default)</li>
-<li><code translate="no">weight: '100 900'</code>: A string for the range between <code translate="no">100</code> and <code translate="no">900</code> for a variable font</li>
-<li><code translate="no">weight: ['100','400','900']</code>: An array of 3 possible values for a non variable font</li>
+<li translated="true"><code translate="no">weight: '400'</code>: Tek bir ağırlık değeri için bir dize - yazı tipi için <a href="https://fonts.google.com/specimen/Inter?query=inter" rel="noopener noreferrer nofollow" target="_blank" title="Inter"><code translate="no">Inter</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>olası değerler <code translate="no">'100'</code>, <code translate="no">'200'</code>, <code translate="no">'300'</code>, <code translate="no">'400'</code>, <code translate="no">'500'</code>, <code translate="no">'600'</code>, <code translate="no">'700'</code>, <code translate="no">'800'</code>, <code translate="no">'900'</code> veya <code translate="no">'variable'</code> olup <code translate="no">'variable'</code> varsayılandır)</li>
+<li translated="true"><code translate="no">weight: '100 900'</code>: Değişken bir yazı tipi için <code translate="no">100</code> ile <code translate="no">900</code> arasındaki aralığı gösteren bir dize</li>
+<li translated="true"><code translate="no">weight: ['100','400','900']</code>: Değişken olmayan bir yazı tipi için 3 olası değerden oluşan bir dizi</li>
 </ul>
 <h3 id="style" data-docs-heading="" translate="no"><a href="#style" title="style"><code translate="no">style</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -63,18 +63,18 @@
 </svg></span></a></h3>
 <p translated="true">Yazı tipi <a href="https://developer.mozilla.org/docs/Web/CSS/font-style" rel="noopener noreferrer nofollow" target="_blank" title="style"><code translate="no">style</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> aşağıdaki olasılıklarla:</p>
 <ul>
-<li>A string <a href="https://developer.mozilla.org/docs/Web/CSS/font-style#values" rel="noopener noreferrer nofollow" target="_blank" title="value">value<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> with default value of <code translate="no">'normal'</code></li>
-<li>An array of style values if the font is not a <a href="https://fonts.google.com/variablefonts" rel="noopener noreferrer nofollow" target="_blank" title="variable google font">variable google font<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>. It applies to <code translate="no">next/font/google</code> only.</li>
+<li translated="true">Varsayılan <a href="https://developer.mozilla.org/docs/Web/CSS/font-style#values" rel="noopener noreferrer nofollow" target="_blank" title="value">değeri<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> olan bir dize değeri <code translate="no">'normal'</code></li>
+<li translated="true">Yazı tipi <a href="https://fonts.google.com/variablefonts" rel="noopener noreferrer nofollow" target="_blank" title="variable google font">değişken</a> bir <a href="https://fonts.google.com/variablefonts" rel="noopener noreferrer nofollow" target="_blank" title="variable google font">google</a> yazı tipi değilse bir stil değerleri dizisi <a href="https://fonts.google.com/variablefonts" rel="noopener noreferrer nofollow" target="_blank" title="variable google font"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span>. Yalnızca</a> <code translate="no">next/font/google</code> için geçerlidir.</li>
 </ul>
 <p translated="true"><code translate="no">next/font/google</code> ve <code translate="no">next/font/local</code></p>
 <ul>
-<li>Optional</li>
+<li translated="true">Opsiyonel</li>
 </ul>
 <p translated="true">Örnekler:</p>
 <ul>
-<li><code translate="no">style: 'italic'</code>: A string - it can be <code translate="no">normal</code> or <code translate="no">italic</code> for <code translate="no">next/font/google</code></li>
-<li><code translate="no">style: 'oblique'</code>: A string - it can take any value for <code translate="no">next/font/local</code> but is expected to come from <a href="https://developer.mozilla.org/docs/Web/CSS/font-style" rel="noopener noreferrer nofollow" target="_blank" title="standard font styles">standard font styles<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a></li>
-<li><code translate="no">style: ['italic','normal']</code>: An array of 2 values for <code translate="no">next/font/google</code> - the values are from <code translate="no">normal</code> and <code translate="no">italic</code></li>
+<li translated="true"><code translate="no">style: 'italic'</code>: Bir dize - <code translate="no">normal</code> veya <code translate="no">italic</code> için olabilir <code translate="no">next/font/google</code></li>
+<li translated="true"><code translate="no">style: 'oblique'</code>: Bir dize - <code translate="no">next/font/local</code> için herhangi bir değer alabilir ancak <a href="https://developer.mozilla.org/docs/Web/CSS/font-style" rel="noopener noreferrer nofollow" target="_blank" title="standard font styles">standart yazı tipi stillerinden</a> gelmesi beklenir <a href="https://developer.mozilla.org/docs/Web/CSS/font-style" rel="noopener noreferrer nofollow" target="_blank" title="standard font styles"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a></li>
+<li translated="true"><code translate="no">style: ['italic','normal']</code>: <code translate="no">next/font/google</code> için 2 değerden oluşan bir dizi - değerler <code translate="no">normal</code> ve <code translate="no">italic</code></li>
 </ul>
 <h3 id="subsets" data-docs-heading="" translate="no"><a href="#subsets" title="subsets"><code translate="no">subsets</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -85,11 +85,11 @@
 <p translated="true">Yazı tipi <a href="https://fonts.google.com/knowledge/glossary/subsetting" rel="noopener noreferrer nofollow" target="_blank" title="subsets"><code translate="no">subsets</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a><a href="/docs/app/building-your-application/optimizing/fonts#specifying-a-subset" title="preloaded">önceden yüklenmesini</a> istediğiniz her bir alt kümenin adlarını içeren bir dizi dize değeri ile tanımlanır. <code translate="no">subsets</code> aracılığıyla belirtilen yazı tipleri, aşağıdaki durumlarda başlığa enjekte edilen bir bağlantı ön yükleme etiketine sahip olacaktır <a href="#preload" title="preload"><code translate="no">preload</code></a> seçeneği varsayılan değer olan true'dur.</p>
 <p translated="true">İçinde kullanılır <code translate="no">next/font/google</code></p>
 <ul>
-<li>Optional</li>
+<li translated="true">Opsiyonel</li>
 </ul>
 <p translated="true">Örnekler:</p>
 <ul>
-<li><code translate="no">subsets: ['latin']</code>: An array with the subset <code translate="no">latin</code></li>
+<li translated="true"><code translate="no">subsets: ['latin']</code>: Alt kümesi olan bir dizi <code translate="no">latin</code></li>
 </ul>
 <p translated="true">Yazı tipiniz için Google Fonts sayfasında tüm alt kümelerin bir listesini bulabilirsiniz.</p>
 <h3 id="axes" data-docs-heading="" translate="no"><a href="#axes" title="axes"><code translate="no">axes</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -101,11 +101,11 @@
 <p translated="true">Bazı değişken yazı tiplerinde dahil edilebilecek ekstra <code translate="no">axes</code> vardır. Varsayılan olarak, dosya boyutunu düşük tutmak için yalnızca yazı tipi ağırlığı dahil edilir. Olası <code translate="no">axes</code> değerleri belirli yazı tipine bağlıdır.</p>
 <p translated="true">İçinde kullanılır <code translate="no">next/font/google</code></p>
 <ul>
-<li>Optional</li>
+<li translated="true">Opsiyonel</li>
 </ul>
 <p translated="true">Örnekler:</p>
 <ul>
-<li><code translate="no">axes: ['slnt']</code>: An array with value <code translate="no">slnt</code> for the <code translate="no">Inter</code> variable font which has <code translate="no">slnt</code> as additional <code translate="no">axes</code> as shown <a href="https://fonts.google.com/variablefonts?vfquery=inter#font-families" rel="noopener noreferrer nofollow" target="_blank" title="here">here<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>. You can find the possible <code translate="no">axes</code> values for your font by using the filter on the <a href="https://fonts.google.com/variablefonts#font-families" rel="noopener noreferrer nofollow" target="_blank" title="Google variable fonts page">Google variable fonts page<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> and looking for axes other than <code translate="no">wght</code></li>
+<li translated="true"><code translate="no">axes: ['slnt']</code>: <a href="https://fonts.google.com/variablefonts?vfquery=inter#font-families" rel="noopener noreferrer nofollow" target="_blank" title="here">Burada</a> gösterildiği gibi ek <code translate="no">axes</code> olarak <code translate="no">slnt</code> olan <code translate="no">Inter</code> değişken yazı tipi için <code translate="no">slnt</code> değerine sahip bir dizi <a href="https://fonts.google.com/variablefonts?vfquery=inter#font-families" rel="noopener noreferrer nofollow" target="_blank" title="here"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span>. Yazı tipiniz için olası</a> <code translate="no">axes</code> değerlerini, <a href="https://fonts.google.com/variablefonts#font-families" rel="noopener noreferrer nofollow" target="_blank" title="Google variable fonts page">Google değişken yazı tipleri sayfasındaki<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> filtresini kullanarak ve aşağıdakiler dışındaki eksenleri arayarak bulabilirsiniz <code translate="no">wght</code></li>
 </ul>
 <h3 id="display" data-docs-heading="" translate="no"><a href="#display" title="display"><code translate="no">display</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -116,11 +116,11 @@
 <p translated="true">Yazı tipi <a href="https://developer.mozilla.org/docs/Web/CSS/@font-face/font-display" rel="noopener noreferrer nofollow" target="_blank" title="display"><code translate="no">display</code><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> olası dize <a href="https://developer.mozilla.org/docs/Web/CSS/@font-face/font-display#values" rel="noopener noreferrer nofollow" target="_blank" title="values">değerleri<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> ile <code translate="no">'auto'</code>, <code translate="no">'block'</code>, <code translate="no">'swap'</code>, <code translate="no">'fallback'</code> veya <code translate="no">'optional'</code> varsayılan değeri <code translate="no">'swap'</code>.</p>
 <p translated="true"><code translate="no">next/font/google</code> ve <code translate="no">next/font/local</code></p>
 <ul>
-<li>Optional</li>
+<li translated="true">Opsiyonel</li>
 </ul>
 <p translated="true">Örnekler:</p>
 <ul>
-<li><code translate="no">display: 'optional'</code>: A string assigned to the <code translate="no">optional</code> value</li>
+<li translated="true"><code translate="no">display: 'optional'</code>: <code translate="no">optional</code> değerine atanan bir dize</li>
 </ul>
 <h3 id="preload" data-docs-heading="" translate="no"><a href="#preload" title="preload"><code translate="no">preload</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -131,11 +131,11 @@
 <p translated="true">Yazı tipinin <a href="/docs/app/building-your-application/optimizing/fonts#preloading" title="preloaded">önceden yüklenip yüklenmeyeceğini</a> belirten boolean değeri. Varsayılan değer <code translate="no">true</code>'dur.</p>
 <p translated="true"><code translate="no">next/font/google</code> ve <code translate="no">next/font/local</code></p>
 <ul>
-<li>Optional</li>
+<li translated="true">Opsiyonel</li>
 </ul>
 <p translated="true">Örnekler:</p>
 <ul>
-<li><code translate="no">preload: false</code></li>
+<li translated="true"><code translate="no">preload: false</code></li>
 </ul>
 <h3 id="fallback" data-docs-heading="" translate="no"><a href="#fallback" title="fallback"><code translate="no">fallback</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -145,12 +145,12 @@
 </svg></span></a></h3>
 <p translated="true">Yazı tipi yüklenemezse kullanılacak yedek yazı tipi. Varsayılanı olmayan yedek yazı tiplerinin dizelerinden oluşan bir dizi.</p>
 <ul>
-<li>Optional</li>
+<li translated="true">Opsiyonel</li>
 </ul>
 <p translated="true"><code translate="no">next/font/google</code> ve <code translate="no">next/font/local</code></p>
 <p translated="true">Örnekler:</p>
 <ul>
-<li><code translate="no">fallback: ['system-ui', 'arial']</code>: An array setting the fallback fonts to <code translate="no">system-ui</code> or <code translate="no">arial</code></li>
+<li translated="true"><code translate="no">fallback: ['system-ui', 'arial']</code>: Yedek yazı tiplerini <code translate="no">system-ui</code> veya <code translate="no">arial</code></li>
 </ul>
 <h3 id="adjustfontfallback" data-docs-heading="" translate="no"><a href="#adjustfontfallback" title="adjustFontFallback"><code translate="no">adjustFontFallback</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -159,17 +159,17 @@
   </g>
 </svg></span></a></h3>
 <ul>
-<li>For <code translate="no">next/font/google</code>: A boolean value that sets whether an automatic fallback font should be used to reduce <a href="https://web.dev/cls/" rel="noopener noreferrer nofollow" target="_blank" title="Cumulative Layout Shift">Cumulative Layout Shift<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>. The default is <code translate="no">true</code>.</li>
-<li>For <code translate="no">next/font/local</code>: A string or boolean <code translate="no">false</code> value that sets whether an automatic fallback font should be used to reduce <a href="https://web.dev/cls/" rel="noopener noreferrer nofollow" target="_blank" title="Cumulative Layout Shift">Cumulative Layout Shift<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>. The possible values are <code translate="no">'Arial'</code>, <code translate="no">'Times New Roman'</code> or <code translate="no">false</code>. The default is <code translate="no">'Arial'</code>.</li>
+<li translated="true"><code translate="no">next/font/google</code> için: <a href="https://web.dev/cls/" rel="noopener noreferrer nofollow" target="_blank" title="Cumulative Layout Shift">Kümülatif Düzen Kaymasını</a> azaltmak için otomatik bir yedek yazı tipinin kullanılıp kullanılmayacağını belirleyen boolean değer <a href="https://web.dev/cls/" rel="noopener noreferrer nofollow" target="_blank" title="Cumulative Layout Shift"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span>. Varsayılan değer</a> <code translate="no">true</code>.</li>
+<li translated="true"><code translate="no">next/font/local</code> için: <a href="https://web.dev/cls/" rel="noopener noreferrer nofollow" target="_blank" title="Cumulative Layout Shift">Kümülatif Düzen Kaymasını<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> azaltmak için otomatik bir yedek yazı tipinin kullanılıp kullanılmayacağını belirleyen bir dize veya boolean <code translate="no">false</code> değeri. Olası değerler <code translate="no">'Arial'</code>, <code translate="no">'Times New Roman'</code> veya <code translate="no">false</code> şeklindedir. Varsayılan değer <code translate="no">'Arial'</code> şeklindedir.</li>
 </ul>
 <p translated="true"><code translate="no">next/font/google</code> ve <code translate="no">next/font/local</code></p>
 <ul>
-<li>Optional</li>
+<li translated="true">Opsiyonel</li>
 </ul>
 <p translated="true">Örnekler:</p>
 <ul>
-<li><code translate="no">adjustFontFallback: false</code>: for <code translate="no">next/font/google</code></li>
-<li><code translate="no">adjustFontFallback: 'Times New Roman'</code>: for <code translate="no">next/font/local</code></li>
+<li translated="true"><code translate="no">adjustFontFallback: false</code>: için <code translate="no">next/font/google</code></li>
+<li translated="true"><code translate="no">adjustFontFallback: 'Times New Roman'</code>: için <code translate="no">next/font/local</code></li>
 </ul>
 <h3 id="variable" data-docs-heading="" translate="no"><a href="#variable" title="variable"><code translate="no">variable</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -180,11 +180,11 @@
 <p translated="true">Stil <a href="#css-variables" title="CSS variable method">CSS değişkeni yöntemiyle</a> uygulandığında kullanılacak <a href="#css-variables" title="CSS variable method">CSS değiş</a>keni adını tanımlamak için bir dize değeri.</p>
 <p translated="true"><code translate="no">next/font/google</code> ve <code translate="no">next/font/local</code></p>
 <ul>
-<li>Optional</li>
+<li translated="true">Opsiyonel</li>
 </ul>
 <p translated="true">Örnekler:</p>
 <ul>
-<li><code translate="no">variable: '--my-font'</code>: The CSS variable <code translate="no">--my-font</code> is declared</li>
+<li translated="true"><code translate="no">variable: '--my-font'</code>: CSS değişkeni <code translate="no">--my-font</code> bildirilir</li>
 </ul>
 <h3 id="declarations" data-docs-heading="" translate="no"><a href="#declarations" title="declarations"><code translate="no">declarations</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -195,11 +195,11 @@
 <p translated="true">Oluşturulan <code translate="no">@font-face</code> adresini daha fazla tanımlayan font yüzü <a href="https://developer.mozilla.org/docs/Web/CSS/@font-face#descriptors" rel="noopener noreferrer nofollow" target="_blank" title="descriptor">tanımlayıcısı<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> anahtar-değer çiftlerinden oluşan bir dizi.</p>
 <p translated="true">İçinde kullanılır <code translate="no">next/font/local</code></p>
 <ul>
-<li>Optional</li>
+<li translated="true">Opsiyonel</li>
 </ul>
 <p translated="true">Örnekler:</p>
 <ul>
-<li><code translate="no">declarations: [{ prop: 'ascent-override', value: '90%' }]</code></li>
+<li translated="true"><code translate="no">declarations: [{ prop: 'ascent-override', value: '90%' }]</code></li>
 </ul>
 <h2 id="applying-styles" data-docs-heading="" translate="no"><a href="#applying-styles" title="Applying Styles">Applying Styles<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -209,9 +209,9 @@
 </svg></span></a></h2>
 <p translated="true">Yazı tipi stillerini üç şekilde uygulayabilirsiniz:</p>
 <ul>
-<li><a href="#classname" title="className"><code translate="no">className</code></a></li>
-<li><a href="#style-1" title="style"><code translate="no">style</code></a></li>
-<li><a href="#css-variables" title="CSS Variables">CSS Variables</a></li>
+<li translated="true"><a href="#classname" title="className"><code translate="no">className</code></a></li>
+<li translated="true"><a href="#style-1" title="style"><code translate="no">style</code></a></li>
+<li translated="true"><a href="#css-variables" title="CSS Variables">CSS Değişkenleri</a></li>
 </ul>
 <h3 id="classname" data-docs-heading="" translate="no"><a href="#classname" title="className"><code translate="no">className</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">

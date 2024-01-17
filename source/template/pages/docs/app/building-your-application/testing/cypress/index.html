@@ -16,23 +16,16 @@
         Next.js ile nasıl kuracağınızı ve ilk testlerinizi nasıl yazacağınızı gösterecektir.
       </p>
       <blockquote class="p-3 text-sm">
-        <p><strong>Warning:</strong></p>
+        <p translated="true"><strong>Uyarı:</strong></p>
         <ul>
-          <li>
-            For <strong>component testing</strong>, Cypress currently does not support
-            <a href="https://github.com/cypress-io/cypress/issues/28185" rel="noopener noreferrer nofollow" target="_blank" title="Next.js version 14">Next.js version 14<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+          <li translated="true">
+           <strong>Bileşen testi</strong> için Cypress şu anda <a href="https://github.com/cypress-io/cypress/issues/28185" rel="noopener noreferrer nofollow" target="_blank" title="Next.js version 14">Next.js sürüm 14<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                   <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path></svg></span></a>
-            and <code translate="no">async</code> Server Components. These issues are being tracked. For now, component testing works with Next.js
-            version 13, and we recommend E2E testing for <code translate="no">async</code> Server Components.
-          </li>
-          <li>
-            Cypress currently does not support
-            <a href="https://github.com/cypress-io/cypress/issues/27731" rel="noopener noreferrer nofollow" target="_blank" title="TypeScript version 5">TypeScript version 5<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                  <path d="M7 7h10v10"></path></svg></span></a>ve <code translate="no">async</code> Sunucu <strong>Bileşenlerini</strong> desteklemiyor. Bu sorunlar takip edilmektedir. Şimdilik, bileşen testi Next.js sürüm 13 ile çalışıyor ve <code translate="no">async</code> Sunucu Bileşenleri için E2E testini öneriyoruz.          </li>
+          <li translated="true">
+            Cypress şu anda <code translate="no">moduleResolution:"bundler"</code> ile <a href="https://github.com/cypress-io/cypress/issues/27731" rel="noopener noreferrer nofollow" target="_blank" title="TypeScript version 5">TypeScript sürüm 5<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                   <path d="M7 17L17 7"></path>
-                  <path d="M7 7h10v10"></path></svg></span></a>
-            with <code translate="no">moduleResolution:"bundler"</code>. This issue is being tracked.
-          </li>
+                  <path d="M7 7h10v10"></path></svg></span></a>'u desteklemiyor. Bu sorun takip ediliyor.         </li>
         </ul>
       </blockquote>
       <h2 id="quickstart" data-docs-heading="" translate="no">
@@ -348,16 +341,10 @@
       <blockquote class="p-3 text-sm">
         <p><strong>Bilmekte fayda var:</strong></p>
         <ul>
-          <li>
-            You can use <code translate="no">cy.visit("/")</code> instead of <code translate="no">cy.visit("http://localhost:3000/")</code> by adding
-            <code translate="no">baseUrl: 'http://localhost:3000'</code> to the <code translate="no">cypress.config.js</code> configuration file.
-          </li>
-          <li>
-            Alternatively, you can install the <code translate="no">start-server-and-test</code> package to run the Next.js production server in
-            conjunction with Cypress. After installation, add
-            <code translate="no">"test": "start-server-and-test start http://localhost:3000 cypress"</code> to your
-            <code translate="no">package.json</code> scripts field. Remember to rebuild your application after new changes.
-          </li>
+          <li translated="true">
+            <code translate="no">cypress.config.js</code> yapılandırma dosyasına <code translate="no">baseUrl: 'http://localhost:3000'</code> ekleyerek <code translate="no">cy.visit("http://localhost:3000/")</code> yerine <code translate="no">cy.visit("/")</code> kullanabilirsiniz.          </li>
+          <li translated="true">
+            Alternatif olarak, Next.js üretim sunucusunu Cypress ile birlikte çalıştırmak için <code translate="no">start-server-and-test</code> paketini yükleyebilirsiniz. Kurulumdan sonra <code translate="no">"test": "start-server-and-test start http://localhost:3000 cypress"</code> adresini <code translate="no">package.json</code> komut dosyaları alanınıza ekleyin. Yeni değişikliklerden sonra uygulamanızı yeniden oluşturmayı unutmayın.          </li>
         </ul>
       </blockquote>
       <h2 id="creating-your-first-cypress-component-test" data-docs-heading="" translate="no">
@@ -480,16 +467,12 @@
       </div>
       <!-- -->
       <blockquote class="p-3 text-sm">
-        <p><strong>Good to know</strong>:</p>
+        <p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
         <ul>
-          <li>
-            Cypress currently doesn't support component testing for <code translate="no">async</code> Server Components. We recommend using E2E
-            testing.
-          </li>
-          <li>
-            Since component tests do not require a Next.js server, features like <code translate="no">&lt;Image /&gt;</code> that rely on a server
-            being available may not function out-of-the-box.
-          </li>
+          <li translated="true">
+            Cypress şu anda <code translate="no">async</code> Sunucu Bileşenleri için bileşen testini desteklememektedir. E2E testini kullanmanızı öneririz.          </li>
+          <li translated="true">
+            Bileşen testleri bir Next.js sunucusu gerektirmediğinden, <code translate="no">&lt;Image /&gt;</code> gibi bir sunucunun kullanılabilir olmasına dayanan özellikler kullanıma hazır olarak çalışmayabilir.          </li>
         </ul>
       </blockquote>
       <h3 id="running-component-tests" data-docs-heading="" translate="no">
@@ -545,31 +528,26 @@
       </div>
       <p translated="true">Bu kaynaklardan Cypress ve Sürekli Entegrasyon hakkında daha fazla bilgi edinebilirsiniz:</p>
       <ul>
-        <li>
-          <a href="https://github.com/vercel/next.js/tree/canary/examples/with-cypress" rel="noopener noreferrer" target="_blank" title="Next.js with Cypress example">Next.js with Cypress example<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+        <li translated="true">
+         <a href="https://github.com/vercel/next.js/tree/canary/examples/with-cypress" rel="noopener noreferrer" target="_blank" title="Next.js with Cypress example">Cypress örneği ile Next.js<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-        </li>
-        <li>
-          <a href="https://docs.cypress.io/guides/continuous-integration/introduction" rel="noopener noreferrer nofollow" target="_blank" title="Cypress Continuous Integration Docs">Cypress Continuous Integration Docs<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 7h10v10"></path></svg></span></a></li>
+        <li translated="true">
+         <a href="https://docs.cypress.io/guides/continuous-integration/introduction" rel="noopener noreferrer nofollow" target="_blank" title="Cypress Continuous Integration Docs">Cypress Sürekli Entegrasyon Dokümanları<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-        </li>
-        <li>
-          <a href="https://on.cypress.io/github-actions" rel="noopener noreferrer nofollow" target="_blank" title="Cypress GitHub Actions Guide">Cypress GitHub Actions Guide<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 7h10v10"></path></svg></span></a></li>
+        <li translated="true">
+         <a href="https://on.cypress.io/github-actions" rel="noopener noreferrer nofollow" target="_blank" title="Cypress GitHub Actions Guide">Cypress GitHub Eylemler Kılavuzu<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-        </li>
-        <li>
-          <a href="https://github.com/cypress-io/github-action" rel="noopener noreferrer nofollow" target="_blank" title="Official Cypress GitHub Action">Official Cypress GitHub Action<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 7h10v10"></path></svg></span></a></li>
+        <li translated="true">
+         <a href="https://github.com/cypress-io/github-action" rel="noopener noreferrer nofollow" target="_blank" title="Official Cypress GitHub Action">Resmi Cypress GitHub Eylemi<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-        </li>
-        <li>
-          <a href="https://discord.com/invite/cypress" rel="noopener noreferrer nofollow" target="_blank" title="Cypress Discord">Cypress Discord<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
+                <path d="M7 7h10v10"></path></svg></span></a></li>
+        <li translated="true">
+         <a href="https://discord.com/invite/cypress" rel="noopener noreferrer nofollow" target="_blank" title="Cypress Discord">Cypress Discord<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color: currentColor; width: 14px; height: 14px">
                 <path d="M7 17L17 7"></path>
-                <path d="M7 7h10v10"></path></svg></span></a>
-        </li>
+                <path d="M7 7h10v10"></path></svg></span></a></li>
       </ul>
     </article>@@include('../../../../../../layouts/sidebar.html')</main>
 

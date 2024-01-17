@@ -22,7 +22,7 @@
 </svg></span></a></h2>
 <p translated="true">Paralel rotalar adlandırılmış <strong>yuvalar</strong> kullanılarak oluşturulur. Yuvalar <code translate="no">@folder</code> konvansiyonu ile tanımlanır ve aynı seviyedeki düzene prop olarak aktarılır.</p>
 <blockquote class="p-3 text-sm">
-<p>Slots are <em>not</em> route segments and <em>do not affect the URL structure</em>. The file path <code translate="no">/@team/members</code> would be accessible at <code translate="no">/members</code>.</p>
+<p translated="true">Yuvalar rota segmentleri <em>değildir</em> ve <em>URL yapısını etkilemez</em>. <code translate="no">/@team/members</code> dosya yoluna <code translate="no">/members</code> adresinden erişilebilir.</p>
 </blockquote>
 <p translated="true">Örneğin, aşağıdaki dosya yapısı iki açık yuva tanımlar: <code translate="no">@analytics</code> ve <code translate="no">@team</code>.</p>
 <figure><img alt="Parallel Routes File-system Structure" loading="lazy" width="1600" height="687" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/parallel-routes-file-system.png"><img alt="Parallel Routes File-system Structure" loading="lazy" width="1600" height="687" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/parallel-routes-file-system.png"></figure>
@@ -42,7 +42,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: The <code translate="no">children</code> prop is an implicit slot that does not need to be mapped to a folder. This means <code translate="no">app/page.js</code> is equivalent to <code translate="no">app/@children/page.js</code>.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: <code translate="no">children</code> prop, bir klasörle eşleştirilmesi gerekmeyen örtük bir yuvadır. Bu, <code translate="no">app/page.js</code> 'un <code translate="no">app/@children/page.js</code> ile eşdeğer olduğu anlamına gelir.</p>
 </blockquote>
 <h2 id="unmatched-routes" data-docs-heading="" translate="no"><a href="#unmatched-routes" title="Unmatched Routes">Unmatched Routes<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -76,7 +76,7 @@
 </svg></span></a></h4>
 <p translated="true">Next.js yeniden yüklendiğinde, ilk olarak eşleşmeyen yuvanın <code translate="no">default.js</code> dosyasını oluşturmaya çalışır. Eğer bu dosya mevcut değilse, bir 404 görüntülenir.</p>
 <blockquote class="p-3 text-sm">
-<p>The 404 for unmatched routes helps ensure that you don't accidentally render a route that shouldn't be parallel rendered.</p>
+<p translated="true">Eşleşmeyen rotalar için 404, paralel olarak işlenmemesi gereken bir rotayı yanlışlıkla işlememenizi sağlamaya yardımcı olur.</p>
 </blockquote>
 <h2 id="useselectedlayoutsegments" data-docs-heading="" translate="no"><a href="#useselectedlayoutsegments" title="useSelectedLayoutSegment(s)"><code translate="no">useSelectedLayoutSegment(s)</code><span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -164,7 +164,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p>More information on modals is covered in the <a href="/docs/app/building-your-application/routing/intercepting-routes" title="Intercepting Routes">Intercepting Routes</a> section.</p>
+<p translated="true">Kipler hakkında daha fazla bilgi Yakalama <a href="/docs/app/building-your-application/routing/intercepting-routes" title="Intercepting Routes">Yolları</a> bölümünde ele alınmıştır.</p>
 </blockquote>
 <p translated="true">Başka bir yere gitmek ve bir modalı kapatmak istiyorsanız, her şeyi kapsayan bir rota da kullanabilirsiniz.</p>
 <figure><img alt="Parallel Routes Diagram" loading="lazy" width="1600" height="768" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/parallel-routes-catchall.png"><img alt="Parallel Routes Diagram" loading="lazy" width="1600" height="768" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/parallel-routes-catchall.png"></figure>
@@ -173,7 +173,7 @@
 <span class="line"><span style="color:var(--shiki-color-text)">}</span></span></code></pre></div>
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p>Catch-all routes take precedence over <code translate="no">default.js</code>.</p>
+<p translated="true">Tümünü yakalama rotaları <code translate="no">default.js</code> adresinden önceliklidir.</p>
 </blockquote>
 <h3 id="conditional-routes" data-docs-heading="" translate="no"><a href="#conditional-routes" title="Conditional Routes">Conditional Routes<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">

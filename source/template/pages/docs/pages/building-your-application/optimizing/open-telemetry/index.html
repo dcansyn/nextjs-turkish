@@ -9,7 +9,7 @@
 
     <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">OpenTelemetry</h1>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: This feature is <strong>experimental</strong>, you need to explicitly opt-in by providing <code translate="no">experimental.instrumentationHook = true;</code> in your <code translate="no">next.config.js</code>.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: Bu özellik <strong>deneyseldir</strong>, <code translate="no">next.config.js</code> adresinizde <code translate="no">experimental.instrumentationHook = true;</code> adresini sağlayarak açıkça katılmanız gerekir.</p>
 </blockquote>
 <p translated="true">Next.js uygulamanızın davranışını ve performansını anlamak ve optimize etmek için gözlemlenebilirlik çok önemlidir.</p>
 <p translated="true">Uygulamalar daha karmaşık hale geldikçe, ortaya çıkabilecek sorunları belirlemek ve teşhis etmek giderek zorlaşmaktadır. Geliştiriciler, günlük kaydı ve metrikler gibi gözlemlenebilirlik araçlarından yararlanarak uygulamalarının davranışları hakkında içgörü kazanabilir ve optimizasyon alanlarını belirleyebilir. Gözlemlenebilirlik sayesinde, geliştiriciler sorunları büyük sorunlara dönüşmeden önce proaktif olarak ele alabilir ve daha iyi bir kullanıcı deneyimi sağlayabilir. Bu nedenle, performansı artırmak, kaynakları optimize etmek ve kullanıcı deneyimini geliştirmek için Next.js uygulamalarınızda gözlemlenebilirliği kullanmanız şiddetle tavsiye edilir.</p>
@@ -17,8 +17,7 @@
 <p translated="true">Bu dokümanda <em>Span</em>, <em>Trace</em> veya <em>Exporter</em> gibi terimler kullanılmaktadır, bunların tümü <a href="https://opentelemetry.io/docs/concepts/observability-primer/" rel="noopener noreferrer nofollow" target="_blank" title="the OpenTelemetry Observability Primer">OpenTelemetry Observability Primer<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> adresinde bulunabilir.</p>
 <p translated="true">Next.js, OpenTelemetry enstrümantasyonunu kutudan çıkar çıkmaz destekler, bu da Next.js'nin kendisini zaten enstrümante ettiğimiz anlamına gelir. OpenTelemetry'yi etkinleştirdiğinizde, <code translate="no">getStaticProps</code> gibi tüm kodlarınızı otomatik olarak yararlı niteliklerle <em>span</em> 'lara saracağız.</p>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>: We currently support OpenTelemetry bindings only in serverless functions.
-We don't provide any for <code translate="no">edge</code> or client side code.</p>
+<p translated="true"><strong>Bilmekte</strong> fayda var: Şu anda OpenTelemetry bağlamalarını yalnızca sunucusuz işlevlerde destekliyoruz. <code translate="no">edge</code> veya istemci tarafı kodu için herhangi bir destek sağlamıyoruz.</p>
 </blockquote>
 <h2 id="getting-started" data-docs-heading="" translate="no"><a href="#getting-started" title="Getting Started">Getting Started<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
   <g stroke-width="1.2" fill="none" stroke="currentColor">
@@ -45,11 +44,11 @@ We don't provide any for <code translate="no">edge</code> or client side code.</
 <!-- -->
 <!-- -->
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong></p>
+<p translated="true"><strong>Bildiğim iyi oldu</strong></p>
 <ul>
-<li>The <code translate="no">instrumentation</code> file should be in the root of your project and not inside the <code translate="no">app</code> or <code translate="no">pages</code> directory. If you're using the <code translate="no">src</code> folder, then place the file inside <code translate="no">src</code> alongside <code translate="no">pages</code> and <code translate="no">app</code>.</li>
-<li>If you use the <a href="/docs/pages/api-reference/next-config-js/pageExtensions" title="pageExtensions config option"><code translate="no">pageExtensions</code> config option</a> to add a suffix, you will also need to update the <code translate="no">instrumentation</code> filename to match.</li>
-<li>We have created a basic <a href="https://github.com/vercel/next.js/tree/canary/examples/with-opentelemetry" rel="noopener noreferrer" target="_blank" title="with-opentelemetry">with-opentelemetry<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> example that you can use.</li>
+<li translated="true"><code translate="no">instrumentation</code> dosyası, <code translate="no">app</code> veya <code translate="no">pages</code> dizininin içinde değil, projenizin kök dizininde olmalıdır. Eğer <code translate="no">src</code> klasörünü kullanıyorsanız, dosyayı <code translate="no">pages</code> ve <code translate="no">app</code> ile birlikte <code translate="no">src</code> içine yerleştirin.</li>
+<li translated="true">Bir sonek eklemek için <a href="/docs/pages/api-reference/next-config-js/pageExtensions" title="pageExtensions config option"><code translate="no">pageExtensions</code> yapılandırma seçeneğini</a> kullanırsanız, <code translate="no">instrumentation</code> dosya adını da eşleşecek şekilde güncellemeniz gerekecektir.</li>
+<li translated="true">Kullanabileceğiniz temel bir <a href="https://github.com/vercel/next.js/tree/canary/examples/with-opentelemetry" rel="noopener noreferrer" target="_blank" title="with-opentelemetry">with-opentelemetry<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a> örneği oluşturduk.</li>
 </ul>
 </blockquote>
 <h3 id="manual-opentelemetry-configuration" data-docs-heading="" translate="no"><a href="#manual-opentelemetry-configuration" title="Manual OpenTelemetry configuration">Manual OpenTelemetry configuration<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -161,14 +160,14 @@ We don't provide any for <code translate="no">edge</code> or client side code.</
 <p translated="true">Next.js, uygulamanızın performansı hakkında yararlı bilgiler sağlamak için otomatik olarak çeşitli aralıkları enstrümante eder.</p>
 <p translated="true"><a href="https://opentelemetry.io/docs/reference/specification/trace/semantic_conventions/" rel="noopener noreferrer nofollow" target="_blank" title="OpenTelemetry semantic conventions">Açıklıklardaki öznitelikler OpenTelemetry semantik kurallarını</a> takip eder <a href="https://opentelemetry.io/docs/reference/specification/trace/semantic_conventions/" rel="noopener noreferrer nofollow" target="_blank" title="OpenTelemetry semantic conventions"><span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span>. Ayrıca</a> <code translate="no">next</code> ad alanı altında bazı özel öznitelikler de ekliyoruz:</p>
 <ul>
-<li><code translate="no">next.span_name</code> - duplicates span name</li>
-<li><code translate="no">next.span_type</code> - each span type has a unique identifier</li>
-<li><code translate="no">next.route</code> - The route pattern of the request (e.g., <code translate="no">/[param]/user</code>).</li>
-<li><code translate="no">next.page</code>
+<li translated="true"><code translate="no">next.span_name</code> - yayılma adını çoğaltır</li>
+<li translated="true"><code translate="no">next.span_type</code> - her span türünün benzersiz bir tanımlayıcısı vardır</li>
+<li translated="true"><code translate="no">next.route</code> - Talebin rota modeli (örneğin, <code translate="no">/[param]/user</code>).</li>
+<li translated="true"><code translate="no">next.page</code>
 <ul>
-<li>This is an internal value used by an app router.</li>
-<li>You can think about it as a route to a special file (like <code translate="no">page.ts</code>, <code translate="no">layout.ts</code>, <code translate="no">loading.ts</code> and others)</li>
-<li>It can be used as a unique identifier only when paired with <code translate="no">next.route</code> because <code translate="no">/layout</code> can be used to identify both <code translate="no">/(groupA)/layout.ts</code> and <code translate="no">/(groupB)/layout.ts</code></li>
+<li>Bu, bir uygulama yönlendiricisi tarafından kullanılan dahili bir değerdir.</li>
+<li>Bunu özel bir dosyaya giden bir yol olarak düşünebilirsiniz ( <code translate="no">page.ts</code>, <code translate="no">layout.ts</code>, <code translate="no">loading.ts</code> ve diğerleri gibi)</li>
+<li>Yalnızca <code translate="no">next.route</code> ile eşleştirildiğinde benzersiz bir tanımlayıcı olarak kullanılabilir çünkü <code translate="no">/layout</code> hem <code translate="no">/(groupA)/layout.ts</code> hem de <code translate="no">/(groupB)/layout.ts</code></li>
 </ul>
 </li>
 </ul>
@@ -184,14 +183,12 @@ We don't provide any for <code translate="no">edge</code> or client side code.</
 <p translated="true">Bu span, Next.js uygulamanıza gelen her istek için kök spanı temsil eder. İsteğin HTTP yöntemini, rotasını, hedefini ve durum kodunu izler.</p>
 <p translated="true">Nitelikler:</p>
 <ul>
-<li><a href="https://opentelemetry.io/docs/reference/specification/trace/semantic_conventions/http/#common-attributes" rel="noopener noreferrer nofollow" target="_blank" title="Common HTTP attributes">Common HTTP attributes<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>
-<ul>
+<li translated="true"><a href="https://opentelemetry.io/docs/reference/specification/trace/semantic_conventions/http/#common-attributes" rel="noopener noreferrer nofollow" target="_blank" title="Common HTTP attributes">Ortak HTTP öznitelikleri<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a><ul>
 <li><code translate="no">http.method</code></li>
 <li><code translate="no">http.status_code</code></li>
 </ul>
 </li>
-<li><a href="https://opentelemetry.io/docs/reference/specification/trace/semantic_conventions/http/#http-server-semantic-conventions" rel="noopener noreferrer nofollow" target="_blank" title="Server HTTP attributes">Server HTTP attributes<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>
-<ul>
+<li translated="true"><a href="https://opentelemetry.io/docs/reference/specification/trace/semantic_conventions/http/#http-server-semantic-conventions" rel="noopener noreferrer nofollow" target="_blank" title="Server HTTP attributes">Sunucu HTTP öznitelikleri<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a><ul>
 <li><code translate="no">http.route</code></li>
 <li><code translate="no">http.target</code></li>
 </ul>
@@ -228,16 +225,14 @@ We don't provide any for <code translate="no">edge</code> or client side code.</
 <p translated="true">Bu aralık, kodunuzda yürütülen getirme isteğini temsil eder.</p>
 <p translated="true">Nitelikler:</p>
 <ul>
-<li><a href="https://opentelemetry.io/docs/reference/specification/trace/semantic_conventions/http/#common-attributes" rel="noopener noreferrer nofollow" target="_blank" title="Common HTTP attributes">Common HTTP attributes<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>
-<ul>
+<li translated="true"><a href="https://opentelemetry.io/docs/reference/specification/trace/semantic_conventions/http/#common-attributes" rel="noopener noreferrer nofollow" target="_blank" title="Common HTTP attributes">Ortak HTTP öznitelikleri<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a><ul>
 <li><code translate="no">http.method</code></li>
 </ul>
 </li>
-<li><a href="https://opentelemetry.io/docs/reference/specification/trace/semantic_conventions/http/#http-client" rel="noopener noreferrer nofollow" target="_blank" title="Client HTTP attributes">Client HTTP attributes<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a>
-<ul>
+<li translated="true"><a href="https://opentelemetry.io/docs/reference/specification/trace/semantic_conventions/http/#http-client" rel="noopener noreferrer nofollow" target="_blank" title="Client HTTP attributes">İstemci HTTP öznitelikleri<span class="inline-flex"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:14px;height:14px"><path d="M7 17L17 7"></path><path d="M7 7h10v10"></path></svg></span></a><ul>
 <li><code translate="no">http.url</code></li>
 <li><code translate="no">net.peer.name</code></li>
-<li><code translate="no">net.peer.port</code> (only if specified)</li>
+<li><code translate="no">net.peer.port</code> (yalnızca belirtilmişse)</li>
 </ul>
 </li>
 <li><code translate="no">next.span_name</code></li>

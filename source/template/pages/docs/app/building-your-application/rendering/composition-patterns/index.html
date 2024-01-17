@@ -679,11 +679,8 @@
       <!-- -->
       <p translated="true">Sağlayıcı kökte işlendiğinde, uygulamanızdaki diğer tüm İstemci Bileşenleri bu bağlamı kullanabilecektir.</p>
       <blockquote class="p-3 text-sm">
-        <p>
-          <strong>Good to know</strong>: You should render providers as deep as possible in the tree – notice how
-          <code translate="no">ThemeProvider</code> only wraps <code translate="no">{children}</code> instead of the entire
-          <code translate="no">&lt;html&gt;</code> document. This makes it easier for Next.js to optimize the static parts of your Server Components.
-        </p>
+        <p translated="true">
+         <strong>Bilmekte</strong> fayda var: Sağlayıcıları ağaçta mümkün olduğunca derinde oluşturmalısınız - <code translate="no">ThemeProvider</code> adresinin <code translate="no">&lt;html&gt;</code> belgesinin tamamı yerine yalnızca <code translate="no">{children}</code> adresini nasıl sardığına dikkat edin. Bu, Next.js'nin Sunucu Bileşenlerinizin statik kısımlarını optimize etmesini kolaylaştırır.        </p>
       </blockquote>
       <h4 id="advice-for-library-authors" data-docs-heading="" translate="no">
         <a href="#advice-for-library-authors" title="Advice for Library Authors">Advice for Library Authors<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -826,26 +823,15 @@
         bazı şeyler vardır:
       </p>
       <ul>
-        <li>
-          During a request-response lifecycle, your code moves from the server to the client. If you need to access data or resources on the server
-          while on the client, you'll be making a <strong>new</strong> request to the server - not switching back and forth.
-        </li>
-        <li>
-          When a new request is made to the server, all Server Components are rendered first, including those nested inside Client Components. The
-          rendered result (RSC Payload) will contain references to the locations of Client Components. Then, on the client, React uses the RSC Payload
-          to reconcile Server and Client Components into a single tree.
-        </li>
+        <li translated="true">
+          İstek-yanıt yaşam döngüsü sırasında kodunuz sunucudan istemciye geçer. İstemcideyken sunucudaki verilere veya kaynaklara erişmeniz gerekirse, sunucuya <strong>yeni</strong> bir istekte bulunacaksınız - ileri geri geçiş yapmayacaksınız.        </li>
+        <li translated="true">
+          Sunucuya yeni bir istek yapıldığında, İstemci Bileşenleri içinde yuvalanmış olanlar da dahil olmak üzere tüm Sunucu Bileşenleri ilk olarak işlenir. Render edilen sonuç (RSC Payload), İstemci Bileşenlerinin konumlarına referanslar içerecektir. Ardından, istemcide React, Sunucu ve İstemci Bileşenlerini tek bir ağaçta uzlaştırmak için RSC Payload'u kullanır.        </li>
       </ul>
       <!-- -->
       <ul>
-        <li>
-          Since Client Components are rendered after Server Components, you cannot import a Server Component into a Client Component module (since it
-          would require a new request back to the server). Instead, you can pass a Server Component as <code translate="no">props</code> to a Client
-          Component. See the
-          <a href="#unsupported-pattern-importing-server-components-into-client-components" title="unsupported pattern">unsupported pattern</a> and
-          <a href="#supported-pattern-passing-server-components-to-client-components-as-props" title="supported pattern">supported pattern</a>
-          sections below.
-        </li>
+        <li translated="true">
+          İstemci Bileşenleri Sunucu Bileşenlerinden sonra oluşturulduğu için, bir Sunucu Bileşenini bir İstemci Bileşeni modülüne aktaramazsınız (çünkü bu sunucuya yeni bir istek yapılmasını gerektirir). Bunun yerine, bir Sunucu Bileşenini <code translate="no">props</code> olarak bir İstemci Bileşenine aktarabilirsiniz. Aşağıdaki <a href="#unsupported-pattern-importing-server-components-into-client-components" title="unsupported pattern">desteklenmeyen kalıp</a> ve <a href="#supported-pattern-passing-server-components-to-client-components-as-props" title="supported pattern">desteklenen kalıp</a>bölümlerine bakın.       </li>
       </ul>
       <h3 id="unsupported-pattern-importing-server-components-into-client-components" data-docs-heading="" translate="no">
         <a href="#unsupported-pattern-importing-server-components-into-client-components" title="Unsupported Pattern: Importing Server Components into Client Components">Unsupported Pattern: Importing Server Components into Client Components<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
@@ -1029,10 +1015,9 @@
       <blockquote class="p-3 text-sm">
         <p><strong>Bilmekte fayda var:</strong></p>
         <ul>
-          <li>
-            The pattern of "lifting content up" has been used to avoid re-rendering a nested child component when a parent component re-renders.
-          </li>
-          <li>You're not limited to the <code translate="no">children</code> prop. You can use any prop to pass JSX.</li>
+          <li translated="true">
+            "İçeriği yukarı kaldırma" modeli, bir üst bileşen yeniden render edildiğinde iç içe geçmiş bir alt bileşenin yeniden render edilmesini önlemek için kullanılmıştır.          </li>
+          <li translated="true"><code translate="no">children</code> prop'u ile sınırlı değilsiniz. JSX iletmek için herhangi bir prop kullanabilirsiniz.</li>
         </ul>
       </blockquote>
     </article>@@include('../../../../../../layouts/sidebar.html')</main>

@@ -20,13 +20,12 @@
 <p translated="true"><code translate="no">usePathname</code> kasıtlı olarak bir İstemci <a href="/docs/app/building-your-application/rendering/client-components" title="Client Component">Bileşeni</a> kullanılmasını gerektirir. İstemci Bileşenlerinin bir optimizasyon eksikliği olmadığını belirtmek önemlidir. <a href="/docs/app/building-your-application/rendering/server-components" title="Server Components">Sunucu Bileşenleri</a> mimarisinin ayrılmaz bir parçasıdır.</p>
 <p translated="true">Örneğin, <code translate="no">usePathname</code> adresindeki bir İstemci Bileşeni ilk sayfa yüklemesinde HTML'ye dönüştürülür. Yeni bir rotaya gidildiğinde, bu bileşenin yeniden taranması gerekmez. Bunun yerine, bileşen bir kez indirilir (istemci JavaScript paketinde) ve mevcut duruma göre yeniden oluşturulur.</p>
 <blockquote class="p-3 text-sm">
-<p><strong>Good to know</strong>:</p>
+<p translated="true"><strong>Bildiğim iyi</strong> oldu:</p>
 <ul>
-<li>Reading the current URL from a <a href="/docs/app/building-your-application/rendering/server-components" title="Server Component">Server Component</a> is not supported. This design is intentional to support layout state being preserved across page navigations.</li>
-<li>Compatibility mode:<!-- -->
-<ul>
-<li><code translate="no">usePathname</code> can return <code translate="no">null</code> when a <a href="/docs/pages/api-reference/functions/get-static-paths#fallback-true" title="fallback route">fallback route</a> is being rendered or when a <code translate="no">pages</code> directory page has been <a href="/docs/pages/building-your-application/rendering/automatic-static-optimization" title="automatically statically optimized">automatically statically optimized</a> by Next.js and the router is not ready.</li>
-<li>Next.js will automatically update your types if it detects both an <code translate="no">app</code> and <code translate="no">pages</code> directory in your project.</li>
+<li translated="true">Geçerli URL'nin bir <a href="/docs/app/building-your-application/rendering/server-components" title="Server Component">Sunucu Bileşeninden</a> okunması desteklenmez. Bu tasarım, sayfa gezintileri boyunca düzen durumunun korunmasını desteklemek için tasarlanmıştır.</li>
+<li translated="true">Uyumluluk modu:<!-- --><ul>
+<li><code translate="no">usePathname</code> bir <a href="/docs/pages/api-reference/functions/get-static-paths#fallback-true" title="fallback route">geri</a> dönüş rotası işlenirken veya bir <code translate="no">pages</code> dizin sayfası Next.js tarafından <a href="/docs/pages/building-your-application/rendering/automatic-static-optimization" title="automatically statically optimized">otomatik olarak statik olarak optimize</a> edildiğinde ve yönlendirici hazır olmadığında <code translate="no">null</code> döndürülebilir.</li>
+<li translated="true">Next.js, projenizde hem <code translate="no">app</code> hem de <code translate="no">pages</code> dizini tespit ederseniz türlerinizi otomatik olarak güncelleyecektir.</li>
 </ul>
 </li>
 </ul>
