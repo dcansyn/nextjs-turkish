@@ -1,14 +1,14 @@
 (function () {
   'use strict';
 
-  var App = function () {
-    var o = this;
+  let App = function () {
+    let o = this;
     this.ready(function () {
       o.initialize();
     });
   };
 
-  var p = App.prototype;
+  let p = App.prototype;
   p.isMobile = false;
 
   p.screen = {
@@ -43,15 +43,15 @@
   };
 
   p.setCookie = function (name, value, day) {
-    var date = new Date();
+    let date = new Date();
     date.setTime(date.getTime() + day * 1000 * 60 * 60 * 24);
-    var expires = 'expires=' + date.toUTCString();
+    let expires = 'expires=' + date.toUTCString();
     document.cookie = name + '=' + value + ';' + expires + ';path=/';
   };
 
   p.getCookie = function (name) {
-    for (var t = name + '=', i = decodeURIComponent(document.cookie).split(';'), a = 0; a < i.length; a++) {
-      for (var n = i[a]; ' ' === n.charAt(0); ) n = n.substring(1);
+    for (let t = name + '=', i = decodeURIComponent(document.cookie).split(';'), a = 0; a < i.length; a++) {
+      for (let n = i[a]; ' ' === n.charAt(0); ) n = n.substring(1);
       if (0 === n.indexOf(t)) return n.substring(t.length, n.length);
     }
     return '';

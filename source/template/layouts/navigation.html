@@ -1,660 +1,564 @@
-<nav>
+<nav class="navigation">
   <ul>
     <li>
-      <a href="/docs/getting-started">Getting Started</a>
+      <a class="menu-title" href="/docs">Getting Started</a>
       <div>
-        <div>
-          <ul>
-            <li><a href="/docs/getting-started/installation">Installation</a></li>
-            <li><a href="/docs/getting-started/project-structure">Project Structure</a></li>
-          </ul>
-        </div>
+        <ul>
+          <li><a href="/docs/getting-started/installation">Installation</a></li>
+          <li><a href="/docs/getting-started/project-structure">Project Structure</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  <ul data-type="app">
+    <li>
+      <a class="menu-title" href="/docs/app/building-your-application">Building Your Application</a>
+      <div>
+        <ul>
+          <li>
+            <a href="/docs/app/building-your-application/routing">Routing </a>
+            <div>
+              <ul>
+                <li><a href="/docs/app/building-your-application/routing/defining-routes">Defining Routes</a></li>
+                <li><a href="/docs/app/building-your-application/routing/pages-and-layouts">Pages and Layouts</a></li>
+                <li>
+                  <a href="/docs/app/building-your-application/routing/linking-and-navigating">Linking and Navigating</a>
+                </li>
+                <li>
+                  <a href="/docs/app/building-your-application/routing/loading-ui-and-streaming">Loading UI and Streaming</a>
+                </li>
+                <li><a href="/docs/app/building-your-application/routing/error-handling">Error Handling</a></li>
+                <li><a href="/docs/app/building-your-application/routing/redirecting">Redirecting</a></li>
+                <li><a href="/docs/app/building-your-application/routing/route-groups">Route Groups</a></li>
+                <li><a href="/docs/app/building-your-application/routing/colocation">Project Organization</a></li>
+                <li><a href="/docs/app/building-your-application/routing/dynamic-routes">Dynamic Routes</a></li>
+                <li><a href="/docs/app/building-your-application/routing/parallel-routes">Parallel Routes</a></li>
+                <li><a href="/docs/app/building-your-application/routing/intercepting-routes">Intercepting Routes</a></li>
+                <li><a href="/docs/app/building-your-application/routing/route-handlers">Route Handlers</a></li>
+                <li><a href="/docs/app/building-your-application/routing/middleware">Middleware</a></li>
+                <li><a href="/docs/app/building-your-application/routing/internationalization">Internationalization</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/app/building-your-application/data-fetching">Data Fetching</a>
+            <div>
+              <ul>
+                <li>
+                  <a href="/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating"
+                    >Fetching, Caching, and Revalidating</a
+                  >
+                </li>
+                <li>
+                  <a href="/docs/app/building-your-application/data-fetching/server-actions-and-mutations">Server Actions and Mutations</a>
+                </li>
+                <li>
+                  <a href="/docs/app/building-your-application/data-fetching/patterns">Data Fetching Patterns and Best Practices</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/app/building-your-application/rendering">Rendering</a>
+            <div>
+              <ul>
+                <li><a href="/docs/app/building-your-application/rendering/server-components">Server Components</a></li>
+                <li><a href="/docs/app/building-your-application/rendering/client-components">Client Components</a></li>
+                <li>
+                  <a href="/docs/app/building-your-application/rendering/composition-patterns">Composition Patterns</a>
+                </li>
+                <li>
+                  <a href="/docs/app/building-your-application/rendering/edge-and-nodejs-runtimes">Edge and Node.js Runtimes</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="/docs/app/building-your-application/caching">Caching</a></li>
+          <li>
+            <a href="/docs/app/building-your-application/styling">Styling</a>
+            <div>
+              <ul>
+                <li><a href="/docs/app/building-your-application/styling/css-modules">CSS Modules</a></li>
+                <li><a href="/docs/app/building-your-application/styling/tailwind-css">Tailwind CSS</a></li>
+                <li><a href="/docs/app/building-your-application/styling/css-in-js">CSS-in-JS</a></li>
+                <li><a href="/docs/app/building-your-application/styling/sass">Sass</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/app/building-your-application/optimizing">Optimizing</a>
+            <div>
+              <ul>
+                <li><a href="/docs/app/building-your-application/optimizing/images">Images</a></li>
+                <li><a href="/docs/app/building-your-application/optimizing/fonts">Fonts</a></li>
+                <li><a href="/docs/app/building-your-application/optimizing/scripts">Scripts</a></li>
+                <li><a href="/docs/app/building-your-application/optimizing/metadata">Metadata</a></li>
+                <li><a href="/docs/app/building-your-application/optimizing/static-assets">Static Assets</a></li>
+                <li><a href="/docs/app/building-your-application/optimizing/bundle-analyzer">Bundle Analyzer</a></li>
+                <li><a href="/docs/app/building-your-application/optimizing/lazy-loading">Lazy Loading</a></li>
+                <li><a href="/docs/app/building-your-application/optimizing/analytics">Analytics</a></li>
+                <li><a href="/docs/app/building-your-application/optimizing/instrumentation">Instrumentation</a></li>
+                <li><a href="/docs/app/building-your-application/optimizing/open-telemetry">OpenTelemetry</a></li>
+                <li>
+                  <a href="/docs/app/building-your-application/optimizing/third-party-libraries">Third Party Libraries</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/app/building-your-application/configuring">Configuring</a>
+            <div>
+              <ul>
+                <li><a href="/docs/app/building-your-application/configuring/typescript">TypeScript</a></li>
+                <li><a href="/docs/app/building-your-application/configuring/eslint">ESLint</a></li>
+                <li>
+                  <a href="/docs/app/building-your-application/configuring/environment-variables">Environment Variables</a>
+                </li>
+                <li>
+                  <a href="/docs/app/building-your-application/configuring/absolute-imports-and-module-aliases"
+                    >Absolute Imports and Module Path Aliases</a
+                  >
+                </li>
+                <li><a href="/docs/app/building-your-application/configuring/mdx">MDX</a></li>
+                <li><a href="/docs/app/building-your-application/configuring/src-directory">src Directory</a></li>
+                <li><a href="/docs/app/building-your-application/configuring/draft-mode">Draft Mode</a></li>
+                <li>
+                  <a href="/docs/app/building-your-application/configuring/content-security-policy">Content Security Policy</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/app/building-your-application/testing">Testing</a>
+            <div>
+              <ul>
+                <li><a href="/docs/app/building-your-application/testing/vitest">Vitest</a></li>
+                <li><a href="/docs/app/building-your-application/testing/jest">Jest</a></li>
+                <li><a href="/docs/app/building-your-application/testing/playwright">Playwright</a></li>
+                <li><a href="/docs/app/building-your-application/testing/cypress">Cypress</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/app/building-your-application/deploying">Deploying</a>
+            <div>
+              <ul>
+                <li>
+                  <a href="/docs/app/building-your-application/deploying/production-checklist">Production Checklist</a>
+                </li>
+                <li><a href="/docs/app/building-your-application/deploying/static-exports">Static Exports</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/app/building-your-application/upgrading">Upgrading</a>
+            <div>
+              <ul>
+                <li><a href="/docs/app/building-your-application/upgrading/codemods">Codemods</a></li>
+                <li>
+                  <a href="/docs/app/building-your-application/upgrading/app-router-migration">App Router Migration</a>
+                </li>
+                <li><a href="/docs/app/building-your-application/upgrading/version-14">Version 14</a></li>
+                <li><a href="/docs/app/building-your-application/upgrading/from-vite">Migrating from Vite</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  <ul data-type="app">
+    <li>
+      <a class="menu-title" href="/docs/app/api-reference">API Reference</a>
+      <div>
+        <ul>
+          <li>
+            <a href="/docs/app/api-reference/components">Components</a>
+            <div>
+              <ul>
+                <li><a href="/docs/app/api-reference/components/font">Font</a></li>
+                <li><a href="/docs/app/api-reference/components/image">&lt;Image&gt;</a></li>
+                <li><a href="/docs/app/api-reference/components/link">&lt;Link&gt;</a></li>
+                <li><a href="/docs/app/api-reference/components/script">&lt;Script&gt;</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/app/api-reference/file-conventions">File Conventions</a>
+            <div>
+              <ul>
+                <li><a href="/docs/app/api-reference/file-conventions/default">default.js</a></li>
+                <li><a href="/docs/app/api-reference/file-conventions/error">error.js</a></li>
+                <li><a href="/docs/app/api-reference/file-conventions/layout">layout.js</a></li>
+                <li><a href="/docs/app/api-reference/file-conventions/loading">loading.js</a></li>
+                <li><a href="/docs/app/api-reference/file-conventions/not-found">not-found.js</a></li>
+                <li><a href="/docs/app/api-reference/file-conventions/page">page.js</a></li>
+                <li><a href="/docs/app/api-reference/file-conventions/route">route.js</a></li>
+                <li><a href="/docs/app/api-reference/file-conventions/route-segment-config">Route Segment Config</a></li>
+                <li><a href="/docs/app/api-reference/file-conventions/template">template.js</a></li>
+                <li>
+                  <a href="/docs/app/api-reference/file-conventions/metadata">Metadata Files</a>
+                  <div>
+                    <ul>
+                      <li>
+                        <a href="/docs/app/api-reference/file-conventions/metadata/app-icons">favicon, icon, and apple-icon</a>
+                      </li>
+                      <li><a href="/docs/app/api-reference/file-conventions/metadata/manifest">manifest.json</a></li>
+                      <li>
+                        <a href="/docs/app/api-reference/file-conventions/metadata/opengraph-image">opengraph-image and twitter-image</a>
+                      </li>
+                      <li><a href="/docs/app/api-reference/file-conventions/metadata/robots">robots.txt</a></li>
+                      <li><a href="/docs/app/api-reference/file-conventions/metadata/sitemap">sitemap.xml</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/app/api-reference/functions">Functions</a>
+            <div>
+              <ul>
+                <li><a href="/docs/app/api-reference/functions/cookies">cookies</a></li>
+                <li><a href="/docs/app/api-reference/functions/draft-mode">draftMode</a></li>
+                <li><a href="/docs/app/api-reference/functions/fetch">fetch</a></li>
+                <li><a href="/docs/app/api-reference/functions/generate-image-metadata">generateImageMetadata</a></li>
+                <li><a href="/docs/app/api-reference/functions/generate-metadata">generateMetadata</a></li>
+                <li><a href="/docs/app/api-reference/functions/generate-sitemaps">generateSitemaps</a></li>
+                <li><a href="/docs/app/api-reference/functions/generate-static-params">generateStaticParams</a></li>
+                <li><a href="/docs/app/api-reference/functions/generate-viewport">generateViewport</a></li>
+                <li><a href="/docs/app/api-reference/functions/headers">headers</a></li>
+                <li><a href="/docs/app/api-reference/functions/image-response">ImageResponse</a></li>
+                <li><a href="/docs/app/api-reference/functions/next-request">NextRequest</a></li>
+                <li><a href="/docs/app/api-reference/functions/next-response">NextResponse</a></li>
+                <li><a href="/docs/app/api-reference/functions/not-found">notFound</a></li>
+                <li><a href="/docs/app/api-reference/functions/permanentRedirect">permanentRedirect</a></li>
+                <li><a href="/docs/app/api-reference/functions/redirect">redirect</a></li>
+                <li><a href="/docs/app/api-reference/functions/revalidatePath">revalidatePath</a></li>
+                <li><a href="/docs/app/api-reference/functions/revalidateTag">revalidateTag</a></li>
+                <li><a href="/docs/app/api-reference/functions/unstable_cache">unstable_cache</a></li>
+                <li><a href="/docs/app/api-reference/functions/unstable_noStore">unstable_noStore</a></li>
+                <li><a href="/docs/app/api-reference/functions/use-params">useParams</a></li>
+                <li><a href="/docs/app/api-reference/functions/use-pathname">usePathname</a></li>
+                <li><a href="/docs/app/api-reference/functions/use-report-web-vitals">useReportWebVitals</a></li>
+                <li><a href="/docs/app/api-reference/functions/use-router">useRouter</a></li>
+                <li><a href="/docs/app/api-reference/functions/use-search-params">useSearchParams</a></li>
+                <li>
+                  <a href="/docs/app/api-reference/functions/use-selected-layout-segment">useSelectedLayoutSegment</a>
+                </li>
+                <li>
+                  <a href="/docs/app/api-reference/functions/use-selected-layout-segments">useSelectedLayoutSegments</a>
+                </li>
+                <li><a href="/docs/app/api-reference/functions/userAgent">userAgent</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/app/api-reference/next-config-js">next.config.js Options</a>
+            <div>
+              <ul>
+                <li><a href="/docs/app/api-reference/next-config-js/appDir">appDir</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/assetPrefix">assetPrefix</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/basePath">basePath</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/compress">compress</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/devIndicators">devIndicators</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/distDir">distDir</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/env">env</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/eslint">eslint</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/exportPathMap">exportPathMap</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/generateBuildId">generateBuildId</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/generateEtags">generateEtags</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/headers">headers</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/httpAgentOptions">httpAgentOptions</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/images">images</a></li>
+                <li>
+                  <a href="/docs/app/api-reference/next-config-js/incrementalCacheHandlerPath">incrementalCacheHandlerPath</a>
+                </li>
+                <li><a href="/docs/app/api-reference/next-config-js/logging">logging</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/mdxRs">mdxRs</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/onDemandEntries">onDemandEntries</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/optimizePackageImports">optimizePackageImports</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/output">output</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/pageExtensions">pageExtensions</a></li>
+                <li>
+                  <a href="/docs/app/api-reference/next-config-js/partial-prerendering">Partial Prerendering (experimental)</a>
+                </li>
+                <li><a href="/docs/app/api-reference/next-config-js/poweredByHeader">poweredByHeader</a></li>
+                <li>
+                  <a href="/docs/app/api-reference/next-config-js/productionBrowserSourceMaps">productionBrowserSourceMaps</a>
+                </li>
+                <li><a href="/docs/app/api-reference/next-config-js/reactStrictMode">reactStrictMode</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/redirects">redirects</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/rewrites">rewrites</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/serverActions">serverActions</a></li>
+                <li>
+                  <a href="/docs/app/api-reference/next-config-js/serverComponentsExternalPackages">serverComponentsExternalPackages</a>
+                </li>
+                <li><a href="/docs/app/api-reference/next-config-js/trailingSlash">trailingSlash</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/transpilePackages">transpilePackages</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/turbo">turbo</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/typedRoutes">typedRoutes</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/typescript">typescript</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/urlImports">urlImports</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/webpack">webpack</a></li>
+                <li><a href="/docs/app/api-reference/next-config-js/webVitalsAttribution">webVitalsAttribution</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="/docs/app/api-reference/create-next-app">create-next-app</a></li>
+          <li><a href="/docs/app/api-reference/edge">Edge Runtime</a></li>
+          <li><a href="/docs/app/api-reference/next-cli">Next.js CLI</a></li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  <ul data-type="pages">
+    <li>
+      <a class="menu-title" href="/docs/pages/building-your-application">Building Your Application</a>
+      <div>
+        <ul>
+          <li>
+            <a href="/docs/pages/building-your-application/routing">Routing</a>
+            <div>
+              <ul>
+                <li><a href="/docs/pages/building-your-application/routing/pages-and-layouts">Pages and Layouts</a></li>
+                <li><a href="/docs/pages/building-your-application/routing/dynamic-routes">Dynamic Routes</a></li>
+                <li><a href="/docs/pages/building-your-application/routing/linking-and-navigating">Linking and Navigating</a></li>
+                <li><a href="/docs/pages/building-your-application/routing/custom-app">Custom App</a></li>
+                <li><a href="/docs/pages/building-your-application/routing/custom-document">Custom Document</a></li>
+                <li><a href="/docs/pages/building-your-application/routing/custom-error">Custom Errors</a></li>
+                <li><a href="/docs/pages/building-your-application/routing/api-routes">API Routes</a></li>
+                <li><a href="/docs/pages/building-your-application/routing/internationalization">Internationalization</a></li>
+                <li><a href="/docs/pages/building-your-application/routing/authenticating">Authenticating</a></li>
+                <li><a href="/docs/pages/building-your-application/routing/middleware">Middleware</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/pages/building-your-application/rendering">Rendering</a>
+            <div>
+              <ul>
+                <li><a href="/docs/pages/building-your-application/rendering/server-side-rendering">Server-side Rendering (SSR)</a></li>
+                <li><a href="/docs/pages/building-your-application/rendering/static-site-generation">Static Site Generation (SSG)</a></li>
+                <li><a href="/docs/pages/building-your-application/rendering/automatic-static-optimization">Automatic Static Optimization</a></li>
+                <li><a href="/docs/pages/building-your-application/rendering/client-side-rendering">Client-side Rendering (CSR)</a></li>
+                <li><a href="/docs/pages/building-your-application/rendering/edge-and-nodejs-runtimes">Edge and Node.js Runtimes</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/pages/building-your-application/data-fetching">Data Fetching</a>
+            <div>
+              <ul>
+                <li><a href="/docs/pages/building-your-application/data-fetching/get-static-props">getStaticProps</a></li>
+                <li><a href="/docs/pages/building-your-application/data-fetching/get-static-paths">getStaticPaths</a></li>
+                <li><a href="/docs/pages/building-your-application/data-fetching/forms-and-mutations">Forms and Mutations</a></li>
+                <li><a href="/docs/pages/building-your-application/data-fetching/get-server-side-props">getServerSideProps</a></li>
+                <li>
+                  <a href="/docs/pages/building-your-application/data-fetching/incremental-static-regeneration"
+                    >Incremental Static Regeneration (ISR)</a
+                  >
+                </li>
+                <li><a href="/docs/pages/building-your-application/data-fetching/client-side">Client-side Fetching</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/pages/building-your-application/styling">Styling</a>
+            <div>
+              <ul>
+                <li><a href="/docs/pages/building-your-application/styling/css-modules">CSS Modules</a></li>
+                <li><a href="/docs/pages/building-your-application/styling/tailwind-css">Tailwind CSS</a></li>
+                <li><a href="/docs/pages/building-your-application/styling/css-in-js">CSS-in-JS</a></li>
+                <li><a href="/docs/pages/building-your-application/styling/sass">Sass</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/pages/building-your-application/optimizing">Optimizing</a>
+            <div>
+              <ul>
+                <li><a href="/docs/pages/building-your-application/optimizing/images">Images</a></li>
+                <li><a href="/docs/pages/building-your-application/optimizing/fonts">Fonts</a></li>
+                <li><a href="/docs/pages/building-your-application/optimizing/scripts">Scripts</a></li>
+                <li><a href="/docs/pages/building-your-application/optimizing/static-assets">Static Assets</a></li>
+                <li><a href="/docs/pages/building-your-application/optimizing/bundle-analyzer">Bundle Analyzer</a></li>
+                <li><a href="/docs/pages/building-your-application/optimizing/analytics">Analytics</a></li>
+                <li><a href="/docs/pages/building-your-application/optimizing/lazy-loading">Lazy Loading</a></li>
+                <li><a href="/docs/pages/building-your-application/optimizing/instrumentation">Instrumentation</a></li>
+                <li><a href="/docs/pages/building-your-application/optimizing/open-telemetry">OpenTelemetry</a></li>
+                <li><a href="/docs/pages/building-your-application/optimizing/third-party-libraries">Third Party Libraries</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/pages/building-your-application/configuring">Configuring</a>
+            <div>
+              <ul>
+                <li><a href="/docs/pages/building-your-application/configuring/typescript">TypeScript</a></li>
+                <li><a href="/docs/pages/building-your-application/configuring/eslint">ESLint</a></li>
+                <li><a href="/docs/pages/building-your-application/configuring/environment-variables">Environment Variables</a></li>
+                <li>
+                  <a href="/docs/pages/building-your-application/configuring/absolute-imports-and-module-aliases"
+                    >Absolute Imports and Module Path Aliases</a
+                  >
+                </li>
+                <li><a href="/docs/pages/building-your-application/configuring/src-directory">src Directory</a></li>
+                <li><a href="/docs/pages/building-your-application/configuring/mdx">MDX</a></li>
+                <li><a href="/docs/pages/building-your-application/configuring/amp">AMP</a></li>
+                <li><a href="/docs/pages/building-your-application/configuring/babel">Babel</a></li>
+                <li><a href="/docs/pages/building-your-application/configuring/post-css">PostCSS</a></li>
+                <li><a href="/docs/pages/building-your-application/configuring/custom-server">Custom Server</a></li>
+                <li><a href="/docs/pages/building-your-application/configuring/draft-mode">Draft Mode</a></li>
+                <li><a href="/docs/pages/building-your-application/configuring/error-handling">Error Handling</a></li>
+                <li><a href="/docs/pages/building-your-application/configuring/debugging">Debugging</a></li>
+                <li><a href="/docs/pages/building-your-application/configuring/preview-mode">Preview Mode</a></li>
+                <li><a href="/docs/pages/building-your-application/configuring/content-security-policy">Content Security Policy</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/pages/building-your-application/testing">Testing</a>
+            <div>
+              <ul>
+                <li><a href="/docs/pages/building-your-application/testing/vitest">Vitest</a></li>
+                <li><a href="/docs/pages/building-your-application/testing/jest">Jest</a></li>
+                <li><a href="/docs/pages/building-your-application/testing/playwright">Playwright</a></li>
+                <li><a href="/docs/pages/building-your-application/testing/cypress">Cypress</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/pages/building-your-application/deploying">Deploying</a>
+            <div>
+              <ul>
+                <li><a href="/docs/pages/building-your-application/deploying/production-checklist">Production Checklist</a></li>
+                <li><a href="/docs/pages/building-your-application/deploying/static-exports">Static Exports</a></li>
+                <li><a href="/docs/pages/building-your-application/deploying/multi-zones">Multi Zones</a></li>
+                <li><a href="/docs/pages/building-your-application/deploying/ci-build-caching">Continuous Integration (CI) Build Caching</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/pages/building-your-application/upgrading">Upgrading</a>
+            <div>
+              <ul>
+                <li><a href="/docs/pages/building-your-application/upgrading/codemods">Codemods</a></li>
+                <li><a href="/docs/pages/building-your-application/upgrading/app-router-migration">From Pages to App</a></li>
+                <li><a href="/docs/pages/building-your-application/upgrading/version-14">Version 14</a></li>
+                <li><a href="/docs/pages/building-your-application/upgrading/version-13">Version 13</a></li>
+                <li><a href="/docs/pages/building-your-application/upgrading/version-12">Version 12</a></li>
+                <li><a href="/docs/pages/building-your-application/upgrading/version-11">Version 11</a></li>
+                <li><a href="/docs/pages/building-your-application/upgrading/version-10">Version 10</a></li>
+                <li><a href="/docs/pages/building-your-application/upgrading/version-9">Version 9</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  <ul data-type="pages">
+    <li>
+      <a class="menu-title" href="/docs/pages/api-reference">API Reference</a>
+      <div>
+        <ul>
+          <li>
+            <a href="/docs/pages/api-reference/components">Components</a>
+            <div>
+              <ul>
+                <li><a href="/docs/pages/api-reference/components/font">Font</a></li>
+                <li><a href="/docs/pages/api-reference/components/head">&lt;Head&gt;</a></li>
+                <li><a href="/docs/pages/api-reference/components/image">&lt;Image&gt;</a></li>
+                <li><a href="/docs/pages/api-reference/components/image-legacy">&lt;Image&gt; (Legacy)</a></li>
+                <li><a href="/docs/pages/api-reference/components/link">&lt;Link&gt;</a></li>
+                <li><a href="/docs/pages/api-reference/components/script">&lt;Script&gt;</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/pages/api-reference/functions">Functions</a>
+            <div>
+              <ul>
+                <li><a href="/docs/pages/api-reference/functions/get-initial-props">getInitialProps</a></li>
+                <li><a href="/docs/pages/api-reference/functions/get-server-side-props">getServerSideProps</a></li>
+                <li><a href="/docs/pages/api-reference/functions/get-static-paths">getStaticPaths</a></li>
+                <li><a href="/docs/pages/api-reference/functions/get-static-props">getStaticProps</a></li>
+                <li><a href="/docs/pages/api-reference/functions/next-request">NextRequest</a></li>
+                <li><a href="/docs/pages/api-reference/functions/next-response">NextResponse</a></li>
+                <li><a href="/docs/pages/api-reference/functions/use-amp">useAmp</a></li>
+                <li><a href="/docs/pages/api-reference/functions/use-report-web-vitals">useReportWebVitals</a></li>
+                <li><a href="/docs/pages/api-reference/functions/use-router">useRouter</a></li>
+                <li><a href="/docs/pages/api-reference/functions/userAgent">userAgent</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="/docs/pages/api-reference/next-config-js">next.config.js Options</a>
+            <div>
+              <ul>
+                <li><a href="/docs/pages/api-reference/next-config-js/assetPrefix">assetPrefix</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/basePath">basePath</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/compress">compress</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/devIndicators">devIndicators</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/distDir">distDir</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/env">env</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/eslint">eslint</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/exportPathMap">exportPathMap</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/generateBuildId">generateBuildId</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/generateEtags">generateEtags</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/headers">headers</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/httpAgentOptions">httpAgentOptions</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/images">images</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/onDemandEntries">onDemandEntries</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/output">output</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/pageExtensions">pageExtensions</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/poweredByHeader">poweredByHeader</a></li>
+                <li>
+                  <a href="/docs/pages/api-reference/next-config-js/productionBrowserSourceMaps">productionBrowserSourceMaps</a>
+                </li>
+                <li><a href="/docs/pages/api-reference/next-config-js/reactStrictMode">reactStrictMode</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/redirects">redirects</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/rewrites">rewrites</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/runtime-configuration">Runtime Config</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/trailingSlash">trailingSlash</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/transpilePackages">transpilePackages</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/turbo">turbo</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/typescript">typescript</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/urlImports">urlImports</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/webpack">webpack</a></li>
+                <li><a href="/docs/pages/api-reference/next-config-js/webVitalsAttribution">webVitalsAttribution</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="/docs/pages/api-reference/create-next-app">create-next-app</a></li>
+          <li><a href="/docs/pages/api-reference/next-cli">Next.js CLI</a></li>
+          <li><a href="/docs/pages/api-reference/edge">Edge Runtime</a></li>
+        </ul>
       </div>
     </li>
   </ul>
   <ul>
     <li>
-      <a href="/docs/app/building-your-application">Building Your Application</a>
+      <a class="menu-title" href="/docs/architecture">Architecture</a>
       <div>
-        <div>
-          <ul>
-            <li>
-              <a href="/docs/app/building-your-application/routing">Routing</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/app/building-your-application/routing/defining-routes">Defining Routes</a></li>
-                    <li><a href="/docs/app/building-your-application/routing/pages-and-layouts">Pages and Layouts</a></li>
-                    <li>
-                      <a href="/docs/app/building-your-application/routing/linking-and-navigating">Linking and Navigating</a>
-                    </li>
-                    <li>
-                      <a href="/docs/app/building-your-application/routing/loading-ui-and-streaming">Loading UI and Streaming</a>
-                    </li>
-                    <li><a href="/docs/app/building-your-application/routing/error-handling">Error Handling</a></li>
-                    <li><a href="/docs/app/building-your-application/routing/redirecting">Redirecting</a></li>
-                    <li><a href="/docs/app/building-your-application/routing/route-groups">Route Groups</a></li>
-                    <li><a href="/docs/app/building-your-application/routing/colocation">Project Organization</a></li>
-                    <li><a href="/docs/app/building-your-application/routing/dynamic-routes">Dynamic Routes</a></li>
-                    <li><a href="/docs/app/building-your-application/routing/parallel-routes">Parallel Routes</a></li>
-                    <li><a href="/docs/app/building-your-application/routing/intercepting-routes">Intercepting Routes</a></li>
-                    <li><a href="/docs/app/building-your-application/routing/route-handlers">Route Handlers</a></li>
-                    <li><a href="/docs/app/building-your-application/routing/middleware">Middleware</a></li>
-                    <li><a href="/docs/app/building-your-application/routing/internationalization">Internationalization</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/app/building-your-application/data-fetching">Data Fetching</a>
-              <div>
-                <div>
-                  <ul>
-                    <li>
-                      <a href="/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating"
-                        >Fetching, Caching, and Revalidating</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/docs/app/building-your-application/data-fetching/server-actions-and-mutations">Server Actions and Mutations</a>
-                    </li>
-                    <li>
-                      <a href="/docs/app/building-your-application/data-fetching/patterns">Data Fetching Patterns and Best Practices</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/app/building-your-application/rendering">Rendering</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/app/building-your-application/rendering/server-components">Server Components</a></li>
-                    <li><a href="/docs/app/building-your-application/rendering/client-components">Client Components</a></li>
-                    <li>
-                      <a href="/docs/app/building-your-application/rendering/composition-patterns">Composition Patterns</a>
-                    </li>
-                    <li>
-                      <a href="/docs/app/building-your-application/rendering/edge-and-nodejs-runtimes">Edge and Node.js Runtimes</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li><a href="/docs/app/building-your-application/caching">Caching</a></li>
-            <li>
-              <a href="/docs/app/building-your-application/styling">Styling</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/app/building-your-application/styling/css-modules">CSS Modules</a></li>
-                    <li><a href="/docs/app/building-your-application/styling/tailwind-css">Tailwind CSS</a></li>
-                    <li><a href="/docs/app/building-your-application/styling/css-in-js">CSS-in-JS</a></li>
-                    <li><a href="/docs/app/building-your-application/styling/sass">Sass</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/app/building-your-application/optimizing">Optimizing</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/app/building-your-application/optimizing/images">Images</a></li>
-                    <li><a href="/docs/app/building-your-application/optimizing/fonts">Fonts</a></li>
-                    <li><a href="/docs/app/building-your-application/optimizing/scripts">Scripts</a></li>
-                    <li><a href="/docs/app/building-your-application/optimizing/metadata">Metadata</a></li>
-                    <li><a href="/docs/app/building-your-application/optimizing/static-assets">Static Assets</a></li>
-                    <li><a href="/docs/app/building-your-application/optimizing/bundle-analyzer">Bundle Analyzer</a></li>
-                    <li><a href="/docs/app/building-your-application/optimizing/lazy-loading">Lazy Loading</a></li>
-                    <li><a href="/docs/app/building-your-application/optimizing/analytics">Analytics</a></li>
-                    <li><a href="/docs/app/building-your-application/optimizing/instrumentation">Instrumentation</a></li>
-                    <li><a href="/docs/app/building-your-application/optimizing/open-telemetry">OpenTelemetry</a></li>
-                    <li>
-                      <a href="/docs/app/building-your-application/optimizing/third-party-libraries">Third Party Libraries</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/app/building-your-application/configuring">Configuring</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/app/building-your-application/configuring/typescript">TypeScript</a></li>
-                    <li><a href="/docs/app/building-your-application/configuring/eslint">ESLint</a></li>
-                    <li>
-                      <a href="/docs/app/building-your-application/configuring/environment-variables">Environment Variables</a>
-                    </li>
-                    <li>
-                      <a href="/docs/app/building-your-application/configuring/absolute-imports-and-module-aliases"
-                        >Absolute Imports and Module Path Aliases</a
-                      >
-                    </li>
-                    <li><a href="/docs/app/building-your-application/configuring/mdx">MDX</a></li>
-                    <li><a href="/docs/app/building-your-application/configuring/src-directory">src Directory</a></li>
-                    <li><a href="/docs/app/building-your-application/configuring/draft-mode">Draft Mode</a></li>
-                    <li>
-                      <a href="/docs/app/building-your-application/configuring/content-security-policy">Content Security Policy</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/app/building-your-application/testing">Testing</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/app/building-your-application/testing/vitest">Vitest</a></li>
-                    <li><a href="/docs/app/building-your-application/testing/jest">Jest</a></li>
-                    <li><a href="/docs/app/building-your-application/testing/playwright">Playwright</a></li>
-                    <li><a href="/docs/app/building-your-application/testing/cypress">Cypress</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/app/building-your-application/deploying">Deploying</a>
-              <div>
-                <div>
-                  <ul>
-                    <li>
-                      <a href="/docs/app/building-your-application/deploying/production-checklist">Production Checklist</a>
-                    </li>
-                    <li><a href="/docs/app/building-your-application/deploying/static-exports">Static Exports</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/app/building-your-application/upgrading">Upgrading</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/app/building-your-application/upgrading/codemods">Codemods</a></li>
-                    <li>
-                      <a href="/docs/app/building-your-application/upgrading/app-router-migration">App Router Migration</a>
-                    </li>
-                    <li><a href="/docs/app/building-your-application/upgrading/version-14">Version 14</a></li>
-                    <li><a href="/docs/app/building-your-application/upgrading/from-vite">Migrating from Vite</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <ul>
+          <li><a href="/docs/architecture/accessibility">Accessibility</a></li>
+          <li><a href="/docs/architecture/fast-refresh">Fast Refresh</a></li>
+          <li><a href="/docs/architecture/nextjs-compiler">Next.js Compiler</a></li>
+          <li><a href="/docs/architecture/supported-browsers">Supported Browsers</a></li>
+          <li><a href="/docs/architecture/turbopack">Turbopack</a></li>
+        </ul>
       </div>
     </li>
   </ul>
   <ul>
     <li>
-      <a href="/docs/app/api-reference">API Reference</a>
+      <a class="menu-title" href="/docs/community">Community</a>
       <div>
-        <div>
-          <ul>
-            <li>
-              <a href="/docs/app/api-reference/components">Components</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/app/api-reference/components/font">Font</a></li>
-                    <li><a href="/docs/app/api-reference/components/image">&lt;Image&gt;</a></li>
-                    <li><a href="/docs/app/api-reference/components/link">&lt;Link&gt;</a></li>
-                    <li><a href="/docs/app/api-reference/components/script">&lt;Script&gt;</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/app/api-reference/file-conventions">File Conventions</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/app/api-reference/file-conventions/default">default.js</a></li>
-                    <li><a href="/docs/app/api-reference/file-conventions/error">error.js</a></li>
-                    <li><a href="/docs/app/api-reference/file-conventions/layout">layout.js</a></li>
-                    <li><a href="/docs/app/api-reference/file-conventions/loading">loading.js</a></li>
-                    <li><a href="/docs/app/api-reference/file-conventions/not-found">not-found.js</a></li>
-                    <li><a href="/docs/app/api-reference/file-conventions/page">page.js</a></li>
-                    <li><a href="/docs/app/api-reference/file-conventions/route">route.js</a></li>
-                    <li><a href="/docs/app/api-reference/file-conventions/route-segment-config">Route Segment Config</a></li>
-                    <li><a href="/docs/app/api-reference/file-conventions/template">template.js</a></li>
-                    <li>
-                      <a href="/docs/app/api-reference/file-conventions/metadata">Metadata Files</a>
-                      <div>
-                        <div>
-                          <ul>
-                            <li>
-                              <a href="/docs/app/api-reference/file-conventions/metadata/app-icons">favicon, icon, and apple-icon</a>
-                            </li>
-                            <li><a href="/docs/app/api-reference/file-conventions/metadata/manifest">manifest.json</a></li>
-                            <li>
-                              <a href="/docs/app/api-reference/file-conventions/metadata/opengraph-image">opengraph-image and twitter-image</a>
-                            </li>
-                            <li><a href="/docs/app/api-reference/file-conventions/metadata/robots">robots.txt</a></li>
-                            <li><a href="/docs/app/api-reference/file-conventions/metadata/sitemap">sitemap.xml</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/app/api-reference/functions">Functions</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/app/api-reference/functions/cookies">cookies</a></li>
-                    <li><a href="/docs/app/api-reference/functions/draft-mode">draftMode</a></li>
-                    <li><a href="/docs/app/api-reference/functions/fetch">fetch</a></li>
-                    <li><a href="/docs/app/api-reference/functions/generate-image-metadata">generateImageMetadata</a></li>
-                    <li><a href="/docs/app/api-reference/functions/generate-metadata">generateMetadata</a></li>
-                    <li><a href="/docs/app/api-reference/functions/generate-sitemaps">generateSitemaps</a></li>
-                    <li><a href="/docs/app/api-reference/functions/generate-static-params">generateStaticParams</a></li>
-                    <li><a href="/docs/app/api-reference/functions/generate-viewport">generateViewport</a></li>
-                    <li><a href="/docs/app/api-reference/functions/headers">headers</a></li>
-                    <li><a href="/docs/app/api-reference/functions/image-response">ImageResponse</a></li>
-                    <li><a href="/docs/app/api-reference/functions/next-request">NextRequest</a></li>
-                    <li><a href="/docs/app/api-reference/functions/next-response">NextResponse</a></li>
-                    <li><a href="/docs/app/api-reference/functions/not-found">notFound</a></li>
-                    <li><a href="/docs/app/api-reference/functions/permanentRedirect">permanentRedirect</a></li>
-                    <li><a href="/docs/app/api-reference/functions/redirect">redirect</a></li>
-                    <li><a href="/docs/app/api-reference/functions/revalidatePath">revalidatePath</a></li>
-                    <li><a href="/docs/app/api-reference/functions/revalidateTag">revalidateTag</a></li>
-                    <li><a href="/docs/app/api-reference/functions/unstable_cache">unstable_cache</a></li>
-                    <li><a href="/docs/app/api-reference/functions/unstable_noStore">unstable_noStore</a></li>
-                    <li><a href="/docs/app/api-reference/functions/use-params">useParams</a></li>
-                    <li><a href="/docs/app/api-reference/functions/use-pathname">usePathname</a></li>
-                    <li><a href="/docs/app/api-reference/functions/use-report-web-vitals">useReportWebVitals</a></li>
-                    <li><a href="/docs/app/api-reference/functions/use-router">useRouter</a></li>
-                    <li><a href="/docs/app/api-reference/functions/use-search-params">useSearchParams</a></li>
-                    <li>
-                      <a href="/docs/app/api-reference/functions/use-selected-layout-segment">useSelectedLayoutSegment</a>
-                    </li>
-                    <li>
-                      <a href="/docs/app/api-reference/functions/use-selected-layout-segments">useSelectedLayoutSegments</a>
-                    </li>
-                    <li><a href="/docs/app/api-reference/functions/userAgent">userAgent</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/app/api-reference/next-config-js">next.config.js Options</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/app/api-reference/next-config-js/appDir">appDir</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/assetPrefix">assetPrefix</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/basePath">basePath</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/compress">compress</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/devIndicators">devIndicators</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/distDir">distDir</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/env">env</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/eslint">eslint</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/exportPathMap">exportPathMap</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/generateBuildId">generateBuildId</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/generateEtags">generateEtags</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/headers">headers</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/httpAgentOptions">httpAgentOptions</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/images">images</a></li>
-                    <li>
-                      <a href="/docs/app/api-reference/next-config-js/incrementalCacheHandlerPath">incrementalCacheHandlerPath</a>
-                    </li>
-                    <li><a href="/docs/app/api-reference/next-config-js/logging">logging</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/mdxRs">mdxRs</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/onDemandEntries">onDemandEntries</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/optimizePackageImports">optimizePackageImports</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/output">output</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/pageExtensions">pageExtensions</a></li>
-                    <li>
-                      <a href="/docs/app/api-reference/next-config-js/partial-prerendering">Partial Prerendering (experimental)</a>
-                    </li>
-                    <li><a href="/docs/app/api-reference/next-config-js/poweredByHeader">poweredByHeader</a></li>
-                    <li>
-                      <a href="/docs/app/api-reference/next-config-js/productionBrowserSourceMaps">productionBrowserSourceMaps</a>
-                    </li>
-                    <li><a href="/docs/app/api-reference/next-config-js/reactStrictMode">reactStrictMode</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/redirects">redirects</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/rewrites">rewrites</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/serverActions">serverActions</a></li>
-                    <li>
-                      <a href="/docs/app/api-reference/next-config-js/serverComponentsExternalPackages">serverComponentsExternalPackages</a>
-                    </li>
-                    <li><a href="/docs/app/api-reference/next-config-js/trailingSlash">trailingSlash</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/transpilePackages">transpilePackages</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/turbo">turbo</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/typedRoutes">typedRoutes</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/typescript">typescript</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/urlImports">urlImports</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/webpack">webpack</a></li>
-                    <li><a href="/docs/app/api-reference/next-config-js/webVitalsAttribution">webVitalsAttribution</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li><a href="/docs/app/api-reference/create-next-app">create-next-app</a></li>
-            <li><a href="/docs/app/api-reference/edge">Edge Runtime</a></li>
-            <li><a href="/docs/app/api-reference/next-cli">Next.js CLI</a></li>
-          </ul>
-        </div>
-      </div>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <a href="/docs/pages/building-your-application">Building Your Application</a>
-      <div>
-        <div>
-          <ul>
-            <li>
-              <a href="/docs/pages/building-your-application/routing">Routing</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/pages/building-your-application/routing/pages-and-layouts">Pages and Layouts</a></li>
-                    <li><a href="/docs/pages/building-your-application/routing/dynamic-routes">Dynamic Routes</a></li>
-                    <li>
-                      <a href="/docs/pages/building-your-application/routing/linking-and-navigating">Linking and Navigating</a>
-                    </li>
-                    <li><a href="/docs/pages/building-your-application/routing/custom-app">Custom App</a></li>
-                    <li><a href="/docs/pages/building-your-application/routing/custom-document">Custom Document</a></li>
-                    <li><a href="/docs/pages/building-your-application/routing/custom-error">Custom Errors</a></li>
-                    <li><a href="/docs/pages/building-your-application/routing/api-routes">API Routes</a></li>
-                    <li>
-                      <a href="/docs/pages/building-your-application/routing/internationalization">Internationalization</a>
-                    </li>
-                    <li><a href="/docs/pages/building-your-application/routing/authenticating">Authenticating</a></li>
-                    <li><a href="/docs/pages/building-your-application/routing/middleware">Middleware</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/pages/building-your-application/rendering">Rendering</a>
-              <div>
-                <div>
-                  <ul>
-                    <li>
-                      <a href="/docs/pages/building-your-application/rendering/server-side-rendering">Server-side Rendering (SSR)</a>
-                    </li>
-                    <li>
-                      <a href="/docs/pages/building-your-application/rendering/static-site-generation">Static Site Generation (SSG)</a>
-                    </li>
-                    <li>
-                      <a href="/docs/pages/building-your-application/rendering/automatic-static-optimization">Automatic Static Optimization</a>
-                    </li>
-                    <li>
-                      <a href="/docs/pages/building-your-application/rendering/client-side-rendering">Client-side Rendering (CSR)</a>
-                    </li>
-                    <li>
-                      <a href="/docs/pages/building-your-application/rendering/edge-and-nodejs-runtimes">Edge and Node.js Runtimes</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/pages/building-your-application/data-fetching">Data Fetching</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/pages/building-your-application/data-fetching/get-static-props">getStaticProps</a></li>
-                    <li><a href="/docs/pages/building-your-application/data-fetching/get-static-paths">getStaticPaths</a></li>
-                    <li>
-                      <a href="/docs/pages/building-your-application/data-fetching/forms-and-mutations">Forms and Mutations</a>
-                    </li>
-                    <li>
-                      <a href="/docs/pages/building-your-application/data-fetching/get-server-side-props">getServerSideProps</a>
-                    </li>
-                    <li>
-                      <a href="/docs/pages/building-your-application/data-fetching/incremental-static-regeneration"
-                        >Incremental Static Regeneration</a
-                      >
-                    </li>
-                    <li><a href="/docs/pages/building-your-application/data-fetching/client-side">Client-side Fetching</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/pages/building-your-application/styling">Styling</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/pages/building-your-application/styling/css-modules">CSS Modules</a></li>
-                    <li><a href="/docs/pages/building-your-application/styling/tailwind-css">Tailwind CSS</a></li>
-                    <li><a href="/docs/pages/building-your-application/styling/css-in-js">CSS-in-JS</a></li>
-                    <li><a href="/docs/pages/building-your-application/styling/sass">Sass</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/pages/building-your-application/optimizing">Optimizing</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/pages/building-your-application/optimizing/images">Images</a></li>
-                    <li><a href="/docs/pages/building-your-application/optimizing/fonts">Fonts</a></li>
-                    <li><a href="/docs/pages/building-your-application/optimizing/scripts">Scripts</a></li>
-                    <li><a href="/docs/pages/building-your-application/optimizing/static-assets">Static Assets</a></li>
-                    <li><a href="/docs/pages/building-your-application/optimizing/bundle-analyzer">Bundle Analyzer</a></li>
-                    <li><a href="/docs/pages/building-your-application/optimizing/analytics">Analytics</a></li>
-                    <li><a href="/docs/pages/building-your-application/optimizing/lazy-loading">Lazy Loading</a></li>
-                    <li><a href="/docs/pages/building-your-application/optimizing/instrumentation">Instrumentation</a></li>
-                    <li><a href="/docs/pages/building-your-application/optimizing/open-telemetry">OpenTelemetry</a></li>
-                    <li>
-                      <a href="/docs/pages/building-your-application/optimizing/third-party-libraries">Third Party Libraries</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/pages/building-your-application/configuring">Configuring</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/pages/building-your-application/configuring/typescript">TypeScript</a></li>
-                    <li><a href="/docs/pages/building-your-application/configuring/eslint">ESLint</a></li>
-                    <li>
-                      <a href="/docs/pages/building-your-application/configuring/environment-variables">Environment Variables</a>
-                    </li>
-                    <li>
-                      <a href="/docs/pages/building-your-application/configuring/absolute-imports-and-module-aliases"
-                        >Absolute Imports and Module Path Aliases</a
-                      >
-                    </li>
-                    <li><a href="/docs/pages/building-your-application/configuring/src-directory">src Directory</a></li>
-                    <li><a href="/docs/pages/building-your-application/configuring/mdx">MDX</a></li>
-                    <li><a href="/docs/pages/building-your-application/configuring/amp">AMP</a></li>
-                    <li><a href="/docs/pages/building-your-application/configuring/babel">Babel</a></li>
-                    <li><a href="/docs/pages/building-your-application/configuring/post-css">PostCSS</a></li>
-                    <li><a href="/docs/pages/building-your-application/configuring/custom-server">Custom Server</a></li>
-                    <li><a href="/docs/pages/building-your-application/configuring/draft-mode">Draft Mode</a></li>
-                    <li><a href="/docs/pages/building-your-application/configuring/error-handling">Error Handling</a></li>
-                    <li><a href="/docs/pages/building-your-application/configuring/debugging">Debugging</a></li>
-                    <li><a href="/docs/pages/building-your-application/configuring/preview-mode">Preview Mode</a></li>
-                    <li>
-                      <a href="/docs/pages/building-your-application/configuring/content-security-policy">Content Security Policy</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/pages/building-your-application/testing">Testing</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/pages/building-your-application/testing/vitest">Vitest</a></li>
-                    <li><a href="/docs/pages/building-your-application/testing/jest">Jest</a></li>
-                    <li><a href="/docs/pages/building-your-application/testing/playwright">Playwright</a></li>
-                    <li><a href="/docs/pages/building-your-application/testing/cypress">Cypress</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/pages/building-your-application/deploying">Deploying</a>
-              <div>
-                <div>
-                  <ul>
-                    <li>
-                      <a href="/docs/pages/building-your-application/deploying/production-checklist">Production Checklist</a>
-                    </li>
-                    <li><a href="/docs/pages/building-your-application/deploying/static-exports">Static Exports</a></li>
-                    <li><a href="/docs/pages/building-your-application/deploying/multi-zones">Multi Zones</a></li>
-                    <li>
-                      <a href="/docs/pages/building-your-application/deploying/ci-build-caching">Continuous Integration (CI) Build Caching</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/pages/building-your-application/upgrading">Upgrading</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/pages/building-your-application/upgrading/codemods">Codemods</a></li>
-                    <li>
-                      <a href="/docs/pages/building-your-application/upgrading/app-router-migration">From Pages to App</a>
-                    </li>
-                    <li><a href="/docs/pages/building-your-application/upgrading/version-14">Version 14</a></li>
-                    <li><a href="/docs/pages/building-your-application/upgrading/version-13">Version 13</a></li>
-                    <li><a href="/docs/pages/building-your-application/upgrading/version-12">Version 12</a></li>
-                    <li><a href="/docs/pages/building-your-application/upgrading/version-11">Version 11</a></li>
-                    <li><a href="/docs/pages/building-your-application/upgrading/version-10">Version 10</a></li>
-                    <li><a href="/docs/pages/building-your-application/upgrading/version-9">Version 9</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <a href="/docs/pages/api-reference">API Reference</a>
-      <div>
-        <div>
-          <ul>
-            <li>
-              <a href="/docs/pages/api-reference/components">Components</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/pages/api-reference/components/font">Font</a></li>
-                    <li><a href="/docs/pages/api-reference/components/head">&lt;Head&gt;</a></li>
-                    <li><a href="/docs/pages/api-reference/components/image">&lt;Image&gt;</a></li>
-                    <li><a href="/docs/pages/api-reference/components/image-legacy">&lt;Image&gt; (Legacy)</a></li>
-                    <li><a href="/docs/pages/api-reference/components/link">&lt;Link&gt;</a></li>
-                    <li><a href="/docs/pages/api-reference/components/script">&lt;Script&gt;</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/pages/api-reference/functions">Functions</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/pages/api-reference/functions/get-initial-props">getInitialProps</a></li>
-                    <li><a href="/docs/pages/api-reference/functions/get-server-side-props">getServerSideProps</a></li>
-                    <li><a href="/docs/pages/api-reference/functions/get-static-paths">getStaticPaths</a></li>
-                    <li><a href="/docs/pages/api-reference/functions/get-static-props">getStaticProps</a></li>
-                    <li><a href="/docs/pages/api-reference/functions/next-request">NextRequest</a></li>
-                    <li><a href="/docs/pages/api-reference/functions/next-response">NextResponse</a></li>
-                    <li><a href="/docs/pages/api-reference/functions/use-amp">useAmp</a></li>
-                    <li><a href="/docs/pages/api-reference/functions/use-report-web-vitals">useReportWebVitals</a></li>
-                    <li><a href="/docs/pages/api-reference/functions/use-router">useRouter</a></li>
-                    <li><a href="/docs/pages/api-reference/functions/userAgent">userAgent</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li>
-              <a href="/docs/pages/api-reference/next-config-js">next.config.js Options</a>
-              <div>
-                <div>
-                  <ul>
-                    <li><a href="/docs/pages/api-reference/next-config-js/assetPrefix">assetPrefix</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/basePath">basePath</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/compress">compress</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/devIndicators">devIndicators</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/distDir">distDir</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/env">env</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/eslint">eslint</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/exportPathMap">exportPathMap</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/generateBuildId">generateBuildId</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/generateEtags">generateEtags</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/headers">headers</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/httpAgentOptions">httpAgentOptions</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/images">images</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/onDemandEntries">onDemandEntries</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/output">output</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/pageExtensions">pageExtensions</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/poweredByHeader">poweredByHeader</a></li>
-                    <li>
-                      <a href="/docs/pages/api-reference/next-config-js/productionBrowserSourceMaps">productionBrowserSourceMaps</a>
-                    </li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/reactStrictMode">reactStrictMode</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/redirects">redirects</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/rewrites">rewrites</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/runtime-configuration">Runtime Config</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/trailingSlash">trailingSlash</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/transpilePackages">transpilePackages</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/turbo">turbo</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/typescript">typescript</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/urlImports">urlImports</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/webpack">webpack</a></li>
-                    <li><a href="/docs/pages/api-reference/next-config-js/webVitalsAttribution">webVitalsAttribution</a></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <li><a href="/docs/pages/api-reference/create-next-app">create-next-app</a></li>
-            <li><a href="/docs/pages/api-reference/next-cli">Next.js CLI</a></li>
-            <li><a href="/docs/pages/api-reference/edge">Edge Runtime</a></li>
-          </ul>
-        </div>
-      </div>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <a href="/docs/architecture">Architecture</a>
-      <div>
-        <div>
-          <ul>
-            <li><a href="/docs/architecture/accessibility">Accessibility</a></li>
-            <li><a href="/docs/architecture/fast-refresh">Fast Refresh</a></li>
-            <li><a href="/docs/architecture/nextjs-compiler">Next.js Compiler</a></li>
-            <li><a href="/docs/architecture/supported-browsers">Supported Browsers</a></li>
-            <li><a href="/docs/architecture/turbopack">Turbopack</a></li>
-          </ul>
-        </div>
-      </div>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <a href="/docs/community">Community</a>
-      <div>
-        <div>
-          <ul>
-            <li><a href="/docs/community/contribution-guide">Contribution Guide</a></li>
-          </ul>
-        </div>
+        <ul>
+          <li><a href="/docs/community/contribution-guide">Contribution Guide</a></li>
+        </ul>
       </div>
     </li>
   </ul>
