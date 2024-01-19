@@ -7,7 +7,9 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">App Router Incremental Adoption Guide</h1><p translated="true">Bu kılavuz size yardımcı olacaktır:</p>
+    <main>
+      @@include('../../../../../../layouts/navigation.html')
+      <article><h1 class="break-words" translate="no">App Router Incremental Adoption Guide</h1><p translated="true">Bu kılavuz size yardımcı olacaktır:</p>
 <ul>
 <li translated="true"><a href="#nextjs-version" title="Update your Next.js application from version 12 to version 13">Next.js uygulamanızı sürüm 12'den sürüm 13'e güncelleyin</a></li>
 <li translated="true"><a href="#upgrading-new-features" title="Upgrade features that work in both the pages and the app directories">Hem <code translate="no">pages</code> hem de <code translate="no">app</code> dizinlerinde çalışan yükseltme özellikleri</a></li>
@@ -371,7 +373,7 @@
 <p translated="true"><code translate="no">app</code> adresinde, <code translate="no">next/navigation</code> adresinden içe aktarılan üç yeni kancayı kullanmalısınız: <a href="/docs/app/api-reference/functions/use-router" title="useRouter()"><code translate="no">useRouter()</code></a>, <a href="/docs/app/api-reference/functions/use-pathname" title="usePathname()"><code translate="no">usePathname()</code></a>ve <a href="/docs/app/api-reference/functions/use-search-params" title="useSearchParams()"><code translate="no">useSearchParams()</code></a>.</p>
 <ul>
 <li translated="true">Yeni <code translate="no">useRouter</code> kancası <code translate="no">next/navigation</code> adresinden içe aktarılmıştır ve <code translate="no">pages</code> adresindeki <code translate="no">useRouter</code> kancasından farklı bir davranışa sahiptir ve <code translate="no">next/router</code> adresinden içe aktarılmıştır.<!-- --><ul>
-<li><a href="/docs/pages/api-reference/functions/use-router" title="useRouter hook imported from next/router"> <code translate="no">next/router</code> adresinden içe aktarılan<code translate="no">useRouter</code> kancası</a> <code translate="no">app</code> dizininde desteklenmez ancak <code translate="no">pages</code> dizininde kullanılmaya devam edilebilir.</li>
+<li> <a href="/docs/pages/api-reference/functions/use-router" title="useRouter hook imported from next/router"> <code translate="no">next/router</code> adresinden içe aktarılan<code translate="no">useRouter</code> kancası</a> <code translate="no">app</code> dizininde desteklenmez ancak <code translate="no">pages</code> dizininde kullanılmaya devam edilebilir.</li>
 </ul>
 </li>
 <li translated="true">Yeni <code translate="no">useRouter</code>, <code translate="no">pathname</code> dizesini döndürmez. Bunun yerine ayrı <code translate="no">usePathname</code> kancasını kullanın.</li>
@@ -748,7 +750,9 @@
     <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
   </g>
 </svg></span></a></h2>
-<p translated="true">Next.js, bir özellik kullanımdan kaldırıldığında kod tabanınızı yükseltmenize yardımcı olmak için Codemod dönüşümleri sağlar. Daha fazla bilgi için <a href="/docs/app/building-your-application/upgrading/codemods" title="Codemods">Codemods</a> bölümüne bakın.</p></article>@@include('../../../../../../layouts/sidebar.html')</main>
+<p translated="true">Next.js, bir özellik kullanımdan kaldırıldığında kod tabanınızı yükseltmenize yardımcı olmak için Codemod dönüşümleri sağlar. Daha fazla bilgi için <a href="/docs/app/building-your-application/upgrading/codemods" title="Codemods">Codemods</a> bölümüne bakın.</p></article>
+      @@include('../../../../../../layouts/sidebar.html')
+    </main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>

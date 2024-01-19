@@ -7,7 +7,24 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">default.js</h1><p translated="true">Bu dokümantasyon halen yazılmaktadır. Lütfen daha sonra tekrar kontrol edin.</p></article>@@include('../../../../../../layouts/sidebar.html')</main>
+    <main>
+      @@include('../../../../../../layouts/navigation.html')
+      <article><h1 class="break-words" translate="no">default.js</h1><p translated="true"><code translate="no">default.js</code> dosyası, Next.js tam sayfa yüklemeden sonra bir <a href="/docs/app/building-your-application/routing/parallel-routes#slots" title="slot's">yuvanın</a> etkin durumunu kurtaramadığında <a href="/docs/app/building-your-application/routing/parallel-routes" title="Parallel Routes">Paralel Rotalar</a> içinde bir geri dönüş oluşturmak için kullanılır.</p>
+<p translated="true"><a href="/docs/app/building-your-application/routing/linking-and-navigating#5-soft-navigation" title="soft navigation">Yumuşak</a> gezinme sırasında Next.js her slot için aktif <em>durumu</em> (alt sayfa) takip eder. Ancak, sert gezintiler (tam sayfa yükleme) için Next.js etkin durumu kurtaramaz. Bu durumda, geçerli URL ile eşleşmeyen alt sayfalar için bir <code translate="no">default.js</code> dosyası oluşturulabilir.</p>
+<p translated="true">Aşağıdaki klasör yapısını düşünün. <code translate="no">@team</code> yuvasında bir <code translate="no">settings</code> sayfası var, ancak <code translate="no">@analytics</code> yok.</p>
+<figure><img alt="Parallel Routes unmatched routes" loading="lazy" width="1600" height="930" decoding="async" data-nimg="1" class="block rounded-md border border-gray-200 bg-gray-100 dark:hidden" style="color:transparent" src="/docs/light/parallel-routes-unmatched-routes.png"><img alt="Parallel Routes unmatched routes" loading="lazy" width="1600" height="930" decoding="async" data-nimg="1" class="hidden rounded-md border border-gray-200 bg-gray-100 dark:block" style="color:transparent" src="/docs/dark/parallel-routes-unmatched-routes.png"></figure>
+<p translated="true"><code translate="no">/dashboard/settings</code> adresine gidildiğinde, <code translate="no">@team</code> yuvası <code translate="no">settings</code> sayfasını oluştururken <code translate="no">@analytics</code> yuvası için o anda etkin olan sayfayı koruyacaktır.</p>
+<p translated="true">Yenileme sırasında Next.js, <code translate="no">@analytics</code> için bir <code translate="no">default.js</code> oluşturur. <code translate="no">default.js</code> mevcut değilse, bunun yerine bir <code translate="no">404</code> oluşturulur.</p>
+<p translated="true">Ayrıca, <code translate="no">children</code> örtük bir yuva olduğundan, Next.js ana sayfanın etkin durumunu kurtaramadığında <code translate="no">children</code> için bir geri dönüş oluşturmak üzere bir <code translate="no">default.js</code> dosyası da oluşturmanız gerekir.</p>
+<h2 id="props" data-docs-heading="" translate="no"><a href="#props" title="Props">Props<span><svg viewbox="0 0 16 16" height="0.7em" width="0.7em">
+  <g stroke-width="1.2" fill="none" stroke="currentColor">
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M8.995,7.005 L8.995,7.005c1.374,1.374,1.374,3.601,0,4.975l-1.99,1.99c-1.374,1.374-3.601,1.374-4.975,0l0,0c-1.374-1.374-1.374-3.601,0-4.975 l1.748-1.698"></path>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
+  </g>
+</svg></span></a></h2>
+<p translated="true"><code translate="no">default.js</code> herhangi bir destek almaz.</p></article>
+      @@include('../../../../../../layouts/sidebar.html')
+    </main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>
