@@ -1,10 +1,16 @@
 .navigation {
   position: sticky;
-  top: 120px;
-  width: 284px;
-  height: calc(100vh - 121px);
+  top: 64px;
+  width: 300px;
+  height: calc(100vh - 64px);
   overflow: hidden;
-  padding-right: 22px;
+
+  .router {
+    width: 276px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 24px 12px 12px 12px;
+  }
   li {
     margin: 4px 0px;
     a {
@@ -64,6 +70,6 @@
   .menu-title {
     font-size: 16px;
     color: var(--ds-gray-1000);
-    font-weight: 500;
+    font-weight: 600;
   }
 }

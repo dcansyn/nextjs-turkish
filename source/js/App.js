@@ -50,8 +50,9 @@
   };
 
   p.getCookie = function (name) {
+    let n;
     for (let t = name + '=', i = decodeURIComponent(document.cookie).split(';'), a = 0; a < i.length; a++) {
-      for (let n = i[a]; ' ' === n.charAt(0); ) n = n.substring(1);
+      for (n = i[a]; ' ' === n.charAt(0); ) n = n.substring(1);
       if (0 === n.indexOf(t)) return n.substring(t.length, n.length);
     }
     return '';

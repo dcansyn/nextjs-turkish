@@ -14,11 +14,41 @@
     // Init
 
     this._locationReady();
+    this._routerChange();
   };
 
   p.scrollTo = function (elem) {
     elem.scrollIntoView(true, {
       behavior: 'smooth',
+    });
+  };
+
+  p._routerChange = function () {
+    let routerValue = fe.App.getCookie('router');
+
+    routerValue = routerValue === '' ? 'app' : routerValue;
+    if (window.location.pathname.startsWith('/docs/pages')) routerValue = 'pages';
+
+    this.routerChange(routerValue);
+
+    let router = document.querySelector('.router');
+    router.addEventListener('change', (event) => {
+      this.routerChange(router.value);
+    });
+  };
+
+  p.routerChange = function (value) {
+    let router = document.querySelector('.router');
+    router.value = value;
+
+    fe.App.setCookie('router', value, 365);
+
+    let items = document.querySelectorAll('nav ul[data-type]');
+
+    items?.forEach((item) => {
+      item.style.display = 'none';
+
+      if (item.dataset.type === value) item.style.display = 'block';
     });
   };
 
