@@ -7,7 +7,9 @@
   <body>
     @@include('../../../../../../layouts/header.html')
 
-    <main>@@include('../../../../../../layouts/navigation.html')<article><h1 class="break-words" translate="no">Static Exports</h1>
+    <main>
+      @@include('../../../../../../layouts/navigation.html')
+      <article><h1 class="break-words" translate="no">Static Exports</h1>
 <p translated="true">Next.js, statik bir site veya Tek Sayfalık Uygulama (SPA) olarak başlamayı ve daha sonra isteğe bağlı olarak sunucu gerektiren özellikleri kullanmak için yükseltmeyi sağlar.</p>
 <p translated="true">Next.js, <code translate="no">next build</code> adresini çalıştırırken her rota için bir HTML dosyası oluşturur. Next.js, katı bir SPA'yı ayrı HTML dosyalarına bölerek istemci tarafında gereksiz JavaScript kodlarının yüklenmesini önleyebilir, paket boyutunu küçültebilir ve sayfanın daha hızlı yüklenmesini sağlayabilir.</p>
 <p translated="true">Next.js bu statik dışa aktarımı desteklediğinden, HTML/CSS/JS statik varlıklarını sunabilen herhangi bir web sunucusunda dağıtılabilir ve barındırılabilir.</p>
@@ -187,15 +189,15 @@
 <p translated="true">Statik bir dışa aktarma ile Next.js, HTML/CSS/JS statik varlıkları sunabilen herhangi bir web sunucusunda dağıtılabilir ve barındırılabilir.</p>
 <p translated="true"><code translate="no">next build</code> çalıştırıldığında, Next.js statik dışa aktarımı <code translate="no">out</code> klasörüne oluşturur. Örneğin, aşağıdaki rotalara sahip olduğunuzu varsayalım:</p>
 <ul>
-<li translated="true"><code translate="no">/</code></li>
-<li translated="true"><code translate="no">/blog/[id]</code></li>
+<li><code translate="no">/</code></li>
+<li><code translate="no">/blog/[id]</code></li>
 </ul>
 <p translated="true"><code translate="no">next build</code> çalıştırıldıktan sonra Next.js aşağıdaki dosyaları oluşturacaktır:</p>
 <ul>
-<li translated="true"><code translate="no">/out/index.html</code></li>
-<li translated="true"><code translate="no">/out/404.html</code></li>
-<li translated="true"><code translate="no">/out/blog/post-1.html</code></li>
-<li translated="true"><code translate="no">/out/blog/post-2.html</code></li>
+<li><code translate="no">/out/index.html</code></li>
+<li><code translate="no">/out/404.html</code></li>
+<li><code translate="no">/out/blog/post-1.html</code></li>
+<li><code translate="no">/out/blog/post-2.html</code></li>
 </ul>
 <p translated="true">Nginx gibi statik bir ana bilgisayar kullanıyorsanız, gelen isteklerden doğru dosyalara yeniden yazmaları yapılandırabilirsiniz:</p>
 <div class="code-block_wrapper__t6FCO code-block_hasFileName__ezlBD not-prose" translate="no"><div class="code-block_header__t3NRd"><div class="code-block_fileName__HmSv1"><div aria-hidden="true" class="code-block_iconWrapper__TuHFk"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" style="color:currentColor;width:16px;height:16px"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"></path><path d="M13 2v7h7"></path></svg></div><span class="code-block_filenameP__02nok">nginx.conf</span></div><div class="code-block_actions__yphRf"><button aria-label="Copy code" class="code-block_copyButton__uo5Yu" type="button"><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M6 17C4.89543 17 4 16.1046 4 15V5C4 3.89543 4.89543 3 6 3H13C13.7403 3 14.3866 3.4022 14.7324 4M11 21H18C19.1046 21 20 20.1046 20 19V9C20 7.89543 19.1046 7 18 7H11C9.89543 7 9 7.89543 9 9V19C9 20.1046 9.89543 21 11 21Z"></path></svg><svg class="with-icon_icon__MHUeb" data-testid="geist-icon" fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="24" aria-hidden="true" style="color:currentColor;width:20px;height:20px"><path d="M20 6L9 17l-5-5"></path></svg></button></div></div><pre class="code-block_pre___OLfy"><code class="code-block_code__isn_V" translate="no"><span class="line"><span style="color:var(--shiki-token-keyword)">server</span><span style="color:var(--shiki-color-text)"> {</span></span>
@@ -225,7 +227,9 @@
     <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M7.005,8.995 L7.005,8.995c-1.374-1.374-1.374-3.601,0-4.975l1.99-1.99c1.374-1.374,3.601-1.374,4.975,0l0,0c1.374,1.374,1.374,3.601,0,4.975 l-1.748,1.698"></path>
   </g>
 </svg></span></a></h2>
-<div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th>Version</th><th>Changes</th></tr></thead><tbody><tr><td><code translate="no">v14.0.0</code></td><td><code translate="no">next export</code> has been removed in favor of <code translate="no">"output": "export"</code></td></tr><tr><td><code translate="no">v13.4.0</code></td><td>App Router (Stable) adds enhanced static export support, including using React Server Components and Route Handlers.</td></tr><tr><td><code translate="no">v13.3.0</code></td><td><code translate="no">next export</code> is deprecated and replaced with <code translate="no">"output": "export"</code></td></tr></tbody></table></div></article>@@include('../../../../../../layouts/sidebar.html')</main>
+<div class="overflow-x-auto"><table class="w-full table-auto"><thead><tr><th>Version</th><th>Changes</th></tr></thead><tbody><tr><td><code translate="no">v14.0.0</code></td><td><code translate="no">next export</code> has been removed in favor of <code translate="no">"output": "export"</code></td></tr><tr><td><code translate="no">v13.4.0</code></td><td>App Router (Stable) adds enhanced static export support, including using React Server Components and Route Handlers.</td></tr><tr><td><code translate="no">v13.3.0</code></td><td><code translate="no">next export</code> is deprecated and replaced with <code translate="no">"output": "export"</code></td></tr></tbody></table></div></article>
+      @@include('../../../../../../layouts/sidebar.html')
+    </main>
 
     @@include('../../../../../../layouts/footer.html') @@include('../../../../../../layouts/script.html')
   </body>
