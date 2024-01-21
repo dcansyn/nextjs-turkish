@@ -22,4 +22,21 @@ header {
     display: flex;
     align-items: center;
   }
+
+  .menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      padding-bottom: 6px;
+    }
+
+    @include screen('ipad') {
+      display: flex;
+    }
+  }
 }

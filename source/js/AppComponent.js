@@ -12,6 +12,20 @@
 
   p.initialize = function () {
     this._modeChange();
+    this._clickEvents();
+  };
+
+  p._clickEvents = function () {
+    let menu = document.querySelector('.menu-toggle');
+    menu?.addEventListener('click', function () {
+      let navigation = document.querySelector('nav.navigation');
+
+      if (!navigation.classList.contains('active')) {
+        navigation.classList.add('active');
+      } else {
+        navigation.classList.remove('active');
+      }
+    });
   };
 
   p._modeChange = function () {
