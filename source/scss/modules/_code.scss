@@ -1,3 +1,12 @@
+code {
+  padding: 0.12em 0.25em;
+  background: #f7f7f7;
+  border: 1px solid #ededed;
+  border-radius: 0.375rem;
+  display: inline-block;
+  line-height: 1.2;
+  margin: 0;
+}
 .code-block_wrapper__t6FCO {
   margin: 16px 0;
   border-radius: 6px;
@@ -39,22 +48,10 @@
         font-family: var(--font-sans);
         white-space: nowrap;
       }
-      .code-block_copyButton__uo5Yu {
-        height: 32px;
-        width: 32px;
-        border-radius: var(--geist-radius);
-        border: none;
-        color: var(--ds-gray-900);
-        cursor: pointer;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: inherit;
-        position: relative;
-        transition: background 0.2s ease;
-      }
     }
+  }
+  .code-block_copyButton__uo5Yu {
+    display: none;
   }
   .code-block_pre___OLfy {
     border-radius: 0 0 6px 6px;

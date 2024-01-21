@@ -5,6 +5,18 @@
   height: calc(100vh - 64px);
   overflow: hidden;
 
+  @include screen('ipad') {
+    position: fixed;
+    background-color: #fff;
+    overflow-y: scroll;
+    z-index: 1;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
   .router {
     width: 276px;
     height: 40px;
@@ -52,7 +64,15 @@
     }
   }
   a {
-    @extend .menu-item;
+    color: var(--ds-gray-900);
+    font-size: 14px;
+    line-height: 1.25rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    &:hover {
+      color: var(--ds-gray-1000);
+    }
+
     width: 100%;
     display: flex;
     align-items: center;

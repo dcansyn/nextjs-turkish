@@ -6,7 +6,7 @@ $screen-widths: (
   'ip5': $width-xs,
 );
 
-@mixin screen-width($width, $type: max) {
+@mixin screen($width, $type: max) {
   @if map_has_key($screen-widths, $width) {
     $width: map_get($screen-widths, $width);
     @media only screen and (#{$type}-width: $width) {
