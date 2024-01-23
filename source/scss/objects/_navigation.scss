@@ -10,10 +10,12 @@
     background-color: #fff;
     overflow-y: scroll;
     z-index: 1;
-    display: none;
-
+    transition: all cubic-bezier(0.77, 0.2, 0.05, 1) 0.4s;
+    transform: translateX(-100%);
+    visibility: hidden;
     &.active {
-      display: block;
+      transform: translateX(0);
+      visibility: visible;
     }
   }
 

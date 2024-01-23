@@ -24,18 +24,42 @@ header {
 
   .menu-toggle {
     display: none;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    margin-right: 20px;
-
-    svg {
-      width: 30px;
-      height: 30px;
-      padding-bottom: 6px;
-    }
-
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
     @include screen('ipad') {
       display: flex;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      height: 1.5px;
+      width: 22px;
+      background-color: #000;
+      transition: transform 0.15s ease;
+      transform: translateY(-4px) rotate(0deg);
+    }
+    &::after {
+      content: '';
+      display: block;
+      height: 1.5px;
+      width: 22px;
+      background-color: #000;
+      transition: transform 0.15s ease;
+      transform: translateY(4px) rotate(0deg);
+    }
+
+    &.active {
+      &::before {
+        transform: translateY(1px) rotate(45deg);
+      }
+      &::after {
+        transform: translateY(0) rotate(-45deg);
+      }
     }
   }
 }

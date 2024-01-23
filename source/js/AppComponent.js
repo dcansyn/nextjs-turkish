@@ -22,8 +22,10 @@
 
       if (!navigation.classList.contains('active')) {
         navigation.classList.add('active');
+        menu.classList.add('active');
       } else {
         navigation.classList.remove('active');
+        menu.classList.remove('active');
       }
     });
   };
