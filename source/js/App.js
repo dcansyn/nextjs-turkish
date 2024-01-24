@@ -10,7 +10,7 @@
 
   let p = App.prototype;
   p.isMobile = false;
-
+  p.theme = 'light';
   p.screen = {
     laptop: 1365,
     tablet: 991,
@@ -21,6 +21,7 @@
 
   p.initialize = function () {
     this.isMobile = this.checkMobile();
+    this.detectColorScheme();
   };
 
   p.ready = function (callback) {
@@ -56,6 +57,24 @@
       if (0 === n.indexOf(t)) return n.substring(t.length, n.length);
     }
     return '';
+  };
+
+  p.detectColorScheme = function () {
+    let themeCookie = this.getCookie('theme');
+    if (themeCookie) {
+      let cookieValue = JSON.parse(themeCookie);
+      if (cookieValue === 'dark') {
+        this.theme = 'dark';
+      }
+    } else if (!window.matchMedia) {
+      return false;
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      this.theme = 'dark';
+    }
+
+    document.documentElement.setAttribute('data-theme', this.theme);
+
+    this.setCookie('theme', JSON.stringify(this.theme), 365);
   };
 
   window.fe = window.fe || {};

@@ -6,14 +6,18 @@ h1 {
 }
 h2 {
   font-size: 24px;
+  color: var(--tw-prose-headings);
   border-top-style: solid;
   border-top-width: 1px;
   border-color: var(--ds-gray-200);
   padding-top: 2.5rem;
   scroll-margin-top: 11px;
   a {
+    color: var(--tw-prose-headings) !important;
     text-decoration: none;
-    color: inherit;
+    @include light-mode {
+      color: inherit;
+    }
   }
   margin-top: 2em;
   margin-bottom: 1em;
