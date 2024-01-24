@@ -231,6 +231,15 @@ $h6-font-size: 16px;
   --tw-prose-pre-bg: #fff;
   --tw-prose-th-borders: var(--ds-gray-200);
   --tw-prose-td-borders: var(--ds-gray-200);
-
   --accents-2: #eaeaea;
+
+  &[data-theme='dark'] {
+    --tw-prose-headings: #ededed;
+    --ds-gray-200: #3b3b3bbd;
+    --ds-gray-1000: #ededed;
+    --ds-gray-900: #a1a1a1;
+    --ds-background-200: #000;
+    --ds-background-100: #0a0a0a;
+    --accents-2: #3b3b3bbd;
+  }
 }

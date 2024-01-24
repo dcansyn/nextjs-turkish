@@ -13,6 +13,9 @@
     transition: all cubic-bezier(0.77, 0.2, 0.05, 1) 0.4s;
     transform: translateX(-100%);
     visibility: hidden;
+    @include dark-mode {
+      background-color: #000;
+    }
     &.active {
       transform: translateX(0);
       visibility: visible;
@@ -22,8 +25,17 @@
   .router {
     width: 276px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 4px;
     margin: 24px 12px 12px 12px;
+    padding: 0px 4px;
+
+    @include dark-mode {
+      background: transparent;
+      color: #fff;
+    }
+    &:select {
+      background-color: aqua;
+    }
   }
   li {
     margin: 4px 0px;

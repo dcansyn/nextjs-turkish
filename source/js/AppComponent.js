@@ -13,6 +13,7 @@
   p.initialize = function () {
     this._modeChange();
     this._clickEvents();
+    this._themeChange();
   };
 
   p._clickEvents = function () {
@@ -48,6 +49,38 @@
         item.style.display = isDark ? 'none' : 'block';
       }
     });
+  };
+
+  p._themeChange = function () {
+    const toggleSwitch = document.querySelectorAll('input[name=mode]');
+
+    function switchTheme(e) {
+      if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        toggleSwitch.forEach((item) => {
+          item.checked = true;
+        });
+        fe.App.theme = 'dark';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        toggleSwitch.forEach((item) => {
+          item.checked = false;
+        });
+        fe.App.theme = 'light';
+      }
+
+      fe.App.setCookie('theme', JSON.stringify(fe.App.theme), 365);
+    }
+
+    toggleSwitch.forEach((item) => {
+      item.addEventListener('change', switchTheme, false);
+    });
+
+    if (document.documentElement.getAttribute('data-theme') == 'dark') {
+      toggleSwitch.forEach((item) => {
+        item.checked = true;
+      });
+    }
   };
 
   window.fe.AppComponent = new AppComponent();

@@ -1,6 +1,6 @@
 code {
   padding: 0.12em 0.25em;
-  background: #f7f7f7;
+
   border-radius: 0.375rem;
   display: inline-block;
   line-height: 1.2;
@@ -8,6 +8,7 @@ code {
   word-break: break-all;
 }
 .code-block_wrapper__t6FCO {
+  background: var(--ds-background-100);
   margin: 16px 0;
   border-radius: 6px;
   overflow: hidden;
@@ -18,7 +19,6 @@ code {
     display: flex;
     height: 48px;
     align-items: center;
-    background: var(--ds-background-200);
     .code-block_fileName__HmSv1 {
       color: var(--ds-gray-900);
       display: flex;
@@ -41,7 +41,7 @@ code {
         align-items: center;
         line-height: 1;
         gap: 4px;
-        background: var(--ds-background-200);
+
         transition: background 0.2s, color 0.2s;
         cursor: pointer;
         color: var(--ds-gray-900);
@@ -58,7 +58,7 @@ code {
     padding: 10px;
     margin: 0;
     overflow-x: auto;
-    background: #f7f7f7;
+
     counter-reset: line;
     --shiki-color-text: var(--ds-gray-1000);
     --shiki-color-background: transparent;

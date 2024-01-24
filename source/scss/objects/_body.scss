@@ -1,0 +1,5 @@
+body {
+  @include dark-mode {
+    background: #000;
+  }
+}
