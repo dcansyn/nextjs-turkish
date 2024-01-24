@@ -17,17 +17,27 @@
 
   p._clickEvents = function () {
     let menu = document.querySelector('.menu-toggle');
-    menu?.addEventListener('click', function () {
-      let navigation = document.querySelector('nav.navigation');
+    let navigation = document.querySelector('nav.navigation');
+
+    menu?.addEventListener('click', function (event) {
+      event.stopPropagation();
 
       if (!navigation.classList.contains('active')) {
         navigation.classList.add('active');
+        menu.classList.add('active');
       } else {
         navigation.classList.remove('active');
+        menu.classList.remove('active');
+      }
+    });
+
+    document.addEventListener('click', function (event) {
+      if (navigation.classList.contains('active') && !event.target.closest('nav.navigation')) {
+        navigation.classList.remove('active');
+        menu.classList.remove('active');
       }
     });
   };
-
   p._modeChange = function () {
     let isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
